@@ -115,7 +115,7 @@ For more tips on how to build and test Chainlink, see our [development tips page
 
 ## Contributing
 
-Chainlink's source code is [licensed under the MIT License](https://github.com/smartcontractkit/chainlink/blob/master/LICENSE), and contributions are welcome.
+Chainlink's sources code is [licensed under the MIT License](https://github.com/smartcontractkit/chainlink/blob/master/LICENSE), and contributions are welcome.
 
 Please check out our [contributing guidelines](./docs/CONTRIBUTING.md) for more details.
 
