@@ -56,14 +56,22 @@ func TestGenerateEthPrefixedMsgHash(t *testing.T) {
 }
 
 func TestGenerateEthSignature(t *testing.T) {
+	message := Message{
+		Message:   "Hello, this is a test message from DeAI-Artist!",
+		Timestamp: time.Now().UTC().Format(time.RFC3339), // Use current time for the timestamp
+	}
+	jsonString, err := json.Marshal(message)
+	if err != nil {
+		t.Fatalf("Failed to marshal JSON: %v", err)
+	}
 	privateKey, err := crypto.GenerateKey()
 	assert.NoError(t, err)
-
-	msg := []byte("test message")
+	//println(crypto.PubkeyToAddress(privateKey.PublicKey).String())
+	msg := jsonString
 	signature, err := GenerateEthSignature(privateKey, msg)
 	assert.NoError(t, err)
 	assert.Len(t, signature, 65)
-
+	//println(signature)
 	recoveredPub, err := crypto.SigToPub(GenerateEthPrefixedMsgHash(msg).Bytes(), signature)
 	assert.NoError(t, err)
 	assert.Equal(t, privateKey.PublicKey, *recoveredPub)
