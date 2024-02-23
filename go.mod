@@ -17,6 +17,7 @@ require (
 	go.uber.org/zap v1.26.0
 	golang.org/x/mod v0.14.0
 	golang.org/x/text v0.14.0
+	gopkg.in/guregu/null.v4 v4.0.0
 )
 
 require (
@@ -24,6 +25,7 @@ require (
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/jmoiron/sqlx v1.3.5 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.1.1 // indirect
