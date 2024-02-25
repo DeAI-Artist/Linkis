@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // FailTask is like the Panic task but without all the drama and stack

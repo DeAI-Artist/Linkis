@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/fluxmonitorv2"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils"
+	"github.com/DeAI-Artist/MintAI/core/internal/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/fluxmonitorv2"
 )
 
 func TestFlags_IsLowered(t *testing.T) {

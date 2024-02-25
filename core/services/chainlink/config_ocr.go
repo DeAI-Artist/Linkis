@@ -5,9 +5,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
 )
 
 var _ config.OCR = (*ocrConfig)(nil)

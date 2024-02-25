@@ -5,8 +5,8 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
 )
 
 var _ config.MercuryCache = (*mercuryCacheConfig)(nil)

@@ -5,7 +5,7 @@ import (
 
 	"github.com/smartcontractkit/libocr/commontypes"
 
-	"github.com/smartcontractkit/chainlink/v2/common/config"
+	"github.com/DeAI-Artist/MintAI/common/config"
 )
 
 type Config interface {

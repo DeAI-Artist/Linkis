@@ -8,17 +8,17 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	sfmocks "github.com/smartcontractkit/chainlink/v2/core/services/functions/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/connector"
-	hc "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/common"
-	gfaMocks "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/allowlist/mocks"
-	gfsMocks "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/subscriptions/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	ksmocks "github.com/smartcontractkit/chainlink/v2/core/services/keystore/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	s4mocks "github.com/smartcontractkit/chainlink/v2/core/services/s4/mocks"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	sfmocks "github.com/DeAI-Artist/MintAI/core/services/functions/mocks"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/connector"
+	hc "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/common"
+	gfaMocks "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/allowlist/mocks"
+	gfsMocks "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/subscriptions/mocks"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	ksmocks "github.com/DeAI-Artist/MintAI/core/services/keystore/mocks"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	s4mocks "github.com/DeAI-Artist/MintAI/core/services/s4/mocks"
 )
 
 func TestNewConnector_Success(t *testing.T) {

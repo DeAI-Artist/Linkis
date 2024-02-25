@@ -14,12 +14,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 
-	txmgrcommon "github.com/smartcontractkit/chainlink/v2/common/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/blockhash_store"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/trusted_blockhash_store"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
+	txmgrcommon "github.com/DeAI-Artist/MintAI/common/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/blockhash_store"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/trusted_blockhash_store"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
 )
 
 var _ BHS = &BulletproofBHS{}

@@ -11,7 +11,7 @@ import (
 	ocrtypes "github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocrcommon"
+	"github.com/DeAI-Artist/MintAI/core/services/ocrcommon"
 )
 
 var _ ocrtypes.OnchainKeyring = (*fakeOnchainKeyring)(nil)

@@ -13,9 +13,9 @@ import (
 
 	decryptionPlugin "github.com/smartcontractkit/tdh2/go/ocr2/decryptionplugin"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
 )
 
 func Test_decryptionQueue_NewThresholdDecryptor(t *testing.T) {

@@ -3,7 +3,7 @@ package csakey
 import (
 	"testing"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys"
 )
 
 func TestCSAKeys_ExportImport(t *testing.T) {

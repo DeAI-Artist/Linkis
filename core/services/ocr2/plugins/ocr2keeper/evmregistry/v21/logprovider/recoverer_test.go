@@ -19,16 +19,16 @@ import (
 
 	ocr2keepers "github.com/smartcontractkit/chainlink-common/pkg/types/automation"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	lpmocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	ubig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	lpmocks "github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	ubig "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core/mocks"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 func TestLogRecoverer_GetRecoverables(t *testing.T) {

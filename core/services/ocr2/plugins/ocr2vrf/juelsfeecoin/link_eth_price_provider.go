@@ -13,9 +13,9 @@ import (
 
 	"github.com/smartcontractkit/chainlink-vrf/types"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/aggregator_v3_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/aggregator_v3_interface"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // linkEthPriceProvider provides conversation rate between Link and native token using price feeds

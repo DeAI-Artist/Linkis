@@ -8,11 +8,11 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/pkg/errors"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/ocr2vrf/generated/vrf_beacon"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/ocr2vrf/generated/vrf_coordinator"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/ocr2vrf/generated/vrf_beacon"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/ocr2vrf/generated/vrf_coordinator"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 var _ VRFBeaconCoordinator = &vrfRouter{}

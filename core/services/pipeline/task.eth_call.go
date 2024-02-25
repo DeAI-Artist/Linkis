@@ -13,10 +13,10 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"go.uber.org/multierr"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // Return types:

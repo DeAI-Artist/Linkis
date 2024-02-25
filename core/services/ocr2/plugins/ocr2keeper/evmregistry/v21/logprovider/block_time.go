@@ -6,8 +6,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 var (

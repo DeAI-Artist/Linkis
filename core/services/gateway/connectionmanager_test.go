@@ -8,13 +8,13 @@ import (
 	"github.com/jonboulle/clockwork"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
-	gc "github.com/smartcontractkit/chainlink/v2/core/services/gateway/common"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/network"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/api"
+	gc "github.com/DeAI-Artist/MintAI/core/services/gateway/common"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/config"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/network"
 )
 
 const defaultConfig = `

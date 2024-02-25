@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	ocrtypes "github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 type db struct {

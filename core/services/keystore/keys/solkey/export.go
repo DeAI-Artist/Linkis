@@ -5,8 +5,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 const keyTypeIdentifier = "Solana"

@@ -11,14 +11,14 @@ import (
 
 	"github.com/smartcontractkit/caigo"
 
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/configtest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/pgtest"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/mocks"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/configtest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/pgtest"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/starkkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/mocks"
 
 	starktxm "github.com/smartcontractkit/chainlink-starknet/relayer/pkg/chainlink/txm"
 )

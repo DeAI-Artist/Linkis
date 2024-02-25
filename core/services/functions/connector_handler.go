@@ -20,16 +20,16 @@ import (
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/common"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/connector"
-	hc "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/common"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions"
-	fallow "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/allowlist"
-	fsub "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/subscriptions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/s4"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/api"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/common"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/connector"
+	hc "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/common"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions"
+	fallow "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/allowlist"
+	fsub "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/subscriptions"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/s4"
 )
 
 type functionsConnectorHandler struct {

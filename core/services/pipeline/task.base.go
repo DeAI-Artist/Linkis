@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/smartcontractkit/chainlink/v2/core/null"
+	"github.com/DeAI-Artist/MintAI/core/null"
 )
 
 type BaseTask struct {

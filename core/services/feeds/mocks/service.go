@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	feeds "github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	feeds "github.com/DeAI-Artist/MintAI/core/services/feeds"
 	mock "github.com/stretchr/testify/mock"
 )
 

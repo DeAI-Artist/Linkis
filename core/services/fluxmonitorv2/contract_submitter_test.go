@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/fluxmonitorv2"
-	fmmocks "github.com/smartcontractkit/chainlink/v2/core/services/fluxmonitorv2/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/fluxmonitorv2"
+	fmmocks "github.com/DeAI-Artist/MintAI/core/services/fluxmonitorv2/mocks"
 )
 
 func TestFluxAggregatorContractSubmitter_Submit(t *testing.T) {

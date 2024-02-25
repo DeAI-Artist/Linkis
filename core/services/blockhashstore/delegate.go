@@ -8,19 +8,19 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/blockhash_store"
+	v1 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/trusted_blockhash_store"
+	v2 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2"
+	v2plus "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/blockhash_store"
-	v1 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/trusted_blockhash_store"
-	v2 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2"
-	v2plus "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 var _ job.ServiceCtx = &service{}

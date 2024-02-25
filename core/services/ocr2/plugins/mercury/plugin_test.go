@@ -10,9 +10,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config/env"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/config/env"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"
 	commontypes "github.com/smartcontractkit/chainlink-common/pkg/types"
@@ -21,17 +21,17 @@ import (
 	v2 "github.com/smartcontractkit/chainlink-common/pkg/types/mercury/v2"
 	v3 "github.com/smartcontractkit/chainlink-common/pkg/types/mercury/v3"
 
-	mercuryocr2 "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/mercury"
+	mercuryocr2 "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/mercury"
 
 	libocr2 "github.com/smartcontractkit/libocr/offchainreporting2plus"
 	libocr2types "github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay/evm/mercury/types"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay/evm/mercury/utils"
-	"github.com/smartcontractkit/chainlink/v2/plugins"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/services/relay/evm/mercury/types"
+	"github.com/DeAI-Artist/MintAI/core/services/relay/evm/mercury/utils"
+	"github.com/DeAI-Artist/MintAI/plugins"
 )
 
 var (

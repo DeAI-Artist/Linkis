@@ -14,8 +14,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
+	"github.com/DeAI-Artist/MintAI/core/bridges"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/hex"
-	"github.com/smartcontractkit/chainlink/v2/core/bridges"
 )
 
 // ExternalAdapterClient supports two endpoints:

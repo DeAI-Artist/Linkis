@@ -10,9 +10,9 @@ import (
 
 	ocr2keepers "github.com/smartcontractkit/chainlink-common/pkg/types/automation"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	iregistry21 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/i_keeper_registry_master_wrapper_2_1"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	iregistry21 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/i_keeper_registry_master_wrapper_2_1"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/core"
 )
 
 func TestTransmitEventLog(t *testing.T) {

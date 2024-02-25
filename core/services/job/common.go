@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 //go:generate mockery --quiet --name ServiceCtx --output ./mocks/ --case=underscore

@@ -7,7 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/api"
 )
 
 func TestMessage_Validate(t *testing.T) {

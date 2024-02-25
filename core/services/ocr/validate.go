@@ -5,17 +5,16 @@ import (
 	"time"
 
 	"github.com/lib/pq"
-	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
 	"github.com/smartcontractkit/libocr/offchainreporting"
 
-	"github.com/smartcontractkit/chainlink/v2/common/config"
-	evmconfig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/config"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocrcommon"
+	"github.com/DeAI-Artist/MintAI/common/config"
+	evmconfig "github.com/DeAI-Artist/MintAI/core/chains/evm/config"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/services/ocrcommon"
 )
 
 type ValidationConfig interface {

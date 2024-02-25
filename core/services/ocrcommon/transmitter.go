@@ -7,8 +7,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/common/txmgr/types"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
+	"github.com/DeAI-Artist/MintAI/common/txmgr/types"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
 )
 
 type roundRobinKeystore interface {

@@ -12,7 +12,7 @@ import (
 	decryptionPluginConfig "github.com/smartcontractkit/tdh2/go/ocr2/decryptionplugin/config"
 	"github.com/smartcontractkit/tdh2/go/tdh2/tdh2easy"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 )
 
 type ThresholdServicesConfig struct {

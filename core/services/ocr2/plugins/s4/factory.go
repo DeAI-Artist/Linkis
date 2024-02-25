@@ -1,7 +1,7 @@
 package s4
 
 import (
-	s4_orm "github.com/smartcontractkit/chainlink/v2/core/services/s4"
+	s4_orm "github.com/DeAI-Artist/MintAI/core/services/s4"
 
 	"github.com/smartcontractkit/libocr/commontypes"
 	"github.com/smartcontractkit/libocr/offchainreporting2/types"

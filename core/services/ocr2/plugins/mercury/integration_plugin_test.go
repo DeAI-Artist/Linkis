@@ -5,7 +5,7 @@ package mercury_test
 import (
 	"testing"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config/env"
+	"github.com/DeAI-Artist/MintAI/core/config/env"
 )
 
 func TestIntegration_MercuryV1_Plugin(t *testing.T) {

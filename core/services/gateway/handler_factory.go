@@ -6,12 +6,12 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/config"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 const (

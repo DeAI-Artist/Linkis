@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	functionsConfig "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	utils "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/integration_tests/v1/internal"
+	functionsConfig "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	utils "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/integration_tests/v1/internal"
 )
 
 var (

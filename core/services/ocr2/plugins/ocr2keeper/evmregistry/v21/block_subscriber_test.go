@@ -11,13 +11,13 @@ import (
 
 	ocr2keepers "github.com/smartcontractkit/chainlink-common/pkg/types/automation"
 
-	commonmocks "github.com/smartcontractkit/chainlink/v2/common/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/headtracker/types"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	commonmocks "github.com/DeAI-Artist/MintAI/common/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/headtracker/types"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 const historySize = 4

@@ -9,8 +9,8 @@ import (
 
 	decryptionPlugin "github.com/smartcontractkit/tdh2/go/ocr2/decryptionplugin"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 )
 
 //go:generate mockery --quiet --name Decryptor --output ./mocks/ --case=underscore

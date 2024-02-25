@@ -3,7 +3,7 @@ package fluxmonitorv2
 import (
 	"github.com/shopspring/decimal"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // DeviationThresholds carries parameters used by the threshold-trigger logic

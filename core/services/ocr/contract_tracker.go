@@ -23,15 +23,15 @@ import (
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/mailbox"
 
-	"github.com/smartcontractkit/chainlink/v2/common/config"
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	httypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/headtracker/types"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/log"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/offchain_aggregator_wrapper"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocrcommon"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/common/config"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	httypes "github.com/DeAI-Artist/MintAI/core/chains/evm/headtracker/types"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/log"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/offchain_aggregator_wrapper"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/ocrcommon"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 // configMailboxSanityLimit is the maximum number of configs that can be held

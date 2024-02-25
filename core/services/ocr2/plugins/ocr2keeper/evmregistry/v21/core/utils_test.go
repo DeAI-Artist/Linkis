@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	evmClientMocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
+	evmClientMocks "github.com/DeAI-Artist/MintAI/core/chains/evm/client/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/types"
 )
 
 func TestUtils_GetTxBlock(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"math/big"
 
-	ubig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/services/s4"
+	ubig "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/services/s4"
 
 	"github.com/ethereum/go-ethereum/common"
 	"google.golang.org/protobuf/proto"

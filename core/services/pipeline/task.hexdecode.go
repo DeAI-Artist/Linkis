@@ -7,8 +7,8 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/multierr"
 
+	"github.com/DeAI-Artist/MintAI/core/logger"
 	commonhex "github.com/smartcontractkit/chainlink-common/pkg/utils/hex"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
 )
 
 // Return types:

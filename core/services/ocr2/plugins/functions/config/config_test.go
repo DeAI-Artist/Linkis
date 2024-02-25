@@ -3,7 +3,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

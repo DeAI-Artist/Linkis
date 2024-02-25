@@ -24,14 +24,14 @@ import (
 
 	ocr2keepers "github.com/smartcontractkit/chainlink-common/pkg/types/automation"
 
-	evmClientMocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client/mocks"
-	iregistry21 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/i_keeper_registry_master_wrapper_2_1"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/encoding"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury"
-	v02 "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury/v02"
-	v03 "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury/v03"
+	evmClientMocks "github.com/DeAI-Artist/MintAI/core/chains/evm/client/mocks"
+	iregistry21 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/i_keeper_registry_master_wrapper_2_1"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/encoding"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury"
+	v02 "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury/v02"
+	v03 "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21/mercury/v03"
 )
 
 type MockMercuryConfigProvider struct {

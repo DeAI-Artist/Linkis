@@ -6,8 +6,8 @@ import (
 
 	"github.com/smartcontractkit/chainlink-vrf/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/gas"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/gas"
 )
 
 // reasonableGasPriceProvider provides an estimate for the average gas price

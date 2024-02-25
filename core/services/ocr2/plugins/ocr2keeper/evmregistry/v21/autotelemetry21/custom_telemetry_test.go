@@ -7,10 +7,10 @@ import (
 	"github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 	"github.com/stretchr/testify/assert"
 
-	headtracker "github.com/smartcontractkit/chainlink/v2/core/chains/evm/headtracker/types"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	evm "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21"
+	headtracker "github.com/DeAI-Artist/MintAI/core/chains/evm/headtracker/types"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	evm "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2keeper/evmregistry/v21"
 )
 
 // const historySize = 4

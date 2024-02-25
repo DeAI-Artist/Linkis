@@ -6,9 +6,9 @@ import (
 
 	"go.uber.org/multierr"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/config"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/api"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/config"
 )
 
 // DummyHandler forwards each request/response without doing any checks.

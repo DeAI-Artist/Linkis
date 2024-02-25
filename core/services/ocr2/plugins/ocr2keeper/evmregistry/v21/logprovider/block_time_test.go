@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	lpmocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	lpmocks "github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
 )
 
 func TestBlockTimeResolver_BlockTime(t *testing.T) {

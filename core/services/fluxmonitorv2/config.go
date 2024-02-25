@@ -3,9 +3,9 @@ package fluxmonitorv2
 import (
 	"time"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config"
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config"
 )
 
 // Config defines the Flux Monitor configuration.

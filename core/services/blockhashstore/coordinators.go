@@ -8,11 +8,11 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	v1 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
-	v2 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2"
-	v2plus "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	v1 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
+	v2 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2"
+	v2plus "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 )
 
 var (

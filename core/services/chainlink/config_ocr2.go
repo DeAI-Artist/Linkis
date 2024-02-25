@@ -3,8 +3,8 @@ package chainlink
 import (
 	"time"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
 )
 
 var _ config.OCR2 = (*ocr2Config)(nil)

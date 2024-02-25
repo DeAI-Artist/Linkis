@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/encoding"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/encoding"
 )
 
 func CanAggregate(N int, F int, observations []*encoding.ProcessedRequest) bool {

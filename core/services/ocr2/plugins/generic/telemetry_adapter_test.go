@@ -8,9 +8,9 @@ import (
 
 	"github.com/smartcontractkit/libocr/commontypes"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/generic"
-	"github.com/smartcontractkit/chainlink/v2/core/services/synchronization"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/generic"
+	"github.com/DeAI-Artist/MintAI/core/services/synchronization"
 )
 
 type mockEndpoint struct {

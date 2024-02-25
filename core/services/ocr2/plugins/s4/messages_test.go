@@ -7,9 +7,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/s4"
-	s4_svc "github.com/smartcontractkit/chainlink/v2/core/services/s4"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/s4"
+	s4_svc "github.com/DeAI-Artist/MintAI/core/services/s4"
 
 	"github.com/stretchr/testify/require"
 )

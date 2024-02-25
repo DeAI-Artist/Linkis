@@ -6,7 +6,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 type Encrypted interface {

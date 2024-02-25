@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/uuid"
 
-	pb "github.com/smartcontractkit/chainlink/v2/core/services/feeds/proto"
+	pb "github.com/DeAI-Artist/MintAI/core/services/feeds/proto"
 )
 
 // RPCHandlers define handlers for RPC method calls from the Feeds Manager

@@ -11,8 +11,8 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/multierr"
 
+	corelogger "github.com/DeAI-Artist/MintAI/core/logger"
 	"github.com/smartcontractkit/chainlink-common/pkg/logger"
-	corelogger "github.com/smartcontractkit/chainlink/v2/core/logger"
 )
 
 // NOTE: This is the default level in Postgres anyway, we just make it

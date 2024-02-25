@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/s4"
-	s4_mocks "github.com/smartcontractkit/chainlink/v2/core/services/s4/mocks"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/s4"
+	s4_mocks "github.com/DeAI-Artist/MintAI/core/services/s4/mocks"
 
 	commonlogger "github.com/smartcontractkit/chainlink-common/pkg/logger"
 

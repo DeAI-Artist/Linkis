@@ -4,10 +4,9 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 )
 
 // ValidatedKeeperSpec analyses the tomlString passed as parameter and

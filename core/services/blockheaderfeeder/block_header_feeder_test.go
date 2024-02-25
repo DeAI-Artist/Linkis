@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/blockhashstore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	keystoremocks "github.com/smartcontractkit/chainlink/v2/core/services/keystore/mocks"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/blockhashstore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	keystoremocks "github.com/DeAI-Artist/MintAI/core/services/keystore/mocks"
 )
 
 type testCase struct {

@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/utils/tomlutils"
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/tomlutils"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

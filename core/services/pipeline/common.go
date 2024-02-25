@@ -20,12 +20,12 @@ import (
 	pkgerrors "github.com/pkg/errors"
 	"gopkg.in/guregu/null.v4"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	cnull "github.com/DeAI-Artist/MintAI/core/null"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
 	cutils "github.com/smartcontractkit/chainlink-common/pkg/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	cnull "github.com/smartcontractkit/chainlink/v2/core/null"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 const (

@@ -1,6 +1,6 @@
 package functions
 
-import "github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
+import "github.com/DeAI-Artist/MintAI/core/services/gateway/api"
 
 const (
 	MethodSecretsSet  = "secrets_set"

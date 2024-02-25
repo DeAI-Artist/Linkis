@@ -5,12 +5,11 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 type ValidationConfig interface {

@@ -29,16 +29,16 @@ import (
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/mathutil"
 
-	evmclimocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	lp_mocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	dkg_wrapper "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/ocr2vrf/generated/dkg"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/ocr2vrf/generated/vrf_beacon"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/ocr2vrf/generated/vrf_coordinator"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/ocr2vrf/coordinator/mocks"
+	evmclimocks "github.com/DeAI-Artist/MintAI/core/chains/evm/client/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	lp_mocks "github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	dkg_wrapper "github.com/DeAI-Artist/MintAI/core/gethwrappers/ocr2vrf/generated/dkg"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/ocr2vrf/generated/vrf_beacon"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/ocr2vrf/generated/vrf_coordinator"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/ocr2vrf/coordinator/mocks"
 )
 
 func TestCoordinator_BeaconPeriod(t *testing.T) {

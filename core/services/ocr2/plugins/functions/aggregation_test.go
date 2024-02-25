@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/encoding"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/encoding"
 )
 
 func req(id int, result []byte, err []byte) *encoding.ProcessedRequest {

@@ -15,17 +15,17 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"go.uber.org/multierr"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/api"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/config"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers"
+	hc "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/common"
+	fallow "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/allowlist"
+	fsub "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/subscriptions"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers"
-	hc "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/common"
-	fallow "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/allowlist"
-	fsub "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/subscriptions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
 )
 
 var (

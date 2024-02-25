@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	evmclimocks "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/aggregator_v3_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/vrf/mocks"
+	evmclimocks "github.com/DeAI-Artist/MintAI/core/chains/evm/client/mocks"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/aggregator_v3_interface"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/vrf/mocks"
 )
 
 func Test_JuelsPerFeeCoin(t *testing.T) {

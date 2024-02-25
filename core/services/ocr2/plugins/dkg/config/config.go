@@ -3,7 +3,7 @@ package config
 import (
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
 )
 
 // PluginConfig contains custom arguments for the DKG plugin.

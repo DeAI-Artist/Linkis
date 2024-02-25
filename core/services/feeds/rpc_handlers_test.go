@@ -7,10 +7,10 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds/mocks"
-	pb "github.com/smartcontractkit/chainlink/v2/core/services/feeds/proto"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds/mocks"
+	pb "github.com/DeAI-Artist/MintAI/core/services/feeds/proto"
 )
 
 type TestRPCHandlers struct {

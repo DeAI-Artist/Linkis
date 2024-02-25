@@ -8,9 +8,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
+	gw_common "github.com/DeAI-Artist/MintAI/core/services/gateway/common"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/hex"
-	gw_common "github.com/smartcontractkit/chainlink/v2/core/services/gateway/common"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 const (

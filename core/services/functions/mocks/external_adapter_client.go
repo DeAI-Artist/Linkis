@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	functions "github.com/smartcontractkit/chainlink/v2/core/services/functions"
+	functions "github.com/DeAI-Artist/MintAI/core/services/functions"
 	mock "github.com/stretchr/testify/mock"
 )
 

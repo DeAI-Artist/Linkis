@@ -3,10 +3,10 @@ package chainlink
 import (
 	"path/filepath"
 
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 var _ config.AutoPprof = (*autoPprofConfig)(nil)

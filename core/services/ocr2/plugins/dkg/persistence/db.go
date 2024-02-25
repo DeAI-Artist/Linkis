@@ -19,9 +19,9 @@ import (
 	ocr2vrftypes "github.com/smartcontractkit/chainlink-vrf/types"
 	"github.com/smartcontractkit/chainlink-vrf/types/hash"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 )
 
 var (

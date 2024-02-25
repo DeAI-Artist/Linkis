@@ -1,7 +1,7 @@
 package connector
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/network"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/network"
 )
 
 type ConnectorConfig struct {

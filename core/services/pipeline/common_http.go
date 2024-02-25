@@ -10,8 +10,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	clhttp "github.com/smartcontractkit/chainlink/v2/core/utils/http"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	clhttp "github.com/DeAI-Artist/MintAI/core/utils/http"
 )
 
 func makeHTTPRequest(

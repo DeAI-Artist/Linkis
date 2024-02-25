@@ -16,18 +16,18 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/mathutil"
 
-	mocklp "github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
+	mocklp "github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	bhsmocks "github.com/smartcontractkit/chainlink/v2/core/services/blockhashstore/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	bhsmocks "github.com/DeAI-Artist/MintAI/core/services/blockhashstore/mocks"
 
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	loggermocks "github.com/smartcontractkit/chainlink/v2/core/logger/mocks"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/solidity_vrf_coordinator_interface"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/vrf_coordinator_v2plus_interface"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	loggermocks "github.com/DeAI-Artist/MintAI/core/logger/mocks"
 )
 
 const (

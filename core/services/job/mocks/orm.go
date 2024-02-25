@@ -4,19 +4,19 @@ package mocks
 
 import (
 	common "github.com/ethereum/go-ethereum/common"
-	big "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
+	big "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
 
 	context "context"
 
-	ethkey "github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
+	ethkey "github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
 
-	job "github.com/smartcontractkit/chainlink/v2/core/services/job"
+	job "github.com/DeAI-Artist/MintAI/core/services/job"
 
 	mock "github.com/stretchr/testify/mock"
 
-	pg "github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	pg "github.com/DeAI-Artist/MintAI/core/services/pg"
 
-	pipeline "github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
+	pipeline "github.com/DeAI-Artist/MintAI/core/services/pipeline"
 
 	uuid "github.com/google/uuid"
 )

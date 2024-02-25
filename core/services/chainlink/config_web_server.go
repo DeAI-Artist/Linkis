@@ -9,9 +9,9 @@ import (
 
 	"github.com/gin-contrib/sessions"
 
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
 )
 
 var _ config.WebServer = (*webServerConfig)(nil)

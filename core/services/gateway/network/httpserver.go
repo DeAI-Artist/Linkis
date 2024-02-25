@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
 )
 
 //go:generate mockery --quiet --name HttpServer --output ./mocks/ --case=underscore

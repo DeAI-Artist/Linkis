@@ -3,9 +3,9 @@ package chainlink
 import (
 	"go.uber.org/zap/zapcore"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 var _ config.Log = (*logConfig)(nil)

@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/cron"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/cron"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 )
 
 func TestValidatedCronJobSpec(t *testing.T) {

@@ -11,13 +11,13 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/pkg/errors"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	registry1_1 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/keeper_registry_wrapper1_1"
-	registry1_2 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/keeper_registry_wrapper1_2"
-	registry1_3 "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/keeper_registry_wrapper1_3"
-	type_and_version "github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/type_and_version_interface_wrapper"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	registry1_1 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/keeper_registry_wrapper1_1"
+	registry1_2 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/keeper_registry_wrapper1_2"
+	registry1_3 "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/keeper_registry_wrapper1_3"
+	type_and_version "github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/type_and_version_interface_wrapper"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
 )
 
 type RegistryVersion int32

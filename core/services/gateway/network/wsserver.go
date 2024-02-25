@@ -10,9 +10,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
 )
 
 //go:generate mockery --quiet --name WebSocketServer --output ./mocks/ --case=underscore

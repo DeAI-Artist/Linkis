@@ -3,10 +3,10 @@
 package mocks
 
 import (
-	feeds "github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	feeds "github.com/DeAI-Artist/MintAI/core/services/feeds"
 	mock "github.com/stretchr/testify/mock"
 
-	pg "github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	pg "github.com/DeAI-Artist/MintAI/core/services/pg"
 
 	uuid "github.com/google/uuid"
 )

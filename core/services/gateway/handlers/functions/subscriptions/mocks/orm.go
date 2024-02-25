@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	subscriptions "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/subscriptions"
-	pg "github.com/smartcontractkit/chainlink/v2/core/services/pg"
+	subscriptions "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/subscriptions"
+	pg "github.com/DeAI-Artist/MintAI/core/services/pg"
 	mock "github.com/stretchr/testify/mock"
 )
 

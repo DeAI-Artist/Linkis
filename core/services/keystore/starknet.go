@@ -9,9 +9,9 @@ import (
 
 	"github.com/smartcontractkit/caigo"
 
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"
 	adapters "github.com/smartcontractkit/chainlink-common/pkg/loop/adapters/starknet"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/starkkey"
 )
 
 //go:generate mockery --quiet --name StarkNet --output ./mocks/ --case=underscore --filename starknet.go

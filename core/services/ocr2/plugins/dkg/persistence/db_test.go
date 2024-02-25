@@ -13,10 +13,10 @@ import (
 	ocr2vrftypes "github.com/smartcontractkit/chainlink-vrf/types"
 	"github.com/smartcontractkit/chainlink-vrf/types/hash"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/pgtest"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/pgtest"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 )
 
 func setup(t testing.TB) (ocr2vrftypes.DKGSharePersistence, *sqlx.DB) {

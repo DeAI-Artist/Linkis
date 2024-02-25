@@ -3,7 +3,7 @@ package pipeline
 import (
 	"context"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 type PanicTask struct {

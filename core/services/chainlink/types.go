@@ -5,8 +5,8 @@ import (
 	"github.com/smartcontractkit/chainlink-solana/pkg/solana"
 	stkcfg "github.com/smartcontractkit/chainlink-starknet/relayer/pkg/chainlink/config"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/config"
 )
 
 //go:generate mockery --quiet --name GeneralConfig --output ./mocks/ --case=underscore

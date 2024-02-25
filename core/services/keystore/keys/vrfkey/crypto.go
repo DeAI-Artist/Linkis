@@ -4,13 +4,11 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils"
+	"github.com/DeAI-Artist/MintAI/core/services/signatures/secp256k1"
+	bm "github.com/DeAI-Artist/MintAI/core/utils/big_math"
 	"github.com/ethereum/go-ethereum/common"
-	"go.dedis.ch/kyber/v3"
-
 	"github.com/smartcontractkit/chainlink-common/pkg/utils/hex"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/signatures/secp256k1"
-	bm "github.com/smartcontractkit/chainlink/v2/core/utils/big_math"
 )
 
 // This file contains golang re-implementations of functions on the VRF solidity

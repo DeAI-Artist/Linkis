@@ -14,10 +14,10 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/synchronization/telem"
-	"github.com/smartcontractkit/chainlink/v2/core/static"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/synchronization/telem"
+	"github.com/DeAI-Artist/MintAI/core/static"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 type AutomationCustomTelemetryService struct {

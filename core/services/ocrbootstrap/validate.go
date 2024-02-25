@@ -1,11 +1,10 @@
 package ocrbootstrap
 
 import (
-	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocrcommon"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/ocrcommon"
 )
 
 // ValidatedBootstrapSpecToml validates a bootstrap spec that came from TOML

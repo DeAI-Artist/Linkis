@@ -12,11 +12,11 @@ import (
 	"github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos"
 	"github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/adapters"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/services"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/chains"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/services"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 )
 
 var ErrNoSuchRelayer = errors.New("relayer does not exist")

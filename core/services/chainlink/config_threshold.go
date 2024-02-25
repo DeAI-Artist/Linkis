@@ -1,6 +1,6 @@
 package chainlink
 
-import "github.com/smartcontractkit/chainlink/v2/core/config/toml"
+import "github.com/DeAI-Artist/MintAI/core/config/toml"
 
 type thresholdConfig struct {
 	s toml.ThresholdKeyShareSecrets

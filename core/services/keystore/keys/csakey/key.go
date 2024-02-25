@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/crypto"
+	"github.com/DeAI-Artist/MintAI/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/utils/crypto"
 )
 
 type Key struct {

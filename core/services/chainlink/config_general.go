@@ -17,16 +17,16 @@ import (
 	"github.com/smartcontractkit/chainlink-solana/pkg/solana"
 	starknet "github.com/smartcontractkit/chainlink-starknet/relayer/pkg/chainlink/config"
 
+	evmcfg "github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/config"
+	coreconfig "github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config/env"
+	"github.com/DeAI-Artist/MintAI/core/config/parse"
+	v2 "github.com/DeAI-Artist/MintAI/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/p2pkey"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	evmcfg "github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	coreconfig "github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config/env"
-	"github.com/smartcontractkit/chainlink/v2/core/config/parse"
-	v2 "github.com/smartcontractkit/chainlink/v2/core/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/p2pkey"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 // generalConfig is a wrapper to adapt Config to the config.GeneralConfig interface.

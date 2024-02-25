@@ -5,13 +5,11 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils"
+	"github.com/DeAI-Artist/MintAI/core/services/signatures/secp256k1"
+	bm "github.com/DeAI-Artist/MintAI/core/utils/big_math"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/pkg/errors"
-	"go.dedis.ch/kyber/v3"
-
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/signatures/secp256k1"
-	bm "github.com/smartcontractkit/chainlink/v2/core/utils/big_math"
 )
 
 var suite = secp256k1.NewBlakeKeccackSecp256k1()

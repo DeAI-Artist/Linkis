@@ -7,7 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"golang.org/x/time/rate"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
 )
 
 type upkeepFilter struct {

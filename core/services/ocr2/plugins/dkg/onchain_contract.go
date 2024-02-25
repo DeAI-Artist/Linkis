@@ -12,7 +12,7 @@ import (
 	dkgwrapper "github.com/smartcontractkit/chainlink-vrf/gethwrappers/dkg"
 	ocr2vrftypes "github.com/smartcontractkit/chainlink-vrf/types"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
 )
 
 type onchainContract struct {

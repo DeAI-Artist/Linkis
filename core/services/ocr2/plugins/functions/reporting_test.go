@@ -12,14 +12,14 @@ import (
 	"github.com/smartcontractkit/libocr/commontypes"
 	"github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	functions_srv "github.com/DeAI-Artist/MintAI/core/services/functions"
+	functions_mocks "github.com/DeAI-Artist/MintAI/core/services/functions/mocks"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/encoding"
 	commonlogger "github.com/smartcontractkit/chainlink-common/pkg/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	functions_srv "github.com/smartcontractkit/chainlink/v2/core/services/functions"
-	functions_mocks "github.com/smartcontractkit/chainlink/v2/core/services/functions/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/encoding"
 )
 
 func preparePlugin(t *testing.T, batchSize uint32, maxTotalGasLimit uint32) (types.ReportingPlugin, *functions_mocks.ORM, encoding.ReportCodec, *functions_mocks.OffchainTransmitter) {

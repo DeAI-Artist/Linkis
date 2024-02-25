@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/smartcontractkit/chainlink/v2/core/utils/crypto"
+	"github.com/DeAI-Artist/MintAI/core/utils/crypto"
 )
 
 const (

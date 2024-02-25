@@ -9,7 +9,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/abi"
 
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/automation_utils_2_1"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/automation_utils_2_1"
 )
 
 type triggerWrapper = automation_utils_2_1.KeeperRegistryBase21LogTrigger

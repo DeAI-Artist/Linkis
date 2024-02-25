@@ -6,8 +6,8 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/cosmoskey"
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/cosmoskey"
 )
 
 //go:generate mockery --quiet --name Cosmos --output ./mocks/ --case=underscore --filename cosmos.go

@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
 )
 
 func Test_ReasonableGasPrice(t *testing.T) {

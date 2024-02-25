@@ -10,10 +10,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 // ArbitrumBlockTranslator uses Arbitrum's special L1BlockNumber to optimise log lookups

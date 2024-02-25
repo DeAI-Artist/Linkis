@@ -12,12 +12,12 @@ import (
 
 	ocr2keepers "github.com/smartcontractkit/chainlink-automation/pkg/v2"
 
-	commonmocks "github.com/smartcontractkit/chainlink/v2/common/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller/mocks"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	ubig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
+	commonmocks "github.com/DeAI-Artist/MintAI/common/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller/mocks"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	ubig "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
 )
 
 func TestGetActiveUpkeepKeys(t *testing.T) {

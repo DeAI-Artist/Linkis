@@ -10,13 +10,13 @@ import (
 
 	"github.com/smartcontractkit/libocr/offchainreporting2/types"
 
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/connector"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/common"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/allowlist"
+	"github.com/DeAI-Artist/MintAI/core/services/gateway/handlers/functions/subscriptions"
+	s4PluginConfig "github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/s4"
+	"github.com/DeAI-Artist/MintAI/core/services/s4"
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/connector"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/common"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/allowlist"
-	"github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers/functions/subscriptions"
-	s4PluginConfig "github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/s4"
-	"github.com/smartcontractkit/chainlink/v2/core/services/s4"
 )
 
 // This config is part of the job spec and is loaded only once on node boot/job creation.

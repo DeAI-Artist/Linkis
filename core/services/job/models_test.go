@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v4"
 
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/services/relay/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
 	"github.com/smartcontractkit/chainlink-common/pkg/codec"
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/services/relay/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
 )
 
 func TestOCR2OracleSpec_RelayIdentifier(t *testing.T) {

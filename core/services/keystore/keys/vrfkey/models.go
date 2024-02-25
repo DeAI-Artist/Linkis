@@ -10,8 +10,8 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/signatures/secp256k1"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/services/signatures/secp256k1"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 // EncryptedVRFKey contains encrypted private key to be serialized to DB

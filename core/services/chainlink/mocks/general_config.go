@@ -4,7 +4,7 @@ package mocks
 
 import (
 	chainlinkconfig "github.com/smartcontractkit/chainlink-starknet/relayer/pkg/chainlink/config"
-	config "github.com/smartcontractkit/chainlink/v2/core/config"
+	config "github.com/DeAI-Artist/MintAI/core/config"
 
 	cosmosconfig "github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/config"
 
@@ -14,7 +14,7 @@ import (
 
 	time "time"
 
-	toml "github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
+	toml "github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
 
 	uuid "github.com/google/uuid"
 

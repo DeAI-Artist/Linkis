@@ -17,16 +17,16 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/services"
 
-	"github.com/smartcontractkit/chainlink/v2/core/cbor"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/functions/config"
-	"github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/threshold"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	evmrelayTypes "github.com/smartcontractkit/chainlink/v2/core/services/relay/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/services/s4"
-	"github.com/smartcontractkit/chainlink/v2/core/services/synchronization/telem"
+	"github.com/DeAI-Artist/MintAI/core/cbor"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/functions/config"
+	"github.com/DeAI-Artist/MintAI/core/services/ocr2/plugins/threshold"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	evmrelayTypes "github.com/DeAI-Artist/MintAI/core/services/relay/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/services/s4"
+	"github.com/DeAI-Artist/MintAI/core/services/synchronization/telem"
 )
 
 var (

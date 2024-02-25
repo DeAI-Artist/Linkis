@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // Tests in this file only run in dev mode
-// /usr/bin/go test --tags=dev -timeout 360s -run ^TestTOMLGeneralConfig_DevModeInsecureConfig github.com/smartcontractkit/chainlink/v2/core/services/chainlink
+// /usr/bin/go test --tags=dev -timeout 360s -run ^TestTOMLGeneralConfig_DevModeInsecureConfig github.com/DeAI-Artist/MintAI/core/services/chainlink
 
 func TestTOMLGeneralConfig_DevModeInsecureConfig(t *testing.T) {
 	t.Parallel()

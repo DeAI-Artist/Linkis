@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/log"
-	"github.com/smartcontractkit/chainlink/v2/core/gethwrappers/generated/flux_aggregator_wrapper"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/log"
+	"github.com/DeAI-Artist/MintAI/core/gethwrappers/generated/flux_aggregator_wrapper"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 // Format implements fmt.Formatter to always print just the pointer address.

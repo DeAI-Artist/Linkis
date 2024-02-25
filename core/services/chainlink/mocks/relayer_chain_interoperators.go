@@ -4,14 +4,14 @@ import (
 	"context"
 	"slices"
 
-	services2 "github.com/smartcontractkit/chainlink/v2/core/services"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
+	services2 "github.com/DeAI-Artist/MintAI/core/services"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
 
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
 )

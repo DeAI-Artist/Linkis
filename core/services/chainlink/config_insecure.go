@@ -1,8 +1,8 @@
 package chainlink
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/build"
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/build"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
 )
 
 type insecureConfig struct {

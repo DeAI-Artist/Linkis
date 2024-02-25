@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	ocrtypes "github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/chaintype"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/starkkey"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/chaintype"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
 )
 
 type OCR3SignerVerifier interface {

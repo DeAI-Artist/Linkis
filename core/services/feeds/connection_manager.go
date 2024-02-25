@@ -10,9 +10,9 @@ import (
 	"github.com/smartcontractkit/wsrpc"
 	"github.com/smartcontractkit/wsrpc/connectivity"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/recovery"
-	pb "github.com/smartcontractkit/chainlink/v2/core/services/feeds/proto"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/recovery"
+	pb "github.com/DeAI-Artist/MintAI/core/services/feeds/proto"
 )
 
 //go:generate mockery --quiet --name ConnectionsManager --output ./mocks/ --case=underscore

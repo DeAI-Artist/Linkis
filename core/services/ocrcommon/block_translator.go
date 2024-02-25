@@ -4,10 +4,10 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/smartcontractkit/chainlink/v2/common/config"
-	evmclient "github.com/smartcontractkit/chainlink/v2/core/chains/evm/client"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/common/config"
+	evmclient "github.com/DeAI-Artist/MintAI/core/chains/evm/client"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 // BlockTranslator converts emitted block numbers (from block.number) into a

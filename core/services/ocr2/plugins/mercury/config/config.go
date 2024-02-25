@@ -11,9 +11,9 @@ import (
 
 	pkgerrors "github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/null"
-	mercuryutils "github.com/smartcontractkit/chainlink/v2/core/services/relay/evm/mercury/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/null"
+	mercuryutils "github.com/DeAI-Artist/MintAI/core/services/relay/evm/mercury/utils"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 type PluginConfig struct {

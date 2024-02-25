@@ -7,8 +7,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/spf13/cast"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 var (

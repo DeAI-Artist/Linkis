@@ -5,9 +5,9 @@ package mocks
 import (
 	context "context"
 
-	api "github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
+	api "github.com/DeAI-Artist/MintAI/core/services/gateway/api"
 
-	handlers "github.com/smartcontractkit/chainlink/v2/core/services/gateway/handlers"
+	handlers "github.com/DeAI-Artist/MintAI/core/services/gateway/handlers"
 
 	mock "github.com/stretchr/testify/mock"
 )

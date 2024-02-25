@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	network "github.com/smartcontractkit/chainlink/v2/core/services/gateway/network"
+	network "github.com/DeAI-Artist/MintAI/core/services/gateway/network"
 	mock "github.com/stretchr/testify/mock"
 )
 

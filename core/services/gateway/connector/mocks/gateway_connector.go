@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	api "github.com/smartcontractkit/chainlink/v2/core/services/gateway/api"
+	api "github.com/DeAI-Artist/MintAI/core/services/gateway/api"
 
 	context "context"
 

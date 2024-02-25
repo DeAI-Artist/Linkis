@@ -13,8 +13,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
+	"github.com/DeAI-Artist/MintAI/core/utils"
 	commonhex "github.com/smartcontractkit/chainlink-common/pkg/utils/hex"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
 )
 
 //go:generate mockery --quiet --name PipelineParamUnmarshaler --output ./mocks/ --case=underscore
