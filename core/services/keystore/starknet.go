@@ -7,7 +7,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/caigo"
+	"github.com/dontpanicdao/caigo"
 
 	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"

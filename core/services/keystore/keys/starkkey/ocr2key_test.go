@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"testing"
 
-	caigotypes "github.com/smartcontractkit/caigo/types"
+	caigotypes "github.com/dontpanicdao/caigo/types"
 
 	ocrtypes "github.com/smartcontractkit/libocr/offchainreporting2plus/types"
 	"github.com/stretchr/testify/assert"

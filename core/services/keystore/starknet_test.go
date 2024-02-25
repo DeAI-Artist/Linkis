@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/caigo"
+	"github.com/dontpanicdao/caigo"
 
 	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
 	"github.com/DeAI-Artist/MintAI/core/internal/testutils"

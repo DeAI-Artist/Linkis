@@ -6,7 +6,7 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/smartcontractkit/caigo"
+	"github.com/dontpanicdao/caigo"
 )
 
 // constants
@@ -14,7 +14,7 @@ var (
 	byteLen = 32
 )
 
-// reimplements parts of https://github.com/smartcontractkit/caigo/blob/main/utils.go#L85
+// reimplements parts of https://github.com/dontpanicdao/caigo/blob/main/utils.go#L85
 // generate the PK as a pseudo-random number in the interval [1, CurveOrder - 1]
 // using io.Reader, and Key struct
 func GenerateKey(material io.Reader) (k Key, err error) {
