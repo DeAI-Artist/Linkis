@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/csakey"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/csakey"
 )
 
 type expectedKey struct {

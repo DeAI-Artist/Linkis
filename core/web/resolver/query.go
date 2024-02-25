@@ -10,14 +10,14 @@ import (
 	"github.com/graph-gophers/graphql-go"
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/bridges"
+	"github.com/DeAI-Artist/MintAI/core/chains"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/vrfkey"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	evmrelay "github.com/DeAI-Artist/MintAI/core/services/relay/evm"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
-	"github.com/smartcontractkit/chainlink/v2/core/bridges"
-	"github.com/smartcontractkit/chainlink/v2/core/chains"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/vrfkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	evmrelay "github.com/smartcontractkit/chainlink/v2/core/services/relay/evm"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
 )
 
 // Bridge retrieves a bridges by name.

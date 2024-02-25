@@ -13,14 +13,14 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/smartcontractkit/chainlink/v2/core/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/pgtest"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/sessions"
-	"github.com/smartcontractkit/chainlink/v2/core/sessions/localauth"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/auth"
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/pgtest"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/sessions/localauth"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 func setupORM(t *testing.T) (*sqlx.DB, sessions.AuthenticationProvider) {

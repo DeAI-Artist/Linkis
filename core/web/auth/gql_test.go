@@ -10,12 +10,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	clsessions "github.com/smartcontractkit/chainlink/v2/core/sessions"
-	"github.com/smartcontractkit/chainlink/v2/core/sessions/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/web/auth"
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	clsessions "github.com/DeAI-Artist/MintAI/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/sessions/mocks"
+	"github.com/DeAI-Artist/MintAI/core/web/auth"
 )
 
 func Test_AuthenticateGQL_Unauthenticated(t *testing.T) {

@@ -9,13 +9,13 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	gqlerrors "github.com/graph-gophers/graphql-go/errors"
 
-	txmgrcommon "github.com/smartcontractkit/chainlink/v2/common/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/gas"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	ubig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
+	txmgrcommon "github.com/DeAI-Artist/MintAI/common/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/gas"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	ubig "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
 )
 
 func TestResolver_EthTransaction(t *testing.T) {

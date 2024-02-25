@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
 )
 
 func Test_CreateFeedsManagerChainConfig(t *testing.T) {

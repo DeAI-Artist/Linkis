@@ -8,12 +8,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains"
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	solanamodels "github.com/smartcontractkit/chainlink/v2/core/store/models/solana"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/chains"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	solanamodels "github.com/DeAI-Artist/MintAI/core/store/models/solana"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 // SolanaTransfersController can send LINK tokens to another address

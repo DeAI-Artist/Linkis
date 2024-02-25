@@ -1,9 +1,9 @@
 package web
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 // ErrSolanaNotEnabled is returned when Solana.Enabled is not true.

@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/web"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/web"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
 )
 
 func TestDKGSignKeysController_Index_HappyPath(t *testing.T) {

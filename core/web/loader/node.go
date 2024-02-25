@@ -7,8 +7,8 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 )
 
 type nodeBatcher struct {

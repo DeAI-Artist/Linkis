@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
+	"github.com/DeAI-Artist/MintAI/core/utils"
 )
 
 // User holds the credentials for API user.

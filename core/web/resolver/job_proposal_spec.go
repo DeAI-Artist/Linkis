@@ -4,7 +4,7 @@ import (
 	"github.com/graph-gophers/graphql-go"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
 )
 
 // SpecStatus defines the enum values for GQL

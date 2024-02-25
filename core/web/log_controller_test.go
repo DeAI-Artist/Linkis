@@ -11,13 +11,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/configtest"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/web"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/configtest"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/web"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 type testCase struct {

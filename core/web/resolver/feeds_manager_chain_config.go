@@ -3,7 +3,7 @@ package resolver
 import (
 	"github.com/graph-gophers/graphql-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
 )
 
 type FeedsManagerChainConfigResolver struct {

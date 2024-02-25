@@ -5,10 +5,8 @@ import (
 	"database/sql"
 	"os"
 
+	"github.com/DeAI-Artist/MintAI/core/config/env"
 	"github.com/pkg/errors"
-	"github.com/pressly/goose/v3"
-
-	"github.com/smartcontractkit/chainlink/v2/core/config/env"
 )
 
 func init() {

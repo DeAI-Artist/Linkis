@@ -6,11 +6,11 @@ import (
 	"github.com/graph-gophers/graphql-go"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/services/webhook"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
-	"github.com/smartcontractkit/chainlink/v2/core/web/loader"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/services/webhook"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/web/loader"
 )
 
 type JobRunStatus string

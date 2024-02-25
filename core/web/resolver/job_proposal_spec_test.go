@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
 )
 
 func TestResolver_ApproveJobProposalSpec(t *testing.T) {

@@ -13,16 +13,16 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v4"
 
+	evmassets "github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	clnull "github.com/DeAI-Artist/MintAI/core/null"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/services/signatures/secp256k1"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 	"github.com/smartcontractkit/chainlink-common/pkg/assets"
-	evmassets "github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	clnull "github.com/smartcontractkit/chainlink/v2/core/null"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/services/signatures/secp256k1"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
 )
 
 func TestJob(t *testing.T) {

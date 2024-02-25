@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
 	commonassets "github.com/smartcontractkit/chainlink-common/pkg/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/manyminds/api2go/jsonapi"

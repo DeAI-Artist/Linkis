@@ -5,8 +5,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/forwarders"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/forwarders"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
 )
 
 // EVMForwarderResource is an EVM forwarder JSONAPI resource.

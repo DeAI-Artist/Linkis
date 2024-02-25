@@ -3,7 +3,7 @@ package resolver
 import (
 	"github.com/graph-gophers/graphql-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/sessions"
 )
 
 type clearSessionsError struct{}

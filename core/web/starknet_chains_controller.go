@@ -1,9 +1,9 @@
 package web
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 func NewStarkNetChainsController(app chainlink.Application) ChainsController {

@@ -7,10 +7,10 @@ import (
 
 	"github.com/Masterminds/semver/v3"
 
-	"github.com/smartcontractkit/chainlink/v2/core/build"
-	"github.com/smartcontractkit/chainlink/v2/core/cmd"
-	"github.com/smartcontractkit/chainlink/v2/core/recovery"
-	"github.com/smartcontractkit/chainlink/v2/core/static"
+	"github.com/DeAI-Artist/MintAI/core/build"
+	"github.com/DeAI-Artist/MintAI/core/cmd"
+	"github.com/DeAI-Artist/MintAI/core/recovery"
+	"github.com/DeAI-Artist/MintAI/core/static"
 )
 
 func init() {

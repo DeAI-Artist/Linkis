@@ -6,8 +6,8 @@ import (
 	"github.com/graph-gophers/graphql-go"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/csakey"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/csakey"
 )
 
 // CSAKeyResolver resolves the single CSA Key object

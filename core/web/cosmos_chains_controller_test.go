@@ -13,13 +13,13 @@ import (
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
 	coscfg "github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/config"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/configtest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/cosmostest"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/web"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/configtest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/cosmostest"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/web"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 func Test_CosmosChainsController_Show(t *testing.T) {

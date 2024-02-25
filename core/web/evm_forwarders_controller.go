@@ -6,14 +6,14 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/forwarders"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/logpoller"
-	ubig "github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/forwarders"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/logpoller"
+	ubig "github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 
 	"github.com/gin-gonic/gin"
 )

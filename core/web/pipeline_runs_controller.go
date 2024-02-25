@@ -10,13 +10,13 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/services/webhook"
-	"github.com/smartcontractkit/chainlink/v2/core/web/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/services/webhook"
+	"github.com/DeAI-Artist/MintAI/core/web/auth"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 // PipelineRunsController manages V2 job run requests.

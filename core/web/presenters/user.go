@@ -3,7 +3,7 @@ package presenters
 import (
 	"time"
 
-	"github.com/smartcontractkit/chainlink/v2/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/sessions"
 )
 
 // UserResource represents a User JSONAPI resource.

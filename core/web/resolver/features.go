@@ -1,6 +1,6 @@
 package resolver
 
-import "github.com/smartcontractkit/chainlink/v2/core/config"
+import "github.com/DeAI-Artist/MintAI/core/config"
 
 type FeaturesResolver struct {
 	cfg config.Feature

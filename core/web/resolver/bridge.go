@@ -3,7 +3,7 @@ package resolver
 import (
 	"github.com/graph-gophers/graphql-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/bridges"
+	"github.com/DeAI-Artist/MintAI/core/bridges"
 )
 
 // BridgeResolver resolves the Bridge type.

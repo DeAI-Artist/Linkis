@@ -5,11 +5,11 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
 )
 
 // Returns an instantiated ldapAuthenticator struct without validation for testing

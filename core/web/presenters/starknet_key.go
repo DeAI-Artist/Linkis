@@ -1,7 +1,7 @@
 package presenters
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/starkkey"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
 )
 
 // StarkNetKeyResource represents a StarkNet key JSONAPI resource.

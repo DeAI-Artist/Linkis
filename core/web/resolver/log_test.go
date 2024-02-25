@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config"
 )
 
 func TestResolver_SetSQLLogging(t *testing.T) {

@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	ldapauth "github.com/smartcontractkit/chainlink/v2/core/sessions/ldapauth"
+	ldapauth "github.com/DeAI-Artist/MintAI/core/sessions/ldapauth"
 	mock "github.com/stretchr/testify/mock"
 )
 

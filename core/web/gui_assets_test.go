@@ -6,12 +6,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/cltest"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/configtest"
-	clhttptest "github.com/smartcontractkit/chainlink/v2/core/internal/testutils/httptest"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/web"
+	"github.com/DeAI-Artist/MintAI/core/internal/cltest"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/configtest"
+	clhttptest "github.com/DeAI-Artist/MintAI/core/internal/testutils/httptest"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/web"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"

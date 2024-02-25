@@ -3,7 +3,7 @@ package recovery
 import (
 	"github.com/getsentry/sentry-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 )
 
 func ReportPanics(fn func()) {

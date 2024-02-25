@@ -9,9 +9,9 @@ import (
 	gqlerrors "github.com/graph-gophers/graphql-go/errors"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/keystest"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/chaintype"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ocr2key"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/keystest"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/chaintype"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ocr2key"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

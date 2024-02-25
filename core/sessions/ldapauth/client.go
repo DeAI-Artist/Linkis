@@ -3,9 +3,7 @@ package ldapauth
 import (
 	"fmt"
 
-	"github.com/go-ldap/ldap/v3"
-
-	"github.com/smartcontractkit/chainlink/v2/core/config"
+	"github.com/DeAI-Artist/MintAI/core/config"
 )
 
 type ldapClient struct {

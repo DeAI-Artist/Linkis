@@ -11,14 +11,13 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
-	"github.com/pressly/goose/v3"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/smartcontractkit/chainlink/v2/core/config/env"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/store/migrate/migrations" // Invoke init() functions within migrations pkg.
+	"github.com/DeAI-Artist/MintAI/core/config/env"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/store/migrate/migrations" // Invoke init() functions within migrations pkg.
 )
 
 //go:embed migrations/*.sql migrations/*.go

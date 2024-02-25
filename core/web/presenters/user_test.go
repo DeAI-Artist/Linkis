@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/sessions"
 )
 
 func TestUserResource(t *testing.T) {

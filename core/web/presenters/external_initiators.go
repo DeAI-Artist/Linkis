@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/smartcontractkit/chainlink/v2/core/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/bridges"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
+	"github.com/DeAI-Artist/MintAI/core/auth"
+	"github.com/DeAI-Artist/MintAI/core/bridges"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
 )
 
 // ExternalInitiatorAuthentication includes initiator and authentication details.

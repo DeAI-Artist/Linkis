@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/smartcontractkit/chainlink/v2/core/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/bridges"
+	"github.com/DeAI-Artist/MintAI/core/auth"
+	"github.com/DeAI-Artist/MintAI/core/bridges"
 )
 
 // Application config constant options

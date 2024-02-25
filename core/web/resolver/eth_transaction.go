@@ -6,10 +6,10 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/graph-gophers/graphql-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
-	"github.com/smartcontractkit/chainlink/v2/core/web/loader"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/web/loader"
 )
 
 type EthTransactionResolver struct {

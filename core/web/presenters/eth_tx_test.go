@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	txmgrcommon "github.com/smartcontractkit/chainlink/v2/common/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/gas"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
-	evmtypes "github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
+	txmgrcommon "github.com/DeAI-Artist/MintAI/common/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/gas"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
+	evmtypes "github.com/DeAI-Artist/MintAI/core/chains/evm/types"
 )
 
 func TestEthTxResource(t *testing.T) {

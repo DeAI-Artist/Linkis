@@ -5,12 +5,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/logger"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 
-	clsessions "github.com/smartcontractkit/chainlink/v2/core/sessions"
+	clsessions "github.com/DeAI-Artist/MintAI/core/sessions"
 )
 
 type sessionUserKey struct{}

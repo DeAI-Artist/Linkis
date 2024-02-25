@@ -8,7 +8,7 @@ import (
 	"github.com/google/uuid"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
 )
 
 func TestResolver_GetJobProposal(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"time"
 
+	"github.com/DeAI-Artist/MintAI/core/logger"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
 )
 
 type sessionReaper struct {

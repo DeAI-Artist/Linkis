@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/keystest"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/keystest"
 )
 
 func TestP2PKeyResource(t *testing.T) {

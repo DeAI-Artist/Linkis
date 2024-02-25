@@ -6,9 +6,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/graph-gophers/graphql-go"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	"github.com/smartcontractkit/chainlink/v2/core/web/loader"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/web/loader"
 )
 
 type ETHKey struct {

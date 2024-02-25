@@ -6,11 +6,11 @@ import (
 	gqlerrors "github.com/graph-gophers/graphql-go/errors"
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
 	"github.com/smartcontractkit/chainlink-common/pkg/types"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
 )
 
 func TestResolver_Nodes(t *testing.T) {

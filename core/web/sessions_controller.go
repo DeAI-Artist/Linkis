@@ -9,10 +9,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/multierr"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	clsessions "github.com/smartcontractkit/chainlink/v2/core/sessions"
-	"github.com/smartcontractkit/chainlink/v2/core/web/auth"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	clsessions "github.com/DeAI-Artist/MintAI/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/web/auth"
 )
 
 // SessionsController manages session requests.

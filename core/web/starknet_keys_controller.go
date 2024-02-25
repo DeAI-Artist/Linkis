@@ -1,9 +1,9 @@
 package web
 
 import (
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/starkkey"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/starkkey"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 func NewStarkNetKeysController(app chainlink.Application) KeysController {

@@ -14,14 +14,14 @@ import (
 	"github.com/stretchr/testify/mock"
 	"gopkg.in/guregu/null.v4"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains"
-	clnull "github.com/smartcontractkit/chainlink/v2/core/null"
-	"github.com/smartcontractkit/chainlink/v2/core/services/directrequest"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
-	"github.com/smartcontractkit/chainlink/v2/core/testdata/testspecs"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/chains"
+	clnull "github.com/DeAI-Artist/MintAI/core/null"
+	"github.com/DeAI-Artist/MintAI/core/services/directrequest"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
+	"github.com/DeAI-Artist/MintAI/core/testdata/testspecs"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
 )
 
 // This tests the main fields on the job results. Embedded spec testing is done

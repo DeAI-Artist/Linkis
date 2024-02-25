@@ -7,17 +7,17 @@ import (
 	"github.com/lib/pq"
 	"gopkg.in/guregu/null.v4"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	clnull "github.com/DeAI-Artist/MintAI/core/null"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
+	"github.com/DeAI-Artist/MintAI/core/services/signatures/secp256k1"
+	"github.com/DeAI-Artist/MintAI/core/store/models"
 	commonassets "github.com/smartcontractkit/chainlink-common/pkg/assets"
 	commonconfig "github.com/smartcontractkit/chainlink-common/pkg/config"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	clnull "github.com/smartcontractkit/chainlink/v2/core/null"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
-	"github.com/smartcontractkit/chainlink/v2/core/services/signatures/secp256k1"
-	"github.com/smartcontractkit/chainlink/v2/core/store/models"
 )
 
 // JobSpecType defines the the the spec type of the job

@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	sessions "github.com/smartcontractkit/chainlink/v2/core/sessions"
+	sessions "github.com/DeAI-Artist/MintAI/core/sessions"
 	mock "github.com/stretchr/testify/mock"
 )
 

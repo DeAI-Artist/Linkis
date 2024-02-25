@@ -9,12 +9,12 @@ import (
 
 	commontypes "github.com/smartcontractkit/chainlink-common/pkg/types"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/txmgr"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/types"
-	"github.com/smartcontractkit/chainlink/v2/core/services/feeds"
-	"github.com/smartcontractkit/chainlink/v2/core/services/job"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pipeline"
-	"github.com/smartcontractkit/chainlink/v2/core/utils/stringutils"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/txmgr"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/types"
+	"github.com/DeAI-Artist/MintAI/core/services/feeds"
+	"github.com/DeAI-Artist/MintAI/core/services/job"
+	"github.com/DeAI-Artist/MintAI/core/services/pipeline"
+	"github.com/DeAI-Artist/MintAI/core/utils/stringutils"
 )
 
 // ErrInvalidType indicates that results loaded is not the type expected

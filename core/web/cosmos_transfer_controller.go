@@ -10,15 +10,15 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 
+	"github.com/DeAI-Artist/MintAI/core/services/relay"
 	coscfg "github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/config"
 	"github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/db"
 	"github.com/smartcontractkit/chainlink-cosmos/pkg/cosmos/denom"
-	"github.com/smartcontractkit/chainlink/v2/core/services/relay"
 
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	cosmosmodels "github.com/smartcontractkit/chainlink/v2/core/store/models/cosmos"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	cosmosmodels "github.com/DeAI-Artist/MintAI/core/store/models/cosmos"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 // CosmosTransfersController can send LINK tokens to another address

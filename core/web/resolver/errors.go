@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/chains"
+	"github.com/DeAI-Artist/MintAI/core/chains"
 )
 
 type ErrorCode string

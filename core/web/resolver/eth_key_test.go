@@ -9,17 +9,17 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/mock"
 
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/assets"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config"
+	mocks2 "github.com/DeAI-Artist/MintAI/core/chains/evm/config/mocks"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/config/toml"
+	"github.com/DeAI-Artist/MintAI/core/chains/evm/utils/big"
+	"github.com/DeAI-Artist/MintAI/core/chains/legacyevm"
+	"github.com/DeAI-Artist/MintAI/core/internal/testutils/configtest"
 	commonassets "github.com/smartcontractkit/chainlink-common/pkg/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/assets"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config"
-	mocks2 "github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/mocks"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/config/toml"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/evm/utils/big"
-	"github.com/smartcontractkit/chainlink/v2/core/chains/legacyevm"
-	"github.com/smartcontractkit/chainlink/v2/core/internal/testutils/configtest"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ethkey"
-	evmrelay "github.com/smartcontractkit/chainlink/v2/core/services/relay/evm"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ethkey"
+	evmrelay "github.com/DeAI-Artist/MintAI/core/services/relay/evm"
 )
 
 type mockEvmConfig struct {

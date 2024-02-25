@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ocr2key"
-	"github.com/smartcontractkit/chainlink/v2/core/services/keystore/keys/ocrkey"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ocr2key"
+	"github.com/DeAI-Artist/MintAI/core/services/keystore/keys/ocrkey"
 )
 
 // OCRKeysBundleResource represents a bundle of OCRs keys as JSONAPI resource

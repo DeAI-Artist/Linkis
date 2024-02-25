@@ -9,13 +9,13 @@ import (
 	"github.com/jackc/pgconn"
 	"github.com/pkg/errors"
 
-	"github.com/smartcontractkit/chainlink/v2/core/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/logger/audit"
-	"github.com/smartcontractkit/chainlink/v2/core/services/chainlink"
-	clsession "github.com/smartcontractkit/chainlink/v2/core/sessions"
-	"github.com/smartcontractkit/chainlink/v2/core/utils"
-	webauth "github.com/smartcontractkit/chainlink/v2/core/web/auth"
-	"github.com/smartcontractkit/chainlink/v2/core/web/presenters"
+	"github.com/DeAI-Artist/MintAI/core/auth"
+	"github.com/DeAI-Artist/MintAI/core/logger/audit"
+	"github.com/DeAI-Artist/MintAI/core/services/chainlink"
+	clsession "github.com/DeAI-Artist/MintAI/core/sessions"
+	"github.com/DeAI-Artist/MintAI/core/utils"
+	webauth "github.com/DeAI-Artist/MintAI/core/web/auth"
+	"github.com/DeAI-Artist/MintAI/core/web/presenters"
 )
 
 // UserController manages the current Session's User.

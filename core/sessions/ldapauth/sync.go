@@ -5,15 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/go-ldap/ldap/v3"
 	"github.com/jmoiron/sqlx"
 	"github.com/lib/pq"
 
+	"github.com/DeAI-Artist/MintAI/core/config"
+	"github.com/DeAI-Artist/MintAI/core/logger"
+	"github.com/DeAI-Artist/MintAI/core/services/pg"
+	"github.com/DeAI-Artist/MintAI/core/sessions"
 	"github.com/smartcontractkit/chainlink-common/pkg/utils"
-	"github.com/smartcontractkit/chainlink/v2/core/config"
-	"github.com/smartcontractkit/chainlink/v2/core/logger"
-	"github.com/smartcontractkit/chainlink/v2/core/services/pg"
-	"github.com/smartcontractkit/chainlink/v2/core/sessions"
 )
 
 type LDAPServerStateSyncer struct {
