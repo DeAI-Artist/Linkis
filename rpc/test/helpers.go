@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
+	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	"github.com/DeAI-Artist/MintAI/libs/log"
 
-	cfg "github.com/tendermint/tendermint/config"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	core_grpc "github.com/tendermint/tendermint/rpc/grpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	cfg "github.com/DeAI-Artist/MintAI/config"
+	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	nm "github.com/DeAI-Artist/MintAI/node"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/MintAI/privval"
+	"github.com/DeAI-Artist/MintAI/proxy"
+	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
+	core_grpc "github.com/DeAI-Artist/MintAI/rpc/grpc"
+	rpcclient "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

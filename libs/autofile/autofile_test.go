@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmos "github.com/tendermint/tendermint/libs/os"
+	tmos "github.com/DeAI-Artist/MintAI/libs/os"
 )
 
 func TestSIGHUP(t *testing.T) {

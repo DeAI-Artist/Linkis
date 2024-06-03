@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 // assert that all nodes that have blocks at the height of a misbehavior has evidence

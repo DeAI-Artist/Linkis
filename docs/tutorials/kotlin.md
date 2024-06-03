@@ -115,7 +115,7 @@ Hello world.
 
 Tendermint Core communicates with the application through the Application
 BlockChain Interface (ABCI). All message types are defined in the [protobuf
-file](https://github.com/tendermint/tendermint/blob/v0.34.x/proto/tendermint/abci/types.proto).
+file](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/proto/tendermint/abci/types.proto).
 This allows Tendermint Core to run applications written in any programming
 language.
 
@@ -168,29 +168,29 @@ Copy the necessary `.proto` files to your project:
 
 ```bash
 mkdir -p \
-  $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/abci \
-  $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/version \
-  $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/types \
-  $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/crypto \
-  $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/libs \
+  $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/abci \
+  $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/version \
+  $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/types \
+  $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/crypto \
+  $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/libs \
   $KVSTORE_HOME/src/main/proto/github.com/gogo/protobuf/gogoproto
 
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/abci/types.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/abci/types.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/version/version.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/version/version.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/types/types.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/types/types.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/types/evidence.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/types/evidence.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/types/params.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/types/params.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/crypto/merkle.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/crypto/merkle.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/crypto/keys.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/crypto/keys.proto
-cp $GOPATH/src/github.com/tendermint/tendermint/proto/tendermint/libs/types.proto \
-   $KVSTORE_HOME/src/main/proto/github.com/tendermint/tendermint/proto/tendermint/libs/types.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/abci/types.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/abci/types.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/version/version.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/version/version.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/types/types.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/types/types.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/types/evidence.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/types/evidence.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/types/params.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/types/params.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/crypto/merkle.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/crypto/merkle.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/crypto/keys.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/crypto/keys.proto
+cp $GOPATH/src/github.com/DeAI-Artist/MintAI/proto/tendermint/libs/types.proto \
+   $KVSTORE_HOME/src/main/proto/github.com/DeAI-Artist/MintAI/proto/tendermint/libs/types.proto
 cp $GOPATH/src/github.com/gogo/protobuf/gogoproto/gogo.proto \
    $KVSTORE_HOME/src/main/proto/github.com/gogo/protobuf/gogoproto/gogo.proto
 ```
@@ -314,7 +314,7 @@ etc.) by Tendermint Core.
 
 Valid transactions will eventually be committed given they are not too big and
 have enough gas. To learn more about gas, check out ["the
-specification"](https://github.com/tendermint/tendermint/blob/v0.34.x/spec/abci/apps.md#gas).
+specification"](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/abci/apps.md#gas).
 
 For the underlying key-value store we'll use
 [JetBrains Xodus](https://github.com/JetBrains/xodus), which is a transactional schema-less embedded high-performance database written in Java.
@@ -422,7 +422,7 @@ the application's `Query` method.
 
 Applications are free to provide their own APIs. But by using Tendermint Core
 as a proxy, clients (including [light client
-package](https://godoc.org/github.com/tendermint/tendermint/light)) can leverage
+package](https://godoc.org/github.com/DeAI-Artist/MintAI/light)) can leverage
 the unified API across different applications. Plus they won't have to call the
 otherwise separate Tendermint Core API for additional proofs.
 
@@ -446,7 +446,7 @@ override fun query(req: RequestQuery, responseObserver: StreamObserver<ResponseQ
 ```
 
 The complete specification can be found
-[here](https://github.com/tendermint/tendermint/tree/v0.34.x/spec/abci/).
+[here](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/spec/abci/).
 
 ## 1.4 Starting an application and a Tendermint Core instances
 
@@ -522,7 +522,7 @@ Tendermint Core.
 
 ```bash
 rm -rf /tmp/example
-cd $GOPATH/src/github.com/tendermint/tendermint
+cd $GOPATH/src/github.com/DeAI-Artist/MintAI
 make install
 TMHOME="/tmp/example" tendermint init
 
@@ -598,7 +598,7 @@ curl -s 'localhost:26657/abci_query?data="tendermint"'
 
 I hope everything went smoothly and your first, but hopefully not the last,
 Tendermint Core application is up and running. If not, please [open an issue on
-Github](https://github.com/tendermint/tendermint/issues/new/choose). To dig
+Github](https://github.com/DeAI-Artist/MintAI/issues/new/choose). To dig
 deeper, read [the docs](https://docs.tendermint.com/v0.34/).
 
 The full source code of this example project can be found [here](https://github.com/climber73/tendermint-abci-grpc-kotlin).

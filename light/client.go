@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/light/store"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/MintAI/light/provider"
+	"github.com/DeAI-Artist/MintAI/light/store"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 type mode byte
@@ -506,7 +506,7 @@ func (c *Client) VerifyLightBlockAtHeight(ctx context.Context, height int64, now
 // headers are not adjacent, verifySkipping is performed and necessary (not all)
 // intermediate headers will be requested. See the specification for details.
 // Intermediate headers are not saved to database.
-// https://github.com/tendermint/tendermint/blob/v0.34.x/spec/consensus/light-client.md
+// https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/consensus/light-client.md
 //
 // If the header, which is older than the currently trusted header, is
 // requested and the light client does not have it, VerifyHeader will perform:

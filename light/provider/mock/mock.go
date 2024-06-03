@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/light/provider"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 type Mock struct {

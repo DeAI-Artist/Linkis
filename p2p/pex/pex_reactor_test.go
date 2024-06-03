@@ -12,11 +12,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/mock"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/MintAI/config"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/MintAI/p2p/mock"
+	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
 )
 
 var cfg *config.P2PConfig
@@ -402,7 +402,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 // this should give it time to request addrs and for the seed
 // to call FlushStop, and allows us to test calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
-// https://github.com/tendermint/tendermint/issues/3231.
+// https://github.com/DeAI-Artist/MintAI/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {
 	N := 2
 	switches := make([]*p2p.Switch, N)

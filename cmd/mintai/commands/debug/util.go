@@ -9,8 +9,8 @@ import (
 	"path"
 	"path/filepath"
 
-	cfg "github.com/tendermint/tendermint/config"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
+	cfg "github.com/DeAI-Artist/MintAI/config"
+	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
 )
 
 // dumpStatus gets node status state dump from the MintAI RPC and writes it

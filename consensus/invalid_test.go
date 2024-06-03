@@ -3,13 +3,13 @@ package consensus
 import (
 	"testing"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/p2p"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/libs/bytes"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	tmcons "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus"
+	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 //----------------------------------------------

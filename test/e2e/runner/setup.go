@@ -16,14 +16,14 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/test/e2e/pkg/infra"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/config"
+	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/MintAI/privval"
+	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
+	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 const (

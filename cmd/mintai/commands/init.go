@@ -5,13 +5,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/tendermint/tendermint/config"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	cfg "github.com/DeAI-Artist/MintAI/config"
+	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/MintAI/privval"
+	"github.com/DeAI-Artist/MintAI/types"
+	tmtime "github.com/DeAI-Artist/MintAI/types/time"
 )
 
 // InitFilesCmd initialises a fresh MintAI Core instance.

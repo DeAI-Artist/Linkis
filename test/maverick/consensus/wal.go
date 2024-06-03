@@ -11,14 +11,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	// tmjson "github.com/tendermint/tendermint/libs/json"
-	tmcon "github.com/tendermint/tendermint/consensus"
-	auto "github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/service"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	// tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	tmcon "github.com/DeAI-Artist/MintAI/consensus"
+	auto "github.com/DeAI-Artist/MintAI/libs/autofile"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	"github.com/DeAI-Artist/MintAI/libs/service"
+	tmcons "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus"
+	tmtime "github.com/DeAI-Artist/MintAI/types/time"
 )
 
 const (
@@ -177,7 +177,7 @@ func (wal *BaseWAL) WriteSync(msg tmcon.WALMessage) error {
 	}
 
 	if err := wal.FlushAndSync(); err != nil {
-		wal.Logger.Error(`WriteSync failed to flush consensus wal. 
+		wal.Logger.Error(`WriteSync failed to flush consensus wal.
 		WARNING: may result in creating alternative proposals / votes for the current height iff the node restarted`,
 			"err", err)
 		return err

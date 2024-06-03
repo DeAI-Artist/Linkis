@@ -1,4 +1,4 @@
-GOMOD="github.com/tendermint/tendermint/test/loadtime"
+GOMOD="github.com/DeAI-Artist/MintAI/test/loadtime"
 OUTPUT?=build/
 
 build:

@@ -3,8 +3,8 @@ package behaviour
 import (
 	"errors"
 
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/MintAI/p2p"
 )
 
 // Reporter provides an interface for reactors to report the behaviour

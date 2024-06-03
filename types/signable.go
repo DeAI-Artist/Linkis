@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmmath "github.com/tendermint/tendermint/libs/math"
+	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
+	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
 )
 
 var (

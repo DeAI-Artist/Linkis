@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	tmtypes "github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	"github.com/DeAI-Artist/MintAI/consensus/types"
+	"github.com/DeAI-Artist/MintAI/crypto/merkle"
+	"github.com/DeAI-Artist/MintAI/libs/autofile"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmtypes "github.com/DeAI-Artist/MintAI/types"
+	tmtime "github.com/DeAI-Artist/MintAI/types/time"
 )
 
 const (

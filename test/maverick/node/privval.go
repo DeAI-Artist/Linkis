@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/tempfile"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/crypto"
+	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
+	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
+	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	"github.com/DeAI-Artist/MintAI/libs/tempfile"
+	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 // *******************************************************************************************************************

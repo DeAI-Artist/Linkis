@@ -281,7 +281,7 @@ We call this encoding the SignBytes. For instance, SignBytes for a vote is the p
 
 ```protobuf
 message CanonicalVote {
-  SignedMsgType             type      = 1;  
+  SignedMsgType             type      = 1;
   sfixed64                  height    = 2;  // canonicalization requires fixed size encoding here
   sfixed64                  round     = 3;  // canonicalization requires fixed size encoding here
   CanonicalBlockID          block_id  = 4;
@@ -297,4 +297,4 @@ in HSMs. It creates fixed offsets for relevant fields that need to be read in th
 
 For more details, see the [signing spec](../consensus/signing.md).
 Also, see the motivating discussion in
-[#1622](https://github.com/tendermint/tendermint/issues/1622).
+[#1622](https://github.com/DeAI-Artist/MintAI/issues/1622).

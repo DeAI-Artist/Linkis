@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/privval"
+	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	"github.com/DeAI-Artist/MintAI/privval"
 )
 
 // ShowValidatorCmd adds capabilities for showing the validator info.

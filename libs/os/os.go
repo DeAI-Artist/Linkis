@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/DeAI-Artist/MintAI/libs/log"
 )
 
 type logger interface {

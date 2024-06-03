@@ -1,6 +1,6 @@
 # Tendermint
 
-_UPDATE: TendermintCore featureset is frozen for LTS, see issue https://github.com/tendermint/tendermint/issues/9972_<br/>
+_UPDATE: TendermintCore featureset is frozen for LTS, see issue https://github.com/DeAI-Artist/MintAI/issues/9972_<br/>
 _This is the latest stable release used by cosmoshub-4, version 0.34.24_<br/>
 _The previous main branch (v0.38.xx) can now be found under "main_backup"_<br/>
 
@@ -38,7 +38,7 @@ Complete documentation can be found on the
 ## Releases
 
 Please do not depend on `main` as your production branch. Use
-[releases](https://github.com/tendermint/tendermint/releases) instead.
+[releases](https://github.com/DeAI-Artist/MintAI/releases) instead.
 
 Tendermint has been in the production of private and public environments, most
 notably the blockchains of the Cosmos Network. we haven't released v1.0 yet
@@ -162,18 +162,18 @@ for-profit entity that also maintains [tendermint.com](https://tendermint.com).
 [smr]: https://en.wikipedia.org/wiki/State_machine_replication
 [Blockchain]: https://en.wikipedia.org/wiki/Blockchain
 [version-badge]: https://img.shields.io/github/tag/tendermint/tendermint.svg
-[version-url]: https://github.com/tendermint/tendermint/releases/latest
+[version-url]: https://github.com/DeAI-Artist/MintAI/releases/latest
 [api-badge]: https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
-[api-url]: https://pkg.go.dev/github.com/tendermint/tendermint
+[api-url]: https://pkg.go.dev/github.com/DeAI-Artist/MintAI
 [go-badge]: https://img.shields.io/badge/go-1.18-blue.svg
 [go-url]: https://github.com/moovweb/gvm
 [discord-badge]: https://img.shields.io/discord/669268347736686612.svg
 [discord-url]: https://discord.gg/cosmosnetwork
 [license-badge]: https://img.shields.io/github/license/tendermint/tendermint.svg
-[license-url]: https://github.com/tendermint/tendermint/blob/main/LICENSE
-[sg-badge]: https://sourcegraph.com/github.com/tendermint/tendermint/-/badge.svg
-[sg-url]: https://sourcegraph.com/github.com/tendermint/tendermint?badge
-[tests-url]: https://github.com/tendermint/tendermint/actions/workflows/tests.yml
-[tests-badge]: https://github.com/tendermint/tendermint/actions/workflows/tests.yml/badge.svg?branch=main
-[lint-badge]: https://github.com/tendermint/tendermint/actions/workflows/lint.yml/badge.svg
-[lint-url]: https://github.com/tendermint/tendermint/actions/workflows/lint.yml
+[license-url]: https://github.com/DeAI-Artist/MintAI/blob/main/LICENSE
+[sg-badge]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI/-/badge.svg
+[sg-url]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI?badge
+[tests-url]: https://github.com/DeAI-Artist/MintAI/actions/workflows/tests.yml
+[tests-badge]: https://github.com/DeAI-Artist/MintAI/actions/workflows/tests.yml/badge.svg?branch=main
+[lint-badge]: https://github.com/DeAI-Artist/MintAI/actions/workflows/lint.yml/badge.svg
+[lint-url]: https://github.com/DeAI-Artist/MintAI/actions/workflows/lint.yml

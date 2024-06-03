@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	tmquery "github.com/tendermint/tendermint/libs/pubsub/query"
-	nm "github.com/tendermint/tendermint/node"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/core"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/libs/bytes"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
+	tmquery "github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	nm "github.com/DeAI-Artist/MintAI/node"
+	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
+	"github.com/DeAI-Artist/MintAI/rpc/core"
+	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 /*

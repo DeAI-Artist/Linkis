@@ -8,18 +8,18 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/light"
-	lightprovider "github.com/tendermint/tendermint/light/provider"
-	lighthttp "github.com/tendermint/tendermint/light/provider/http"
-	lightrpc "github.com/tendermint/tendermint/light/rpc"
-	lightdb "github.com/tendermint/tendermint/light/store/db"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/MintAI/light"
+	lightprovider "github.com/DeAI-Artist/MintAI/light/provider"
+	lighthttp "github.com/DeAI-Artist/MintAI/light/provider/http"
+	lightrpc "github.com/DeAI-Artist/MintAI/light/rpc"
+	lightdb "github.com/DeAI-Artist/MintAI/light/store/db"
+	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
+	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
+	sm "github.com/DeAI-Artist/MintAI/state"
+	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/MintAI/version"
 )
 
 //go:generate ../scripts/mockery_generate.sh StateProvider

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/DeAI-Artist/MintAI/libs/log"
 )
 
 func TestLoggerLogsItsErrors(t *testing.T) {

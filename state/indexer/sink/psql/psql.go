@@ -11,9 +11,9 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 const (

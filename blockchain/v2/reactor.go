@@ -7,14 +7,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/tendermint/tendermint/behaviour"
-	bc "github.com/tendermint/tendermint/blockchain"
-	"github.com/tendermint/tendermint/libs/log"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blockchain"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/behaviour"
+	bc "github.com/DeAI-Artist/MintAI/blockchain"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	bcproto "github.com/DeAI-Artist/MintAI/proto/tendermint/blockchain"
+	"github.com/DeAI-Artist/MintAI/state"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 const (

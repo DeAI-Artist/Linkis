@@ -8,14 +8,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tendermint/tendermint/light/provider"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/light/provider"
+	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
+	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 var (
-	// This is very brittle, see: https://github.com/tendermint/tendermint/issues/4740
+	// This is very brittle, see: https://github.com/DeAI-Artist/MintAI/issues/4740
 	regexpMissingHeight = regexp.MustCompile(`height \d+ is not available`)
 	regexpTooHigh       = regexp.MustCompile(`height \d+ must be less than or equal to`)
 	regexpTimedOut      = regexp.MustCompile(`Timeout exceeded`)

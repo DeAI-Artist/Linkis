@@ -3,10 +3,10 @@ package privval
 import (
 	"io"
 
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/libs/service"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	privvalproto "github.com/DeAI-Artist/MintAI/proto/tendermint/privval"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

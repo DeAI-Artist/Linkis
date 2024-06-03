@@ -3,10 +3,10 @@ package v2
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/p2p"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blockchain"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	bcproto "github.com/DeAI-Artist/MintAI/proto/tendermint/blockchain"
+	"github.com/DeAI-Artist/MintAI/state"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 type iIO interface {

@@ -12,11 +12,11 @@ import (
 	"github.com/gorilla/websocket"
 	metrics "github.com/rcrowley/go-metrics"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	"github.com/DeAI-Artist/MintAI/libs/service"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
 )
 
 const (
@@ -501,7 +501,7 @@ func (c *WSClient) readRoutine() {
 		// because they are implemented as responses with the subscribe request's
 		// ID. According to the spec, they should be notifications (requests
 		// without IDs).
-		// https://github.com/tendermint/tendermint/issues/2949
+		// https://github.com/DeAI-Artist/MintAI/issues/2949
 		// c.mtx.Lock()
 		// if _, ok := c.sentIDs[response.ID.(types.JSONRPCIntID)]; !ok {
 		// 	c.Logger.Error("unsolicited response ID", "id", response.ID, "expected", c.sentIDs)

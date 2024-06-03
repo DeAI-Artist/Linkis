@@ -1,6 +1,6 @@
 # Results of Discussions and Decisions
 
-- Generating a minimal proof of fork (as suggested in [Issue #5083](https://github.com/tendermint/tendermint/issues/5083)) is too costly at the light client
+- Generating a minimal proof of fork (as suggested in [Issue #5083](https://github.com/DeAI-Artist/MintAI/issues/5083)) is too costly at the light client
     - we do not know all lightblocks from the primary
     - therefore there are many scenarios. we might even need to ask
       the primary again for additional lightblocks to isolate the
@@ -30,7 +30,7 @@
 
 - decision: "full" proof of fork consists of two traces that originate in the
   same lightblock and lead to conflicting headers of the same height.
-  
+
 - For submission of proof of fork, we may do some optimizations, for
   instance, we might just submit  a trace of lightblocks that verifies a block
   different from the one the full node knows (we do not send the trace
@@ -44,7 +44,7 @@
 - Observe that just two blocks for the same height are not
 sufficient proof of fork.
 One of the blocks may be bogus [TMBC-BOGUS.1] which does
-not constitute slashable behavior.  
+not constitute slashable behavior.
 Which leads to the question whether the light node should try to do
 fork detection on its initial block (from subjective
 initialization). This could be done by doing backwards verification
@@ -79,7 +79,7 @@ func Sequential-Supervisor () (Error) {
     loop {
      // get the next height
         nextHeight := input();
-  
+
   // Verify
         result := NoResult;
         while result != ResultSuccess {
@@ -91,7 +91,7 @@ func Sequential-Supervisor () (Error) {
              Replace_Primary();
    }
         }
-  
+
   // Cross-check
         PoFs := Forkdetector(lightStore, PoFs);
         if PoFs.Empty {

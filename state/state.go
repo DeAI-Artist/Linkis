@@ -9,12 +9,12 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
+	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
+	"github.com/DeAI-Artist/MintAI/types"
+	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/MintAI/version"
 )
 
 // database key

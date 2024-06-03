@@ -60,7 +60,7 @@ of the problem addressed by the Lightclient Verification protocol.
 
     - [Incentives](#incentives): how faulty full nodes may benefit from
     misbehaving and how correct full nodes benefit from cooperating.
-  
+
     - [Computational Model](#Computational-Model):
       timing and correctness assumptions.
 
@@ -152,7 +152,7 @@ Given a full node, a
 - *peerID* is the PeerID (public key) of a full node,
 - *voting_power* is an integer (representing the full node's
   voting power in a certain consensus instance).
-  
+
 > In the Golang implementation the data type for *validator
 pair* is called `Validator`
 
@@ -264,7 +264,7 @@ If for a block *b*,  a commit *c*
 - contains at least one validator pair *(v,p)* such that *v* is a
     **correct** validator node, and
 - is contained in *PossibleCommit(b)*
-  
+
 then the block *b* is on the blockchain.
 
 ## Context of this document
@@ -400,7 +400,7 @@ Each instance must eventually terminate.
     - the  *primary* is correct (and locally has the block of
        *targetHeight*), and
     - *LightStore* always contains a verified header whose age is less than the
-        trusting period,  
+        trusting period,
     then *Core Verification* adds a verified header *hd* with height
     *targetHeight* to *LightStore* and it **terminates successfully**
 
@@ -429,8 +429,8 @@ The *Verifier* solves the invariant of the sequential part
 
 In the case the primary is correct, and there is a recent header in *LightStore*, the verifier satisfies the liveness requirements.
 
-⋀ *primary is correct*  
-⋀ always ∃ verified header in LightStore. *header.Time* > *now* - *trustingPeriod*  
+⋀ *primary is correct*
+⋀ always ∃ verified header in LightStore. *header.Time* > *now* - *trustingPeriod*
 ⋀ [**[LCV-A-Comm.1]**](#lcv-a-comm) ⋀ (
        ( [**[TMBC-CorrFull.1]**][TMBC-CorrFull-link] ⋀
          [**[LCV-DIST-LIVE.1]**](#lcv-vc-live) )
@@ -455,7 +455,7 @@ independently:
   underspecified as different implementations (currently in Goland and
   Rust) may implement different optimizations here. We just provide
   necessary conditions on how the height may evolve.
-  
+
 <!-- > `ValidAndVerified` is the function that is sometimes called "Light -->
 <!-- > Client" in the IBC context. -->
 
@@ -528,7 +528,7 @@ func (ls LightStore) LatestVerified() LightBlock
 #### **[LCV-FUNC-UPDATE.2]**
 
 ```go
-func (ls LightStore) Update(lightBlock LightBlock, 
+func (ls LightStore) Update(lightBlock LightBlock,
                             verfiedState VerifiedState
        verifiedBy Height)
 ```
@@ -768,7 +768,7 @@ func VerifyToTarget(primary PeerID, lightStore LightStore,
     - if the precondition is violated
     - if `ValidAndVerified` or `FetchLightBlock` report an error
     - if [**[LCV-INV-TP.1]**](#LCV-INV-TP.1) is violated
-  
+
 ### Details of the Functions
 
 #### **[LCV-FUNC-VALID.1]**
@@ -833,12 +833,12 @@ func Schedule(lightStore, nextHeight, targetHeight) Height
 - Expected postcondition: **[LCV-SCHEDULE-POST.1]**
    Return *H* s.t.
    1. if *lightStore.LatestVerified.Height = nextHeight* and
-      *lightStore.LatestVerified < targetHeight* then  
+      *lightStore.LatestVerified < targetHeight* then
    *nextHeight < H <= targetHeight*
    2. if *lightStore.LatestVerified.Height < nextHeight* and
-      *lightStore.LatestVerified.Height < targetHeight* then  
+      *lightStore.LatestVerified.Height < targetHeight* then
    *lightStore.LatestVerified.Height < H < nextHeight*
-   3. if *lightStore.LatestVerified.Height = targetHeight* then  
+   3. if *lightStore.LatestVerified.Height = targetHeight* then
      *H =  targetHeight*
 
 > Case i. captures the case where the light block at height *nextHeight*
@@ -929,7 +929,7 @@ header of height *startHeader.Height + 1* is added to *LightStore*.
   expired, that is only the case if
     - startHeader.Time > startTime + WCG * (Comp + 2 Delta) -
       trustingPeriod,
-    - that is, if core verification is started at  
+    - that is, if core verification is started at
    startTime < startHeader.Time + trustingPeriod -  WCG * (Comp + 2 Delta)
 
 - one may then do an inductive argument from this point on, depending
@@ -993,7 +993,7 @@ the following cases:
     - otherwise. In this case we need to do "backwards verification"
      using the hash of the previous block in the `LastBlockID` field
      of a header.
-  
+
 **Open Question:** what are the security assumptions for backward
 verification. Should we check that the light block we verify from
 (and/or the checked light block) is within the trusting period?
@@ -1041,7 +1041,7 @@ following function:
 ```go
 func Backwards (primary PeerID, lightStore LightStore, targetHeight Height)
                (LightStore, Result) {
-  
+
     lb,res = lightStore.MinVerified()
     if res = false {
         return (lightStore, ResultFailure)
@@ -1130,7 +1130,7 @@ func Main (primary PeerID, lightStore LightStore, targetHeight Height)
 <!--          return Backwards(primary, lightStore, targetHeight) -->
 <!-- 	 - if b2 exists -->
 <!--           - make auxiliary light store auxLS containing only b2 -->
-  
+
 <!-- 	       VerifyToTarget(primary, auxLS, targetHeight) -->
 <!--      - if b2  -->
 
@@ -1164,15 +1164,15 @@ func Main (primary PeerID, lightStore LightStore, targetHeight Height)
 
 [lightclient]: https://github.com/interchainio/tendermint-rs/blob/e2cb9aca0b95430fca2eac154edddc9588038982/docs/architecture/adr-002-lite-client.md
 [fork-detector]: https://github.com/informalsystems/tendermint-rs/blob/master/docs/spec/lightclient/detection.md
-[fullnode]: https://github.com/tendermint/tendermint/blob/v0.34.x/spec/blockchain/fullnode.md
+[fullnode]: https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/fullnode.md
 
 [ibc-rs]:https://github.com/informalsystems/ibc-rs
 
-[FN-LuckyCase-link]: https://github.com/tendermint/tendermint/blob/v0.34.x/spec/blockchain/fullnode.md#fn-luckycase
+[FN-LuckyCase-link]: https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/fullnode.md#fn-luckycase
 
-[blockchain-validator-set]: https://github.com/tendermint/tendermint/blob/v0.34.x/spec/blockchain/blockchain.md#data-structures
-[fullnode-data-structures]: https://github.com/tendermint/tendermint/blob/v0.34.x/spec/blockchain/fullnode.md#data-structures
+[blockchain-validator-set]: https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/blockchain.md#data-structures
+[fullnode-data-structures]: https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/fullnode.md#data-structures
 
-[FN-ManifestFaulty-link]: https://github.com/tendermint/tendermint/blob/v0.34.x/spec/blockchain/fullnode.md#fn-manifestfaulty
+[FN-ManifestFaulty-link]: https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/fullnode.md#fn-manifestfaulty
 
 [arXiv]: https://arxiv.org/abs/1807.04938

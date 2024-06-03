@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"sort"
 
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
 )
 
 // HTTP + JSON handler

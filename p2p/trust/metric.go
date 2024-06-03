@@ -7,8 +7,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
+	"github.com/DeAI-Artist/MintAI/libs/service"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
 )
 
 //---------------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-module github.com/tendermint/tendermint
+module github.com/DeAI-Artist/MintAI
 
 go 1.18
 

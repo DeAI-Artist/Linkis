@@ -3,11 +3,11 @@ package core
 import (
 	"time"
 
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/p2p"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 // Status returns Tendermint status including node info, pubkey, latest block

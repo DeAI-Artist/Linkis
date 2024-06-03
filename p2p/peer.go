@@ -8,11 +8,11 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/tendermint/tendermint/libs/cmap"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/DeAI-Artist/MintAI/libs/cmap"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/MintAI/libs/service"
 
-	tmconn "github.com/tendermint/tendermint/p2p/conn"
+	tmconn "github.com/DeAI-Artist/MintAI/p2p/conn"
 )
 
 //go:generate ../scripts/mockery_generate.sh Peer

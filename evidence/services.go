@@ -1,7 +1,7 @@
 package evidence
 
 import (
-	"github.com/tendermint/tendermint/types"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 //go:generate ../scripts/mockery_generate.sh BlockStore

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/DeAI-Artist/MintAI/abci/types"
 )
 
 const (

@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/libs/log"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/test/e2e/pkg/infra"
-	"github.com/tendermint/tendermint/test/e2e/pkg/infra/docker"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
+	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra"
+	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra/docker"
 )
 
 var (
@@ -270,7 +270,7 @@ func NewCLI() *CLI {
 	Min Block Interval
 	Max Block Interval
 over a 100 block sampling period.
-		
+
 Does not run any perbutations.
 		`,
 		RunE: func(cmd *cobra.Command, args []string) error {

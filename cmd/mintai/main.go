@@ -4,11 +4,11 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	"github.com/tendermint/tendermint/cmd/tendermint/commands/debug"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/cli"
-	nm "github.com/tendermint/tendermint/node"
+	cmd "github.com/DeAI-Artist/MintAI/cmd/mintai/commands"
+	"github.com/DeAI-Artist/MintAI/cmd/mintai/commands/debug"
+	cfg "github.com/DeAI-Artist/MintAI/config"
+	"github.com/DeAI-Artist/MintAI/libs/cli"
+	nm "github.com/DeAI-Artist/MintAI/node"
 )
 
 func main() {

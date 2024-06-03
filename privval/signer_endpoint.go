@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/protoio"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
+	"github.com/DeAI-Artist/MintAI/libs/protoio"
+	"github.com/DeAI-Artist/MintAI/libs/service"
+	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	privvalproto "github.com/DeAI-Artist/MintAI/proto/tendermint/privval"
 )
 
 const (

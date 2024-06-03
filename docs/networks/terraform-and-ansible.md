@@ -14,7 +14,7 @@ testnets on those servers.
 ## Install
 
 NOTE: see the [integration bash
-script](https://github.com/tendermint/tendermint/blob/v0.34.x/networks/remote/integration.sh)
+script](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/networks/remote/integration.sh)
 that can be run on a fresh DO droplet and will automatically spin up a 4
 node testnet. The script more or less does everything described below.
 
@@ -41,7 +41,7 @@ This step will create four Digital Ocean droplets. First, go to the
 correct directory:
 
 ```sh
-cd $GOPATH/src/github.com/tendermint/tendermint/networks/remote/terraform
+cd $GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/terraform
 ```
 
 then:
@@ -58,10 +58,10 @@ With the droplets created and running, let's setup Ansible.
 ## Ansible
 
 The playbooks in [the ansible
-directory](https://github.com/tendermint/tendermint/tree/v0.34.x/networks/remote/ansible)
+directory](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/networks/remote/ansible)
 run ansible roles to configure the sentry node architecture. You must
 switch to this directory to run ansible
-(`cd $GOPATH/src/github.com/tendermint/tendermint/networks/remote/ansible`).
+(`cd $GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible`).
 
 There are several roles that are self-explanatory:
 
@@ -79,7 +79,7 @@ tendermint testnet
 Then, to configure our droplets run:
 
 ```sh
-ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/src/github.com/tendermint/tendermint/build/tendermint -e CONFIGDIR=$GOPATH/src/github.com/tendermint/tendermint/networks/remote/ansible/mytestnet
+ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/src/github.com/DeAI-Artist/MintAI/build/tendermint -e CONFIGDIR=$GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible/mytestnet
 ```
 
 Voila! All your droplets now have the `tendermint` binary and required

@@ -12,12 +12,12 @@ guidelines](./UPGRADING.md#v03424) for more details.
 
 ### IMPROVEMENTS
 
-- `[rpc]` [\#9724](https://github.com/tendermint/tendermint/issues/9724) Remove
+- `[rpc]` [\#9724](https://github.com/DeAI-Artist/MintAI/issues/9724) Remove
   useless whitespace in RPC output (@adizere, @thanethomson)
 
 ### BUG FIXES
 
-- `[rpc]` [\#9692](https://github.com/tendermint/tendermint/issues/9692) Remove
+- `[rpc]` [\#9692](https://github.com/DeAI-Artist/MintAI/issues/9692) Remove
   `Cache-Control` header response from `/check_tx` endpoint (@JayT106)
 
 ## v0.34.23
@@ -35,13 +35,13 @@ facilitate caching.
 Special thanks to external contributors on this release: @JayT106
 
 ### IMPROVEMENTS
-- `[p2p]` [\#9641](https://github.com/tendermint/tendermint/issues/9641) Add new
+- `[p2p]` [\#9641](https://github.com/DeAI-Artist/MintAI/issues/9641) Add new
   Envelope type and associated methods for sending and receiving Envelopes
   instead of raw bytes. This also adds new metrics,
   `tendermint_p2p_message_send_bytes_total` and
   `tendermint_p2p_message_receive_bytes_total`, that expose how many bytes of
   each message type have been sent.
-- `[rpc]` [\#9666](https://github.com/tendermint/tendermint/issues/9666) Enable
+- `[rpc]` [\#9666](https://github.com/DeAI-Artist/MintAI/issues/9666) Enable
   caching of RPC responses (@JayT106)
 
   The following RPC endpoints will return `Cache-Control` headers with a maximum
@@ -63,7 +63,7 @@ Special thanks to external contributors on this release: @JayT106
 ## v0.34.22
 
 This release includes several bug fixes, [one of
-which](https://github.com/tendermint/tendermint/pull/9518) we discovered while
+which](https://github.com/DeAI-Artist/MintAI/pull/9518) we discovered while
 building up a baseline for v0.34 against which to compare our upcoming v0.37
 release during our [QA process](./docs/qa/).
 
@@ -71,22 +71,22 @@ Special thanks to external contributors on this release: @RiccardoM
 
 ### FEATURES
 
-- [rpc] [\#9423](https://github.com/tendermint/tendermint/pull/9423) Support
+- [rpc] [\#9423](https://github.com/DeAI-Artist/MintAI/pull/9423) Support
   HTTPS URLs from the WebSocket client (@RiccardoM, @cmwaters)
 
 ### BUG FIXES
 
-- [config] [\#9483](https://github.com/tendermint/tendermint/issues/9483)
+- [config] [\#9483](https://github.com/DeAI-Artist/MintAI/issues/9483)
   Calling `tendermint init` would incorrectly leave out the new `[storage]`
   section delimiter in the generated configuration file - this has now been
   fixed
-- [p2p] [\#9500](https://github.com/tendermint/tendermint/issues/9500) Prevent
+- [p2p] [\#9500](https://github.com/DeAI-Artist/MintAI/issues/9500) Prevent
   peers who have errored being added to the peer set (@jmalicevic)
-- [indexer] [\#9473](https://github.com/tendermint/tendermint/issues/9473) Fix
+- [indexer] [\#9473](https://github.com/DeAI-Artist/MintAI/issues/9473) Fix
   bug that caused the psql indexer to index empty blocks whenever one of the
   transactions returned a non zero code. The relevant deduplication logic has
   been moved within the kv indexer only (@cmwaters)
-- [blocksync] [\#9518](https://github.com/tendermint/tendermint/issues/9518) A
+- [blocksync] [\#9518](https://github.com/DeAI-Artist/MintAI/issues/9518) A
   block sync stall was observed during our QA process whereby the node was
   unable to make progress. Retrying block requests after a timeout fixes this.
 
@@ -107,20 +107,20 @@ Special thanks to external contributors on this release: @rootwarp & @animart
 
 ### FEATURES
 
-- [cli] [\#9083](https://github.com/tendermint/tendermint/issues/9083) Backport command to reindex missed events (@cmwaters)
-- [cli] [\#9107](https://github.com/tendermint/tendermint/issues/9107) Add the `p2p.external-address` argument to set the node P2P external address (@amimart)
+- [cli] [\#9083](https://github.com/DeAI-Artist/MintAI/issues/9083) Backport command to reindex missed events (@cmwaters)
+- [cli] [\#9107](https://github.com/DeAI-Artist/MintAI/issues/9107) Add the `p2p.external-address` argument to set the node P2P external address (@amimart)
 
 ### IMPROVEMENTS
 
-- [config] [\#9054](https://github.com/tendermint/tendermint/issues/9054) `discard_abci_responses` flag added to discard all ABCI
+- [config] [\#9054](https://github.com/DeAI-Artist/MintAI/issues/9054) `discard_abci_responses` flag added to discard all ABCI
   responses except the last in order to save on storage space in the state
   store (@samricotta)
 
 ### BUG FIXES
 
-- [mempool] [\#9033](https://github.com/tendermint/tendermint/issues/9033) Rework lock discipline to mitigate callback deadlocks in the
+- [mempool] [\#9033](https://github.com/DeAI-Artist/MintAI/issues/9033) Rework lock discipline to mitigate callback deadlocks in the
   priority mempool
-- [cli] [\#9103](https://github.com/tendermint/tendermint/issues/9103) fix unsafe-reset-all for working with home path (@rootwarp)
+- [cli] [\#9103](https://github.com/DeAI-Artist/MintAI/issues/9103) fix unsafe-reset-all for working with home path (@rootwarp)
 
 ## v0.34.20
 
@@ -128,13 +128,13 @@ Special thanks to external contributors on this release: @joeabbey @yihuang
 
 This release introduces a prioritized mempool. Further notes can be found in UPGRADING.md.
 
-NOTE: There's a known issue when combining the prioritized mempool with the ABCI socket client, that the team are curently working to resolve. Read more about the issue [here](https://github.com/tendermint/tendermint/pull/9030).
+NOTE: There's a known issue when combining the prioritized mempool with the ABCI socket client, that the team are curently working to resolve. Read more about the issue [here](https://github.com/DeAI-Artist/MintAI/pull/9030).
 
 ### BUG FIXES
 
-- [blocksync] [\#8496](https://github.com/tendermint/tendermint/pull/8496) validate block against state before persisting it to disk (@cmwaters)
-- [indexer] [#8625](https://github.com/tendermint/tendermint/pull/8625) Fix overriding tx index of duplicated txs. (@yihuang)
-- [mempool] [\#8962](https://github.com/tendermint/tendermint/issues/8962) Backport priority mempool fixes from v0.35.x to v0.34.x (@creachadair).
+- [blocksync] [\#8496](https://github.com/DeAI-Artist/MintAI/pull/8496) validate block against state before persisting it to disk (@cmwaters)
+- [indexer] [#8625](https://github.com/DeAI-Artist/MintAI/pull/8625) Fix overriding tx index of duplicated txs. (@yihuang)
+- [mempool] [\#8962](https://github.com/DeAI-Artist/MintAI/issues/8962) Backport priority mempool fixes from v0.35.x to v0.34.x (@creachadair).
 
 ### FEATURES
 
@@ -143,20 +143,20 @@ NOTE: There's a known issue when combining the prioritized mempool with the ABCI
 
 ### IMPROVEMENTS
 
-- [logging] [\#8845](https://github.com/tendermint/tendermint/issues/8845) Add "Lazy" Stringers to defer Sprintf and Hash until logs print. (@joeabbey)
+- [logging] [\#8845](https://github.com/DeAI-Artist/MintAI/issues/8845) Add "Lazy" Stringers to defer Sprintf and Hash until logs print. (@joeabbey)
 
 ## v0.34.19
 
 ### BUG FIXES
 
-- [cli] [\#8270](https://github.com/tendermint/tendermint/issues/8270) fix reset commands (@alexanderbez).
+- [cli] [\#8270](https://github.com/DeAI-Artist/MintAI/issues/8270) fix reset commands (@alexanderbez).
 
 ## v0.34.18
 
 ### BREAKING CHANGES
 
 - CLI/RPC/Config
-    - [cli] [\#8258](https://github.com/tendermint/tendermint/pull/8258) Fix a bug in the cli that caused `unsafe-reset-all` to panic
+    - [cli] [\#8258](https://github.com/DeAI-Artist/MintAI/pull/8258) Fix a bug in the cli that caused `unsafe-reset-all` to panic
 
 ## v0.34.17
 
@@ -164,12 +164,12 @@ NOTE: There's a known issue when combining the prioritized mempool with the ABCI
 
 - CLI/RPC/Config
 
-   - [cli] [\#8081](https://github.com/tendermint/tendermint/issues/8081) make the reset command safe to use (@marbar3778).
+   - [cli] [\#8081](https://github.com/DeAI-Artist/MintAI/issues/8081) make the reset command safe to use (@marbar3778).
 
 ### BUG FIXES
 
-- [consensus] [\#8079](https://github.com/tendermint/tendermint/issues/8079) start the timeout ticker before relay (backport #7844) (@creachadair).
-- [consensus] [\#7992](https://github.com/tendermint/tendermint/issues/7992) [\#7994](https://github.com/tendermint/tendermint/issues/7994) change lock handling in handleMsg and reactor to alleviate issues gossiping during long ABCI calls (@williambanfield).
+- [consensus] [\#8079](https://github.com/DeAI-Artist/MintAI/issues/8079) start the timeout ticker before relay (backport #7844) (@creachadair).
+- [consensus] [\#7992](https://github.com/DeAI-Artist/MintAI/issues/7992) [\#7994](https://github.com/DeAI-Artist/MintAI/issues/7994) change lock handling in handleMsg and reactor to alleviate issues gossiping during long ABCI calls (@williambanfield).
 
 ## v0.34.16
 
@@ -177,11 +177,11 @@ Special thanks to external contributors on this release: @yihuang
 
 ### BUG FIXES
 
-- [consensus] [\#7617](https://github.com/tendermint/tendermint/issues/7617) calculate prevote message delay metric (backport #7551) (@williambanfield).
-- [consensus] [\#7631](https://github.com/tendermint/tendermint/issues/7631) check proposal non-nil in prevote message delay metric (backport #7625) (@williambanfield).
-- [statesync] [\#7885](https://github.com/tendermint/tendermint/issues/7885) statesync: assert app version matches (backport #7856) (@cmwaters).
-- [statesync] [\#7881](https://github.com/tendermint/tendermint/issues/7881) fix app hash in state rollback (backport #7837) (@cmwaters).
-- [cli] [#7837](https://github.com/tendermint/tendermint/pull/7837) fix app hash in state rollback. (@yihuang).
+- [consensus] [\#7617](https://github.com/DeAI-Artist/MintAI/issues/7617) calculate prevote message delay metric (backport #7551) (@williambanfield).
+- [consensus] [\#7631](https://github.com/DeAI-Artist/MintAI/issues/7631) check proposal non-nil in prevote message delay metric (backport #7625) (@williambanfield).
+- [statesync] [\#7885](https://github.com/DeAI-Artist/MintAI/issues/7885) statesync: assert app version matches (backport #7856) (@cmwaters).
+- [statesync] [\#7881](https://github.com/DeAI-Artist/MintAI/issues/7881) fix app hash in state rollback (backport #7837) (@cmwaters).
+- [cli] [#7837](https://github.com/DeAI-Artist/MintAI/pull/7837) fix app hash in state rollback. (@yihuang).
 
 ## v0.34.15
 
@@ -189,14 +189,14 @@ Special thanks to external contributors on this release: @thanethomson
 
 ### BUG FIXES
 
-- [\#7368](https://github.com/tendermint/tendermint/issues/7368) cmd: add integration test for rollback functionality (@cmwaters).
-- [\#7309](https://github.com/tendermint/tendermint/issues/7309) pubsub: Report a non-nil error when shutting down (fixes #7306).
-- [\#7057](https://github.com/tendermint/tendermint/pull/7057) Import Postgres driver support for the psql indexer (@creachadair).
-- [\#7106](https://github.com/tendermint/tendermint/pull/7106) Revert mutex change to ABCI Clients (@tychoish).
+- [\#7368](https://github.com/DeAI-Artist/MintAI/issues/7368) cmd: add integration test for rollback functionality (@cmwaters).
+- [\#7309](https://github.com/DeAI-Artist/MintAI/issues/7309) pubsub: Report a non-nil error when shutting down (fixes #7306).
+- [\#7057](https://github.com/DeAI-Artist/MintAI/pull/7057) Import Postgres driver support for the psql indexer (@creachadair).
+- [\#7106](https://github.com/DeAI-Artist/MintAI/pull/7106) Revert mutex change to ABCI Clients (@tychoish).
 
 ### IMPROVEMENTS
 
-- [config] [\#7230](https://github.com/tendermint/tendermint/issues/7230) rpc: Add experimental config params to allow for subscription buffer size control (@thanethomson).
+- [config] [\#7230](https://github.com/DeAI-Artist/MintAI/issues/7230) rpc: Add experimental config params to allow for subscription buffer size control (@thanethomson).
 
 ## v0.34.14
 
@@ -204,17 +204,17 @@ This release backports the `rollback` feature to allow recovery in the event of 
 
 ### FEATURES
 
-- [\#6982](https://github.com/tendermint/tendermint/pull/6982) The tendermint binary now has built-in suppport for running the end-to-end test application (with state sync support) (@cmwaters).
-- [cli] [#7033](https://github.com/tendermint/tendermint/pull/7033) Add a `rollback` command to rollback to the previous tendermint state. This may be useful in the event of non-determinstic app hash or when reverting an upgrade. @cmwaters
+- [\#6982](https://github.com/DeAI-Artist/MintAI/pull/6982) The tendermint binary now has built-in suppport for running the end-to-end test application (with state sync support) (@cmwaters).
+- [cli] [#7033](https://github.com/DeAI-Artist/MintAI/pull/7033) Add a `rollback` command to rollback to the previous tendermint state. This may be useful in the event of non-determinstic app hash or when reverting an upgrade. @cmwaters
 
 ### IMPROVEMENTS
 
-- [\#7103](https://github.com/tendermint/tendermint/pull/7104) Remove IAVL dependency (backport of #6550) (@cmwaters)
+- [\#7103](https://github.com/DeAI-Artist/MintAI/pull/7104) Remove IAVL dependency (backport of #6550) (@cmwaters)
 
 ### BUG FIXES
 
-- [\#7057](https://github.com/tendermint/tendermint/pull/7057) Import Postgres driver support for the psql indexer (@creachadair).
-- [ABCI] [\#7110](https://github.com/tendermint/tendermint/issues/7110) Revert "change client to use multi-reader mutexes (#6873)" (@tychoish).
+- [\#7057](https://github.com/DeAI-Artist/MintAI/pull/7057) Import Postgres driver support for the psql indexer (@creachadair).
+- [ABCI] [\#7110](https://github.com/DeAI-Artist/MintAI/issues/7110) Revert "change client to use multi-reader mutexes (#6873)" (@tychoish).
 
 ## v0.34.13
 
@@ -223,9 +223,9 @@ performance under concurrent load, and the PostgreSQL event indexer.
 
 ### IMPROVEMENTS
 
-- [statesync] [\#6881](https://github.com/tendermint/tendermint/issues/6881) improvements to stateprovider logic (@cmwaters)
-- [ABCI] [\#6873](https://github.com/tendermint/tendermint/issues/6873) change client to use multi-reader mutexes (@tychoish)
-- [indexing] [\#6906](https://github.com/tendermint/tendermint/issues/6906) enable the PostgreSQL indexer sink (@creachadair)
+- [statesync] [\#6881](https://github.com/DeAI-Artist/MintAI/issues/6881) improvements to stateprovider logic (@cmwaters)
+- [ABCI] [\#6873](https://github.com/DeAI-Artist/MintAI/issues/6873) change client to use multi-reader mutexes (@tychoish)
+- [indexing] [\#6906](https://github.com/DeAI-Artist/MintAI/issues/6906) enable the PostgreSQL indexer sink (@creachadair)
 
 ## v0.34.12
 
@@ -233,18 +233,18 @@ Special thanks to external contributors on this release: @JayT106.
 
 ### FEATURES
 
-- [rpc] [\#6717](https://github.com/tendermint/tendermint/pull/6717) introduce
+- [rpc] [\#6717](https://github.com/DeAI-Artist/MintAI/pull/6717) introduce
   `/genesis_chunked` rpc endpoint for handling large genesis files by chunking them (@tychoish)
 
 ### IMPROVEMENTS
 
-- [rpc] [\#6825](https://github.com/tendermint/tendermint/issues/6825) Remove egregious INFO log from `ABCI#Query` RPC. (@alexanderbez)
+- [rpc] [\#6825](https://github.com/DeAI-Artist/MintAI/issues/6825) Remove egregious INFO log from `ABCI#Query` RPC. (@alexanderbez)
 
 ### BUG FIXES
 
-- [light] [\#6685](https://github.com/tendermint/tendermint/pull/6685) fix bug
+- [light] [\#6685](https://github.com/DeAI-Artist/MintAI/pull/6685) fix bug
   with incorrectly handling contexts that would occasionally freeze state sync. (@cmwaters)
-- [privval] [\#6748](https://github.com/tendermint/tendermint/issues/6748) Fix vote timestamp to prevent chain halt (@JayT106)
+- [privval] [\#6748](https://github.com/DeAI-Artist/MintAI/issues/6748) Fix vote timestamp to prevent chain halt (@JayT106)
 
 ## v0.34.11
 
@@ -256,17 +256,17 @@ adding two new parameters to the state sync config.
 ### BREAKING CHANGES
 
 - Apps
-    - [Version] [\#6494](https://github.com/tendermint/tendermint/issues/6494) `TMCoreSemVer` is not required to be set as a ldflag any longer.
+    - [Version] [\#6494](https://github.com/DeAI-Artist/MintAI/issues/6494) `TMCoreSemVer` is not required to be set as a ldflag any longer.
 
 ### IMPROVEMENTS
 
-- [statesync] [\#6566](https://github.com/tendermint/tendermint/issues/6566) Allow state sync fetchers and request timeout to be configurable. (@alexanderbez)
-- [statesync] [\#6378](https://github.com/tendermint/tendermint/issues/6378) Retry requests for snapshots and add a minimum discovery time (5s) for new snapshots. (@tychoish)
-- [statesync] [\#6582](https://github.com/tendermint/tendermint/issues/6582) Increase chunk priority and add multiple retry chunk requests (@cmwaters)
+- [statesync] [\#6566](https://github.com/DeAI-Artist/MintAI/issues/6566) Allow state sync fetchers and request timeout to be configurable. (@alexanderbez)
+- [statesync] [\#6378](https://github.com/DeAI-Artist/MintAI/issues/6378) Retry requests for snapshots and add a minimum discovery time (5s) for new snapshots. (@tychoish)
+- [statesync] [\#6582](https://github.com/DeAI-Artist/MintAI/issues/6582) Increase chunk priority and add multiple retry chunk requests (@cmwaters)
 
 ### BUG FIXES
 
-- [evidence] [\#6375](https://github.com/tendermint/tendermint/issues/6375) Fix bug with inconsistent LightClientAttackEvidence hashing (@cmwaters)
+- [evidence] [\#6375](https://github.com/DeAI-Artist/MintAI/issues/6375) Fix bug with inconsistent LightClientAttackEvidence hashing (@cmwaters)
 
 ## v0.34.10
 
@@ -276,8 +276,8 @@ This release fixes a bug where peers would sometimes try to send messages
 on incorrect channels. Special thanks to our friends at Oasis Labs for surfacing
 this issue!
 
-- [p2p/node] [\#6339](https://github.com/tendermint/tendermint/issues/6339) Fix bug with using custom channels (@cmwaters)
-- [light] [\#6346](https://github.com/tendermint/tendermint/issues/6346) Correctly handle too high errors to improve client robustness (@cmwaters)
+- [p2p/node] [\#6339](https://github.com/DeAI-Artist/MintAI/issues/6339) Fix bug with using custom channels (@cmwaters)
+- [light] [\#6346](https://github.com/DeAI-Artist/MintAI/issues/6346) Correctly handle too high errors to improve client robustness (@cmwaters)
 
 ## v0.34.9
 
@@ -294,16 +294,16 @@ Special thanks to our external contributors on this release: @gchaincl
 ### BREAKING CHANGES
 
 - Go API
-    - [rpc/jsonrpc/server] [\#6204](https://github.com/tendermint/tendermint/issues/6204) Modify `WriteRPCResponseHTTP(Error)` to return an error (@melekes)
+    - [rpc/jsonrpc/server] [\#6204](https://github.com/DeAI-Artist/MintAI/issues/6204) Modify `WriteRPCResponseHTTP(Error)` to return an error (@melekes)
 
 ### FEATURES
 
-- [rpc] [\#6226](https://github.com/tendermint/tendermint/issues/6226) Index block events and expose a new RPC method, `/block_search`, to allow querying for blocks by `BeginBlock` and `EndBlock` events (@alexanderbez)
+- [rpc] [\#6226](https://github.com/DeAI-Artist/MintAI/issues/6226) Index block events and expose a new RPC method, `/block_search`, to allow querying for blocks by `BeginBlock` and `EndBlock` events (@alexanderbez)
 
 ### BUG FIXES
 
-- [rpc/jsonrpc/server] [\#6191](https://github.com/tendermint/tendermint/issues/6191) Correctly unmarshal `RPCRequest` when data is `null` (@melekes)
-- [p2p] [\#6289](https://github.com/tendermint/tendermint/issues/6289) Fix "unknown channels" bug on CustomReactors (@gchaincl)
+- [rpc/jsonrpc/server] [\#6191](https://github.com/DeAI-Artist/MintAI/issues/6191) Correctly unmarshal `RPCRequest` when data is `null` (@melekes)
+- [p2p] [\#6289](https://github.com/DeAI-Artist/MintAI/issues/6289) Fix "unknown channels" bug on CustomReactors (@gchaincl)
 - [light/evidence] Adds logic to handle forward lunatic attacks (@cmwaters)
 
 ## v0.34.8
@@ -315,11 +315,11 @@ introduces changes that should mean the logs are much, much quieter. 🎉
 
 ### IMPROVEMENTS
 
-- [libs/log] [\#6174](https://github.com/tendermint/tendermint/issues/6174) Include timestamp (`ts` field; `time.RFC3339Nano` format) in JSON logger output (@melekes)
+- [libs/log] [\#6174](https://github.com/DeAI-Artist/MintAI/issues/6174) Include timestamp (`ts` field; `time.RFC3339Nano` format) in JSON logger output (@melekes)
 
 ### BUG FIXES
 
-- [abci] [\#6124](https://github.com/tendermint/tendermint/issues/6124) Fixes a panic condition during callback execution in `ReCheckTx` during high tx load. (@alexanderbez)
+- [abci] [\#6124](https://github.com/DeAI-Artist/MintAI/issues/6124) Fixes a panic condition during callback execution in `ReCheckTx` during high tx load. (@alexanderbez)
 
 ## v0.34.7
 
@@ -352,7 +352,7 @@ shout-out to @marbar3778 for diagnosing it quickly.
 
 ### BUG FIXES
 
-- [consensus] [\#6128](https://github.com/tendermint/tendermint/pull/6128) Remove privValidator from log call (@tessr)
+- [consensus] [\#6128](https://github.com/DeAI-Artist/MintAI/pull/6128) Remove privValidator from log call (@tessr)
 
 ## v0.34.6
 
@@ -372,9 +372,9 @@ Special thanks to other external contributors on this release: @yayajacky, @odid
 
 ### BUG FIXES
 
-- [light] [\#6022](https://github.com/tendermint/tendermint/pull/6022) Fix a bug when the number of validators equals 100 (@melekes)
-- [light] [\#6026](https://github.com/tendermint/tendermint/pull/6026) Fix a bug when height isn't provided for the rpc calls: `/commit` and `/validators` (@cmwaters)
-- [evidence] [\#6068](https://github.com/tendermint/tendermint/pull/6068) Terminate broadcastEvidenceRoutine when peer is stopped (@melekes)
+- [light] [\#6022](https://github.com/DeAI-Artist/MintAI/pull/6022) Fix a bug when the number of validators equals 100 (@melekes)
+- [light] [\#6026](https://github.com/DeAI-Artist/MintAI/pull/6026) Fix a bug when height isn't provided for the rpc calls: `/commit` and `/validators` (@cmwaters)
+- [evidence] [\#6068](https://github.com/DeAI-Artist/MintAI/pull/6068) Terminate broadcastEvidenceRoutine when peer is stopped (@melekes)
 
 
 ## v0.34.3
@@ -383,7 +383,7 @@ Special thanks to other external contributors on this release: @yayajacky, @odid
 
 This release includes a fix for a high-severity security vulnerability,
 a DoS-vector that impacted Tendermint Core v0.34.0-v0.34.2. For more details, see
-[Security Advisory Mulberry](https://github.com/tendermint/tendermint/security/advisories/GHSA-p658-8693-mhvg)
+[Security Advisory Mulberry](https://github.com/DeAI-Artist/MintAI/security/advisories/GHSA-p658-8693-mhvg)
 or https://nvd.nist.gov/vuln/detail/CVE-2021-21271.
 
 Tendermint Core v0.34.3 also updates GoGo Protobuf to 1.3.2 in order to pick up the fix for
@@ -391,8 +391,8 @@ https://nvd.nist.gov/vuln/detail/CVE-2021-3121.
 
 ### BUG FIXES
 
-- [evidence] [[security fix]](https://github.com/tendermint/tendermint/security/advisories/GHSA-p658-8693-mhvg) Use correct source of evidence time (@cmwaters)
-- [proto] [\#5886](https://github.com/tendermint/tendermint/pull/5889) Bump gogoproto to 1.3.2 (@marbar3778)
+- [evidence] [[security fix]](https://github.com/DeAI-Artist/MintAI/security/advisories/GHSA-p658-8693-mhvg) Use correct source of evidence time (@cmwaters)
+- [proto] [\#5886](https://github.com/DeAI-Artist/MintAI/pull/5889) Bump gogoproto to 1.3.2 (@marbar3778)
 
 ## v0.34.2
 
@@ -405,13 +405,13 @@ resulting in some nodes panicking when trying to verify said evidence.
 ### BREAKING CHANGES
 
 - Go API
-  - [libs/os] [\#5871](https://github.com/tendermint/tendermint/issues/5871) `EnsureDir` now propagates IO errors and checks the file type (@erikgrinaker)
+  - [libs/os] [\#5871](https://github.com/DeAI-Artist/MintAI/issues/5871) `EnsureDir` now propagates IO errors and checks the file type (@erikgrinaker)
 
 ### BUG FIXES
 
-- [evidence] [\#5890](https://github.com/tendermint/tendermint/pull/5890) Add a buffer to evidence from consensus to avoid broadcasting and proposing evidence before the
+- [evidence] [\#5890](https://github.com/DeAI-Artist/MintAI/pull/5890) Add a buffer to evidence from consensus to avoid broadcasting and proposing evidence before the
   height of such an evidence has finished (@cmwaters)
-- [statesync] [\#5889](https://github.com/tendermint/tendermint/issues/5889) Set `LastHeightConsensusParamsChanged` when bootstrapping Tendermint state (@cmwaters)
+- [statesync] [\#5889](https://github.com/DeAI-Artist/MintAI/issues/5889) Set `LastHeightConsensusParamsChanged` when bootstrapping Tendermint state (@cmwaters)
 
 ## v0.34.1
 
@@ -428,20 +428,20 @@ one by one without batching.
 ### BREAKING CHANGES
 
 - CLI/RPC/Config
-  - [cli] [\#5786](https://github.com/tendermint/tendermint/issues/5786) deprecate snake_case commands for hyphen-case (@cmwaters)
+  - [cli] [\#5786](https://github.com/DeAI-Artist/MintAI/issues/5786) deprecate snake_case commands for hyphen-case (@cmwaters)
 
 - Go API
-  - [libs/protoio] [\#5868](https://github.com/tendermint/tendermint/issues/5868) Return number of bytes read in `Reader.ReadMsg()` (@erikgrinaker)
+  - [libs/protoio] [\#5868](https://github.com/DeAI-Artist/MintAI/issues/5868) Return number of bytes read in `Reader.ReadMsg()` (@erikgrinaker)
 
 ### IMPROVEMENTS
 
-- [mempool] [\#5813](https://github.com/tendermint/tendermint/issues/5813) Add `keep-invalid-txs-in-cache` config option. When set to true, mempool will keep invalid transactions in the cache (@p4u)
+- [mempool] [\#5813](https://github.com/DeAI-Artist/MintAI/issues/5813) Add `keep-invalid-txs-in-cache` config option. When set to true, mempool will keep invalid transactions in the cache (@p4u)
 
 ### BUG FIXES
 
-- [crypto] [\#5707](https://github.com/tendermint/tendermint/issues/5707) Fix infinite recursion in string formatting of Secp256k1 keys (@erikgrinaker)
-- [mempool] [\#5800](https://github.com/tendermint/tendermint/issues/5800) Disable `max-batch-bytes` (@melekes)
-- [p2p] [\#5868](https://github.com/tendermint/tendermint/issues/5868) Fix inbound traffic statistics and rate limiting in `MConnection` (@erikgrinaker)
+- [crypto] [\#5707](https://github.com/DeAI-Artist/MintAI/issues/5707) Fix infinite recursion in string formatting of Secp256k1 keys (@erikgrinaker)
+- [mempool] [\#5800](https://github.com/DeAI-Artist/MintAI/issues/5800) Disable `max-batch-bytes` (@melekes)
+- [p2p] [\#5868](https://github.com/DeAI-Artist/MintAI/issues/5868) Fix inbound traffic statistics and rate limiting in `MConnection` (@erikgrinaker)
 
 ## v0.34.0
 
@@ -457,169 +457,169 @@ Special thanks to external contributors on this release: @james-ray, @fedekunze,
 
 - CLI/RPC/Config
 
-   - [config] [\#5315](https://github.com/tendermint/tendermint/pull/5315) Rename `prof_laddr` to `pprof_laddr` and move it to `rpc` section (@melekes)
-  - [evidence] [\#4959](https://github.com/tendermint/tendermint/pull/4959) Add JSON tags to `DuplicateVoteEvidence` (@marbar3778)
-  - [light] [\#4946](https://github.com/tendermint/tendermint/pull/4946) `tendermint lite` command has been renamed to `tendermint light` (@marbar3778)
-  - [privval] [\#4582](https://github.com/tendermint/tendermint/pull/4582) `round` in private_validator_state.json is no longer JSON string; instead it is a number (@marbar3778)
-  - [rpc] [\#4792](https://github.com/tendermint/tendermint/pull/4792) `/validators` are now sorted by voting power (@melekes)
-  - [rpc] [\#4947](https://github.com/tendermint/tendermint/pull/4947) Return an error when `page` pagination param is 0 in `/validators`, `tx_search` (@melekes)
-  - [rpc] [\#5137](https://github.com/tendermint/tendermint/pull/5137) JSON tags of `gasWanted` and `gasUsed` in `ResponseCheckTx` and `ResponseDeliverTx` have been made snake_case (`gas_wanted` and `gas_used`) (@marbar3778)
-  - [rpc] [\#5315](https://github.com/tendermint/tendermint/pull/5315) Remove `/unsafe_start_cpu_profiler`, `/unsafe_stop_cpu_profiler` and `/unsafe_write_heap_profile`. Please use pprof functionality instead (@melekes)
-  - [rpc/client, rpc/jsonrpc/client] [\#5347](https://github.com/tendermint/tendermint/pull/5347) All client methods now accept `context.Context` as 1st param (@melekes)
+   - [config] [\#5315](https://github.com/DeAI-Artist/MintAI/pull/5315) Rename `prof_laddr` to `pprof_laddr` and move it to `rpc` section (@melekes)
+  - [evidence] [\#4959](https://github.com/DeAI-Artist/MintAI/pull/4959) Add JSON tags to `DuplicateVoteEvidence` (@marbar3778)
+  - [light] [\#4946](https://github.com/DeAI-Artist/MintAI/pull/4946) `tendermint lite` command has been renamed to `tendermint light` (@marbar3778)
+  - [privval] [\#4582](https://github.com/DeAI-Artist/MintAI/pull/4582) `round` in private_validator_state.json is no longer JSON string; instead it is a number (@marbar3778)
+  - [rpc] [\#4792](https://github.com/DeAI-Artist/MintAI/pull/4792) `/validators` are now sorted by voting power (@melekes)
+  - [rpc] [\#4947](https://github.com/DeAI-Artist/MintAI/pull/4947) Return an error when `page` pagination param is 0 in `/validators`, `tx_search` (@melekes)
+  - [rpc] [\#5137](https://github.com/DeAI-Artist/MintAI/pull/5137) JSON tags of `gasWanted` and `gasUsed` in `ResponseCheckTx` and `ResponseDeliverTx` have been made snake_case (`gas_wanted` and `gas_used`) (@marbar3778)
+  - [rpc] [\#5315](https://github.com/DeAI-Artist/MintAI/pull/5315) Remove `/unsafe_start_cpu_profiler`, `/unsafe_stop_cpu_profiler` and `/unsafe_write_heap_profile`. Please use pprof functionality instead (@melekes)
+  - [rpc/client, rpc/jsonrpc/client] [\#5347](https://github.com/DeAI-Artist/MintAI/pull/5347) All client methods now accept `context.Context` as 1st param (@melekes)
 
 - Apps
 
-  - [abci] [\#4704](https://github.com/tendermint/tendermint/pull/4704) Add ABCI methods `ListSnapshots`, `LoadSnapshotChunk`, `OfferSnapshot`, and `ApplySnapshotChunk` for state sync snapshots. `ABCIVersion` bumped to 0.17.0. (@erikgrinaker)
-  - [abci] [\#4989](https://github.com/tendermint/tendermint/pull/4989) `Proof` within `ResponseQuery` has been renamed to `ProofOps`  (@marbar3778)
-  - [abci] [\#5096](https://github.com/tendermint/tendermint/pull/5096) `CheckTxType` Protobuf enum names are now uppercase, to follow Protobuf style guide (@erikgrinaker)
-  - [abci] [\#5324](https://github.com/tendermint/tendermint/pull/5324) ABCI evidence type is now an enum with two types of possible evidence (@cmwaters)
+  - [abci] [\#4704](https://github.com/DeAI-Artist/MintAI/pull/4704) Add ABCI methods `ListSnapshots`, `LoadSnapshotChunk`, `OfferSnapshot`, and `ApplySnapshotChunk` for state sync snapshots. `ABCIVersion` bumped to 0.17.0. (@erikgrinaker)
+  - [abci] [\#4989](https://github.com/DeAI-Artist/MintAI/pull/4989) `Proof` within `ResponseQuery` has been renamed to `ProofOps`  (@marbar3778)
+  - [abci] [\#5096](https://github.com/DeAI-Artist/MintAI/pull/5096) `CheckTxType` Protobuf enum names are now uppercase, to follow Protobuf style guide (@erikgrinaker)
+  - [abci] [\#5324](https://github.com/DeAI-Artist/MintAI/pull/5324) ABCI evidence type is now an enum with two types of possible evidence (@cmwaters)
 
 - P2P Protocol
 
-  - [blockchain] [\#4637](https://github.com/tendermint/tendermint/pull/4637) Migrate blockchain reactor(s) to Protobuf encoding (@marbar3778)
-  - [evidence] [\#4949](https://github.com/tendermint/tendermint/pull/4949) Migrate evidence reactor to Protobuf encoding (@marbar3778)
-  - [mempool] [\#4940](https://github.com/tendermint/tendermint/pull/4940) Migrate mempool from to Protobuf encoding (@marbar3778)
-  - [mempool] [\#5321](https://github.com/tendermint/tendermint/pull/5321) Batch transactions when broadcasting them to peers (@melekes)
+  - [blockchain] [\#4637](https://github.com/DeAI-Artist/MintAI/pull/4637) Migrate blockchain reactor(s) to Protobuf encoding (@marbar3778)
+  - [evidence] [\#4949](https://github.com/DeAI-Artist/MintAI/pull/4949) Migrate evidence reactor to Protobuf encoding (@marbar3778)
+  - [mempool] [\#4940](https://github.com/DeAI-Artist/MintAI/pull/4940) Migrate mempool from to Protobuf encoding (@marbar3778)
+  - [mempool] [\#5321](https://github.com/DeAI-Artist/MintAI/pull/5321) Batch transactions when broadcasting them to peers (@melekes)
      - `MaxBatchBytes` new config setting defines the max size of one batch.
-  - [p2p/pex] [\#4973](https://github.com/tendermint/tendermint/pull/4973) Migrate `p2p/pex` reactor to Protobuf encoding (@marbar3778)
-  - [statesync] [\#4943](https://github.com/tendermint/tendermint/pull/4943) Migrate state sync reactor to Protobuf encoding (@marbar3778)
+  - [p2p/pex] [\#4973](https://github.com/DeAI-Artist/MintAI/pull/4973) Migrate `p2p/pex` reactor to Protobuf encoding (@marbar3778)
+  - [statesync] [\#4943](https://github.com/DeAI-Artist/MintAI/pull/4943) Migrate state sync reactor to Protobuf encoding (@marbar3778)
 
 - Blockchain Protocol
 
-  - [evidence] [\#4725](https://github.com/tendermint/tendermint/pull/4725) Remove `Pubkey` from `DuplicateVoteEvidence` (@marbar3778)
-  - [evidence] [\#5499](https://github.com/tendermint/tendermint/pull/5449) Cap evidence to a maximum number of bytes (supercedes [\#4780](https://github.com/tendermint/tendermint/pull/4780)) (@cmwaters)
-  - [merkle] [\#5193](https://github.com/tendermint/tendermint/pull/5193) Header hashes are no longer empty for empty inputs, notably `DataHash`, `EvidenceHash`, and `LastResultsHash` (@erikgrinaker)
-  - [state] [\#4845](https://github.com/tendermint/tendermint/pull/4845) Include `GasWanted` and `GasUsed` into `LastResultsHash` (@melekes)
-  - [types] [\#4792](https://github.com/tendermint/tendermint/pull/4792) Sort validators by voting power to enable faster commit verification (@melekes)
+  - [evidence] [\#4725](https://github.com/DeAI-Artist/MintAI/pull/4725) Remove `Pubkey` from `DuplicateVoteEvidence` (@marbar3778)
+  - [evidence] [\#5499](https://github.com/DeAI-Artist/MintAI/pull/5449) Cap evidence to a maximum number of bytes (supercedes [\#4780](https://github.com/DeAI-Artist/MintAI/pull/4780)) (@cmwaters)
+  - [merkle] [\#5193](https://github.com/DeAI-Artist/MintAI/pull/5193) Header hashes are no longer empty for empty inputs, notably `DataHash`, `EvidenceHash`, and `LastResultsHash` (@erikgrinaker)
+  - [state] [\#4845](https://github.com/DeAI-Artist/MintAI/pull/4845) Include `GasWanted` and `GasUsed` into `LastResultsHash` (@melekes)
+  - [types] [\#4792](https://github.com/DeAI-Artist/MintAI/pull/4792) Sort validators by voting power to enable faster commit verification (@melekes)
 
 - On-disk serialization
 
-  - [state] [\#4679](https://github.com/tendermint/tendermint/pull/4679) Migrate state module to Protobuf encoding (@marbar3778)
+  - [state] [\#4679](https://github.com/DeAI-Artist/MintAI/pull/4679) Migrate state module to Protobuf encoding (@marbar3778)
     - `BlockStoreStateJSON` is now `BlockStoreState` and is encoded as binary in the database
-  - [store] [\#4778](https://github.com/tendermint/tendermint/pull/4778) Migrate store module to Protobuf encoding (@marbar3778)
+  - [store] [\#4778](https://github.com/DeAI-Artist/MintAI/pull/4778) Migrate store module to Protobuf encoding (@marbar3778)
 
 - Light client, private validator
 
-  - [light] [\#4964](https://github.com/tendermint/tendermint/pull/4964) Migrate light module migration to Protobuf encoding (@marbar3778)
-  - [privval] [\#4985](https://github.com/tendermint/tendermint/pull/4985) Migrate `privval` module to Protobuf encoding (@marbar3778)
+  - [light] [\#4964](https://github.com/DeAI-Artist/MintAI/pull/4964) Migrate light module migration to Protobuf encoding (@marbar3778)
+  - [privval] [\#4985](https://github.com/DeAI-Artist/MintAI/pull/4985) Migrate `privval` module to Protobuf encoding (@marbar3778)
 
 - Go API
 
-  - [consensus] [\#4582](https://github.com/tendermint/tendermint/pull/4582) RoundState: `Round`, `LockedRound` & `CommitRound` are now `int32` (@marbar3778)
-  - [consensus] [\#4582](https://github.com/tendermint/tendermint/pull/4582) HeightVoteSet: `round` is now `int32` (@marbar3778)
-  - [crypto] [\#4721](https://github.com/tendermint/tendermint/pull/4721) Remove `SimpleHashFromMap()` and `SimpleProofsFromMap()` (@erikgrinaker)
-  - [crypto] [\#4940](https://github.com/tendermint/tendermint/pull/4940) All keys have become `[]byte` instead of `[<size>]byte`. The byte method no longer returns the marshaled value but just the `[]byte` form of the data. (@marbar3778)
-  - [crypto] [\#4988](https://github.com/tendermint/tendermint/pull/4988) Removal of key type multisig (@marbar3778)
+  - [consensus] [\#4582](https://github.com/DeAI-Artist/MintAI/pull/4582) RoundState: `Round`, `LockedRound` & `CommitRound` are now `int32` (@marbar3778)
+  - [consensus] [\#4582](https://github.com/DeAI-Artist/MintAI/pull/4582) HeightVoteSet: `round` is now `int32` (@marbar3778)
+  - [crypto] [\#4721](https://github.com/DeAI-Artist/MintAI/pull/4721) Remove `SimpleHashFromMap()` and `SimpleProofsFromMap()` (@erikgrinaker)
+  - [crypto] [\#4940](https://github.com/DeAI-Artist/MintAI/pull/4940) All keys have become `[]byte` instead of `[<size>]byte`. The byte method no longer returns the marshaled value but just the `[]byte` form of the data. (@marbar3778)
+  - [crypto] [\#4988](https://github.com/DeAI-Artist/MintAI/pull/4988) Removal of key type multisig (@marbar3778)
     - The key has been moved to the [Cosmos-SDK](https://github.com/cosmos/cosmos-sdk/blob/master/crypto/types/multisig/multisignature.go)
-  - [crypto] [\#4989](https://github.com/tendermint/tendermint/pull/4989) Remove `Simple` prefixes from `SimpleProof`, `SimpleValueOp` & `SimpleProofNode`. (@marbar3778)
+  - [crypto] [\#4989](https://github.com/DeAI-Artist/MintAI/pull/4989) Remove `Simple` prefixes from `SimpleProof`, `SimpleValueOp` & `SimpleProofNode`. (@marbar3778)
     - `merkle.Proof` has been renamed to `ProofOps`.
     - Protobuf messages `Proof` & `ProofOp` has been moved to `proto/crypto/merkle`
     - `SimpleHashFromByteSlices` has been renamed to `HashFromByteSlices`
     - `SimpleHashFromByteSlicesIterative` has been renamed to `HashFromByteSlicesIterative`
     - `SimpleProofsFromByteSlices` has been renamed to `ProofsFromByteSlices`
-  - [crypto] [\#4941](https://github.com/tendermint/tendermint/pull/4941) Remove suffixes from all keys. (@marbar3778)
+  - [crypto] [\#4941](https://github.com/DeAI-Artist/MintAI/pull/4941) Remove suffixes from all keys. (@marbar3778)
     - ed25519: type `PrivKeyEd25519` is now `PrivKey`
     - ed25519: type `PubKeyEd25519` is now `PubKey`
     - secp256k1: type`PrivKeySecp256k1` is now `PrivKey`
     - secp256k1: type`PubKeySecp256k1` is now `PubKey`
     - sr25519: type `PrivKeySr25519` is now `PrivKey`
     - sr25519: type `PubKeySr25519` is now `PubKey`
-  - [crypto] [\#5214](https://github.com/tendermint/tendermint/pull/5214) Change `GenPrivKeySecp256k1` to `GenPrivKeyFromSecret` to be consistent with other keys (@marbar3778)
-  - [crypto] [\#5236](https://github.com/tendermint/tendermint/pull/5236) `VerifyBytes` is now `VerifySignature` on the `crypto.PubKey` interface (@marbar3778)
-  - [evidence] [\#5361](https://github.com/tendermint/tendermint/pull/5361) Add LightClientAttackEvidence and change evidence interface (@cmwaters)
-  - [libs] [\#4831](https://github.com/tendermint/tendermint/pull/4831) Remove `Bech32` pkg from Tendermint. This pkg now lives in the [cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/4173ea5ebad906dd9b45325bed69b9c655504867/types/bech32) (@marbar3778)
-  - [light] [\#4946](https://github.com/tendermint/tendermint/pull/4946) Rename `lite2` pkg to `light`. Remove `lite` implementation. (@marbar3778)
-  - [light] [\#5347](https://github.com/tendermint/tendermint/pull/5347) `NewClient`, `NewHTTPClient`, `VerifyHeader` and `VerifyLightBlockAtHeight` now accept `context.Context` as 1st param (@melekes)
-  - [merkle] [\#5193](https://github.com/tendermint/tendermint/pull/5193) `HashFromByteSlices` and `ProofsFromByteSlices` now return a hash for empty inputs, following RFC6962 (@erikgrinaker)
-  - [proto] [\#5025](https://github.com/tendermint/tendermint/pull/5025) All proto files have been moved to `/proto` directory. (@marbar3778)
+  - [crypto] [\#5214](https://github.com/DeAI-Artist/MintAI/pull/5214) Change `GenPrivKeySecp256k1` to `GenPrivKeyFromSecret` to be consistent with other keys (@marbar3778)
+  - [crypto] [\#5236](https://github.com/DeAI-Artist/MintAI/pull/5236) `VerifyBytes` is now `VerifySignature` on the `crypto.PubKey` interface (@marbar3778)
+  - [evidence] [\#5361](https://github.com/DeAI-Artist/MintAI/pull/5361) Add LightClientAttackEvidence and change evidence interface (@cmwaters)
+  - [libs] [\#4831](https://github.com/DeAI-Artist/MintAI/pull/4831) Remove `Bech32` pkg from Tendermint. This pkg now lives in the [cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/4173ea5ebad906dd9b45325bed69b9c655504867/types/bech32) (@marbar3778)
+  - [light] [\#4946](https://github.com/DeAI-Artist/MintAI/pull/4946) Rename `lite2` pkg to `light`. Remove `lite` implementation. (@marbar3778)
+  - [light] [\#5347](https://github.com/DeAI-Artist/MintAI/pull/5347) `NewClient`, `NewHTTPClient`, `VerifyHeader` and `VerifyLightBlockAtHeight` now accept `context.Context` as 1st param (@melekes)
+  - [merkle] [\#5193](https://github.com/DeAI-Artist/MintAI/pull/5193) `HashFromByteSlices` and `ProofsFromByteSlices` now return a hash for empty inputs, following RFC6962 (@erikgrinaker)
+  - [proto] [\#5025](https://github.com/DeAI-Artist/MintAI/pull/5025) All proto files have been moved to `/proto` directory. (@marbar3778)
     - Using the recommended the file layout from buf, [see here for more info](https://buf.build/docs/lint-checkers#file_layout)
-  - [rpc/client] [\#4947](https://github.com/tendermint/tendermint/pull/4947) `Validators`, `TxSearch` `page`/`per_page` params become pointers (@melekes)
+  - [rpc/client] [\#4947](https://github.com/DeAI-Artist/MintAI/pull/4947) `Validators`, `TxSearch` `page`/`per_page` params become pointers (@melekes)
     - `UnconfirmedTxs` `limit` param is a pointer
-  - [rpc/jsonrpc/server] [\#5141](https://github.com/tendermint/tendermint/pull/5141) Remove `WriteRPCResponseArrayHTTP` (use `WriteRPCResponseHTTP` instead) (@melekes)
-  - [state] [\#4679](https://github.com/tendermint/tendermint/pull/4679) `TxResult` is a Protobuf type defined in `abci` types directory (@marbar3778)
-  - [state] [\#5191](https://github.com/tendermint/tendermint/pull/5191) Add `State.InitialHeight` field to record initial block height, must be `1` (not `0`) to start from 1 (@erikgrinaker)
-  - [state] [\#5231](https://github.com/tendermint/tendermint/pull/5231) `LoadStateFromDBOrGenesisFile()` and `LoadStateFromDBOrGenesisDoc()` no longer saves the state in the database if not found, the genesis state is simply returned (@erikgrinaker)
-  - [state] [\#5348](https://github.com/tendermint/tendermint/pull/5348) Define an Interface for the state store. (@marbar3778)
-  - [types] [\#4939](https://github.com/tendermint/tendermint/pull/4939)  `SignedMsgType` has moved to a Protobuf enum types (@marbar3778)
-  - [types] [\#4962](https://github.com/tendermint/tendermint/pull/4962) `ConsensusParams`, `BlockParams`, `EvidenceParams`, `ValidatorParams` & `HashedParams` are now Protobuf types (@marbar3778)
-  - [types] [\#4852](https://github.com/tendermint/tendermint/pull/4852) Vote & Proposal `SignBytes` is now func `VoteSignBytes` & `ProposalSignBytes` (@marbar3778)
-  - [types] [\#4798](https://github.com/tendermint/tendermint/pull/4798) Simplify `VerifyCommitTrusting` func + remove extra validation (@melekes)
-  - [types] [\#4845](https://github.com/tendermint/tendermint/pull/4845) Remove `ABCIResult` (@melekes)
-  - [types] [\#5029](https://github.com/tendermint/tendermint/pull/5029) Rename all values from `PartsHeader` to `PartSetHeader` to have consistency (@marbar3778)
-  - [types] [\#4939](https://github.com/tendermint/tendermint/pull/4939) `Total` in `Parts` & `PartSetHeader` has been changed from a `int` to a `uint32` (@marbar3778)
-  - [types] [\#4939](https://github.com/tendermint/tendermint/pull/4939) Vote: `ValidatorIndex` & `Round` are now `int32` (@marbar3778)
-  - [types] [\#4939](https://github.com/tendermint/tendermint/pull/4939) Proposal: `POLRound` & `Round` are now `int32` (@marbar3778)
-  - [types] [\#4939](https://github.com/tendermint/tendermint/pull/4939) Block: `Round` is now `int32` (@marbar3778)
+  - [rpc/jsonrpc/server] [\#5141](https://github.com/DeAI-Artist/MintAI/pull/5141) Remove `WriteRPCResponseArrayHTTP` (use `WriteRPCResponseHTTP` instead) (@melekes)
+  - [state] [\#4679](https://github.com/DeAI-Artist/MintAI/pull/4679) `TxResult` is a Protobuf type defined in `abci` types directory (@marbar3778)
+  - [state] [\#5191](https://github.com/DeAI-Artist/MintAI/pull/5191) Add `State.InitialHeight` field to record initial block height, must be `1` (not `0`) to start from 1 (@erikgrinaker)
+  - [state] [\#5231](https://github.com/DeAI-Artist/MintAI/pull/5231) `LoadStateFromDBOrGenesisFile()` and `LoadStateFromDBOrGenesisDoc()` no longer saves the state in the database if not found, the genesis state is simply returned (@erikgrinaker)
+  - [state] [\#5348](https://github.com/DeAI-Artist/MintAI/pull/5348) Define an Interface for the state store. (@marbar3778)
+  - [types] [\#4939](https://github.com/DeAI-Artist/MintAI/pull/4939)  `SignedMsgType` has moved to a Protobuf enum types (@marbar3778)
+  - [types] [\#4962](https://github.com/DeAI-Artist/MintAI/pull/4962) `ConsensusParams`, `BlockParams`, `EvidenceParams`, `ValidatorParams` & `HashedParams` are now Protobuf types (@marbar3778)
+  - [types] [\#4852](https://github.com/DeAI-Artist/MintAI/pull/4852) Vote & Proposal `SignBytes` is now func `VoteSignBytes` & `ProposalSignBytes` (@marbar3778)
+  - [types] [\#4798](https://github.com/DeAI-Artist/MintAI/pull/4798) Simplify `VerifyCommitTrusting` func + remove extra validation (@melekes)
+  - [types] [\#4845](https://github.com/DeAI-Artist/MintAI/pull/4845) Remove `ABCIResult` (@melekes)
+  - [types] [\#5029](https://github.com/DeAI-Artist/MintAI/pull/5029) Rename all values from `PartsHeader` to `PartSetHeader` to have consistency (@marbar3778)
+  - [types] [\#4939](https://github.com/DeAI-Artist/MintAI/pull/4939) `Total` in `Parts` & `PartSetHeader` has been changed from a `int` to a `uint32` (@marbar3778)
+  - [types] [\#4939](https://github.com/DeAI-Artist/MintAI/pull/4939) Vote: `ValidatorIndex` & `Round` are now `int32` (@marbar3778)
+  - [types] [\#4939](https://github.com/DeAI-Artist/MintAI/pull/4939) Proposal: `POLRound` & `Round` are now `int32` (@marbar3778)
+  - [types] [\#4939](https://github.com/DeAI-Artist/MintAI/pull/4939) Block: `Round` is now `int32` (@marbar3778)
 
 ### FEATURES
 
-- [abci] [\#5031](https://github.com/tendermint/tendermint/pull/5031) Add `AppVersion` to consensus parameters (@james-ray)
+- [abci] [\#5031](https://github.com/DeAI-Artist/MintAI/pull/5031) Add `AppVersion` to consensus parameters (@james-ray)
   - This makes it possible to update your ABCI application version via `EndBlock` response
-- [abci] [\#5174](https://github.com/tendermint/tendermint/pull/5174) Remove `MockEvidence` in favor of testing with actual evidence types (`DuplicateVoteEvidence` & `LightClientAttackEvidence`) (@cmwaters)
-- [abci] [\#5191](https://github.com/tendermint/tendermint/pull/5191) Add `InitChain.InitialHeight` field giving the initial block height (@erikgrinaker)
-- [abci] [\#5227](https://github.com/tendermint/tendermint/pull/5227) Add `ResponseInitChain.app_hash` which is recorded in genesis block (@erikgrinaker)
-- [config] [\#5147](https://github.com/tendermint/tendermint/pull/5147) Add `--consensus.double_sign_check_height` flag and `DoubleSignCheckHeight` config variable. See [ADR-51](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-051-double-signing-risk-reduction.md) (@dongsam)
-- [db] [\#5233](https://github.com/tendermint/tendermint/pull/5233) Add support for `badgerdb` database backend (@erikgrinaker)
-- [evidence] [\#4532](https://github.com/tendermint/tendermint/pull/4532) Handle evidence from light clients (@melekes)
-- [evidence] [#4821](https://github.com/tendermint/tendermint/pull/4821) Amnesia (light client attack) evidence can be detected, verified and committed (@cmwaters)
-- [genesis] [\#5191](https://github.com/tendermint/tendermint/pull/5191) Add `initial_height` field to specify the initial chain height (defaults to `1`) (@erikgrinaker)
-- [libs/math] [\#5665](https://github.com/tendermint/tendermint/pull/5665) Make fractions unsigned integers (uint64) (@cmwaters)
-- [light] [\#5298](https://github.com/tendermint/tendermint/pull/5298) Morph validator set and signed header into light block (@cmwaters)
-- [p2p] [\#4981](https://github.com/tendermint/tendermint/pull/4981) Expose `SaveAs` func on NodeKey (@melekes)
-- [privval] [\#5239](https://github.com/tendermint/tendermint/pull/5239) Add `chainID` to requests from client. (@marbar3778)
-- [rpc] [\#4532](https://github.com/tendermint/tendermint/pull/4923) Support `BlockByHash` query (@fedekunze)
-- [rpc] [\#4979](https://github.com/tendermint/tendermint/pull/4979) Support EXISTS operator in `/tx_search` query (@melekes)
-- [rpc] [\#5017](https://github.com/tendermint/tendermint/pull/5017) Add `/check_tx` endpoint to check transactions without executing them or adding them to the mempool (@melekes)
-- [rpc] [\#5108](https://github.com/tendermint/tendermint/pull/5108) Subscribe using the websocket for new evidence events (@cmwaters)
+- [abci] [\#5174](https://github.com/DeAI-Artist/MintAI/pull/5174) Remove `MockEvidence` in favor of testing with actual evidence types (`DuplicateVoteEvidence` & `LightClientAttackEvidence`) (@cmwaters)
+- [abci] [\#5191](https://github.com/DeAI-Artist/MintAI/pull/5191) Add `InitChain.InitialHeight` field giving the initial block height (@erikgrinaker)
+- [abci] [\#5227](https://github.com/DeAI-Artist/MintAI/pull/5227) Add `ResponseInitChain.app_hash` which is recorded in genesis block (@erikgrinaker)
+- [config] [\#5147](https://github.com/DeAI-Artist/MintAI/pull/5147) Add `--consensus.double_sign_check_height` flag and `DoubleSignCheckHeight` config variable. See [ADR-51](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-051-double-signing-risk-reduction.md) (@dongsam)
+- [db] [\#5233](https://github.com/DeAI-Artist/MintAI/pull/5233) Add support for `badgerdb` database backend (@erikgrinaker)
+- [evidence] [\#4532](https://github.com/DeAI-Artist/MintAI/pull/4532) Handle evidence from light clients (@melekes)
+- [evidence] [#4821](https://github.com/DeAI-Artist/MintAI/pull/4821) Amnesia (light client attack) evidence can be detected, verified and committed (@cmwaters)
+- [genesis] [\#5191](https://github.com/DeAI-Artist/MintAI/pull/5191) Add `initial_height` field to specify the initial chain height (defaults to `1`) (@erikgrinaker)
+- [libs/math] [\#5665](https://github.com/DeAI-Artist/MintAI/pull/5665) Make fractions unsigned integers (uint64) (@cmwaters)
+- [light] [\#5298](https://github.com/DeAI-Artist/MintAI/pull/5298) Morph validator set and signed header into light block (@cmwaters)
+- [p2p] [\#4981](https://github.com/DeAI-Artist/MintAI/pull/4981) Expose `SaveAs` func on NodeKey (@melekes)
+- [privval] [\#5239](https://github.com/DeAI-Artist/MintAI/pull/5239) Add `chainID` to requests from client. (@marbar3778)
+- [rpc] [\#4532](https://github.com/DeAI-Artist/MintAI/pull/4923) Support `BlockByHash` query (@fedekunze)
+- [rpc] [\#4979](https://github.com/DeAI-Artist/MintAI/pull/4979) Support EXISTS operator in `/tx_search` query (@melekes)
+- [rpc] [\#5017](https://github.com/DeAI-Artist/MintAI/pull/5017) Add `/check_tx` endpoint to check transactions without executing them or adding them to the mempool (@melekes)
+- [rpc] [\#5108](https://github.com/DeAI-Artist/MintAI/pull/5108) Subscribe using the websocket for new evidence events (@cmwaters)
 - [statesync] Add state sync support, where a new node can be rapidly bootstrapped by fetching state snapshots from peers instead of replaying blocks. See the `[statesync]` config section.
-- [evidence] [\#5361](https://github.com/tendermint/tendermint/pull/5361) Add LightClientAttackEvidence and refactor evidence lifecycle - for more information see [ADR-059](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-059-evidence-composition-and-lifecycle.md) (@cmwaters)
+- [evidence] [\#5361](https://github.com/DeAI-Artist/MintAI/pull/5361) Add LightClientAttackEvidence and refactor evidence lifecycle - for more information see [ADR-059](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-059-evidence-composition-and-lifecycle.md) (@cmwaters)
 
 ### IMPROVEMENTS
 
-- [blockchain] [\#5278](https://github.com/tendermint/tendermint/pull/5278) Verify only +2/3 of the signatures in a block when fast syncing. (@marbar3778)
-- [consensus] [\#4578](https://github.com/tendermint/tendermint/pull/4578) Attempt to repair the consensus WAL file (`data/cs.wal/wal`) automatically in case of corruption (@alessio)
+- [blockchain] [\#5278](https://github.com/DeAI-Artist/MintAI/pull/5278) Verify only +2/3 of the signatures in a block when fast syncing. (@marbar3778)
+- [consensus] [\#4578](https://github.com/DeAI-Artist/MintAI/pull/4578) Attempt to repair the consensus WAL file (`data/cs.wal/wal`) automatically in case of corruption (@alessio)
   - The original WAL file will be backed up to `data/cs.wal/wal.CORRUPTED`.
-- [consensus] [\#5143](https://github.com/tendermint/tendermint/pull/5143) Only call `privValidator.GetPubKey` once per block (@melekes)
-- [evidence] [\#4722](https://github.com/tendermint/tendermint/pull/4722) Consolidate evidence store and pool types to improve evidence DB (@cmwaters)
-- [evidence] [\#4839](https://github.com/tendermint/tendermint/pull/4839) Reject duplicate evidence from being proposed (@cmwaters)
-- [evidence] [\#5219](https://github.com/tendermint/tendermint/pull/5219) Change the source of evidence time to block time (@cmwaters)
-- [libs] [\#5126](https://github.com/tendermint/tendermint/pull/5126) Add a sync package which wraps sync.(RW)Mutex & deadlock.(RW)Mutex and use a build flag (deadlock) in order to enable deadlock checking (@marbar3778)
-- [light] [\#4935](https://github.com/tendermint/tendermint/pull/4935) Fetch and compare a new header with witnesses in parallel (@melekes)
-- [light] [\#4929](https://github.com/tendermint/tendermint/pull/4929) Compare header with witnesses only when doing bisection (@melekes)
-- [light] [\#4916](https://github.com/tendermint/tendermint/pull/4916) Validate basic for inbound validator sets and headers before further processing them (@cmwaters)
+- [consensus] [\#5143](https://github.com/DeAI-Artist/MintAI/pull/5143) Only call `privValidator.GetPubKey` once per block (@melekes)
+- [evidence] [\#4722](https://github.com/DeAI-Artist/MintAI/pull/4722) Consolidate evidence store and pool types to improve evidence DB (@cmwaters)
+- [evidence] [\#4839](https://github.com/DeAI-Artist/MintAI/pull/4839) Reject duplicate evidence from being proposed (@cmwaters)
+- [evidence] [\#5219](https://github.com/DeAI-Artist/MintAI/pull/5219) Change the source of evidence time to block time (@cmwaters)
+- [libs] [\#5126](https://github.com/DeAI-Artist/MintAI/pull/5126) Add a sync package which wraps sync.(RW)Mutex & deadlock.(RW)Mutex and use a build flag (deadlock) in order to enable deadlock checking (@marbar3778)
+- [light] [\#4935](https://github.com/DeAI-Artist/MintAI/pull/4935) Fetch and compare a new header with witnesses in parallel (@melekes)
+- [light] [\#4929](https://github.com/DeAI-Artist/MintAI/pull/4929) Compare header with witnesses only when doing bisection (@melekes)
+- [light] [\#4916](https://github.com/DeAI-Artist/MintAI/pull/4916) Validate basic for inbound validator sets and headers before further processing them (@cmwaters)
 - [mempool] Add RemoveTxByKey() exported function for custom mempool cleaning (@p4u)
-- [p2p/conn] [\#4795](https://github.com/tendermint/tendermint/pull/4795) Return err on `signChallenge()` instead of panic
-- [privval] [\#5437](https://github.com/tendermint/tendermint/pull/5437) `NewSignerDialerEndpoint` can now be given `SignerServiceEndpointOption` (@erikgrinaker)
-- [rpc] [\#4968](https://github.com/tendermint/tendermint/pull/4968) JSON encoding is now handled by `libs/json`, not Amino (@erikgrinaker)
-- [rpc] [\#5293](https://github.com/tendermint/tendermint/pull/5293) `/dial_peers` has added `private` and `unconditional` as parameters. (@marbar3778)
-- [state] [\#4781](https://github.com/tendermint/tendermint/pull/4781) Export `InitStateVersion` for the initial state version (@erikgrinaker)
-- [txindex] [\#4466](https://github.com/tendermint/tendermint/pull/4466) Allow to index an event at runtime (@favadi)
+- [p2p/conn] [\#4795](https://github.com/DeAI-Artist/MintAI/pull/4795) Return err on `signChallenge()` instead of panic
+- [privval] [\#5437](https://github.com/DeAI-Artist/MintAI/pull/5437) `NewSignerDialerEndpoint` can now be given `SignerServiceEndpointOption` (@erikgrinaker)
+- [rpc] [\#4968](https://github.com/DeAI-Artist/MintAI/pull/4968) JSON encoding is now handled by `libs/json`, not Amino (@erikgrinaker)
+- [rpc] [\#5293](https://github.com/DeAI-Artist/MintAI/pull/5293) `/dial_peers` has added `private` and `unconditional` as parameters. (@marbar3778)
+- [state] [\#4781](https://github.com/DeAI-Artist/MintAI/pull/4781) Export `InitStateVersion` for the initial state version (@erikgrinaker)
+- [txindex] [\#4466](https://github.com/DeAI-Artist/MintAI/pull/4466) Allow to index an event at runtime (@favadi)
   - `abci.EventAttribute` replaces `KV.Pair`
-- [types] [\#4905](https://github.com/tendermint/tendermint/pull/4905) Add `ValidateBasic` to validator and validator set (@cmwaters)
-- [types] [\#5340](https://github.com/tendermint/tendermint/pull/5340) Add check in `Header.ValidateBasic()` for block protocol version (@marbar3778)
-- [types] [\#5490](https://github.com/tendermint/tendermint/pull/5490) Use `Commit` and `CommitSig` max sizes instead of vote max size to calculate the maximum block size. (@cmwaters)
+- [types] [\#4905](https://github.com/DeAI-Artist/MintAI/pull/4905) Add `ValidateBasic` to validator and validator set (@cmwaters)
+- [types] [\#5340](https://github.com/DeAI-Artist/MintAI/pull/5340) Add check in `Header.ValidateBasic()` for block protocol version (@marbar3778)
+- [types] [\#5490](https://github.com/DeAI-Artist/MintAI/pull/5490) Use `Commit` and `CommitSig` max sizes instead of vote max size to calculate the maximum block size. (@cmwaters)
 
 
 ### BUG FIXES
 
-- [abci/grpc] [\#5520](https://github.com/tendermint/tendermint/pull/5520) Return async responses in order, to avoid mempool panics. (@erikgrinaker)
-- [blockchain/v2] [\#4971](https://github.com/tendermint/tendermint/pull/4971) Correctly set block store base in status responses (@erikgrinaker)
-- [blockchain/v2] [\#5499](https://github.com/tendermint/tendermint/pull/5499) Fix "duplicate block enqueued by processor" panic (@melekes)
-- [blockchain/v2] [\#5530](https://github.com/tendermint/tendermint/pull/5530) Fix out of order block processing panic (@melekes)
-- [blockchain/v2] [\#5553](https://github.com/tendermint/tendermint/pull/5553) Make the removal of an already removed peer a noop (@melekes)
-- [consensus] [\#4895](https://github.com/tendermint/tendermint/pull/4895) Cache the address of the validator to reduce querying a remote KMS (@joe-bowman)
-- [consensus] [\#4970](https://github.com/tendermint/tendermint/pull/4970) Don't allow `LastCommitRound` to be negative (@cuonglm)
-- [consensus] [\#5329](https://github.com/tendermint/tendermint/pull/5329) Fix wrong proposer schedule for validators returned by `InitChain` (@erikgrinaker)
-- [docker] [\#5385](https://github.com/tendermint/tendermint/pull/5385) Fix incorrect `time_iota_ms` default setting causing block timestamp drift (@erikgrinaker)
-- [evidence] [\#5170](https://github.com/tendermint/tendermint/pull/5170) Change ABCI evidence time to the time the infraction happened not the time the evidence was committed on the block (@cmwaters)
-- [evidence] [\#5610](https://github.com/tendermint/tendermint/pull/5610) Make it possible for ABCI evidence to be formed from Tendermint evidence (@cmwaters)
-- [libs/rand] [\#5215](https://github.com/tendermint/tendermint/pull/5215) Fix out-of-memory error on unexpected argument of Str() (@SadPencil)
-- [light] [\#5307](https://github.com/tendermint/tendermint/pull/5307) Persist correct proposer priority in light client validator sets (@cmwaters)
-- [p2p] [\#5136](https://github.com/tendermint/tendermint/pull/5136) Fix error for peer with the same ID but different IPs (@valardragon)
-- [privval] [\#5638](https://github.com/tendermint/tendermint/pull/5638) Increase read/write timeout to 5s and calculate ping interval based on it (@JoeKash)
-- [proxy] [\#5078](https://github.com/tendermint/tendermint/pull/5078) Force Tendermint to exit when ABCI app crashes  (@melekes)
-- [rpc] [\#5660](https://github.com/tendermint/tendermint/pull/5660) Set `application/json` as the `Content-Type` header in RPC responses. (@alexanderbez)
-- [store] [\#5382](https://github.com/tendermint/tendermint/pull/5382) Fix race conditions when loading/saving/pruning blocks (@erikgrinaker)
+- [abci/grpc] [\#5520](https://github.com/DeAI-Artist/MintAI/pull/5520) Return async responses in order, to avoid mempool panics. (@erikgrinaker)
+- [blockchain/v2] [\#4971](https://github.com/DeAI-Artist/MintAI/pull/4971) Correctly set block store base in status responses (@erikgrinaker)
+- [blockchain/v2] [\#5499](https://github.com/DeAI-Artist/MintAI/pull/5499) Fix "duplicate block enqueued by processor" panic (@melekes)
+- [blockchain/v2] [\#5530](https://github.com/DeAI-Artist/MintAI/pull/5530) Fix out of order block processing panic (@melekes)
+- [blockchain/v2] [\#5553](https://github.com/DeAI-Artist/MintAI/pull/5553) Make the removal of an already removed peer a noop (@melekes)
+- [consensus] [\#4895](https://github.com/DeAI-Artist/MintAI/pull/4895) Cache the address of the validator to reduce querying a remote KMS (@joe-bowman)
+- [consensus] [\#4970](https://github.com/DeAI-Artist/MintAI/pull/4970) Don't allow `LastCommitRound` to be negative (@cuonglm)
+- [consensus] [\#5329](https://github.com/DeAI-Artist/MintAI/pull/5329) Fix wrong proposer schedule for validators returned by `InitChain` (@erikgrinaker)
+- [docker] [\#5385](https://github.com/DeAI-Artist/MintAI/pull/5385) Fix incorrect `time_iota_ms` default setting causing block timestamp drift (@erikgrinaker)
+- [evidence] [\#5170](https://github.com/DeAI-Artist/MintAI/pull/5170) Change ABCI evidence time to the time the infraction happened not the time the evidence was committed on the block (@cmwaters)
+- [evidence] [\#5610](https://github.com/DeAI-Artist/MintAI/pull/5610) Make it possible for ABCI evidence to be formed from Tendermint evidence (@cmwaters)
+- [libs/rand] [\#5215](https://github.com/DeAI-Artist/MintAI/pull/5215) Fix out-of-memory error on unexpected argument of Str() (@SadPencil)
+- [light] [\#5307](https://github.com/DeAI-Artist/MintAI/pull/5307) Persist correct proposer priority in light client validator sets (@cmwaters)
+- [p2p] [\#5136](https://github.com/DeAI-Artist/MintAI/pull/5136) Fix error for peer with the same ID but different IPs (@valardragon)
+- [privval] [\#5638](https://github.com/DeAI-Artist/MintAI/pull/5638) Increase read/write timeout to 5s and calculate ping interval based on it (@JoeKash)
+- [proxy] [\#5078](https://github.com/DeAI-Artist/MintAI/pull/5078) Force Tendermint to exit when ABCI app crashes  (@melekes)
+- [rpc] [\#5660](https://github.com/DeAI-Artist/MintAI/pull/5660) Set `application/json` as the `Content-Type` header in RPC responses. (@alexanderbez)
+- [store] [\#5382](https://github.com/DeAI-Artist/MintAI/pull/5382) Fix race conditions when loading/saving/pruning blocks (@erikgrinaker)
 
 ## v0.33.8
 
@@ -638,7 +638,7 @@ reason the Tendermint engineering team has opted to conduct a release to aid use
  ### BUG FIXES:
 
  - [go] Build release binary using Go 1.14.4, to avoid halt caused by Go 1.14.1 (https://github.com/golang/go/issues/38223)
- - [privval] [\#5140](https://github.com/tendermint/tendermint/pull/5140) `RemoteSignerError` from remote signers are no longer retried (@melekes)
+ - [privval] [\#5140](https://github.com/DeAI-Artist/MintAI/pull/5140) `RemoteSignerError` from remote signers are no longer retried (@melekes)
 
 
 ## v0.33.6
@@ -712,10 +712,10 @@ Special thanks to external contributors on this release: @tau3,
 
 - Go API
 
-  - [privval] [\#4744](https://github.com/tendermint/tendermint/pull/4744) Remove deprecated `OldFilePV` (@melekes)
-  - [mempool] [\#4759](https://github.com/tendermint/tendermint/pull/4759) Modify `Mempool#InitWAL` to return an error (@melekes)
-  - [node] [\#4832](https://github.com/tendermint/tendermint/pull/4832) `ConfigureRPC` returns an error (@melekes)
-  - [rpc] [\#4836](https://github.com/tendermint/tendermint/pull/4836) Overhaul `lib` folder (@melekes)
+  - [privval] [\#4744](https://github.com/DeAI-Artist/MintAI/pull/4744) Remove deprecated `OldFilePV` (@melekes)
+  - [mempool] [\#4759](https://github.com/DeAI-Artist/MintAI/pull/4759) Modify `Mempool#InitWAL` to return an error (@melekes)
+  - [node] [\#4832](https://github.com/DeAI-Artist/MintAI/pull/4832) `ConfigureRPC` returns an error (@melekes)
+  - [rpc] [\#4836](https://github.com/DeAI-Artist/MintAI/pull/4836) Overhaul `lib` folder (@melekes)
     Move lib/ folder to jsonrpc/.
     Rename:
       rpc package -> jsonrpc package
@@ -736,28 +736,28 @@ Special thanks to external contributors on this release: @tau3,
 
 ### FEATURES:
 
-- [pex] [\#4439](https://github.com/tendermint/tendermint/pull/4439) Use highwayhash for pex buckets (@tau3)
+- [pex] [\#4439](https://github.com/DeAI-Artist/MintAI/pull/4439) Use highwayhash for pex buckets (@tau3)
 
 ### IMPROVEMENTS:
 
-- [abci/server] [\#4719](https://github.com/tendermint/tendermint/pull/4719) Print panic & stack trace to STDERR if logger is not set (@melekes)
-- [types] [\#4638](https://github.com/tendermint/tendermint/pull/4638) Implement `Header#ValidateBasic` (@alexanderbez)
-- [buildsystem] [\#4378](https://github.com/tendermint/tendermint/pull/4738) Replace build_c and install_c with TENDERMINT_BUILD_OPTIONS parsing. The following options are available:
+- [abci/server] [\#4719](https://github.com/DeAI-Artist/MintAI/pull/4719) Print panic & stack trace to STDERR if logger is not set (@melekes)
+- [types] [\#4638](https://github.com/DeAI-Artist/MintAI/pull/4638) Implement `Header#ValidateBasic` (@alexanderbez)
+- [buildsystem] [\#4378](https://github.com/DeAI-Artist/MintAI/pull/4738) Replace build_c and install_c with TENDERMINT_BUILD_OPTIONS parsing. The following options are available:
   - nostrip: don't strip debugging symbols nor DWARF tables.
   - cleveldb: use cleveldb as db backend instead of goleveldb.
   - race: pass -race to go build and enable data race detection.
-- [mempool] [\#4759](https://github.com/tendermint/tendermint/pull/4759) Allow ReapX and CheckTx functions to run in parallel (@melekes)
-- [rpc/core] [\#4844](https://github.com/tendermint/tendermint/pull/4844) Do not lock consensus state in `/validators`, `/consensus_params` and `/status` (@melekes)
+- [mempool] [\#4759](https://github.com/DeAI-Artist/MintAI/pull/4759) Allow ReapX and CheckTx functions to run in parallel (@melekes)
+- [rpc/core] [\#4844](https://github.com/DeAI-Artist/MintAI/pull/4844) Do not lock consensus state in `/validators`, `/consensus_params` and `/status` (@melekes)
 
 ### BUG FIXES:
 
-- [blockchain/v2] [\#4761](https://github.com/tendermint/tendermint/pull/4761) Fix excessive CPU usage caused by spinning on closed channels (@erikgrinaker)
+- [blockchain/v2] [\#4761](https://github.com/DeAI-Artist/MintAI/pull/4761) Fix excessive CPU usage caused by spinning on closed channels (@erikgrinaker)
 - [blockchain/v2] Respect `fast_sync` option (@erikgrinaker)
-- [light] [\#4741](https://github.com/tendermint/tendermint/pull/4741) Correctly return  `ErrSignedHeaderNotFound` and `ErrValidatorSetNotFound` on corresponding RPC errors (@erikgrinaker)
-- [rpc] [\#4805](https://github.com/tendermint/tendermint/issues/4805) Attempt to handle panics during panic recovery (@erikgrinaker)
-- [types] [\#4764](https://github.com/tendermint/tendermint/pull/4764) Return an error if voting power overflows in `VerifyCommitTrusting` (@melekes)
-- [privval] [\#4812](https://github.com/tendermint/tendermint/pull/4812) Retry `GetPubKey/SignVote/SignProposal` a few times before returning an error (@melekes)
-- [p2p] [\#4847](https://github.com/tendermint/tendermint/pull/4847) Return masked IP (not the actual IP) in addrbook#groupKey (@melekes)
+- [light] [\#4741](https://github.com/DeAI-Artist/MintAI/pull/4741) Correctly return  `ErrSignedHeaderNotFound` and `ErrValidatorSetNotFound` on corresponding RPC errors (@erikgrinaker)
+- [rpc] [\#4805](https://github.com/DeAI-Artist/MintAI/issues/4805) Attempt to handle panics during panic recovery (@erikgrinaker)
+- [types] [\#4764](https://github.com/DeAI-Artist/MintAI/pull/4764) Return an error if voting power overflows in `VerifyCommitTrusting` (@melekes)
+- [privval] [\#4812](https://github.com/DeAI-Artist/MintAI/pull/4812) Retry `GetPubKey/SignVote/SignProposal` a few times before returning an error (@melekes)
+- [p2p] [\#4847](https://github.com/DeAI-Artist/MintAI/pull/4847) Return masked IP (not the actual IP) in addrbook#groupKey (@melekes)
 
 ## v0.33.4
 
@@ -771,34 +771,34 @@ Special thanks to external contributors on this release: @whylee259, @greg-szabo
 
 - Go API
 
-  - [lite2] [\#4616](https://github.com/tendermint/tendermint/pull/4616) Make `maxClockDrift` an option `Verify/VerifyAdjacent/VerifyNonAdjacent` now accept `maxClockDrift time.Duration` (@melekes).
-  - [rpc/client] [\#4628](https://github.com/tendermint/tendermint/pull/4628) Split out HTTP and local clients into `http` and `local` packages (@erikgrinaker).
+  - [lite2] [\#4616](https://github.com/DeAI-Artist/MintAI/pull/4616) Make `maxClockDrift` an option `Verify/VerifyAdjacent/VerifyNonAdjacent` now accept `maxClockDrift time.Duration` (@melekes).
+  - [rpc/client] [\#4628](https://github.com/DeAI-Artist/MintAI/pull/4628) Split out HTTP and local clients into `http` and `local` packages (@erikgrinaker).
 
 ### FEATURES:
 
-- [abci] [\#4588](https://github.com/tendermint/tendermint/issues/4588) Add `ResponseCommit.retain_height` field, which will automatically remove blocks below this height. This bumps the ABCI version to 0.16.2 (@erikgrinaker).
-- [cmd] [\#4665](https://github.com/tendermint/tendermint/pull/4665) New `tendermint completion` command to generate Bash/Zsh completion scripts (@alessio).
-- [rpc] [\#4588](https://github.com/tendermint/tendermint/issues/4588) Add `/status` response fields for the earliest block available on the node (@erikgrinaker).
-- [rpc] [\#4611](https://github.com/tendermint/tendermint/pull/4611) Add `codespace` to `ResultBroadcastTx` (@whylee259).
+- [abci] [\#4588](https://github.com/DeAI-Artist/MintAI/issues/4588) Add `ResponseCommit.retain_height` field, which will automatically remove blocks below this height. This bumps the ABCI version to 0.16.2 (@erikgrinaker).
+- [cmd] [\#4665](https://github.com/DeAI-Artist/MintAI/pull/4665) New `tendermint completion` command to generate Bash/Zsh completion scripts (@alessio).
+- [rpc] [\#4588](https://github.com/DeAI-Artist/MintAI/issues/4588) Add `/status` response fields for the earliest block available on the node (@erikgrinaker).
+- [rpc] [\#4611](https://github.com/DeAI-Artist/MintAI/pull/4611) Add `codespace` to `ResultBroadcastTx` (@whylee259).
 
 ### IMPROVEMENTS:
 
-- [all] [\#4608](https://github.com/tendermint/tendermint/pull/4608) Give reactors descriptive names when they're initialized (@tessr).
-- [blockchain] [\#4588](https://github.com/tendermint/tendermint/issues/4588) Add `Base` to blockchain reactor P2P messages `StatusRequest` and `StatusResponse` (@erikgrinaker).
-- [Docker] [\#4569](https://github.com/tendermint/tendermint/issues/4569) Default configuration added to docker image (you can still mount your own config the same way) (@greg-szabo).
-- [example/kvstore] [\#4588](https://github.com/tendermint/tendermint/issues/4588) Add `RetainBlocks` option to control block retention (@erikgrinaker).
-- [evidence] [\#4632](https://github.com/tendermint/tendermint/pull/4632) Inbound evidence checked if already existing (@cmwaters).
-- [lite2] [\#4575](https://github.com/tendermint/tendermint/pull/4575) Use bisection for within-range verification (@cmwaters).
-- [lite2] [\#4562](https://github.com/tendermint/tendermint/pull/4562) Cache headers when using bisection (@cmwaters).
-- [p2p] [\#4548](https://github.com/tendermint/tendermint/pull/4548) Add ban list to address book (@cmwaters).
-- [privval] [\#4534](https://github.com/tendermint/tendermint/issues/4534) Add `error` as a return value on`GetPubKey()` (@marbar3778).
-- [p2p] [\#4621](https://github.com/tendermint/tendermint/issues/4621) Ban peers when messages are unsolicited or too frequent (@cmwaters).
-- [rpc] [\#4703](https://github.com/tendermint/tendermint/pull/4703) Add `count` and `total` to `/validators` response (@melekes).
-- [tools] [\#4615](https://github.com/tendermint/tendermint/issues/4615) Allow developers to use Docker to generate proto stubs, via `make proto-gen-docker` (@erikgrinaker).
+- [all] [\#4608](https://github.com/DeAI-Artist/MintAI/pull/4608) Give reactors descriptive names when they're initialized (@tessr).
+- [blockchain] [\#4588](https://github.com/DeAI-Artist/MintAI/issues/4588) Add `Base` to blockchain reactor P2P messages `StatusRequest` and `StatusResponse` (@erikgrinaker).
+- [Docker] [\#4569](https://github.com/DeAI-Artist/MintAI/issues/4569) Default configuration added to docker image (you can still mount your own config the same way) (@greg-szabo).
+- [example/kvstore] [\#4588](https://github.com/DeAI-Artist/MintAI/issues/4588) Add `RetainBlocks` option to control block retention (@erikgrinaker).
+- [evidence] [\#4632](https://github.com/DeAI-Artist/MintAI/pull/4632) Inbound evidence checked if already existing (@cmwaters).
+- [lite2] [\#4575](https://github.com/DeAI-Artist/MintAI/pull/4575) Use bisection for within-range verification (@cmwaters).
+- [lite2] [\#4562](https://github.com/DeAI-Artist/MintAI/pull/4562) Cache headers when using bisection (@cmwaters).
+- [p2p] [\#4548](https://github.com/DeAI-Artist/MintAI/pull/4548) Add ban list to address book (@cmwaters).
+- [privval] [\#4534](https://github.com/DeAI-Artist/MintAI/issues/4534) Add `error` as a return value on`GetPubKey()` (@marbar3778).
+- [p2p] [\#4621](https://github.com/DeAI-Artist/MintAI/issues/4621) Ban peers when messages are unsolicited or too frequent (@cmwaters).
+- [rpc] [\#4703](https://github.com/DeAI-Artist/MintAI/pull/4703) Add `count` and `total` to `/validators` response (@melekes).
+- [tools] [\#4615](https://github.com/DeAI-Artist/MintAI/issues/4615) Allow developers to use Docker to generate proto stubs, via `make proto-gen-docker` (@erikgrinaker).
 
 ### BUG FIXES:
 
-- [rpc] [\#4568](https://github.com/tendermint/tendermint/issues/4568) Fix panic when `Subscribe` is called, but HTTP client is not running. `Subscribe`, `Unsubscribe(All)` methods return an error now (@melekes).
+- [rpc] [\#4568](https://github.com/DeAI-Artist/MintAI/issues/4568) Fix panic when `Subscribe` is called, but HTTP client is not running. `Subscribe`, `Unsubscribe(All)` methods return an error now (@melekes).
 
 ## v0.33.3
 
@@ -825,7 +825,7 @@ Notes:
 - Tendermint does not rate limit HTTP(S) requests. If you expose any RPC
   endpoints to the public, please make sure to put in place some protection
   (https://www.nginx.com/blog/rate-limiting-nginx/). We may implement this in
-  the future ([\#1696](https://github.com/tendermint/tendermint/issues/1696)).
+  the future ([\#1696](https://github.com/DeAI-Artist/MintAI/issues/1696)).
 
 ### Denial of service 2
 
@@ -844,7 +844,7 @@ which is executed before `MConnection` is started.
 Notes:
 
 - `InitPeer` function was added to all reactors to combat a similar issue -
-  [\#3338](https://github.com/tendermint/tendermint/issues/3338);
+  [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338);
 - Denial of service 2 is independent of Denial of service 1 and can be executed
   without it.
 
@@ -868,44 +868,44 @@ Special thanks to external contributors on this release:
 ### BREAKING CHANGES:
 
 - CLI/RPC/Config
-  - [cli] [\#4505](https://github.com/tendermint/tendermint/pull/4505) `tendermint lite` sub-command new syntax (@melekes):
+  - [cli] [\#4505](https://github.com/DeAI-Artist/MintAI/pull/4505) `tendermint lite` sub-command new syntax (@melekes):
     `lite cosmoshub-3 -p 52.57.29.196:26657 -w public-seed-node.cosmoshub.certus.one:26657
     --height 962118 --hash 28B97BE9F6DE51AC69F70E0B7BFD7E5C9CD1A595B7DC31AFF27C50D4948`
 
 - Go API
-  - [lite2] [\#4535](https://github.com/tendermint/tendermint/pull/4535) Remove `Start/Stop` (@melekes)
-  - [lite2] [\#4469](https://github.com/tendermint/tendermint/issues/4469) Remove `RemoveNoLongerTrustedHeaders` and `RemoveNoLongerTrustedHeadersPeriod` option (@cmwaters)
-  - [lite2] [\#4473](https://github.com/tendermint/tendermint/issues/4473) Return height as a 2nd param in `TrustedValidatorSet` (@melekes)
-  - [lite2] [\#4536](https://github.com/tendermint/tendermint/pull/4536) `Update` returns a signed header (1st param) (@melekes)
+  - [lite2] [\#4535](https://github.com/DeAI-Artist/MintAI/pull/4535) Remove `Start/Stop` (@melekes)
+  - [lite2] [\#4469](https://github.com/DeAI-Artist/MintAI/issues/4469) Remove `RemoveNoLongerTrustedHeaders` and `RemoveNoLongerTrustedHeadersPeriod` option (@cmwaters)
+  - [lite2] [\#4473](https://github.com/DeAI-Artist/MintAI/issues/4473) Return height as a 2nd param in `TrustedValidatorSet` (@melekes)
+  - [lite2] [\#4536](https://github.com/DeAI-Artist/MintAI/pull/4536) `Update` returns a signed header (1st param) (@melekes)
 
 
 ### IMPROVEMENTS:
 
-- [blockchain/v2] [\#4361](https://github.com/tendermint/tendermint/pull/4361) Add reactor (@brapse)
-- [cmd] [\#4515](https://github.com/tendermint/tendermint/issues/4515) Change `tendermint debug dump` sub-command archives filename's format (@melekes)
-- [consensus] [\#3583](https://github.com/tendermint/tendermint/issues/3583) Reduce `non-deterministic signature` log noise (@tau3)
-- [examples/kvstore] [\#4507](https://github.com/tendermint/tendermint/issues/4507) ABCI query now returns the proper height (@erikgrinaker)
-- [lite2] [\#4462](https://github.com/tendermint/tendermint/issues/4462) Add `NewHTTPClient` and `NewHTTPClientFromTrustedStore` (@cmwaters)
-- [lite2] [\#4329](https://github.com/tendermint/tendermint/issues/4329) modified bisection to loop (@cmwaters)
-- [lite2] [\#4385](https://github.com/tendermint/tendermint/issues/4385) Disconnect from bad nodes (@melekes)
-- [lite2] [\#4398](https://github.com/tendermint/tendermint/issues/4398) Add `VerifyAdjacent` and `VerifyNonAdjacent` funcs (@cmwaters)
-- [lite2] [\#4426](https://github.com/tendermint/tendermint/issues/4426) Don't save intermediate headers (@cmwaters)
-- [lite2] [\#4464](https://github.com/tendermint/tendermint/issues/4464) Cross-check first header (@cmwaters)
-- [lite2] [\#4470](https://github.com/tendermint/tendermint/issues/4470) Fix inconsistent header-validatorset pairing (@melekes)
-- [lite2] [\#4488](https://github.com/tendermint/tendermint/issues/4488) Allow local clock drift -10 sec. (@melekes)
-- [p2p] [\#4449](https://github.com/tendermint/tendermint/pull/4449) Use `curve25519.X25519()` instead of `ScalarMult` (@erikgrinaker)
-- [types] [\#4417](https://github.com/tendermint/tendermint/issues/4417) **VerifyCommitX() functions should return as soon as +2/3 threshold is reached** (@alessio).
-- [libs/kv] [\#4542](https://github.com/tendermint/tendermint/pull/4542) remove unused type KI64Pair (@tessr)
+- [blockchain/v2] [\#4361](https://github.com/DeAI-Artist/MintAI/pull/4361) Add reactor (@brapse)
+- [cmd] [\#4515](https://github.com/DeAI-Artist/MintAI/issues/4515) Change `tendermint debug dump` sub-command archives filename's format (@melekes)
+- [consensus] [\#3583](https://github.com/DeAI-Artist/MintAI/issues/3583) Reduce `non-deterministic signature` log noise (@tau3)
+- [examples/kvstore] [\#4507](https://github.com/DeAI-Artist/MintAI/issues/4507) ABCI query now returns the proper height (@erikgrinaker)
+- [lite2] [\#4462](https://github.com/DeAI-Artist/MintAI/issues/4462) Add `NewHTTPClient` and `NewHTTPClientFromTrustedStore` (@cmwaters)
+- [lite2] [\#4329](https://github.com/DeAI-Artist/MintAI/issues/4329) modified bisection to loop (@cmwaters)
+- [lite2] [\#4385](https://github.com/DeAI-Artist/MintAI/issues/4385) Disconnect from bad nodes (@melekes)
+- [lite2] [\#4398](https://github.com/DeAI-Artist/MintAI/issues/4398) Add `VerifyAdjacent` and `VerifyNonAdjacent` funcs (@cmwaters)
+- [lite2] [\#4426](https://github.com/DeAI-Artist/MintAI/issues/4426) Don't save intermediate headers (@cmwaters)
+- [lite2] [\#4464](https://github.com/DeAI-Artist/MintAI/issues/4464) Cross-check first header (@cmwaters)
+- [lite2] [\#4470](https://github.com/DeAI-Artist/MintAI/issues/4470) Fix inconsistent header-validatorset pairing (@melekes)
+- [lite2] [\#4488](https://github.com/DeAI-Artist/MintAI/issues/4488) Allow local clock drift -10 sec. (@melekes)
+- [p2p] [\#4449](https://github.com/DeAI-Artist/MintAI/pull/4449) Use `curve25519.X25519()` instead of `ScalarMult` (@erikgrinaker)
+- [types] [\#4417](https://github.com/DeAI-Artist/MintAI/issues/4417) **VerifyCommitX() functions should return as soon as +2/3 threshold is reached** (@alessio).
+- [libs/kv] [\#4542](https://github.com/DeAI-Artist/MintAI/pull/4542) remove unused type KI64Pair (@tessr)
 
 ### BUG FIXES:
 
-- [cmd] [\#4303](https://github.com/tendermint/tendermint/issues/4303) Show useful error when Tendermint is not initialized (@melekes)
-- [cmd] [\#4515](https://github.com/tendermint/tendermint/issues/4515) **Fix `tendermint debug kill` sub-command** (@melekes)
-- [rpc] [\#3935](https://github.com/tendermint/tendermint/issues/3935) **Create buffered subscriptions on `/subscribe`** (@melekes)
-- [rpc] [\#4375](https://github.com/tendermint/tendermint/issues/4375) Stop searching for txs in `/tx_search` upon client timeout (@gterzian)
-- [rpc] [\#4406](https://github.com/tendermint/tendermint/pull/4406) Fix issue with multiple subscriptions on the websocket (@antho1404)
-- [rpc] [\#4432](https://github.com/tendermint/tendermint/issues/4432) Fix `/tx_search` pagination with ordered results (@erikgrinaker)
-- [rpc] [\#4492](https://github.com/tendermint/tendermint/issues/4492) Keep the original subscription "id" field when new RPCs come in (@michaelfig)
+- [cmd] [\#4303](https://github.com/DeAI-Artist/MintAI/issues/4303) Show useful error when Tendermint is not initialized (@melekes)
+- [cmd] [\#4515](https://github.com/DeAI-Artist/MintAI/issues/4515) **Fix `tendermint debug kill` sub-command** (@melekes)
+- [rpc] [\#3935](https://github.com/DeAI-Artist/MintAI/issues/3935) **Create buffered subscriptions on `/subscribe`** (@melekes)
+- [rpc] [\#4375](https://github.com/DeAI-Artist/MintAI/issues/4375) Stop searching for txs in `/tx_search` upon client timeout (@gterzian)
+- [rpc] [\#4406](https://github.com/DeAI-Artist/MintAI/pull/4406) Fix issue with multiple subscriptions on the websocket (@antho1404)
+- [rpc] [\#4432](https://github.com/DeAI-Artist/MintAI/issues/4432) Fix `/tx_search` pagination with ordered results (@erikgrinaker)
+- [rpc] [\#4492](https://github.com/DeAI-Artist/MintAI/issues/4492) Keep the original subscription "id" field when new RPCs come in (@michaelfig)
 
 
 ## v0.33.1
@@ -917,17 +917,17 @@ Special thanks to external contributors on this release:
 
 ### FEATURES:
 
-- [rpc] [\#3333](https://github.com/tendermint/tendermint/issues/3333) Add `order_by` to `/tx_search` endpoint, allowing to change default ordering from asc to desc (@princesinha19)
+- [rpc] [\#3333](https://github.com/DeAI-Artist/MintAI/issues/3333) Add `order_by` to `/tx_search` endpoint, allowing to change default ordering from asc to desc (@princesinha19)
 
 ### IMPROVEMENTS:
 
-- [proto] [\#4369](https://github.com/tendermint/tendermint/issues/4369) Add [buf](https://buf.build/) for usage with linting and checking if there are breaking changes with the master branch.
-- [proto] [\#4369](https://github.com/tendermint/tendermint/issues/4369) Add `make proto-gen` cmd to generate proto stubs outside of GOPATH.
+- [proto] [\#4369](https://github.com/DeAI-Artist/MintAI/issues/4369) Add [buf](https://buf.build/) for usage with linting and checking if there are breaking changes with the master branch.
+- [proto] [\#4369](https://github.com/DeAI-Artist/MintAI/issues/4369) Add `make proto-gen` cmd to generate proto stubs outside of GOPATH.
 
 ### BUG FIXES:
 
-- [node] [\#4311](https://github.com/tendermint/tendermint/issues/4311) Use `GRPCMaxOpenConnections` when creating the gRPC server, not `MaxOpenConnections`
-- [rpc] [\#4319](https://github.com/tendermint/tendermint/issues/4319) Check `BlockMeta` is not nil in `/block` & `/block_by_hash`
+- [node] [\#4311](https://github.com/DeAI-Artist/MintAI/issues/4311) Use `GRPCMaxOpenConnections` when creating the gRPC server, not `MaxOpenConnections`
+- [rpc] [\#4319](https://github.com/DeAI-Artist/MintAI/issues/4319) Check `BlockMeta` is not nil in `/block` & `/block_by_hash`
 
 ## v0.33
 
@@ -951,15 +951,15 @@ and a validator address plus a timestamp. Note we may remove the validator
 address & timestamp fields in the future (see ADR-25).
 
 `lite2` package has been added to solve `lite` issues and introduce weak
-subjectivity interface. Refer to the [spec](https://github.com/tendermint/tendermint/blob/v0.34.x/spec/consensus/light-client.md) for complete details.
+subjectivity interface. Refer to the [spec](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/consensus/light-client.md) for complete details.
 `lite` package is now deprecated and will be removed in v0.34 release.
 
 ### BREAKING CHANGES:
 
 - CLI/RPC/Config
 
-  - [rpc] [\#3471](https://github.com/tendermint/tendermint/issues/3471) Paginate `/validators` response (default: 30 vals per page)
-  - [rpc] [\#3188](https://github.com/tendermint/tendermint/issues/3188) Remove `BlockMeta` in `ResultBlock` in favor of `BlockId` for `/block`
+  - [rpc] [\#3471](https://github.com/DeAI-Artist/MintAI/issues/3471) Paginate `/validators` response (default: 30 vals per page)
+  - [rpc] [\#3188](https://github.com/DeAI-Artist/MintAI/issues/3188) Remove `BlockMeta` in `ResultBlock` in favor of `BlockId` for `/block`
   - [rpc] `/block_results` response format updated (see RPC docs for details)
     ```
     {
@@ -975,9 +975,9 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
       }
     }
     ```
-  - [rpc] [\#4141](https://github.com/tendermint/tendermint/pull/4141) Remove `#event` suffix from the ID in event responses.
+  - [rpc] [\#4141](https://github.com/DeAI-Artist/MintAI/pull/4141) Remove `#event` suffix from the ID in event responses.
     `{"jsonrpc": "2.0", "id": 0, "result": ...}`
-  - [rpc] [\#4141](https://github.com/tendermint/tendermint/pull/4141) Switch to integer IDs instead of `json-client-XYZ`
+  - [rpc] [\#4141](https://github.com/DeAI-Artist/MintAI/pull/4141) Switch to integer IDs instead of `json-client-XYZ`
     ```
     id=0 method=/subscribe
     id=0 result=...
@@ -987,11 +987,11 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
     - ID is unique for each request;
     - Request.ID is now optional. Notification is a Request without an ID. Previously ID="" or ID=0 were considered as notifications.
 
-  - [config] [\#4046](https://github.com/tendermint/tendermint/issues/4046) Rename tag(s) to CompositeKey & places where tag is still present it was renamed to event or events. Find how a compositeKey is constructed [here](https://github.com/tendermint/tendermint/blob/6d05c531f7efef6f0619155cf10ae8557dd7832f/docs/app-dev/indexing-transactions.md)
+  - [config] [\#4046](https://github.com/DeAI-Artist/MintAI/issues/4046) Rename tag(s) to CompositeKey & places where tag is still present it was renamed to event or events. Find how a compositeKey is constructed [here](https://github.com/DeAI-Artist/MintAI/blob/6d05c531f7efef6f0619155cf10ae8557dd7832f/docs/app-dev/indexing-transactions.md)
     - You will have to generate a new config for your Tendermint node(s)
-  - [genesis] [\#2565](https://github.com/tendermint/tendermint/issues/2565) Add `consensus_params.evidence.max_age_duration`. Rename
+  - [genesis] [\#2565](https://github.com/DeAI-Artist/MintAI/issues/2565) Add `consensus_params.evidence.max_age_duration`. Rename
     `consensus_params.evidence.max_age` to `max_age_num_blocks`.
-  - [cli] [\#1771](https://github.com/tendermint/tendermint/issues/1771) `tendermint lite` now uses new light client package (`lite2`)
+  - [cli] [\#1771](https://github.com/DeAI-Artist/MintAI/issues/1771) `tendermint lite` now uses new light client package (`lite2`)
     and has 3 more flags: `--trusting-period`, `--trusted-height` and
     `--trusted-hash`
 
@@ -1001,40 +1001,40 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
 
 - Go API
 
-  - [rpc] [\#3953](https://github.com/tendermint/tendermint/issues/3953) Modify NewHTTP, NewXXXClient functions to return an error on invalid remote instead of panicking (@mrekucci)
-  - [rpc/client] [\#3471](https://github.com/tendermint/tendermint/issues/3471) `Validators` now requires two more args: `page` and `perPage`
-  - [libs/common] [\#3262](https://github.com/tendermint/tendermint/issues/3262) Make error the last parameter of `Task` (@PSalant726)
-  - [cs/types] [\#3262](https://github.com/tendermint/tendermint/issues/3262) Rename `GotVoteFromUnwantedRoundError` to `ErrGotVoteFromUnwantedRound` (@PSalant726)
-  - [libs/common] [\#3862](https://github.com/tendermint/tendermint/issues/3862) Remove `errors.go` from `libs/common`
-  - [libs/common] [\#4230](https://github.com/tendermint/tendermint/issues/4230) Move `KV` out of common to its own pkg
-  - [libs/common] [\#4230](https://github.com/tendermint/tendermint/issues/4230) Rename `cmn.KVPair(s)` to `kv.Pair(s)`s
-  - [libs/common] [\#4232](https://github.com/tendermint/tendermint/issues/4232) Move `Service` & `BaseService` from `libs/common` to `libs/service`
-  - [libs/common] [\#4232](https://github.com/tendermint/tendermint/issues/4232) Move `common/nil.go` to `types/utils.go` & make the functions private
-  - [libs/common] [\#4231](https://github.com/tendermint/tendermint/issues/4231) Move random functions from `libs/common` into pkg `rand`
-  - [libs/common] [\#4237](https://github.com/tendermint/tendermint/issues/4237) Move byte functions from `libs/common` into pkg `bytes`
-  - [libs/common] [\#4237](https://github.com/tendermint/tendermint/issues/4237) Move throttletimer functions from `libs/common` into pkg `timer`
-  - [libs/common] [\#4237](https://github.com/tendermint/tendermint/issues/4237) Move tempfile functions from `libs/common` into pkg `tempfile`
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move os functions from `libs/common` into pkg `os`
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move net functions from `libs/common` into pkg `net`
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move mathematical functions and types out of `libs/common` to `math` pkg
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move string functions out of `libs/common` to `strings` pkg
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move async functions out of `libs/common` to `async` pkg
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move bit functions out of `libs/common` to `bits` pkg
-  - [libs/common] [\#4240](https://github.com/tendermint/tendermint/issues/4240) Move cmap functions out of `libs/common` to `cmap` pkg
-  - [libs/common] [\#4258](https://github.com/tendermint/tendermint/issues/4258) Remove `Rand` from all `rand` pkg functions
-  - [types] [\#2565](https://github.com/tendermint/tendermint/issues/2565) Remove `MockBadEvidence` & `MockGoodEvidence` in favor of `MockEvidence`
+  - [rpc] [\#3953](https://github.com/DeAI-Artist/MintAI/issues/3953) Modify NewHTTP, NewXXXClient functions to return an error on invalid remote instead of panicking (@mrekucci)
+  - [rpc/client] [\#3471](https://github.com/DeAI-Artist/MintAI/issues/3471) `Validators` now requires two more args: `page` and `perPage`
+  - [libs/common] [\#3262](https://github.com/DeAI-Artist/MintAI/issues/3262) Make error the last parameter of `Task` (@PSalant726)
+  - [cs/types] [\#3262](https://github.com/DeAI-Artist/MintAI/issues/3262) Rename `GotVoteFromUnwantedRoundError` to `ErrGotVoteFromUnwantedRound` (@PSalant726)
+  - [libs/common] [\#3862](https://github.com/DeAI-Artist/MintAI/issues/3862) Remove `errors.go` from `libs/common`
+  - [libs/common] [\#4230](https://github.com/DeAI-Artist/MintAI/issues/4230) Move `KV` out of common to its own pkg
+  - [libs/common] [\#4230](https://github.com/DeAI-Artist/MintAI/issues/4230) Rename `cmn.KVPair(s)` to `kv.Pair(s)`s
+  - [libs/common] [\#4232](https://github.com/DeAI-Artist/MintAI/issues/4232) Move `Service` & `BaseService` from `libs/common` to `libs/service`
+  - [libs/common] [\#4232](https://github.com/DeAI-Artist/MintAI/issues/4232) Move `common/nil.go` to `types/utils.go` & make the functions private
+  - [libs/common] [\#4231](https://github.com/DeAI-Artist/MintAI/issues/4231) Move random functions from `libs/common` into pkg `rand`
+  - [libs/common] [\#4237](https://github.com/DeAI-Artist/MintAI/issues/4237) Move byte functions from `libs/common` into pkg `bytes`
+  - [libs/common] [\#4237](https://github.com/DeAI-Artist/MintAI/issues/4237) Move throttletimer functions from `libs/common` into pkg `timer`
+  - [libs/common] [\#4237](https://github.com/DeAI-Artist/MintAI/issues/4237) Move tempfile functions from `libs/common` into pkg `tempfile`
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move os functions from `libs/common` into pkg `os`
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move net functions from `libs/common` into pkg `net`
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move mathematical functions and types out of `libs/common` to `math` pkg
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move string functions out of `libs/common` to `strings` pkg
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move async functions out of `libs/common` to `async` pkg
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move bit functions out of `libs/common` to `bits` pkg
+  - [libs/common] [\#4240](https://github.com/DeAI-Artist/MintAI/issues/4240) Move cmap functions out of `libs/common` to `cmap` pkg
+  - [libs/common] [\#4258](https://github.com/DeAI-Artist/MintAI/issues/4258) Remove `Rand` from all `rand` pkg functions
+  - [types] [\#2565](https://github.com/DeAI-Artist/MintAI/issues/2565) Remove `MockBadEvidence` & `MockGoodEvidence` in favor of `MockEvidence`
 
 - Blockchain Protocol
 
-  - [abci] [\#2521](https://github.com/tendermint/tendermint/issues/2521) Remove `TotalTxs` and `NumTxs` from `Header`
-  - [types] [\#4151](https://github.com/tendermint/tendermint/pull/4151) Enforce ordering of votes in DuplicateVoteEvidence to be lexicographically sorted on BlockID
-  - [types] [\#1648](https://github.com/tendermint/tendermint/issues/1648) Change `Commit` to consist of just signatures
+  - [abci] [\#2521](https://github.com/DeAI-Artist/MintAI/issues/2521) Remove `TotalTxs` and `NumTxs` from `Header`
+  - [types] [\#4151](https://github.com/DeAI-Artist/MintAI/pull/4151) Enforce ordering of votes in DuplicateVoteEvidence to be lexicographically sorted on BlockID
+  - [types] [\#1648](https://github.com/DeAI-Artist/MintAI/issues/1648) Change `Commit` to consist of just signatures
 
 - P2P Protocol
 
-  - [p2p] [\#3668](https://github.com/tendermint/tendermint/pull/3668) Make `SecretConnection` non-malleable
+  - [p2p] [\#3668](https://github.com/DeAI-Artist/MintAI/pull/3668) Make `SecretConnection` non-malleable
 
-- [proto] [\#3986](https://github.com/tendermint/tendermint/pull/3986) Prefix protobuf types to avoid name conflicts.
+- [proto] [\#3986](https://github.com/DeAI-Artist/MintAI/pull/3986) Prefix protobuf types to avoid name conflicts.
   - ABCI becomes `tendermint.abci.types` with the new API endpoint `/tendermint.abci.types.ABCIApplication/`
   - core_grpc becomes `tendermint.rpc.grpc` with the new API endpoint `/tendermint.rpc.grpc.BroadcastAPI/`
   - merkle becomes `tendermint.crypto.merkle`
@@ -1043,46 +1043,46 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
 
 ### FEATURES:
 
-- [p2p] [\#4053](https://github.com/tendermint/tendermint/issues/4053) Add `unconditional_peer_ids` and `persistent_peers_max_dial_period` config variables (see ADR-050) (@dongsam)
-- [tools] [\#4227](https://github.com/tendermint/tendermint/pull/4227) Implement `tendermint debug kill` and
+- [p2p] [\#4053](https://github.com/DeAI-Artist/MintAI/issues/4053) Add `unconditional_peer_ids` and `persistent_peers_max_dial_period` config variables (see ADR-050) (@dongsam)
+- [tools] [\#4227](https://github.com/DeAI-Artist/MintAI/pull/4227) Implement `tendermint debug kill` and
   `tendermint debug dump` commands for Tendermint node debugging functionality. See `--help` in both
   commands for further documentation and usage.
-- [cli] [\#4234](https://github.com/tendermint/tendermint/issues/4234) Add `--db_backend and --db_dir` flags (@princesinha19)
-- [cli] [\#4113](https://github.com/tendermint/tendermint/issues/4113) Add optional `--genesis_hash` flag to check genesis hash upon startup
-- [config] [\#3831](https://github.com/tendermint/tendermint/issues/3831) Add support for [RocksDB](https://rocksdb.org/) (@Stumble)
-- [rpc] [\#3985](https://github.com/tendermint/tendermint/issues/3985) Add new `/block_by_hash` endpoint, which allows to fetch a block by its hash (@princesinha19)
-- [metrics] [\#4263](https://github.com/tendermint/tendermint/issues/4263) Add
+- [cli] [\#4234](https://github.com/DeAI-Artist/MintAI/issues/4234) Add `--db_backend and --db_dir` flags (@princesinha19)
+- [cli] [\#4113](https://github.com/DeAI-Artist/MintAI/issues/4113) Add optional `--genesis_hash` flag to check genesis hash upon startup
+- [config] [\#3831](https://github.com/DeAI-Artist/MintAI/issues/3831) Add support for [RocksDB](https://rocksdb.org/) (@Stumble)
+- [rpc] [\#3985](https://github.com/DeAI-Artist/MintAI/issues/3985) Add new `/block_by_hash` endpoint, which allows to fetch a block by its hash (@princesinha19)
+- [metrics] [\#4263](https://github.com/DeAI-Artist/MintAI/issues/4263) Add
   - `consensus_validator_power`: track your validators power
   - `consensus_validator_last_signed_height`: track at which height the validator last signed
   - `consensus_validator_missed_blocks`: total amount of missed blocks for a validator
   as gauges in prometheus for validator specific metrics
-- [rpc/lib] [\#4248](https://github.com/tendermint/tendermint/issues/4248) RPC client basic authentication support (@greg-szabo)
-- [lite2] [\#1771](https://github.com/tendermint/tendermint/issues/1771) Light client with weak subjectivity
+- [rpc/lib] [\#4248](https://github.com/DeAI-Artist/MintAI/issues/4248) RPC client basic authentication support (@greg-szabo)
+- [lite2] [\#1771](https://github.com/DeAI-Artist/MintAI/issues/1771) Light client with weak subjectivity
 
 ### IMPROVEMENTS:
 
-- [rpc] [\#3188](https://github.com/tendermint/tendermint/issues/3188) Added `block_size` to `BlockMeta` this is reflected in `/blockchain`
-- [types] [\#2521](https://github.com/tendermint/tendermint/issues/2521) Add `NumTxs` to `BlockMeta` and `EventDataNewBlockHeader`
-- [p2p] [\#4185](https://github.com/tendermint/tendermint/pull/4185) Simplify `SecretConnection` handshake with merlin
-- [cli] [\#4065](https://github.com/tendermint/tendermint/issues/4065) Add `--consensus.create_empty_blocks_interval` flag (@jgimeno)
-- [docs] [\#4065](https://github.com/tendermint/tendermint/issues/4065) Document `--consensus.create_empty_blocks_interval` flag (@jgimeno)
-- [crypto] [\#4190](https://github.com/tendermint/tendermint/pull/4190) Added SR25519 signature scheme
+- [rpc] [\#3188](https://github.com/DeAI-Artist/MintAI/issues/3188) Added `block_size` to `BlockMeta` this is reflected in `/blockchain`
+- [types] [\#2521](https://github.com/DeAI-Artist/MintAI/issues/2521) Add `NumTxs` to `BlockMeta` and `EventDataNewBlockHeader`
+- [p2p] [\#4185](https://github.com/DeAI-Artist/MintAI/pull/4185) Simplify `SecretConnection` handshake with merlin
+- [cli] [\#4065](https://github.com/DeAI-Artist/MintAI/issues/4065) Add `--consensus.create_empty_blocks_interval` flag (@jgimeno)
+- [docs] [\#4065](https://github.com/DeAI-Artist/MintAI/issues/4065) Document `--consensus.create_empty_blocks_interval` flag (@jgimeno)
+- [crypto] [\#4190](https://github.com/DeAI-Artist/MintAI/pull/4190) Added SR25519 signature scheme
 - [abci] [\#4177] kvstore: Return `LastBlockHeight` and `LastBlockAppHash` in `Info` (@princesinha19)
-- [rpc] [\#2741](https://github.com/tendermint/tendermint/issues/2741) Add `proposer` to `/consensus_state` response (@princesinha19)
-- [deps] [\#4289](https://github.com/tendermint/tendermint/pull/4289) Update tm-db to 0.4.0, this includes major breaking changes in the dep that change how errors are handled.
+- [rpc] [\#2741](https://github.com/DeAI-Artist/MintAI/issues/2741) Add `proposer` to `/consensus_state` response (@princesinha19)
+- [deps] [\#4289](https://github.com/DeAI-Artist/MintAI/pull/4289) Update tm-db to 0.4.0, this includes major breaking changes in the dep that change how errors are handled.
 
 ### BUG FIXES:
 
-- [rpc/lib][\#4051](https://github.com/tendermint/tendermint/pull/4131) Fix RPC client, which was previously resolving https protocol to http (@yenkhoon)
-- [rpc] [\#4141](https://github.com/tendermint/tendermint/pull/4141) JSONRPCClient: validate that Response.ID matches Request.ID
-- [rpc] [\#4141](https://github.com/tendermint/tendermint/pull/4141) WSClient: check for unsolicited responses
-- [types] [\4164](https://github.com/tendermint/tendermint/pull/4164) Prevent temporary power overflows on validator updates
-- [cs] [\#4069](https://github.com/tendermint/tendermint/issues/4069) Don't panic when block meta is not found in store (@gregzaitsev)
-- [types] [\#4164](https://github.com/tendermint/tendermint/issues/4164) Prevent temporary power overflows on validator updates (joint
+- [rpc/lib][\#4051](https://github.com/DeAI-Artist/MintAI/pull/4131) Fix RPC client, which was previously resolving https protocol to http (@yenkhoon)
+- [rpc] [\#4141](https://github.com/DeAI-Artist/MintAI/pull/4141) JSONRPCClient: validate that Response.ID matches Request.ID
+- [rpc] [\#4141](https://github.com/DeAI-Artist/MintAI/pull/4141) WSClient: check for unsolicited responses
+- [types] [\4164](https://github.com/DeAI-Artist/MintAI/pull/4164) Prevent temporary power overflows on validator updates
+- [cs] [\#4069](https://github.com/DeAI-Artist/MintAI/issues/4069) Don't panic when block meta is not found in store (@gregzaitsev)
+- [types] [\#4164](https://github.com/DeAI-Artist/MintAI/issues/4164) Prevent temporary power overflows on validator updates (joint
   efforts of @gchaincl and @ancazamfir)
-- [p2p] [\#4140](https://github.com/tendermint/tendermint/issues/4140) `SecretConnection`: use the transcript solely for authentication (i.e. MAC)
-- [consensus/types] [\#4243](https://github.com/tendermint/tendermint/issues/4243) fix BenchmarkRoundStateDeepCopy panics (@cuonglm)
-- [rpc] [\#4256](https://github.com/tendermint/tendermint/issues/4256) Pass `outCapacity` to `eventBus#Subscribe` when subscribing using a local client
+- [p2p] [\#4140](https://github.com/DeAI-Artist/MintAI/issues/4140) `SecretConnection`: use the transcript solely for authentication (i.e. MAC)
+- [consensus/types] [\#4243](https://github.com/DeAI-Artist/MintAI/issues/4243) fix BenchmarkRoundStateDeepCopy panics (@cuonglm)
+- [rpc] [\#4256](https://github.com/DeAI-Artist/MintAI/issues/4256) Pass `outCapacity` to `eventBus#Subscribe` when subscribing using a local client
 
 ## v0.32.13
 
@@ -1090,7 +1090,7 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
 
  ### BUG FIXES
 
- - [privval] [\#5112](https://github.com/tendermint/tendermint/issues/5112) If remote signer errors, don't retry (@melekes)
+ - [privval] [\#5112](https://github.com/DeAI-Artist/MintAI/issues/5112) If remote signer errors, don't retry (@melekes)
 
 ## v0.32.12
 
@@ -1098,7 +1098,7 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
 
 ### BUG FIXES
 
-- [p2p] [\#4847](https://github.com/tendermint/tendermint/pull/4847) Return masked IP (not the actual IP) in addrbook#groupKey (@melekes)
+- [p2p] [\#4847](https://github.com/DeAI-Artist/MintAI/pull/4847) Return masked IP (not the actual IP) in addrbook#groupKey (@melekes)
 
 ## v0.32.11
 
@@ -1106,7 +1106,7 @@ subjectivity interface. Refer to the [spec](https://github.com/tendermint/tender
 
 ### BUG FIXES:
 
-- [privval] [\#4275](https://github.com/tendermint/tendermint/issues/4275) Fix consensus failure when remote signer drops (@melekes)
+- [privval] [\#4275](https://github.com/DeAI-Artist/MintAI/issues/4275) Fix consensus failure when remote signer drops (@melekes)
 
 ## v0.32.10
 
@@ -1133,7 +1133,7 @@ Notes:
 - Tendermint does not rate limit HTTP(S) requests. If you expose any RPC
   endpoints to the public, please make sure to put in place some protection
   (https://www.nginx.com/blog/rate-limiting-nginx/). We may implement this in
-  the future ([\#1696](https://github.com/tendermint/tendermint/issues/1696)).
+  the future ([\#1696](https://github.com/DeAI-Artist/MintAI/issues/1696)).
 
 ### Denial of Service 2
 
@@ -1152,7 +1152,7 @@ which is executed before `MConnection` is started.
 Notes:
 
 - `InitPeer` function was added to all reactors to combat a similar issue -
-  [\#3338](https://github.com/tendermint/tendermint/issues/3338);
+  [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338);
 - Denial of Service 2 is independent of Denial of Service 1 and can be executed
   without it.
 
@@ -1174,9 +1174,9 @@ Special thanks to external contributors on this release: @greg-szabo, @gregzaits
 
 ### FEATURES:
 
-- [rpc/lib] [\#4248](https://github.com/tendermint/tendermint/issues/4248) RPC client basic authentication support (@greg-szabo)
+- [rpc/lib] [\#4248](https://github.com/DeAI-Artist/MintAI/issues/4248) RPC client basic authentication support (@greg-szabo)
 
-- [metrics] [\#4294](https://github.com/tendermint/tendermint/pull/4294) Add
+- [metrics] [\#4294](https://github.com/DeAI-Artist/MintAI/pull/4294) Add
   - `consensus_validator_power`: track your validators power
   - `consensus_validator_last_signed_height`: track at which height the validator last signed
   - `consensus_validator_missed_blocks`: total amount of missed blocks for a validator
@@ -1184,8 +1184,8 @@ Special thanks to external contributors on this release: @greg-szabo, @gregzaits
 
 ### BUG FIXES:
 
-- [rpc/lib] [\#4131](https://github.com/tendermint/tendermint/pull/4131) Fix RPC client, which was previously resolving https protocol to http (@yenkhoon)
-- [cs] [\#4069](https://github.com/tendermint/tendermint/issues/4069) Don't panic when block meta is not found in store (@gregzaitsev)
+- [rpc/lib] [\#4131](https://github.com/DeAI-Artist/MintAI/pull/4131) Fix RPC client, which was previously resolving https protocol to http (@yenkhoon)
+- [cs] [\#4069](https://github.com/DeAI-Artist/MintAI/issues/4069) Don't panic when block meta is not found in store (@gregzaitsev)
 
 ## v0.32.8
 
@@ -1198,25 +1198,25 @@ Special thanks to external contributors on this release: @erikgrinaker, @guagual
 
 - Go API
 
-  - [libs/pubsub] [\#4070](https://github.com/tendermint/tendermint/pull/4070) `Query#(Matches|Conditions)` returns an error.
+  - [libs/pubsub] [\#4070](https://github.com/DeAI-Artist/MintAI/pull/4070) `Query#(Matches|Conditions)` returns an error.
 
 ### IMPROVEMENTS:
 
-- [mempool] [\#4083](https://github.com/tendermint/tendermint/pull/4083) Added TxInfo parameter to CheckTx(), and removed CheckTxWithInfo() (@erikgrinaker)
-- [mempool] [\#4057](https://github.com/tendermint/tendermint/issues/4057) Include peer ID when logging rejected txns (@erikgrinaker)
-- [tools] [\#4023](https://github.com/tendermint/tendermint/issues/4023) Improved `tm-monitor` formatting of start time and avg tx throughput (@erikgrinaker)
-- [p2p] [\#3991](https://github.com/tendermint/tendermint/issues/3991) Log "has been established or dialed" as debug log instead of Error for connected peers (@whunmr)
-- [rpc] [\#4077](https://github.com/tendermint/tendermint/pull/4077) Added support for `EXISTS` clause to the Websocket query interface.
+- [mempool] [\#4083](https://github.com/DeAI-Artist/MintAI/pull/4083) Added TxInfo parameter to CheckTx(), and removed CheckTxWithInfo() (@erikgrinaker)
+- [mempool] [\#4057](https://github.com/DeAI-Artist/MintAI/issues/4057) Include peer ID when logging rejected txns (@erikgrinaker)
+- [tools] [\#4023](https://github.com/DeAI-Artist/MintAI/issues/4023) Improved `tm-monitor` formatting of start time and avg tx throughput (@erikgrinaker)
+- [p2p] [\#3991](https://github.com/DeAI-Artist/MintAI/issues/3991) Log "has been established or dialed" as debug log instead of Error for connected peers (@whunmr)
+- [rpc] [\#4077](https://github.com/DeAI-Artist/MintAI/pull/4077) Added support for `EXISTS` clause to the Websocket query interface.
 - [privval] Add `SignerDialerEndpointRetryWaitInterval` option (@cosmostuba)
 - [crypto] Add `RegisterKeyType` to amino to allow external key types registration (@austinabell)
 
 ### BUG FIXES:
 
-- [libs/pubsub] [\#4070](https://github.com/tendermint/tendermint/pull/4070) Strip out non-numeric characters when attempting to match numeric values.
-- [libs/pubsub] [\#4070](https://github.com/tendermint/tendermint/pull/4070) No longer panic in Query#(Matches|Conditions) preferring to return an error instead.
-- [tools] [\#4023](https://github.com/tendermint/tendermint/issues/4023) Refresh `tm-monitor` health when validator count is updated (@erikgrinaker)
-- [state] [\#4104](https://github.com/tendermint/tendermint/pull/4104) txindex/kv: Fsync data to disk immediately after receiving it (@guagualvcha)
-- [state] [\#4095](https://github.com/tendermint/tendermint/pull/4095) txindex/kv: Return an error if there's one when the user searches for a tx (hash=X) (@hsyis)
+- [libs/pubsub] [\#4070](https://github.com/DeAI-Artist/MintAI/pull/4070) Strip out non-numeric characters when attempting to match numeric values.
+- [libs/pubsub] [\#4070](https://github.com/DeAI-Artist/MintAI/pull/4070) No longer panic in Query#(Matches|Conditions) preferring to return an error instead.
+- [tools] [\#4023](https://github.com/DeAI-Artist/MintAI/issues/4023) Refresh `tm-monitor` health when validator count is updated (@erikgrinaker)
+- [state] [\#4104](https://github.com/DeAI-Artist/MintAI/pull/4104) txindex/kv: Fsync data to disk immediately after receiving it (@guagualvcha)
+- [state] [\#4095](https://github.com/DeAI-Artist/MintAI/pull/4095) txindex/kv: Return an error if there's one when the user searches for a tx (hash=X) (@hsyis)
 
 ## v0.32.7
 
@@ -1260,7 +1260,7 @@ this out.
 
 ### SECURITY:
 
-- [p2p] [\#4030](https://github.com/tendermint/tendermint/issues/4030) Only allow ed25519 pubkeys when connecting
+- [p2p] [\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) Only allow ed25519 pubkeys when connecting
 
 ## v0.32.5
 
@@ -1268,14 +1268,14 @@ this out.
 
 This release fixes a major security vulnerability found in the `p2p` package.
 All clients are recommended to upgrade. See
-[\#4030](https://github.com/tendermint/tendermint/issues/4030) for details.
+[\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) for details.
 
 Special thanks to [fudongbai](https://hackerone.com/fudongbai) for discovering
 and reporting this issue.
 
 ### SECURITY:
 
-- [p2p] [\#4030](https://github.com/tendermint/tendermint/issues/4030) Fix for panic on nil public key send to a peer
+- [p2p] [\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) Fix for panic on nil public key send to a peer
 
 ## v0.32.4
 
@@ -1286,33 +1286,33 @@ Special thanks to external contributors on this release: @jon-certik, @gracenoah
 ### BREAKING CHANGES:
 
 - CLI/RPC/Config
-  - [rpc] [\#3984](https://github.com/tendermint/tendermint/issues/3984) Add `MempoolClient` interface to `Client` interface
+  - [rpc] [\#3984](https://github.com/DeAI-Artist/MintAI/issues/3984) Add `MempoolClient` interface to `Client` interface
 
 ### IMPROVEMENTS:
 
-- [rpc] [\#2010](https://github.com/tendermint/tendermint/issues/2010) Add NewHTTPWithClient and NewJSONRPCClientWithHTTPClient (note these and NewHTTP, NewJSONRPCClient functions panic if remote is invalid) (@gracenoah)
-- [rpc] [\#3882](https://github.com/tendermint/tendermint/issues/3882) Add custom marshalers to proto messages to disable `omitempty`
-- [deps] [\#3952](https://github.com/tendermint/tendermint/pull/3952) bump github.com/go-kit/kit from 0.6.0 to 0.9.0
-- [deps] [\#3951](https://github.com/tendermint/tendermint/pull/3951) bump github.com/stretchr/testify from 1.3.0 to 1.4.0
-- [deps] [\#3945](https://github.com/tendermint/tendermint/pull/3945) bump github.com/gorilla/websocket from 1.2.0 to 1.4.1
-- [deps] [\#3948](https://github.com/tendermint/tendermint/pull/3948) bump github.com/libp2p/go-buffer-pool from 0.0.1 to 0.0.2
-- [deps] [\#3943](https://github.com/tendermint/tendermint/pull/3943) bump github.com/fortytw2/leaktest from 1.2.0 to 1.3.0
-- [deps] [\#3939](https://github.com/tendermint/tendermint/pull/3939) bump github.com/rs/cors from 1.6.0 to 1.7.0
-- [deps] [\#3937](https://github.com/tendermint/tendermint/pull/3937) bump github.com/magiconair/properties from 1.8.0 to 1.8.1
-- [deps] [\#3947](https://github.com/tendermint/tendermint/pull/3947) update gogo/protobuf version from v1.2.1 to v1.3.0
-- [deps] [\#4001](https://github.com/tendermint/tendermint/pull/4001) bump github.com/tendermint/tm-db from 0.1.1 to 0.2.0
+- [rpc] [\#2010](https://github.com/DeAI-Artist/MintAI/issues/2010) Add NewHTTPWithClient and NewJSONRPCClientWithHTTPClient (note these and NewHTTP, NewJSONRPCClient functions panic if remote is invalid) (@gracenoah)
+- [rpc] [\#3882](https://github.com/DeAI-Artist/MintAI/issues/3882) Add custom marshalers to proto messages to disable `omitempty`
+- [deps] [\#3952](https://github.com/DeAI-Artist/MintAI/pull/3952) bump github.com/go-kit/kit from 0.6.0 to 0.9.0
+- [deps] [\#3951](https://github.com/DeAI-Artist/MintAI/pull/3951) bump github.com/stretchr/testify from 1.3.0 to 1.4.0
+- [deps] [\#3945](https://github.com/DeAI-Artist/MintAI/pull/3945) bump github.com/gorilla/websocket from 1.2.0 to 1.4.1
+- [deps] [\#3948](https://github.com/DeAI-Artist/MintAI/pull/3948) bump github.com/libp2p/go-buffer-pool from 0.0.1 to 0.0.2
+- [deps] [\#3943](https://github.com/DeAI-Artist/MintAI/pull/3943) bump github.com/fortytw2/leaktest from 1.2.0 to 1.3.0
+- [deps] [\#3939](https://github.com/DeAI-Artist/MintAI/pull/3939) bump github.com/rs/cors from 1.6.0 to 1.7.0
+- [deps] [\#3937](https://github.com/DeAI-Artist/MintAI/pull/3937) bump github.com/magiconair/properties from 1.8.0 to 1.8.1
+- [deps] [\#3947](https://github.com/DeAI-Artist/MintAI/pull/3947) update gogo/protobuf version from v1.2.1 to v1.3.0
+- [deps] [\#4001](https://github.com/DeAI-Artist/MintAI/pull/4001) bump github.com/tendermint/tm-db from 0.1.1 to 0.2.0
 
 ### BUG FIXES:
 
-- [consensus] [\#3908](https://github.com/tendermint/tendermint/issues/3908) Wait `timeout_commit` to pass even if `create_empty_blocks` is `false`
-- [mempool] [\#3968](https://github.com/tendermint/tendermint/issues/3968) Fix memory loading error on 32-bit machines (@jon-certik)
+- [consensus] [\#3908](https://github.com/DeAI-Artist/MintAI/issues/3908) Wait `timeout_commit` to pass even if `create_empty_blocks` is `false`
+- [mempool] [\#3968](https://github.com/DeAI-Artist/MintAI/issues/3968) Fix memory loading error on 32-bit machines (@jon-certik)
 
 ## v0.32.3
 
 *August 28, 2019*
 
 @climber73 wrote the [Writing a Tendermint Core application in Java
-(gRPC)](https://github.com/tendermint/tendermint/blob/v0.32.x/docs/guides/java.md)
+(gRPC)](https://github.com/DeAI-Artist/MintAI/blob/v0.32.x/docs/guides/java.md)
 guide.
 
 Special thanks to external contributors on this release:
@@ -1320,16 +1320,16 @@ Special thanks to external contributors on this release:
 
 ### IMPROVEMENTS:
 
-- [consensus] [\#3839](https://github.com/tendermint/tendermint/issues/3839) Reduce "Error attempting to add vote" message severity (Error -> Info)
-- [mempool] [\#3877](https://github.com/tendermint/tendermint/pull/3877) Make `max_tx_bytes` configurable instead of `max_msg_bytes` (@bluele)
-- [privval] [\#3370](https://github.com/tendermint/tendermint/issues/3370) Refactor and simplify validator/kms connection handling. Please refer to [this comment](https://github.com/tendermint/tendermint/pull/3370#issue-257360971) for details
-- [rpc] [\#3880](https://github.com/tendermint/tendermint/issues/3880) Document endpoints with `swagger`, introduce contract tests of implementation against documentation
+- [consensus] [\#3839](https://github.com/DeAI-Artist/MintAI/issues/3839) Reduce "Error attempting to add vote" message severity (Error -> Info)
+- [mempool] [\#3877](https://github.com/DeAI-Artist/MintAI/pull/3877) Make `max_tx_bytes` configurable instead of `max_msg_bytes` (@bluele)
+- [privval] [\#3370](https://github.com/DeAI-Artist/MintAI/issues/3370) Refactor and simplify validator/kms connection handling. Please refer to [this comment](https://github.com/DeAI-Artist/MintAI/pull/3370#issue-257360971) for details
+- [rpc] [\#3880](https://github.com/DeAI-Artist/MintAI/issues/3880) Document endpoints with `swagger`, introduce contract tests of implementation against documentation
 
 ### BUG FIXES:
 
-- [config] [\#3868](https://github.com/tendermint/tendermint/issues/3868) Move misplaced `max_msg_bytes` into mempool section (@bluele)
-- [rpc] [\#3910](https://github.com/tendermint/tendermint/pull/3910) Fix DATA RACE in HTTP client (@gchaincl)
-- [store] [\#3893](https://github.com/tendermint/tendermint/issues/3893) Fix "Unregistered interface types.Evidence" panic
+- [config] [\#3868](https://github.com/DeAI-Artist/MintAI/issues/3868) Move misplaced `max_msg_bytes` into mempool section (@bluele)
+- [rpc] [\#3910](https://github.com/DeAI-Artist/MintAI/pull/3910) Fix DATA RACE in HTTP client (@gchaincl)
+- [store] [\#3893](https://github.com/DeAI-Artist/MintAI/issues/3893) Fix "Unregistered interface types.Evidence" panic
 
 ## v0.32.2
 
@@ -1341,30 +1341,30 @@ Special thanks to external contributors on this release:
 ### BREAKING CHANGES:
 
 - Go API
-  - [libs] [\#3811](https://github.com/tendermint/tendermint/issues/3811) Remove `db` from libs in favor of `https://github.com/tendermint/tm-db`
+  - [libs] [\#3811](https://github.com/DeAI-Artist/MintAI/issues/3811) Remove `db` from libs in favor of `https://github.com/tendermint/tm-db`
 
 ### FEATURES:
 
-- [blockchain] [\#3561](https://github.com/tendermint/tendermint/issues/3561) Add early version of the new blockchain reactor, which is supposed to be more modular and testable compared to the old version. To try it, you'll have to change `version` in the config file, [here](https://github.com/tendermint/tendermint/blob/v0.34.x/config/toml.go#L303) NOTE: It's not ready for a production yet. For further information, see [ADR-40](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-040-blockchain-reactor-refactor.md) & [ADR-43](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-043-blockchain-riri-org.md)
-- [mempool] [\#3826](https://github.com/tendermint/tendermint/issues/3826) Make `max_msg_bytes` configurable(@bluele)
-- [node] [\#3846](https://github.com/tendermint/tendermint/pull/3846) Allow replacing existing p2p.Reactor(s) using [`CustomReactors`
-  option](https://godoc.org/github.com/tendermint/tendermint/node#CustomReactors).
+- [blockchain] [\#3561](https://github.com/DeAI-Artist/MintAI/issues/3561) Add early version of the new blockchain reactor, which is supposed to be more modular and testable compared to the old version. To try it, you'll have to change `version` in the config file, [here](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/config/toml.go#L303) NOTE: It's not ready for a production yet. For further information, see [ADR-40](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-040-blockchain-reactor-refactor.md) & [ADR-43](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-043-blockchain-riri-org.md)
+- [mempool] [\#3826](https://github.com/DeAI-Artist/MintAI/issues/3826) Make `max_msg_bytes` configurable(@bluele)
+- [node] [\#3846](https://github.com/DeAI-Artist/MintAI/pull/3846) Allow replacing existing p2p.Reactor(s) using [`CustomReactors`
+  option](https://godoc.org/github.com/DeAI-Artist/MintAI/node#CustomReactors).
   Warning: beware of accidental name clashes. Here is the list of existing
   reactors: MEMPOOL, BLOCKCHAIN, CONSENSUS, EVIDENCE, PEX.
-- [rpc] [\#3818](https://github.com/tendermint/tendermint/issues/3818) Make `max_body_bytes` and `max_header_bytes` configurable(@bluele)
-- [rpc] [\#2252](https://github.com/tendermint/tendermint/issues/2252) Add `/broadcast_evidence` endpoint to submit double signing and other types of evidence
+- [rpc] [\#3818](https://github.com/DeAI-Artist/MintAI/issues/3818) Make `max_body_bytes` and `max_header_bytes` configurable(@bluele)
+- [rpc] [\#2252](https://github.com/DeAI-Artist/MintAI/issues/2252) Add `/broadcast_evidence` endpoint to submit double signing and other types of evidence
 
 ### IMPROVEMENTS:
 
-- [abci] [\#3809](https://github.com/tendermint/tendermint/issues/3809) Recover from application panics in `server/socket_server.go` to allow socket cleanup (@ruseinov)
-- [p2p] [\#3664](https://github.com/tendermint/tendermint/issues/3664) p2p/conn: reuse buffer when write/read from secret connection(@guagualvcha)
-- [p2p] [\#3834](https://github.com/tendermint/tendermint/issues/3834) Do not write 'Couldn't connect to any seeds' error log if there are no seeds in config file
-- [rpc] [\#3076](https://github.com/tendermint/tendermint/issues/3076) Improve transaction search performance
+- [abci] [\#3809](https://github.com/DeAI-Artist/MintAI/issues/3809) Recover from application panics in `server/socket_server.go` to allow socket cleanup (@ruseinov)
+- [p2p] [\#3664](https://github.com/DeAI-Artist/MintAI/issues/3664) p2p/conn: reuse buffer when write/read from secret connection(@guagualvcha)
+- [p2p] [\#3834](https://github.com/DeAI-Artist/MintAI/issues/3834) Do not write 'Couldn't connect to any seeds' error log if there are no seeds in config file
+- [rpc] [\#3076](https://github.com/DeAI-Artist/MintAI/issues/3076) Improve transaction search performance
 
 ### BUG FIXES:
 
-- [p2p] [\#3644](https://github.com/tendermint/tendermint/issues/3644) Fix error logging for connection stop (@defunctzombie)
-- [rpc] [\#3813](https://github.com/tendermint/tendermint/issues/3813) Return err if page is incorrect (less than 0 or greater than total pages)
+- [p2p] [\#3644](https://github.com/DeAI-Artist/MintAI/issues/3644) Fix error logging for connection stop (@defunctzombie)
+- [rpc] [\#3813](https://github.com/DeAI-Artist/MintAI/issues/3813) Return err if page is incorrect (less than 0 or greater than total pages)
 
 ## v0.32.1
 
@@ -1381,30 +1381,30 @@ This release contains a minor enhancement to the ABCI and some breaking changes 
 
 - Go API
 
-  -  [abci] [\#2127](https://github.com/tendermint/tendermint/issues/2127) The CheckTx and DeliverTx methods in the ABCI `Application` interface now take structs  as arguments (RequestCheckTx and RequestDeliverTx, respectively), instead of just the raw tx bytes. This allows more information to be passed to these methods, for instance, indicating whether a tx has already been checked.
+  -  [abci] [\#2127](https://github.com/DeAI-Artist/MintAI/issues/2127) The CheckTx and DeliverTx methods in the ABCI `Application` interface now take structs  as arguments (RequestCheckTx and RequestDeliverTx, respectively), instead of just the raw tx bytes. This allows more information to be passed to these methods, for instance, indicating whether a tx has already been checked.
   - [libs] Remove unused `db/debugDB` and `common/colors.go` & `errors/errors.go` files (@marbar3778)
-  - [libs] [\#2432](https://github.com/tendermint/tendermint/issues/2432) Remove unused `common/heap.go` file (@marbar3778)
+  - [libs] [\#2432](https://github.com/DeAI-Artist/MintAI/issues/2432) Remove unused `common/heap.go` file (@marbar3778)
   - [libs] Remove unused `date.go`, `io.go`. Remove `GoPath()`, `Prompt()` and `IsDirEmpty()` functions from `os.go` (@marbar3778)
   - [libs] Remove unused `FailRand()` func and minor clean up to `fail.go`(@marbar3778)
 
 ### FEATURES:
 
 - [node] Add variadic argument to `NewNode` to support functional options, allowing the Node to be more easily customized.
-- [node][\#3730](https://github.com/tendermint/tendermint/pull/3730) Add `CustomReactors` option to `NewNode` allowing caller to pass
+- [node][\#3730](https://github.com/DeAI-Artist/MintAI/pull/3730) Add `CustomReactors` option to `NewNode` allowing caller to pass
   custom reactors to run inside Tendermint node (@ParthDesai)
-- [abci] [\#2127](https://github.com/tendermint/tendermint/issues/2127)RequestCheckTx has a new field, `CheckTxType`, which can take values of `CheckTxType_New` and `CheckTxType_Recheck`, indicating whether this is a new tx being checked for the first time or whether this tx is being rechecked after a block commit. This allows applications to skip certain expensive operations, like signature checking, if they've already been done once. see [docs](https://github.com/tendermint/tendermint/blob/eddb433d7c082efbeaf8974413a36641519ee895/docs/spec/abci/apps.md#mempool-connection)
+- [abci] [\#2127](https://github.com/DeAI-Artist/MintAI/issues/2127)RequestCheckTx has a new field, `CheckTxType`, which can take values of `CheckTxType_New` and `CheckTxType_Recheck`, indicating whether this is a new tx being checked for the first time or whether this tx is being rechecked after a block commit. This allows applications to skip certain expensive operations, like signature checking, if they've already been done once. see [docs](https://github.com/DeAI-Artist/MintAI/blob/eddb433d7c082efbeaf8974413a36641519ee895/docs/spec/abci/apps.md#mempool-connection)
 
 ### IMPROVEMENTS:
 
-- [rpc] [\#3700](https://github.com/tendermint/tendermint/issues/3700) Make possible to set absolute paths for TLS cert and key (@climber73)
-- [abci] [\#3513](https://github.com/tendermint/tendermint/issues/3513) Call the reqRes callback after the resCb so they always happen in the same order
+- [rpc] [\#3700](https://github.com/DeAI-Artist/MintAI/issues/3700) Make possible to set absolute paths for TLS cert and key (@climber73)
+- [abci] [\#3513](https://github.com/DeAI-Artist/MintAI/issues/3513) Call the reqRes callback after the resCb so they always happen in the same order
 
 ### BUG FIXES:
 
-- [p2p] [\#3338](https://github.com/tendermint/tendermint/issues/3338) Prevent "sent next PEX request too soon" errors by not calling
+- [p2p] [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338) Prevent "sent next PEX request too soon" errors by not calling
   ensurePeers outside of ensurePeersRoutine
-- [behaviour] [\3772](https://github.com/tendermint/tendermint/pull/3772) Return correct reason in MessageOutOfOrder (@jim380)
-- [config] [\#3723](https://github.com/tendermint/tendermint/issues/3723) Add consensus_params to testnet config generation; document time_iota_ms (@ashleyvega)
+- [behaviour] [\3772](https://github.com/DeAI-Artist/MintAI/pull/3772) Return correct reason in MessageOutOfOrder (@jim380)
+- [config] [\#3723](https://github.com/DeAI-Artist/MintAI/issues/3723) Add consensus_params to testnet config generation; document time_iota_ms (@ashleyvega)
 
 
 ## v0.32.0
@@ -1419,35 +1419,35 @@ and the RPC, namely:
 - Use Go modules instead of dep
 - Bring active development to the `master` Github branch
 - ABCI Tags are now Events - see
-  [docs](https://github.com/tendermint/tendermint/blob/60827f75623b92eff132dc0eff5b49d2025c591e/docs/spec/abci/abci.md#events)
+  [docs](https://github.com/DeAI-Artist/MintAI/blob/60827f75623b92eff132dc0eff5b49d2025c591e/docs/spec/abci/abci.md#events)
 - Bind RPC to localhost by default, not to the public interface [UPGRADING/RPC_Changes](./UPGRADING.md#rpc_changes)
 
 ### BREAKING CHANGES:
 
 * CLI/RPC/Config
-  - [cli] [\#3613](https://github.com/tendermint/tendermint/issues/3613) Switch from golang/dep to Go Modules to resolve dependencies:
+  - [cli] [\#3613](https://github.com/DeAI-Artist/MintAI/issues/3613) Switch from golang/dep to Go Modules to resolve dependencies:
     It is recommended to switch to Go Modules if your project has tendermint as
     a dependency. Read more on Modules here:
     https://github.com/golang/go/wiki/Modules
-  - [config] [\#3632](https://github.com/tendermint/tendermint/pull/3632) Removed `leveldb` as generic
+  - [config] [\#3632](https://github.com/DeAI-Artist/MintAI/pull/3632) Removed `leveldb` as generic
     option for `db_backend`. Must be `goleveldb` or `cleveldb`.
-  - [rpc] [\#3616](https://github.com/tendermint/tendermint/issues/3616) Fix field names for `/block_results` response (eg. `results.DeliverTx`
+  - [rpc] [\#3616](https://github.com/DeAI-Artist/MintAI/issues/3616) Fix field names for `/block_results` response (eg. `results.DeliverTx`
     -> `results.deliver_tx`). See docs for details.
-  - [rpc] [\#3724](https://github.com/tendermint/tendermint/issues/3724) RPC now binds to `127.0.0.1` by default instead of `0.0.0.0`
+  - [rpc] [\#3724](https://github.com/DeAI-Artist/MintAI/issues/3724) RPC now binds to `127.0.0.1` by default instead of `0.0.0.0`
 
 * Apps
-  - [abci] [\#1859](https://github.com/tendermint/tendermint/issues/1859) `ResponseCheckTx`, `ResponseDeliverTx`, `ResponseBeginBlock`,
+  - [abci] [\#1859](https://github.com/DeAI-Artist/MintAI/issues/1859) `ResponseCheckTx`, `ResponseDeliverTx`, `ResponseBeginBlock`,
     and `ResponseEndBlock` now include `Events` instead of `Tags`. Each `Event`
     contains a `type` and a list of `attributes` (list of key-value pairs)
     allowing for inclusion of multiple distinct events in each response.
 
 * Go API
-  - [abci] [\#3193](https://github.com/tendermint/tendermint/issues/3193) Use RequestDeliverTx and RequestCheckTx in the ABCI
+  - [abci] [\#3193](https://github.com/DeAI-Artist/MintAI/issues/3193) Use RequestDeliverTx and RequestCheckTx in the ABCI
     Application interface
-  - [libs/db] [\#3632](https://github.com/tendermint/tendermint/pull/3632) Removed deprecated `LevelDBBackend` const
+  - [libs/db] [\#3632](https://github.com/DeAI-Artist/MintAI/pull/3632) Removed deprecated `LevelDBBackend` const
     If you have `db_backend` set to `leveldb` in your config file, please
     change it to `goleveldb` or `cleveldb`.
-  - [p2p] [\#3521](https://github.com/tendermint/tendermint/issues/3521) Remove NewNetAddressStringWithOptionalID
+  - [p2p] [\#3521](https://github.com/DeAI-Artist/MintAI/issues/3521) Remove NewNetAddressStringWithOptionalID
 
 * Blockchain Protocol
 
@@ -1456,16 +1456,16 @@ and the RPC, namely:
 ### FEATURES:
 
 ### IMPROVEMENTS:
-- [abci/examples] [\#3659](https://github.com/tendermint/tendermint/issues/3659) Change validator update tx format in the `persistent_kvstore` to use base64 for pubkeys instead of hex (@needkane)
-- [consensus] [\#3656](https://github.com/tendermint/tendermint/issues/3656) Exit if SwitchToConsensus fails
-- [p2p] [\#3666](https://github.com/tendermint/tendermint/issues/3666) Add per channel telemetry to improve reactor observability
-- [rpc] [\#3686](https://github.com/tendermint/tendermint/pull/3686) `HTTPClient#Call` returns wrapped errors, so a caller could use `errors.Cause` to retrieve an error code. (@wooparadog)
+- [abci/examples] [\#3659](https://github.com/DeAI-Artist/MintAI/issues/3659) Change validator update tx format in the `persistent_kvstore` to use base64 for pubkeys instead of hex (@needkane)
+- [consensus] [\#3656](https://github.com/DeAI-Artist/MintAI/issues/3656) Exit if SwitchToConsensus fails
+- [p2p] [\#3666](https://github.com/DeAI-Artist/MintAI/issues/3666) Add per channel telemetry to improve reactor observability
+- [rpc] [\#3686](https://github.com/DeAI-Artist/MintAI/pull/3686) `HTTPClient#Call` returns wrapped errors, so a caller could use `errors.Cause` to retrieve an error code. (@wooparadog)
 
 ### BUG FIXES:
-- [libs/db] [\#3717](https://github.com/tendermint/tendermint/issues/3717) Fixed the BoltDB backend's Batch.Delete implementation (@Yawning)
-- [libs/db] [\#3718](https://github.com/tendermint/tendermint/issues/3718) Fixed the BoltDB backend's Get and Iterator implementation (@Yawning)
-- [node] [\#3716](https://github.com/tendermint/tendermint/issues/3716) Fix a bug where `nil` is recorded as node's address
-- [node] [\#3741](https://github.com/tendermint/tendermint/issues/3741) Fix profiler blocking the entire node
+- [libs/db] [\#3717](https://github.com/DeAI-Artist/MintAI/issues/3717) Fixed the BoltDB backend's Batch.Delete implementation (@Yawning)
+- [libs/db] [\#3718](https://github.com/DeAI-Artist/MintAI/issues/3718) Fixed the BoltDB backend's Get and Iterator implementation (@Yawning)
+- [node] [\#3716](https://github.com/DeAI-Artist/MintAI/issues/3716) Fix a bug where `nil` is recorded as node's address
+- [node] [\#3741](https://github.com/DeAI-Artist/MintAI/issues/3741) Fix profiler blocking the entire node
 
 *Tendermint 0.31 release series has reached End-Of-Life and is no longer supported.*
 
@@ -1494,7 +1494,7 @@ Notes:
 - Tendermint does not rate limit HTTP(S) requests. If you expose any RPC
   endpoints to the public, please make sure to put in place some protection
   (https://www.nginx.com/blog/rate-limiting-nginx/). We may implement this in
-  the future ([\#1696](https://github.com/tendermint/tendermint/issues/1696)).
+  the future ([\#1696](https://github.com/DeAI-Artist/MintAI/issues/1696)).
 
 ### Denial of Service 2
 
@@ -1513,7 +1513,7 @@ which is executed before `MConnection` is started.
 Notes:
 
 - `InitPeer` function was added to all reactors to combat a similar issue -
-  [\#3338](https://github.com/tendermint/tendermint/issues/3338);
+  [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338);
 - Denial of Service 2 is independent of Denial of Service 1 and can be executed
   without it.
 
@@ -1569,7 +1569,7 @@ this out.
 
 ### SECURITY:
 
-- [p2p] [\#4030](https://github.com/tendermint/tendermint/issues/4030) Only allow ed25519 pubkeys when connecting
+- [p2p] [\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) Only allow ed25519 pubkeys when connecting
 
 ## v0.31.9
 
@@ -1577,19 +1577,19 @@ this out.
 
 This release fixes a major security vulnerability found in the `p2p` package.
 All clients are recommended to upgrade. See
-[\#4030](https://github.com/tendermint/tendermint/issues/4030) for details.
+[\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) for details.
 
 Special thanks to [fudongbai](https://hackerone.com/fudongbai) for discovering
 and reporting this issue.
 
 ### SECURITY:
 
-- [p2p] [\#4030](https://github.com/tendermint/tendermint/issues/4030) Fix for panic on nil public key send to a peer
+- [p2p] [\#4030](https://github.com/DeAI-Artist/MintAI/issues/4030) Fix for panic on nil public key send to a peer
 
 ### BUG FIXES:
 
-- [node] [\#3716](https://github.com/tendermint/tendermint/issues/3716) Fix a bug where `nil` is recorded as node's address
-- [node] [\#3741](https://github.com/tendermint/tendermint/issues/3741) Fix profiler blocking the entire node
+- [node] [\#3716](https://github.com/DeAI-Artist/MintAI/issues/3716) Fix a bug where `nil` is recorded as node's address
+- [node] [\#3741](https://github.com/DeAI-Artist/MintAI/issues/3741) Fix profiler blocking the entire node
 
 ## v0.31.8
 
@@ -1599,10 +1599,10 @@ This releases fixes one bug in the PEX reactor and adds a `recover` to the Go's
 ABCI server, which allows it to properly cleanup.
 
 ### IMPROVEMENTS:
-- [abci] [\#3809](https://github.com/tendermint/tendermint/issues/3809) Recover from application panics in `server/socket_server.go` to allow socket cleanup (@ruseinov)
+- [abci] [\#3809](https://github.com/DeAI-Artist/MintAI/issues/3809) Recover from application panics in `server/socket_server.go` to allow socket cleanup (@ruseinov)
 
 ### BUG FIXES:
-- [p2p] [\#3338](https://github.com/tendermint/tendermint/issues/3338) Prevent "sent next PEX request too soon" errors by not calling
+- [p2p] [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338) Prevent "sent next PEX request too soon" errors by not calling
   ensurePeers outside of ensurePeersRoutine
 
 ## v0.31.7
@@ -1614,11 +1614,11 @@ The regression caused the invalid committed txs to be proposed in blocks over an
 over again.
 
 ### BUG FIXES:
-- [mempool] [\#3699](https://github.com/tendermint/tendermint/issues/3699) Remove all committed txs from the mempool.
+- [mempool] [\#3699](https://github.com/DeAI-Artist/MintAI/issues/3699) Remove all committed txs from the mempool.
     This reverts the change from v0.31.6 where we only remove valid txs from the mempool.
     Note this means malicious proposals can cause txs to be dropped from the
     mempools of other nodes by including them in blocks before they are valid.
-    See [\#3322](https://github.com/tendermint/tendermint/issues/3322).
+    See [\#3322](https://github.com/DeAI-Artist/MintAI/issues/3322).
 
 ## v0.31.6
 
@@ -1640,52 +1640,52 @@ Special thanks to external contributors on this release:
 * Go API
   - [libs/common] Removed deprecated `PanicSanity`, `PanicCrisis`,
     `PanicConsensus` and `PanicQ`
-  - [mempool, state] [\#2659](https://github.com/tendermint/tendermint/issues/2659) `Mempool` now an interface that lives in the mempool package.
+  - [mempool, state] [\#2659](https://github.com/DeAI-Artist/MintAI/issues/2659) `Mempool` now an interface that lives in the mempool package.
     See issue and PR for more details.
-  - [p2p] [\#3346](https://github.com/tendermint/tendermint/issues/3346) `Reactor#InitPeer` method is added to `Reactor` interface
-  - [types] [\#1648](https://github.com/tendermint/tendermint/issues/1648) `Commit#VoteSignBytes` signature was changed
+  - [p2p] [\#3346](https://github.com/DeAI-Artist/MintAI/issues/3346) `Reactor#InitPeer` method is added to `Reactor` interface
+  - [types] [\#1648](https://github.com/DeAI-Artist/MintAI/issues/1648) `Commit#VoteSignBytes` signature was changed
 
 ### FEATURES:
-- [node] [\#2659](https://github.com/tendermint/tendermint/issues/2659) Add `node.Mempool()` method, which allows you to access mempool
-- [libs/db] [\#3604](https://github.com/tendermint/tendermint/pull/3604) Add experimental support for bolt db (etcd's fork of bolt) (@CrocdileChan)
+- [node] [\#2659](https://github.com/DeAI-Artist/MintAI/issues/2659) Add `node.Mempool()` method, which allows you to access mempool
+- [libs/db] [\#3604](https://github.com/DeAI-Artist/MintAI/pull/3604) Add experimental support for bolt db (etcd's fork of bolt) (@CrocdileChan)
 
 ### IMPROVEMENTS:
-- [cli] [\#3585](https://github.com/tendermint/tendermint/issues/3585) Add `--keep-addr-book` option to `unsafe_reset_all` cmd to not
+- [cli] [\#3585](https://github.com/DeAI-Artist/MintAI/issues/3585) Add `--keep-addr-book` option to `unsafe_reset_all` cmd to not
   clear the address book (@climber73)
-- [cli] [\#3160](https://github.com/tendermint/tendermint/issues/3160) Add
+- [cli] [\#3160](https://github.com/DeAI-Artist/MintAI/issues/3160) Add
   `--config=<path-to-config>` option to `testnet` cmd (@gregdhill)
-- [cli] [\#3661](https://github.com/tendermint/tendermint/pull/3661) Add
+- [cli] [\#3661](https://github.com/DeAI-Artist/MintAI/pull/3661) Add
   `--hostname-suffix`, `--hostname` and `--random-monikers` options to `testnet`
   cmd for greater peer address/identity generation flexibility.
-- [crypto] [\#3672](https://github.com/tendermint/tendermint/issues/3672) Return more info in the `AddSignatureFromPubKey` error
-- [cs/replay] [\#3460](https://github.com/tendermint/tendermint/issues/3460) Check appHash for each block
-- [libs/db] [\#3611](https://github.com/tendermint/tendermint/issues/3611) Conditional compilation
+- [crypto] [\#3672](https://github.com/DeAI-Artist/MintAI/issues/3672) Return more info in the `AddSignatureFromPubKey` error
+- [cs/replay] [\#3460](https://github.com/DeAI-Artist/MintAI/issues/3460) Check appHash for each block
+- [libs/db] [\#3611](https://github.com/DeAI-Artist/MintAI/issues/3611) Conditional compilation
   * Use `cleveldb` tag instead of `gcc` to compile Tendermint with CLevelDB or
     use `make build_c` / `make install_c` (full instructions can be found at
     <https://docs.tendermint.com/>)
   * Use `boltdb` tag to compile Tendermint with bolt db
-- [node] [\#3362](https://github.com/tendermint/tendermint/issues/3362) Return an error if `persistent_peers` list is invalid (except
+- [node] [\#3362](https://github.com/DeAI-Artist/MintAI/issues/3362) Return an error if `persistent_peers` list is invalid (except
   when IP lookup fails)
-- [p2p] [\#3463](https://github.com/tendermint/tendermint/pull/3463) Do not log "Can't add peer's address to addrbook" error for a private peer (@guagualvcha)
-- [p2p] [\#3531](https://github.com/tendermint/tendermint/issues/3531) Terminate session on nonce wrapping (@climber73)
-- [pex] [\#3647](https://github.com/tendermint/tendermint/pull/3647) Dial seeds, if any, instead of crawling peers first (@defunctzombie)
-- [rpc] [\#3534](https://github.com/tendermint/tendermint/pull/3534) Add support for batched requests/responses in JSON RPC
-- [rpc] [\#3362](https://github.com/tendermint/tendermint/issues/3362) `/dial_seeds` & `/dial_peers` return errors if addresses are
+- [p2p] [\#3463](https://github.com/DeAI-Artist/MintAI/pull/3463) Do not log "Can't add peer's address to addrbook" error for a private peer (@guagualvcha)
+- [p2p] [\#3531](https://github.com/DeAI-Artist/MintAI/issues/3531) Terminate session on nonce wrapping (@climber73)
+- [pex] [\#3647](https://github.com/DeAI-Artist/MintAI/pull/3647) Dial seeds, if any, instead of crawling peers first (@defunctzombie)
+- [rpc] [\#3534](https://github.com/DeAI-Artist/MintAI/pull/3534) Add support for batched requests/responses in JSON RPC
+- [rpc] [\#3362](https://github.com/DeAI-Artist/MintAI/issues/3362) `/dial_seeds` & `/dial_peers` return errors if addresses are
   incorrect (except when IP lookup fails)
 
 ### BUG FIXES:
-- [consensus] [\#3067](https://github.com/tendermint/tendermint/issues/3067) Fix replay from appHeight==0 with validator set changes (@james-ray)
-- [consensus] [\#3304](https://github.com/tendermint/tendermint/issues/3304) Create a peer state in consensus reactor before the peer
+- [consensus] [\#3067](https://github.com/DeAI-Artist/MintAI/issues/3067) Fix replay from appHeight==0 with validator set changes (@james-ray)
+- [consensus] [\#3304](https://github.com/DeAI-Artist/MintAI/issues/3304) Create a peer state in consensus reactor before the peer
   is started (@guagualvcha)
-- [lite] [\#3669](https://github.com/tendermint/tendermint/issues/3669) Add context parameter to RPC Handlers in proxy routes (@yutianwu)
-- [mempool] [\#3322](https://github.com/tendermint/tendermint/issues/3322) When a block is committed, only remove committed txs from the mempool
+- [lite] [\#3669](https://github.com/DeAI-Artist/MintAI/issues/3669) Add context parameter to RPC Handlers in proxy routes (@yutianwu)
+- [mempool] [\#3322](https://github.com/DeAI-Artist/MintAI/issues/3322) When a block is committed, only remove committed txs from the mempool
 that were valid (ie. `ResponseDeliverTx.Code == 0`)
-- [p2p] [\#3338](https://github.com/tendermint/tendermint/issues/3338) Ensure `RemovePeer` is always called before `InitPeer` (upon a peer
+- [p2p] [\#3338](https://github.com/DeAI-Artist/MintAI/issues/3338) Ensure `RemovePeer` is always called before `InitPeer` (upon a peer
   reconnecting to our node)
-- [p2p] [\#3532](https://github.com/tendermint/tendermint/issues/3532) Limit the number of attempts to connect to a peer in seed mode
+- [p2p] [\#3532](https://github.com/DeAI-Artist/MintAI/issues/3532) Limit the number of attempts to connect to a peer in seed mode
   to 16 (as a result, the node will stop retrying after a 35 hours time window)
-- [p2p] [\#3362](https://github.com/tendermint/tendermint/issues/3362) Allow inbound peers to be persistent, including for seed nodes.
-- [pex] [\#3603](https://github.com/tendermint/tendermint/pull/3603) Dial seeds when addrbook needs more addresses (@defunctzombie)
+- [p2p] [\#3362](https://github.com/DeAI-Artist/MintAI/issues/3362) Allow inbound peers to be persistent, including for seed nodes.
+- [pex] [\#3603](https://github.com/DeAI-Artist/MintAI/pull/3603) Dial seeds when addrbook needs more addresses (@defunctzombie)
 
 ### OTHERS:
 - [networks] fixes ansible integration script (@carlosflrs)
@@ -1708,9 +1708,9 @@ Special thanks to external contributors on this release:
 
 ### BUG FIXES:
 
-- [state] [\#3537](https://github.com/tendermint/tendermint/pull/3537#issuecomment-482711833)
+- [state] [\#3537](https://github.com/DeAI-Artist/MintAI/pull/3537#issuecomment-482711833)
   `LoadValidators`: do not return an empty validator set
-- [blockchain] [\#3457](https://github.com/tendermint/tendermint/issues/3457)
+- [blockchain] [\#3457](https://github.com/DeAI-Artist/MintAI/issues/3457)
   Fix "peer did not send us anything" in `fast_sync` mode when under high pressure
 
 ## v0.31.4
@@ -1722,7 +1722,7 @@ the address book. This swallowed the peer's self-reported port which is importan
 It brings back `NetAddress()` to `NodeInfo` and uses it instead of `SocketAddr` for adding peers.
 Additionally, it improves response time on the `/validators` or `/status` RPC endpoints.
 As a side-effect it makes these RPC endpoint more difficult to DoS and fixes a performance degradation in `ExecCommitBlock`.
-Also, it contains an [ADR](https://github.com/tendermint/tendermint/pull/3539) that proposes decoupling the
+Also, it contains an [ADR](https://github.com/DeAI-Artist/MintAI/pull/3539) that proposes decoupling the
 responsibility for peer behaviour from the `p2p.Switch` (by @brapse).
 
 Special thanks to external contributors on this release:
@@ -1730,15 +1730,15 @@ Special thanks to external contributors on this release:
 
 ### IMPROVEMENTS:
 
-- [p2p] [\#3463](https://github.com/tendermint/tendermint/pull/3463) Do not log "Can't add peer's address to addrbook" error for a private peer
-- [p2p] [\#3547](https://github.com/tendermint/tendermint/pull/3547) Fix a couple of annoying typos (@mdyring)
+- [p2p] [\#3463](https://github.com/DeAI-Artist/MintAI/pull/3463) Do not log "Can't add peer's address to addrbook" error for a private peer
+- [p2p] [\#3547](https://github.com/DeAI-Artist/MintAI/pull/3547) Fix a couple of annoying typos (@mdyring)
 
 ### BUG FIXES:
 
-- [docs] [\#3514](https://github.com/tendermint/tendermint/issues/3514) Fix block.Header.Time description (@melekes)
-- [p2p] [\#2716](https://github.com/tendermint/tendermint/issues/2716) Check if we're already connected to peer right before dialing it (@melekes)
-- [p2p] [\#3545](https://github.com/tendermint/tendermint/issues/3545) Add back `NetAddress()` to `NodeInfo` and use it instead of peer's `SocketAddr()` when adding a peer to the `PEXReactor` (potential fix for [\#3532](https://github.com/tendermint/tendermint/issues/3532))
-- [state] [\#3438](https://github.com/tendermint/tendermint/pull/3438)
+- [docs] [\#3514](https://github.com/DeAI-Artist/MintAI/issues/3514) Fix block.Header.Time description (@melekes)
+- [p2p] [\#2716](https://github.com/DeAI-Artist/MintAI/issues/2716) Check if we're already connected to peer right before dialing it (@melekes)
+- [p2p] [\#3545](https://github.com/DeAI-Artist/MintAI/issues/3545) Add back `NetAddress()` to `NodeInfo` and use it instead of peer's `SocketAddr()` when adding a peer to the `PEXReactor` (potential fix for [\#3532](https://github.com/DeAI-Artist/MintAI/issues/3532))
+- [state] [\#3438](https://github.com/DeAI-Artist/MintAI/pull/3438)
   Persist validators every 100000 blocks even if no changes to the set
   occurred (@guagualvcha). This
   1) Prevents possible DoS attack using `/validators` or `/status` RPC
@@ -1757,17 +1757,17 @@ panic if the lookup failed.
 
 ### BREAKING CHANGES:
 * Go API
-  - [crypto/secp256k1] [\#3439](https://github.com/tendermint/tendermint/issues/3439)
+  - [crypto/secp256k1] [\#3439](https://github.com/DeAI-Artist/MintAI/issues/3439)
     The `secp256k1.GenPrivKeySecp256k1` function has changed to guarantee that it returns a valid key, which means it
     will return a different private key than in previous versions for the same secret.
 
 ### BUG FIXES:
 
-- [crypto/secp256k1] [\#3439](https://github.com/tendermint/tendermint/issues/3439)
+- [crypto/secp256k1] [\#3439](https://github.com/DeAI-Artist/MintAI/issues/3439)
     Ensure generated private keys are valid by randomly sampling until a valid key is found.
     Previously, it was possible (though rare!) to generate keys that exceeded the curve order.
     Such keys would lead to invalid signatures.
-- [p2p] [\#3522](https://github.com/tendermint/tendermint/issues/3522) Memoize
+- [p2p] [\#3522](https://github.com/DeAI-Artist/MintAI/issues/3522) Memoize
   socket address in peer connections to avoid DNS lookups. Previously, failed
   DNS lookups could cause the node to panic.
 
@@ -1788,7 +1788,7 @@ Special thanks to external contributors on this release:
 * Apps
 
 * Go API
-  - [libs/autofile] [\#3504](https://github.com/tendermint/tendermint/issues/3504) Remove unused code in autofile package. Deleted functions: `Group.Search`, `Group.FindLast`, `GroupReader.ReadLine`, `GroupReader.PushLine`, `MakeSimpleSearchFunc` (@guagualvcha)
+  - [libs/autofile] [\#3504](https://github.com/DeAI-Artist/MintAI/issues/3504) Remove unused code in autofile package. Deleted functions: `Group.Search`, `Group.FindLast`, `GroupReader.ReadLine`, `GroupReader.PushLine`, `MakeSimpleSearchFunc` (@guagualvcha)
 
 * Blockchain Protocol
 
@@ -1798,11 +1798,11 @@ Special thanks to external contributors on this release:
 
 ### IMPROVEMENTS:
 
-- [circle] [\#3497](https://github.com/tendermint/tendermint/issues/3497) Move release management to CircleCI
+- [circle] [\#3497](https://github.com/DeAI-Artist/MintAI/issues/3497) Move release management to CircleCI
 
 ### BUG FIXES:
 
-- [mempool] [\#3512](https://github.com/tendermint/tendermint/issues/3512) Fix panic from concurrent access to txsMap, a regression for external ABCI apps introduced in v0.31.1
+- [mempool] [\#3512](https://github.com/DeAI-Artist/MintAI/issues/3512) Fix panic from concurrent access to txsMap, a regression for external ABCI apps introduced in v0.31.1
 
 ## v0.31.1
 
@@ -1822,10 +1822,10 @@ Special thanks to external contributors on this release:
 * Apps
 
 * Go API
-  - [crypto] [\#3426](https://github.com/tendermint/tendermint/pull/3426) Remove `Ripemd160` helper method (@needkane)
-  - [libs/common] [\#3429](https://github.com/tendermint/tendermint/pull/3429) Remove `RepeatTimer` (also `TimerMaker` and `Ticker` interface)
-  - [rpc/client] [\#3458](https://github.com/tendermint/tendermint/issues/3458) Include `NetworkClient` interface into `Client` interface
-  - [types] [\#3448](https://github.com/tendermint/tendermint/issues/3448) Remove method `PB2TM.ConsensusParams`
+  - [crypto] [\#3426](https://github.com/DeAI-Artist/MintAI/pull/3426) Remove `Ripemd160` helper method (@needkane)
+  - [libs/common] [\#3429](https://github.com/DeAI-Artist/MintAI/pull/3429) Remove `RepeatTimer` (also `TimerMaker` and `Ticker` interface)
+  - [rpc/client] [\#3458](https://github.com/DeAI-Artist/MintAI/issues/3458) Include `NetworkClient` interface into `Client` interface
+  - [types] [\#3448](https://github.com/DeAI-Artist/MintAI/issues/3448) Remove method `PB2TM.ConsensusParams`
 
 * Blockchain Protocol
 
@@ -1833,13 +1833,13 @@ Special thanks to external contributors on this release:
 
 ### FEATURES:
 
- - [rpc] [\#3419](https://github.com/tendermint/tendermint/issues/3419) Start HTTPS server if `rpc.tls_cert_file` and `rpc.tls_key_file` are provided in the config (@guagualvcha)
+ - [rpc] [\#3419](https://github.com/DeAI-Artist/MintAI/issues/3419) Start HTTPS server if `rpc.tls_cert_file` and `rpc.tls_key_file` are provided in the config (@guagualvcha)
 
 ### IMPROVEMENTS:
 
-- [docs] [\#3140](https://github.com/tendermint/tendermint/issues/3140) Formalize proposer election algorithm properties
-- [docs] [\#3482](https://github.com/tendermint/tendermint/issues/3482) Fix broken links (@brapse)
-- [mempool] [\#2778](https://github.com/tendermint/tendermint/issues/2778) No longer send txs back to peers who sent it to you.
+- [docs] [\#3140](https://github.com/DeAI-Artist/MintAI/issues/3140) Formalize proposer election algorithm properties
+- [docs] [\#3482](https://github.com/DeAI-Artist/MintAI/issues/3482) Fix broken links (@brapse)
+- [mempool] [\#2778](https://github.com/DeAI-Artist/MintAI/issues/2778) No longer send txs back to peers who sent it to you.
 Also, limit to 65536 active peers.
 This vastly improves the bandwidth consumption of nodes.
 For instance, for a 4 node localnet, in a test sending 250byte txs for 120 sec. at 500 txs/sec (total of 15MB):
@@ -1849,13 +1849,13 @@ For instance, for a 4 node localnet, in a test sending 250byte txs for 120 sec. 
   - total bytes sent to 1st node:
      - before: 30569339 (30MB)
      - after: 19304964 (19MB)
-- [p2p] [\#3475](https://github.com/tendermint/tendermint/issues/3475) Simplify `GetSelectionWithBias` for addressbook (@guagualvcha)
-- [rpc/lib/client] [\#3430](https://github.com/tendermint/tendermint/issues/3430) Disable compression for HTTP client to prevent GZIP-bomb DoS attacks (@guagualvcha)
+- [p2p] [\#3475](https://github.com/DeAI-Artist/MintAI/issues/3475) Simplify `GetSelectionWithBias` for addressbook (@guagualvcha)
+- [rpc/lib/client] [\#3430](https://github.com/DeAI-Artist/MintAI/issues/3430) Disable compression for HTTP client to prevent GZIP-bomb DoS attacks (@guagualvcha)
 
 ### BUG FIXES:
 
-- [blockchain] [\#2699](https://github.com/tendermint/tendermint/issues/2699) Update the maxHeight when a peer is removed
-- [mempool] [\#3478](https://github.com/tendermint/tendermint/issues/3478) Fix memory-leak related to `broadcastTxRoutine` (@HaoyangLiu)
+- [blockchain] [\#2699](https://github.com/DeAI-Artist/MintAI/issues/2699) Update the maxHeight when a peer is removed
+- [mempool] [\#3478](https://github.com/DeAI-Artist/MintAI/issues/3478) Fix memory-leak related to `broadcastTxRoutine` (@HaoyangLiu)
 
 
 ## v0.31.0
@@ -1873,58 +1873,58 @@ This release also adds a configurable limit to the mempool size (`max_txs_bytes`
 and a configurable timeout for the `/broadcast_tx_commit` endpoint.
 
 See the [v0.31.0
-Milestone](https://github.com/tendermint/tendermint/milestone/19?closed=1) for
+Milestone](https://github.com/DeAI-Artist/MintAI/milestone/19?closed=1) for
 more details.
 
 ### BREAKING CHANGES:
 
 * CLI/RPC/Config
-  - [config] [\#2920](https://github.com/tendermint/tendermint/issues/2920) Remove `consensus.blocktime_iota` parameter
-  - [rpc] [\#3227](https://github.com/tendermint/tendermint/issues/3227) New PubSub design does not block on clients when publishing
+  - [config] [\#2920](https://github.com/DeAI-Artist/MintAI/issues/2920) Remove `consensus.blocktime_iota` parameter
+  - [rpc] [\#3227](https://github.com/DeAI-Artist/MintAI/issues/3227) New PubSub design does not block on clients when publishing
     messages. Slow clients may miss messages and receive an error, terminating
     the subscription.
-  - [rpc] [\#3269](https://github.com/tendermint/tendermint/issues/2826) Limit number of unique clientIDs with open subscriptions. Configurable via `rpc.max_subscription_clients`
-  - [rpc] [\#3269](https://github.com/tendermint/tendermint/issues/2826) Limit number of unique queries a given client can subscribe to at once. Configurable via `rpc.max_subscriptions_per_client`.
-  - [rpc] [\#3435](https://github.com/tendermint/tendermint/issues/3435) Default ReadTimeout and WriteTimeout changed to 10s. WriteTimeout can increased by setting `rpc.timeout_broadcast_tx_commit` in the config.
-  - [rpc/client] [\#3269](https://github.com/tendermint/tendermint/issues/3269) Update `EventsClient` interface to reflect new pubsub/eventBus API [ADR-33](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-033-pubsub.md). This includes `Subscribe`, `Unsubscribe`, and `UnsubscribeAll` methods.
+  - [rpc] [\#3269](https://github.com/DeAI-Artist/MintAI/issues/2826) Limit number of unique clientIDs with open subscriptions. Configurable via `rpc.max_subscription_clients`
+  - [rpc] [\#3269](https://github.com/DeAI-Artist/MintAI/issues/2826) Limit number of unique queries a given client can subscribe to at once. Configurable via `rpc.max_subscriptions_per_client`.
+  - [rpc] [\#3435](https://github.com/DeAI-Artist/MintAI/issues/3435) Default ReadTimeout and WriteTimeout changed to 10s. WriteTimeout can increased by setting `rpc.timeout_broadcast_tx_commit` in the config.
+  - [rpc/client] [\#3269](https://github.com/DeAI-Artist/MintAI/issues/3269) Update `EventsClient` interface to reflect new pubsub/eventBus API [ADR-33](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-033-pubsub.md). This includes `Subscribe`, `Unsubscribe`, and `UnsubscribeAll` methods.
 
 * Apps
-  - [abci] [\#3403](https://github.com/tendermint/tendermint/issues/3403) Remove `time_iota_ms` from BlockParams. This is a
+  - [abci] [\#3403](https://github.com/DeAI-Artist/MintAI/issues/3403) Remove `time_iota_ms` from BlockParams. This is a
     ConsensusParam but need not be exposed to the app for now.
-  - [abci] [\#2920](https://github.com/tendermint/tendermint/issues/2920) Rename `consensus_params.block_size` to `consensus_params.block` in ABCI ConsensusParams
+  - [abci] [\#2920](https://github.com/DeAI-Artist/MintAI/issues/2920) Rename `consensus_params.block_size` to `consensus_params.block` in ABCI ConsensusParams
 
 * Go API
   - [libs/common] TrapSignal accepts logger as a first parameter and does not block anymore
     * previously it was dumping "captured ..." msg to os.Stdout
     * TrapSignal should not be responsible for blocking thread of execution
-  - [libs/db] [\#3397](https://github.com/tendermint/tendermint/pull/3397) Add possibility to `Close()` `Batch` to prevent memory leak when using ClevelDB. (@Stumble)
-  - [types] [\#3354](https://github.com/tendermint/tendermint/issues/3354) Remove RoundState from EventDataRoundState
-  - [rpc] [\#3435](https://github.com/tendermint/tendermint/issues/3435) `StartHTTPServer` / `StartHTTPAndTLSServer` now require a Config (use `rpcserver.DefaultConfig`)
+  - [libs/db] [\#3397](https://github.com/DeAI-Artist/MintAI/pull/3397) Add possibility to `Close()` `Batch` to prevent memory leak when using ClevelDB. (@Stumble)
+  - [types] [\#3354](https://github.com/DeAI-Artist/MintAI/issues/3354) Remove RoundState from EventDataRoundState
+  - [rpc] [\#3435](https://github.com/DeAI-Artist/MintAI/issues/3435) `StartHTTPServer` / `StartHTTPAndTLSServer` now require a Config (use `rpcserver.DefaultConfig`)
 
 * Blockchain Protocol
 
 * P2P Protocol
 
 ### FEATURES:
-- [config] [\#3269](https://github.com/tendermint/tendermint/issues/2826) New configuration values for controlling RPC subscriptions:
+- [config] [\#3269](https://github.com/DeAI-Artist/MintAI/issues/2826) New configuration values for controlling RPC subscriptions:
     - `rpc.max_subscription_clients` sets the maximum number of unique clients
       with open subscriptions
     - `rpc.max_subscriptions_per_client`sets the maximum number of unique
       subscriptions from a given client
     - `rpc.timeout_broadcast_tx_commit` sets the time to wait for a tx to be committed during `/broadcast_tx_commit`
-- [types] [\#2920](https://github.com/tendermint/tendermint/issues/2920) Add `time_iota_ms` to block's consensus parameters (not exposed to the application)
-- [lite] [\#3269](https://github.com/tendermint/tendermint/issues/3269) Add `/unsubscribe_all` endpoint to unsubscribe from all events
-- [mempool] [\#3079](https://github.com/tendermint/tendermint/issues/3079) Bound mempool memory usage via the `mempool.max_txs_bytes` configuration value. Set to 1GB by default. The mempool's current `txs_total_bytes` is exposed via `total_bytes` field in
+- [types] [\#2920](https://github.com/DeAI-Artist/MintAI/issues/2920) Add `time_iota_ms` to block's consensus parameters (not exposed to the application)
+- [lite] [\#3269](https://github.com/DeAI-Artist/MintAI/issues/3269) Add `/unsubscribe_all` endpoint to unsubscribe from all events
+- [mempool] [\#3079](https://github.com/DeAI-Artist/MintAI/issues/3079) Bound mempool memory usage via the `mempool.max_txs_bytes` configuration value. Set to 1GB by default. The mempool's current `txs_total_bytes` is exposed via `total_bytes` field in
   `/num_unconfirmed_txs` and `/unconfirmed_txs` RPC endpoints.
 
 ### IMPROVEMENTS:
-- [all] [\#3385](https://github.com/tendermint/tendermint/issues/3385), [\#3386](https://github.com/tendermint/tendermint/issues/3386) Various linting improvements
-- [crypto] [\#3371](https://github.com/tendermint/tendermint/issues/3371) Copy in secp256k1 package from go-ethereum instead of importing
+- [all] [\#3385](https://github.com/DeAI-Artist/MintAI/issues/3385), [\#3386](https://github.com/DeAI-Artist/MintAI/issues/3386) Various linting improvements
+- [crypto] [\#3371](https://github.com/DeAI-Artist/MintAI/issues/3371) Copy in secp256k1 package from go-ethereum instead of importing
   go-ethereum (@silasdavis)
-- [deps] [\#3382](https://github.com/tendermint/tendermint/issues/3382) Don't pin repos without releases
-- [deps] [\#3357](https://github.com/tendermint/tendermint/issues/3357), [\#3389](https://github.com/tendermint/tendermint/issues/3389), [\#3392](https://github.com/tendermint/tendermint/issues/3392) Update gogo/protobuf, golang/protobuf, levigo, golang.org/x/crypto
-- [libs/common] [\#3238](https://github.com/tendermint/tendermint/issues/3238) exit with zero (0) code upon receiving SIGTERM/SIGINT
-- [libs/db] [\#3378](https://github.com/tendermint/tendermint/issues/3378) CLevelDB#Stats now returns the following properties:
+- [deps] [\#3382](https://github.com/DeAI-Artist/MintAI/issues/3382) Don't pin repos without releases
+- [deps] [\#3357](https://github.com/DeAI-Artist/MintAI/issues/3357), [\#3389](https://github.com/DeAI-Artist/MintAI/issues/3389), [\#3392](https://github.com/DeAI-Artist/MintAI/issues/3392) Update gogo/protobuf, golang/protobuf, levigo, golang.org/x/crypto
+- [libs/common] [\#3238](https://github.com/DeAI-Artist/MintAI/issues/3238) exit with zero (0) code upon receiving SIGTERM/SIGINT
+- [libs/db] [\#3378](https://github.com/DeAI-Artist/MintAI/issues/3378) CLevelDB#Stats now returns the following properties:
   - leveldb.num-files-at-level{n}
   - leveldb.stats
   - leveldb.sstables
@@ -1933,18 +1933,18 @@ more details.
   - leveldb.openedtables
   - leveldb.alivesnaps
   - leveldb.aliveiters
-- [privval] [\#3351](https://github.com/tendermint/tendermint/pull/3351) First part of larger refactoring that clarifies and separates concerns in the privval package.
+- [privval] [\#3351](https://github.com/DeAI-Artist/MintAI/pull/3351) First part of larger refactoring that clarifies and separates concerns in the privval package.
 
 ### BUG FIXES:
-- [blockchain] [\#3358](https://github.com/tendermint/tendermint/pull/3358) Fix timer leak in `BlockPool` (@guagualvcha)
-- [cmd] [\#3408](https://github.com/tendermint/tendermint/issues/3408) Fix `testnet` command's panic when creating non-validator configs (using `--n` flag) (@srmo)
-- [libs/db/remotedb/grpcdb] [\#3402](https://github.com/tendermint/tendermint/issues/3402) Close Iterator/ReverseIterator after use
-- [libs/pubsub] [\#951](https://github.com/tendermint/tendermint/issues/951), [\#1880](https://github.com/tendermint/tendermint/issues/1880) Use non-blocking send when dispatching messages [ADR-33](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-033-pubsub.md)
-- [lite] [\#3364](https://github.com/tendermint/tendermint/issues/3364) Fix `/validators` and `/abci_query` proxy endpoints
+- [blockchain] [\#3358](https://github.com/DeAI-Artist/MintAI/pull/3358) Fix timer leak in `BlockPool` (@guagualvcha)
+- [cmd] [\#3408](https://github.com/DeAI-Artist/MintAI/issues/3408) Fix `testnet` command's panic when creating non-validator configs (using `--n` flag) (@srmo)
+- [libs/db/remotedb/grpcdb] [\#3402](https://github.com/DeAI-Artist/MintAI/issues/3402) Close Iterator/ReverseIterator after use
+- [libs/pubsub] [\#951](https://github.com/DeAI-Artist/MintAI/issues/951), [\#1880](https://github.com/DeAI-Artist/MintAI/issues/1880) Use non-blocking send when dispatching messages [ADR-33](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-033-pubsub.md)
+- [lite] [\#3364](https://github.com/DeAI-Artist/MintAI/issues/3364) Fix `/validators` and `/abci_query` proxy endpoints
   (@guagualvcha)
-- [p2p/conn] [\#3347](https://github.com/tendermint/tendermint/issues/3347) Reject all-zero shared secrets in the Diffie-Hellman step of secret-connection
-- [p2p] [\#3369](https://github.com/tendermint/tendermint/issues/3369) Do not panic when filter times out
-- [p2p] [\#3359](https://github.com/tendermint/tendermint/pull/3359) Fix reconnecting report duplicate ID error due to race condition between adding peer to peerSet and starting it (@guagualvcha)
+- [p2p/conn] [\#3347](https://github.com/DeAI-Artist/MintAI/issues/3347) Reject all-zero shared secrets in the Diffie-Hellman step of secret-connection
+- [p2p] [\#3369](https://github.com/DeAI-Artist/MintAI/issues/3369) Do not panic when filter times out
+- [p2p] [\#3359](https://github.com/DeAI-Artist/MintAI/pull/3359) Fix reconnecting report duplicate ID error due to race condition between adding peer to peerSet and starting it (@guagualvcha)
 
 ## v0.30.2
 
@@ -1975,22 +1975,22 @@ handshake by authenticating the NetAddress.ID of the peer we're dialing.
 
 ### IMPROVEMENTS:
 
-* [config] [\#3291](https://github.com/tendermint/tendermint/issues/3291) Make
+* [config] [\#3291](https://github.com/DeAI-Artist/MintAI/issues/3291) Make
   config.ResetTestRootWithChainID() create concurrency-safe test directories.
 
 ### BUG FIXES:
 
-* [consensus] [\#3295](https://github.com/tendermint/tendermint/issues/3295)
+* [consensus] [\#3295](https://github.com/DeAI-Artist/MintAI/issues/3295)
   Flush WAL on stop to prevent data corruption during graceful shutdown.
-* [consensus] [\#3302](https://github.com/tendermint/tendermint/issues/3302)
+* [consensus] [\#3302](https://github.com/DeAI-Artist/MintAI/issues/3302)
   Fix possible halt by resetting TriggeredTimeoutPrecommit before starting next height.
-* [rpc] [\#3251](https://github.com/tendermint/tendermint/issues/3251) Fix
+* [rpc] [\#3251](https://github.com/DeAI-Artist/MintAI/issues/3251) Fix
   `/net_info#peers#remote_ip` format. New format spec:
   * dotted decimal ("192.0.2.1"), if ip is an IPv4 or IP4-mapped IPv6 address
   * IPv6 ("2001:db8::1"), if ip is a valid IPv6 address
-* [cmd] [\#3314](https://github.com/tendermint/tendermint/issues/3314) Return
+* [cmd] [\#3314](https://github.com/DeAI-Artist/MintAI/issues/3314) Return
   an error on `show_validator` when the private validator file does not exist.
-* [p2p] [\#3010](https://github.com/tendermint/tendermint/issues/3010#issuecomment-464287627)
+* [p2p] [\#3010](https://github.com/DeAI-Artist/MintAI/issues/3010#issuecomment-464287627)
   Authenticate a peer against its NetAddress.ID when dialing.
 
 ## v0.30.0
@@ -2000,9 +2000,9 @@ handshake by authenticating the NetAddress.ID of the peer we're dialing.
 This release fixes yet another issue with the proposer selection algorithm.
 We hope it's the last one, but we won't be surprised if it's not.
 We plan to one day expose the selection algorithm more directly to
-the application ([\#3285](https://github.com/tendermint/tendermint/issues/3285)), and even to support randomness ([\#763](https://github.com/tendermint/tendermint/issues/763)).
+the application ([\#3285](https://github.com/DeAI-Artist/MintAI/issues/3285)), and even to support randomness ([\#763](https://github.com/DeAI-Artist/MintAI/issues/763)).
 For more, see issues marked
-[proposer-selection](https://github.com/tendermint/tendermint/labels/proposer-selection).
+[proposer-selection](https://github.com/DeAI-Artist/MintAI/labels/proposer-selection).
 
 This release also includes a fix to prevent Tendermint from including the same
 piece of evidence in more than one block. This issue was reported by @chengwenxi in our
@@ -2011,34 +2011,34 @@ piece of evidence in more than one block. This issue was reported by @chengwenxi
 ### BREAKING CHANGES:
 
 * Apps
-  - [state] [\#3222](https://github.com/tendermint/tendermint/issues/3222)
+  - [state] [\#3222](https://github.com/DeAI-Artist/MintAI/issues/3222)
     Duplicate updates for the same validator are forbidden. Apps must ensure
     that a given `ResponseEndBlock.ValidatorUpdates` contains only one entry per pubkey.
 
 * Go API
-  - [types] [\#3222](https://github.com/tendermint/tendermint/issues/3222)
+  - [types] [\#3222](https://github.com/DeAI-Artist/MintAI/issues/3222)
     Remove `Add` and `Update` methods from `ValidatorSet` in favor of new
     `UpdateWithChangeSet`. This allows updates to be applied as a set, instead of
     one at a time.
 
 * Block Protocol
-  - [state] [\#3286](https://github.com/tendermint/tendermint/issues/3286) Blocks that include already committed evidence are invalid.
+  - [state] [\#3286](https://github.com/DeAI-Artist/MintAI/issues/3286) Blocks that include already committed evidence are invalid.
 
 * P2P Protocol
-  - [consensus] [\#3222](https://github.com/tendermint/tendermint/issues/3222)
+  - [consensus] [\#3222](https://github.com/DeAI-Artist/MintAI/issues/3222)
     Validator updates are applied as a set, instead of one at a time, thus
     impacting the proposer priority calculation. This ensures that the proposer
     selection algorithm does not depend on the order of updates in
     `ResponseEndBlock.ValidatorUpdates`.
 
 ### IMPROVEMENTS:
-- [crypto] [\#3279](https://github.com/tendermint/tendermint/issues/3279) Use `btcec.S256().N` directly instead of hard coding a copy.
+- [crypto] [\#3279](https://github.com/DeAI-Artist/MintAI/issues/3279) Use `btcec.S256().N` directly instead of hard coding a copy.
 
 ### BUG FIXES:
-- [state] [\#3222](https://github.com/tendermint/tendermint/issues/3222) Fix validator set updates so they are applied as a set, rather
+- [state] [\#3222](https://github.com/DeAI-Artist/MintAI/issues/3222) Fix validator set updates so they are applied as a set, rather
   than one at a time. This makes the proposer selection algorithm independent of
   the order of updates in `ResponseEndBlock.ValidatorUpdates`.
-- [evidence] [\#3286](https://github.com/tendermint/tendermint/issues/3286) Don't add committed evidence to evidence pool.
+- [evidence] [\#3286](https://github.com/DeAI-Artist/MintAI/issues/3286) Don't add committed evidence to evidence pool.
 
 ## v0.29.2
 
@@ -2051,7 +2051,7 @@ Special thanks to external contributors on this release:
 `crypto` packages:
 - p2p:
   - Partial fix for MITM attacks on the p2p connection. MITM conditions may
-    still exist. See [\#3010](https://github.com/tendermint/tendermint/issues/3010).
+    still exist. See [\#3010](https://github.com/DeAI-Artist/MintAI/issues/3010).
 - crypto:
   - Eliminate our fork of `btcd` and use the `btcd/btcec` library directly for
     native secp256k1 signing. Note we still modify the signature encoding to
@@ -2062,27 +2062,27 @@ Special thanks to external contributors on this release:
 ### BREAKING CHANGES:
 
 * Go API
-  - [crypto] [\#3278](https://github.com/tendermint/tendermint/issues/3278) Remove
+  - [crypto] [\#3278](https://github.com/DeAI-Artist/MintAI/issues/3278) Remove
     MixEntropy functions
-  - [types] [\#3245](https://github.com/tendermint/tendermint/issues/3245) Commit uses `type CommitSig Vote` instead of `Vote` directly.
-    In preparation for removing redundant fields from the commit [\#1648](https://github.com/tendermint/tendermint/issues/1648)
+  - [types] [\#3245](https://github.com/DeAI-Artist/MintAI/issues/3245) Commit uses `type CommitSig Vote` instead of `Vote` directly.
+    In preparation for removing redundant fields from the commit [\#1648](https://github.com/DeAI-Artist/MintAI/issues/1648)
 
 ### IMPROVEMENTS:
-- [consensus] [\#3246](https://github.com/tendermint/tendermint/issues/3246) Better logging and notes on recovery for corrupted WAL file
-- [crypto] [\#3163](https://github.com/tendermint/tendermint/issues/3163) Use ethereum's libsecp256k1 go-wrapper for signatures when cgo is available
-- [crypto] [\#3162](https://github.com/tendermint/tendermint/issues/3162) Wrap btcd instead of forking it to keep up with fixes (used if cgo is not available)
-- [makefile] [\#3233](https://github.com/tendermint/tendermint/issues/3233) Use golangci-lint instead of go-metalinter
-- [tools] [\#3218](https://github.com/tendermint/tendermint/issues/3218) Add go-deadlock tool to help detect deadlocks
-- [tools] [\#3106](https://github.com/tendermint/tendermint/issues/3106) Add tm-signer-harness test harness for remote signers
-- [tests] [\#3258](https://github.com/tendermint/tendermint/issues/3258) Fixed a bunch of non-deterministic test failures
+- [consensus] [\#3246](https://github.com/DeAI-Artist/MintAI/issues/3246) Better logging and notes on recovery for corrupted WAL file
+- [crypto] [\#3163](https://github.com/DeAI-Artist/MintAI/issues/3163) Use ethereum's libsecp256k1 go-wrapper for signatures when cgo is available
+- [crypto] [\#3162](https://github.com/DeAI-Artist/MintAI/issues/3162) Wrap btcd instead of forking it to keep up with fixes (used if cgo is not available)
+- [makefile] [\#3233](https://github.com/DeAI-Artist/MintAI/issues/3233) Use golangci-lint instead of go-metalinter
+- [tools] [\#3218](https://github.com/DeAI-Artist/MintAI/issues/3218) Add go-deadlock tool to help detect deadlocks
+- [tools] [\#3106](https://github.com/DeAI-Artist/MintAI/issues/3106) Add tm-signer-harness test harness for remote signers
+- [tests] [\#3258](https://github.com/DeAI-Artist/MintAI/issues/3258) Fixed a bunch of non-deterministic test failures
 
 ### BUG FIXES:
-- [node] [\#3186](https://github.com/tendermint/tendermint/issues/3186) EventBus and indexerService should be started before first block (for replay last block on handshake) execution (@ackratos)
-- [p2p] [\#3232](https://github.com/tendermint/tendermint/issues/3232) Fix infinite loop leading to addrbook deadlock for seed nodes
-- [p2p] [\#3247](https://github.com/tendermint/tendermint/issues/3247) Fix panic in SeedMode when calling FlushStop and OnStop
+- [node] [\#3186](https://github.com/DeAI-Artist/MintAI/issues/3186) EventBus and indexerService should be started before first block (for replay last block on handshake) execution (@ackratos)
+- [p2p] [\#3232](https://github.com/DeAI-Artist/MintAI/issues/3232) Fix infinite loop leading to addrbook deadlock for seed nodes
+- [p2p] [\#3247](https://github.com/DeAI-Artist/MintAI/issues/3247) Fix panic in SeedMode when calling FlushStop and OnStop
   concurrently
-- [p2p] [\#3040](https://github.com/tendermint/tendermint/issues/3040) Fix MITM on secret connection by checking low-order points
-- [privval] [\#3258](https://github.com/tendermint/tendermint/issues/3258) Fix race between sign requests and ping requests in socket that was causing messages to be corrupted
+- [p2p] [\#3040](https://github.com/DeAI-Artist/MintAI/issues/3040) Fix MITM on secret connection by checking low-order points
+- [privval] [\#3258](https://github.com/DeAI-Artist/MintAI/issues/3258) Fix race between sign requests and ping requests in socket that was causing messages to be corrupted
 
 ## v0.29.1
 
@@ -2096,13 +2096,13 @@ were not closing connections and one for consensus layer where consensus with
 no empty blocks (`create_empty_blocks = false`) could halt.
 
 ### IMPROVEMENTS:
-- [pex] [\#3037](https://github.com/tendermint/tendermint/issues/3037) Only log "Reached max attempts to dial" once
-- [rpc] [\#3159](https://github.com/tendermint/tendermint/issues/3159) Expose
+- [pex] [\#3037](https://github.com/DeAI-Artist/MintAI/issues/3037) Only log "Reached max attempts to dial" once
+- [rpc] [\#3159](https://github.com/DeAI-Artist/MintAI/issues/3159) Expose
   `triggered_timeout_commit` in the `/dump_consensus_state`
 
 ### BUG FIXES:
-- [consensus] [\#3199](https://github.com/tendermint/tendermint/issues/3199) Fix consensus halt with no empty blocks from not resetting triggeredTimeoutCommit
-- [p2p] [\#2967](https://github.com/tendermint/tendermint/issues/2967) Fix file descriptor leak
+- [consensus] [\#3199](https://github.com/DeAI-Artist/MintAI/issues/3199) Fix consensus halt with no empty blocks from not resetting triggeredTimeoutCommit
+- [p2p] [\#2967](https://github.com/DeAI-Artist/MintAI/issues/2967) Fix file descriptor leak
 
 ## v0.29.0
 
@@ -2122,11 +2122,11 @@ and constraining the hash of the ConsensusParams to include only a few fields.
 The proposer selection algorithm saw significant progress,
 including a [formal proof by @cwgoes for the base-case in Idris](https://github.com/cwgoes/tm-proposer-idris)
 and a [much more detailed specification (still in progress) by
-@ancazamfir](https://github.com/tendermint/tendermint/pull/3140).
+@ancazamfir](https://github.com/DeAI-Artist/MintAI/pull/3140).
 
 Fixes to the proposer selection algorithm include normalizing the proposer
 priorities to mitigate the effects of large changes to the validator set.
-That said, we just discovered [another bug](https://github.com/tendermint/tendermint/issues/3181),
+That said, we just discovered [another bug](https://github.com/DeAI-Artist/MintAI/issues/3181),
 which will be fixed in the next breaking release.
 
 While we are trying to stabilize the Block protocol to preserve compatibility
@@ -2138,40 +2138,40 @@ launch as we continue to audit and test the software.
 * CLI/RPC/Config
 
 * Apps
-  - [state] [\#3049](https://github.com/tendermint/tendermint/issues/3049) Total voting power of the validator set is upper bounded by
+  - [state] [\#3049](https://github.com/DeAI-Artist/MintAI/issues/3049) Total voting power of the validator set is upper bounded by
     `MaxInt64 / 8`. Apps must ensure they do not return changes to the validator
     set that cause this maximum to be exceeded.
 
 * Go API
-  - [node] [\#3082](https://github.com/tendermint/tendermint/issues/3082) MetricsProvider now requires you to pass a chain ID
-  - [types] [\#2713](https://github.com/tendermint/tendermint/issues/2713) Rename `TxProof.LeafHash` to `TxProof.Leaf`
-  - [crypto/merkle] [\#2713](https://github.com/tendermint/tendermint/issues/2713) `SimpleProof.Verify` takes a `leaf` instead of a
+  - [node] [\#3082](https://github.com/DeAI-Artist/MintAI/issues/3082) MetricsProvider now requires you to pass a chain ID
+  - [types] [\#2713](https://github.com/DeAI-Artist/MintAI/issues/2713) Rename `TxProof.LeafHash` to `TxProof.Leaf`
+  - [crypto/merkle] [\#2713](https://github.com/DeAI-Artist/MintAI/issues/2713) `SimpleProof.Verify` takes a `leaf` instead of a
     `leafHash` and performs the hashing itself
 
 * Blockchain Protocol
-  * [crypto/merkle] [\#2713](https://github.com/tendermint/tendermint/issues/2713) Merkle trees now match the RFC 6962 specification
-  * [types] [\#3078](https://github.com/tendermint/tendermint/issues/3078) Re-order Timestamp and BlockID in CanonicalVote so it's
+  * [crypto/merkle] [\#2713](https://github.com/DeAI-Artist/MintAI/issues/2713) Merkle trees now match the RFC 6962 specification
+  * [types] [\#3078](https://github.com/DeAI-Artist/MintAI/issues/3078) Re-order Timestamp and BlockID in CanonicalVote so it's
     consistent with CanonicalProposal (BlockID comes
     first)
-  * [types] [\#3165](https://github.com/tendermint/tendermint/issues/3165) Hash of ConsensusParams only includes BlockSize.MaxBytes and
+  * [types] [\#3165](https://github.com/DeAI-Artist/MintAI/issues/3165) Hash of ConsensusParams only includes BlockSize.MaxBytes and
     BlockSize.MaxGas
 
 * P2P Protocol
-  - [consensus] [\#3049](https://github.com/tendermint/tendermint/issues/3049) Normalize priorities to not exceed `2*TotalVotingPower` to mitigate unfair proposer selection
+  - [consensus] [\#3049](https://github.com/DeAI-Artist/MintAI/issues/3049) Normalize priorities to not exceed `2*TotalVotingPower` to mitigate unfair proposer selection
     heavily preferring earlier joined validators in the case of an early bonded large validator unbonding
 
 ### FEATURES:
 
 ### IMPROVEMENTS:
-- [rpc] [\#3065](https://github.com/tendermint/tendermint/issues/3065) Return maxPerPage (100), not defaultPerPage (30) if `per_page` is greater than the max 100.
-- [instrumentation] [\#3082](https://github.com/tendermint/tendermint/issues/3082) Add `chain_id` label for all metrics
+- [rpc] [\#3065](https://github.com/DeAI-Artist/MintAI/issues/3065) Return maxPerPage (100), not defaultPerPage (30) if `per_page` is greater than the max 100.
+- [instrumentation] [\#3082](https://github.com/DeAI-Artist/MintAI/issues/3082) Add `chain_id` label for all metrics
 
 ### BUG FIXES:
-- [crypto] [\#3164](https://github.com/tendermint/tendermint/issues/3164) Update `btcd` fork for rare signRFC6979 bug
-- [lite] [\#3171](https://github.com/tendermint/tendermint/issues/3171) Fix verifying large validator set changes
-- [log] [\#3125](https://github.com/tendermint/tendermint/issues/3125) Fix year format
-- [mempool] [\#3168](https://github.com/tendermint/tendermint/issues/3168) Limit tx size to fit in the max reactor msg size
-- [scripts] [\#3147](https://github.com/tendermint/tendermint/issues/3147) Fix json2wal for large block parts (@bradyjoestar)
+- [crypto] [\#3164](https://github.com/DeAI-Artist/MintAI/issues/3164) Update `btcd` fork for rare signRFC6979 bug
+- [lite] [\#3171](https://github.com/DeAI-Artist/MintAI/issues/3171) Fix verifying large validator set changes
+- [log] [\#3125](https://github.com/DeAI-Artist/MintAI/issues/3125) Fix year format
+- [mempool] [\#3168](https://github.com/DeAI-Artist/MintAI/issues/3168) Limit tx size to fit in the max reactor msg size
+- [scripts] [\#3147](https://github.com/DeAI-Artist/MintAI/issues/3147) Fix json2wal for large block parts (@bradyjoestar)
 
 ## v0.28.1
 
@@ -2204,39 +2204,39 @@ See [UPGRADING.md](UPGRADING.md) for more details.
 * CLI/RPC/Config
   - [cli] Removed `--proxy_app=dummy` option. Use `kvstore` (`persistent_kvstore`) instead.
   - [cli] Renamed `--proxy_app=nilapp` to `--proxy_app=noop`.
-  - [config] [\#2992](https://github.com/tendermint/tendermint/issues/2992) `allow_duplicate_ip` is now set to false
-  - [privval] [\#1181](https://github.com/tendermint/tendermint/issues/1181) Split `priv_validator.json` into immutable (`config/priv_validator_key.json`) and mutable (`data/priv_validator_state.json`) parts (@yutianwu)
-  - [privval] [\#2926](https://github.com/tendermint/tendermint/issues/2926) Split up `PubKeyMsg` into `PubKeyRequest` and `PubKeyResponse` to be consistent with other message types
-  - [privval] [\#2923](https://github.com/tendermint/tendermint/issues/2923) Listen for unix socket connections instead of dialing them
+  - [config] [\#2992](https://github.com/DeAI-Artist/MintAI/issues/2992) `allow_duplicate_ip` is now set to false
+  - [privval] [\#1181](https://github.com/DeAI-Artist/MintAI/issues/1181) Split `priv_validator.json` into immutable (`config/priv_validator_key.json`) and mutable (`data/priv_validator_state.json`) parts (@yutianwu)
+  - [privval] [\#2926](https://github.com/DeAI-Artist/MintAI/issues/2926) Split up `PubKeyMsg` into `PubKeyRequest` and `PubKeyResponse` to be consistent with other message types
+  - [privval] [\#2923](https://github.com/DeAI-Artist/MintAI/issues/2923) Listen for unix socket connections instead of dialing them
 
 * Apps
 
 * Go API
-  - [types] [\#2981](https://github.com/tendermint/tendermint/issues/2981) Remove `PrivValidator.GetAddress()`
+  - [types] [\#2981](https://github.com/DeAI-Artist/MintAI/issues/2981) Remove `PrivValidator.GetAddress()`
 
 * Blockchain Protocol
 
 * P2P Protocol
 
 ### FEATURES:
-- [rpc] [\#3052](https://github.com/tendermint/tendermint/issues/3052) Include peer's remote IP in `/net_info`
+- [rpc] [\#3052](https://github.com/DeAI-Artist/MintAI/issues/3052) Include peer's remote IP in `/net_info`
 
 ### IMPROVEMENTS:
-- [consensus] [\#3086](https://github.com/tendermint/tendermint/issues/3086) Log peerID on ignored votes (@srmo)
-- [docs] [\#3061](https://github.com/tendermint/tendermint/issues/3061) Added specification for signing consensus msgs at
+- [consensus] [\#3086](https://github.com/DeAI-Artist/MintAI/issues/3086) Log peerID on ignored votes (@srmo)
+- [docs] [\#3061](https://github.com/DeAI-Artist/MintAI/issues/3061) Added specification for signing consensus msgs at
   ./docs/spec/consensus/signing.md
-- [privval] [\#2948](https://github.com/tendermint/tendermint/issues/2948) Memoize pubkey so it's only requested once on startup
-- [privval] [\#2923](https://github.com/tendermint/tendermint/issues/2923) Retry RemoteSigner connections on error
+- [privval] [\#2948](https://github.com/DeAI-Artist/MintAI/issues/2948) Memoize pubkey so it's only requested once on startup
+- [privval] [\#2923](https://github.com/DeAI-Artist/MintAI/issues/2923) Retry RemoteSigner connections on error
 
 ### BUG FIXES:
 
-- [build] [\#3085](https://github.com/tendermint/tendermint/issues/3085) Fix `Version` field in build scripts (@husio)
-- [crypto/multisig] [\#3102](https://github.com/tendermint/tendermint/issues/3102) Fix multisig keys address length
-- [crypto/encoding] [\#3101](https://github.com/tendermint/tendermint/issues/3101) Fix `PubKeyMultisigThreshold` unmarshalling into `crypto.PubKey` interface
-- [p2p/conn] [\#3111](https://github.com/tendermint/tendermint/issues/3111) Make SecretConnection thread safe
-- [rpc] [\#3053](https://github.com/tendermint/tendermint/issues/3053) Fix internal error in `/tx_search` when results are empty
+- [build] [\#3085](https://github.com/DeAI-Artist/MintAI/issues/3085) Fix `Version` field in build scripts (@husio)
+- [crypto/multisig] [\#3102](https://github.com/DeAI-Artist/MintAI/issues/3102) Fix multisig keys address length
+- [crypto/encoding] [\#3101](https://github.com/DeAI-Artist/MintAI/issues/3101) Fix `PubKeyMultisigThreshold` unmarshalling into `crypto.PubKey` interface
+- [p2p/conn] [\#3111](https://github.com/DeAI-Artist/MintAI/issues/3111) Make SecretConnection thread safe
+- [rpc] [\#3053](https://github.com/DeAI-Artist/MintAI/issues/3053) Fix internal error in `/tx_search` when results are empty
   (@gianfelipe93)
-- [types] [\#2926](https://github.com/tendermint/tendermint/issues/2926) Do not panic if retrieving the privval's public key fails
+- [types] [\#2926](https://github.com/DeAI-Artist/MintAI/issues/2926) Do not panic if retrieving the privval's public key fails
 
 ## v0.27.4
 
@@ -2244,7 +2244,7 @@ See [UPGRADING.md](UPGRADING.md) for more details.
 
 ### BUG FIXES:
 
-- [mempool] [\#3036](https://github.com/tendermint/tendermint/issues/3036) Fix
+- [mempool] [\#3036](https://github.com/DeAI-Artist/MintAI/issues/3036) Fix
   LRU cache by popping the least recently used item when the cache is full,
   not the most recently used one!
 
@@ -2255,7 +2255,7 @@ See [UPGRADING.md](UPGRADING.md) for more details.
 ### BREAKING CHANGES:
 
 * Go API
-  - [dep] [\#3027](https://github.com/tendermint/tendermint/issues/3027) Revert to mainline Go crypto library, eliminating the modified
+  - [dep] [\#3027](https://github.com/DeAI-Artist/MintAI/issues/3027) Revert to mainline Go crypto library, eliminating the modified
     `bcrypt.GenerateFromPassword`
 
 ## v0.27.2
@@ -2264,11 +2264,11 @@ See [UPGRADING.md](UPGRADING.md) for more details.
 
 ### IMPROVEMENTS:
 
-- [node] [\#3025](https://github.com/tendermint/tendermint/issues/3025) Validate NodeInfo addresses on startup.
+- [node] [\#3025](https://github.com/DeAI-Artist/MintAI/issues/3025) Validate NodeInfo addresses on startup.
 
 ### BUG FIXES:
 
-- [p2p] [\#3025](https://github.com/tendermint/tendermint/pull/3025) Revert to using defers in addrbook.  Fixes deadlocks in pex and consensus upon invalid ExternalAddr/ListenAddr configuration.
+- [p2p] [\#3025](https://github.com/DeAI-Artist/MintAI/pull/3025) Revert to using defers in addrbook.  Fixes deadlocks in pex and consensus upon invalid ExternalAddr/ListenAddr configuration.
 
 ## v0.27.1
 
@@ -2278,23 +2278,23 @@ Special thanks to external contributors on this release:
 @danil-lashin, @hleb-albau, @james-ray, @leo-xinwang
 
 ### FEATURES:
-- [rpc] [\#2964](https://github.com/tendermint/tendermint/issues/2964) Add `UnconfirmedTxs(limit)` and `NumUnconfirmedTxs()` methods to HTTP/Local clients (@danil-lashin)
-- [docs] [\#3004](https://github.com/tendermint/tendermint/issues/3004) Enable full-text search on docs pages
+- [rpc] [\#2964](https://github.com/DeAI-Artist/MintAI/issues/2964) Add `UnconfirmedTxs(limit)` and `NumUnconfirmedTxs()` methods to HTTP/Local clients (@danil-lashin)
+- [docs] [\#3004](https://github.com/DeAI-Artist/MintAI/issues/3004) Enable full-text search on docs pages
 
 ### IMPROVEMENTS:
-- [consensus] [\#2971](https://github.com/tendermint/tendermint/issues/2971) Return error if ValidatorSet is empty after InitChain
+- [consensus] [\#2971](https://github.com/DeAI-Artist/MintAI/issues/2971) Return error if ValidatorSet is empty after InitChain
   (@leo-xinwang)
-- [ci/cd] [\#3005](https://github.com/tendermint/tendermint/issues/3005) Updated CircleCI job to trigger website build when docs are updated
+- [ci/cd] [\#3005](https://github.com/DeAI-Artist/MintAI/issues/3005) Updated CircleCI job to trigger website build when docs are updated
 - [docs] Various updates
 
 ### BUG FIXES:
-- [cmd] [\#2983](https://github.com/tendermint/tendermint/issues/2983) `testnet` command always sets `addr_book_strict = false`
-- [config] [\#2980](https://github.com/tendermint/tendermint/issues/2980) Fix CORS options formatting
-- [kv indexer] [\#2912](https://github.com/tendermint/tendermint/issues/2912) Don't ignore key when executing CONTAINS
-- [mempool] [\#2961](https://github.com/tendermint/tendermint/issues/2961) Call `notifyTxsAvailable` if there're txs left after committing a block, but recheck=false
-- [mempool] [\#2994](https://github.com/tendermint/tendermint/issues/2994) Reject txs with negative GasWanted
-- [p2p] [\#2990](https://github.com/tendermint/tendermint/issues/2990) Fix a bug where seeds don't disconnect from a peer after 3h
-- [consensus] [\#3006](https://github.com/tendermint/tendermint/issues/3006) Save state after InitChain only when stateHeight is also 0 (@james-ray)
+- [cmd] [\#2983](https://github.com/DeAI-Artist/MintAI/issues/2983) `testnet` command always sets `addr_book_strict = false`
+- [config] [\#2980](https://github.com/DeAI-Artist/MintAI/issues/2980) Fix CORS options formatting
+- [kv indexer] [\#2912](https://github.com/DeAI-Artist/MintAI/issues/2912) Don't ignore key when executing CONTAINS
+- [mempool] [\#2961](https://github.com/DeAI-Artist/MintAI/issues/2961) Call `notifyTxsAvailable` if there're txs left after committing a block, but recheck=false
+- [mempool] [\#2994](https://github.com/DeAI-Artist/MintAI/issues/2994) Reject txs with negative GasWanted
+- [p2p] [\#2990](https://github.com/DeAI-Artist/MintAI/issues/2990) Fix a bug where seeds don't disconnect from a peer after 3h
+- [consensus] [\#3006](https://github.com/DeAI-Artist/MintAI/issues/3006) Save state after InitChain only when stateHeight is also 0 (@james-ray)
 
 ## v0.27.0
 
@@ -2304,7 +2304,7 @@ Special thanks to external contributors on this release:
 @danil-lashin, @srmo
 
 Special thanks to @dlguddus for discovering a [major
-issue](https://github.com/tendermint/tendermint/issues/2718#issuecomment-440888677)
+issue](https://github.com/DeAI-Artist/MintAI/issues/2718#issuecomment-440888677)
 in the proposer selection algorithm.
 
 This release is primarily about fixes to the proposer selection algorithm
@@ -2317,47 +2317,47 @@ message.
 ### BREAKING CHANGES:
 
 * CLI/RPC/Config
-  - [rpc] [\#2932](https://github.com/tendermint/tendermint/issues/2932) Rename `accum` to `proposer_priority`
+  - [rpc] [\#2932](https://github.com/DeAI-Artist/MintAI/issues/2932) Rename `accum` to `proposer_priority`
 
 * Go API
-  - [db] [\#2913](https://github.com/tendermint/tendermint/pull/2913)
+  - [db] [\#2913](https://github.com/DeAI-Artist/MintAI/pull/2913)
     ReverseIterator API change: start < end, and end is exclusive.
-  - [types] [\#2932](https://github.com/tendermint/tendermint/issues/2932) Rename `Validator.Accum` to `Validator.ProposerPriority`
+  - [types] [\#2932](https://github.com/DeAI-Artist/MintAI/issues/2932) Rename `Validator.Accum` to `Validator.ProposerPriority`
 
 * Blockchain Protocol
-  - [state] [\#2714](https://github.com/tendermint/tendermint/issues/2714) Validators can now only use pubkeys allowed within
+  - [state] [\#2714](https://github.com/DeAI-Artist/MintAI/issues/2714) Validators can now only use pubkeys allowed within
     ConsensusParams.Validator.PubKeyTypes
 
 * P2P Protocol
-  - [consensus] [\#2871](https://github.com/tendermint/tendermint/issues/2871)
+  - [consensus] [\#2871](https://github.com/DeAI-Artist/MintAI/issues/2871)
     Remove *ProposalHeartbeat* message as it serves no real purpose (@srmo)
   - [state] Fixes for proposer selection:
-    - [\#2785](https://github.com/tendermint/tendermint/issues/2785) Accum for new validators is `-1.125*totalVotingPower` instead of 0
-    - [\#2941](https://github.com/tendermint/tendermint/issues/2941) val.Accum is preserved during ValidatorSet.Update to avoid being
+    - [\#2785](https://github.com/DeAI-Artist/MintAI/issues/2785) Accum for new validators is `-1.125*totalVotingPower` instead of 0
+    - [\#2941](https://github.com/DeAI-Artist/MintAI/issues/2941) val.Accum is preserved during ValidatorSet.Update to avoid being
       reset to 0
 
 ### IMPROVEMENTS:
 
-- [state] [\#2929](https://github.com/tendermint/tendermint/issues/2929) Minor refactor of updateState logic (@danil-lashin)
-- [node] [\#2959](https://github.com/tendermint/tendermint/issues/2959) Allow node to start even if software's BlockProtocol is
+- [state] [\#2929](https://github.com/DeAI-Artist/MintAI/issues/2929) Minor refactor of updateState logic (@danil-lashin)
+- [node] [\#2959](https://github.com/DeAI-Artist/MintAI/issues/2959) Allow node to start even if software's BlockProtocol is
   different from state's BlockProtocol
-- [pex] [\#2959](https://github.com/tendermint/tendermint/issues/2959) Pex reactor logger uses `module=pex`
+- [pex] [\#2959](https://github.com/DeAI-Artist/MintAI/issues/2959) Pex reactor logger uses `module=pex`
 
 ### BUG FIXES:
 
-- [p2p] [\#2968](https://github.com/tendermint/tendermint/issues/2968) Panic on transport error rather than continuing to run but not
+- [p2p] [\#2968](https://github.com/DeAI-Artist/MintAI/issues/2968) Panic on transport error rather than continuing to run but not
   accept new connections
-- [p2p] [\#2969](https://github.com/tendermint/tendermint/issues/2969) Fix mismatch in peer count between `/net_info` and the prometheus
+- [p2p] [\#2969](https://github.com/DeAI-Artist/MintAI/issues/2969) Fix mismatch in peer count between `/net_info` and the prometheus
   metrics
-- [rpc] [\#2408](https://github.com/tendermint/tendermint/issues/2408) `/broadcast_tx_commit`: Fix "interface conversion: interface {} in nil, not EventDataTx" panic (could happen if somebody sent a tx using `/broadcast_tx_commit` while Tendermint was being stopped)
-- [state] [\#2785](https://github.com/tendermint/tendermint/issues/2785) Fix accum for new validators to be `-1.125*totalVotingPower`
+- [rpc] [\#2408](https://github.com/DeAI-Artist/MintAI/issues/2408) `/broadcast_tx_commit`: Fix "interface conversion: interface {} in nil, not EventDataTx" panic (could happen if somebody sent a tx using `/broadcast_tx_commit` while Tendermint was being stopped)
+- [state] [\#2785](https://github.com/DeAI-Artist/MintAI/issues/2785) Fix accum for new validators to be `-1.125*totalVotingPower`
   instead of 0, forcing them to wait before becoming the proposer. Also:
     - do not batch clip
     - keep accums averaged near 0
-- [txindex/kv] [\#2925](https://github.com/tendermint/tendermint/issues/2925) Don't return false positives when range searching for a prefix of a tag value
-- [types] [\#2938](https://github.com/tendermint/tendermint/issues/2938) Fix regression in v0.26.4 where we panic on empty
+- [txindex/kv] [\#2925](https://github.com/DeAI-Artist/MintAI/issues/2925) Don't return false positives when range searching for a prefix of a tag value
+- [types] [\#2938](https://github.com/DeAI-Artist/MintAI/issues/2938) Fix regression in v0.26.4 where we panic on empty
   genDoc.Validators
-- [types] [\#2941](https://github.com/tendermint/tendermint/issues/2941) Preserve val.Accum during ValidatorSet.Update to avoid it being
+- [types] [\#2941](https://github.com/DeAI-Artist/MintAI/issues/2941) Preserve val.Accum during ValidatorSet.Update to avoid it being
   reset to 0 every time a validator is updated
 
 ## v0.26.4
@@ -2370,34 +2370,34 @@ Special thanks to external contributors on this release:
 
 ### FEATURES:
 
-- [rpc] [\#2747](https://github.com/tendermint/tendermint/issues/2747) Enable subscription to tags emitted from `BeginBlock`/`EndBlock` (@kostko)
-- [types] [\#2747](https://github.com/tendermint/tendermint/issues/2747) Add `ResultBeginBlock` and `ResultEndBlock` fields to `EventDataNewBlock`
+- [rpc] [\#2747](https://github.com/DeAI-Artist/MintAI/issues/2747) Enable subscription to tags emitted from `BeginBlock`/`EndBlock` (@kostko)
+- [types] [\#2747](https://github.com/DeAI-Artist/MintAI/issues/2747) Add `ResultBeginBlock` and `ResultEndBlock` fields to `EventDataNewBlock`
     and `EventDataNewBlockHeader` to support subscriptions (@kostko)
-- [types] [\#2918](https://github.com/tendermint/tendermint/issues/2918) Add Marshal, MarshalTo, Unmarshal methods to various structs
+- [types] [\#2918](https://github.com/DeAI-Artist/MintAI/issues/2918) Add Marshal, MarshalTo, Unmarshal methods to various structs
   to support Protobuf compatibility (@nagarajmanjunath)
 
 ### IMPROVEMENTS:
 
-- [config] [\#2877](https://github.com/tendermint/tendermint/issues/2877) Add `blocktime_iota` to the config.toml (@ackratos)
+- [config] [\#2877](https://github.com/DeAI-Artist/MintAI/issues/2877) Add `blocktime_iota` to the config.toml (@ackratos)
     - NOTE: this should be a ConsensusParam, not part of the config, and will be
       removed from the config at a later date
-      ([\#2920](https://github.com/tendermint/tendermint/issues/2920).
-- [mempool] [\#2882](https://github.com/tendermint/tendermint/issues/2882) Add txs from Update to cache
-- [mempool] [\#2891](https://github.com/tendermint/tendermint/issues/2891) Remove local int64 counter from being stored in every tx
-- [node] [\#2866](https://github.com/tendermint/tendermint/issues/2866) Add ability to instantiate IPCVal (@joe-bowman)
+      ([\#2920](https://github.com/DeAI-Artist/MintAI/issues/2920).
+- [mempool] [\#2882](https://github.com/DeAI-Artist/MintAI/issues/2882) Add txs from Update to cache
+- [mempool] [\#2891](https://github.com/DeAI-Artist/MintAI/issues/2891) Remove local int64 counter from being stored in every tx
+- [node] [\#2866](https://github.com/DeAI-Artist/MintAI/issues/2866) Add ability to instantiate IPCVal (@joe-bowman)
 
 ### BUG FIXES:
 
-- [blockchain] [\#2731](https://github.com/tendermint/tendermint/issues/2731) Retry both blocks if either is bad to avoid getting stuck during fast sync (@goolAdapter)
-- [consensus] [\#2893](https://github.com/tendermint/tendermint/issues/2893) Use genDoc.Validators instead of state.NextValidators on replay when appHeight==0 (@james-ray)
-- [log] [\#2868](https://github.com/tendermint/tendermint/issues/2868) Fix `module=main` setting overriding all others
+- [blockchain] [\#2731](https://github.com/DeAI-Artist/MintAI/issues/2731) Retry both blocks if either is bad to avoid getting stuck during fast sync (@goolAdapter)
+- [consensus] [\#2893](https://github.com/DeAI-Artist/MintAI/issues/2893) Use genDoc.Validators instead of state.NextValidators on replay when appHeight==0 (@james-ray)
+- [log] [\#2868](https://github.com/DeAI-Artist/MintAI/issues/2868) Fix `module=main` setting overriding all others
     - NOTE: this changes the default logging behaviour to be much less verbose.
       Set `log_level="info"` to restore the previous behaviour.
-- [rpc] [\#2808](https://github.com/tendermint/tendermint/issues/2808) Fix `accum` field in `/validators` by calling `IncrementAccum` if necessary
-- [rpc] [\#2811](https://github.com/tendermint/tendermint/issues/2811) Allow integer IDs in JSON-RPC requests (@tomtau)
-- [txindex/kv] [\#2759](https://github.com/tendermint/tendermint/issues/2759) Fix tx.height range queries
-- [txindex/kv] [\#2775](https://github.com/tendermint/tendermint/issues/2775) Order tx results by index if height is the same
-- [txindex/kv] [\#2908](https://github.com/tendermint/tendermint/issues/2908) Don't return false positives when searching for a prefix of a tag value
+- [rpc] [\#2808](https://github.com/DeAI-Artist/MintAI/issues/2808) Fix `accum` field in `/validators` by calling `IncrementAccum` if necessary
+- [rpc] [\#2811](https://github.com/DeAI-Artist/MintAI/issues/2811) Allow integer IDs in JSON-RPC requests (@tomtau)
+- [txindex/kv] [\#2759](https://github.com/DeAI-Artist/MintAI/issues/2759) Fix tx.height range queries
+- [txindex/kv] [\#2775](https://github.com/DeAI-Artist/MintAI/issues/2775) Order tx results by index if height is the same
+- [txindex/kv] [\#2908](https://github.com/DeAI-Artist/MintAI/issues/2908) Don't return false positives when searching for a prefix of a tag value
 
 ## v0.26.3
 
@@ -2409,36 +2409,36 @@ Special thanks to external contributors on this release:
 ### BREAKING CHANGES:
 
 * Go API
-  - [rpc] [\#2791](https://github.com/tendermint/tendermint/issues/2791) Functions that start HTTP servers are now blocking:
+  - [rpc] [\#2791](https://github.com/DeAI-Artist/MintAI/issues/2791) Functions that start HTTP servers are now blocking:
     - Impacts `StartHTTPServer`, `StartHTTPAndTLSServer`, and `StartGRPCServer`
     - These functions now take a `net.Listener` instead of an address
-  - [rpc] [\#2767](https://github.com/tendermint/tendermint/issues/2767) Subscribing to events
+  - [rpc] [\#2767](https://github.com/DeAI-Artist/MintAI/issues/2767) Subscribing to events
   `NewRound` and `CompleteProposal` return new types `EventDataNewRound` and
   `EventDataCompleteProposal`, respectively, instead of the generic `EventDataRoundState`. (@kevlubkcm)
 
 ### FEATURES:
 
-- [log] [\#2843](https://github.com/tendermint/tendermint/issues/2843) New `log_format` config option, which can be set to 'plain' for colored
+- [log] [\#2843](https://github.com/DeAI-Artist/MintAI/issues/2843) New `log_format` config option, which can be set to 'plain' for colored
   text or 'json' for JSON output
-- [types] [\#2767](https://github.com/tendermint/tendermint/issues/2767) New event types EventDataNewRound (with ProposerInfo) and EventDataCompleteProposal (with BlockID). (@kevlubkcm)
+- [types] [\#2767](https://github.com/DeAI-Artist/MintAI/issues/2767) New event types EventDataNewRound (with ProposerInfo) and EventDataCompleteProposal (with BlockID). (@kevlubkcm)
 
 ### IMPROVEMENTS:
 
-- [dep] [\#2844](https://github.com/tendermint/tendermint/issues/2844) Dependencies are no longer pinned to an exact version in the
+- [dep] [\#2844](https://github.com/DeAI-Artist/MintAI/issues/2844) Dependencies are no longer pinned to an exact version in the
   Gopkg.toml:
   - Serialization libs are allowed to vary by patch release
   - Other libs are allowed to vary by minor release
-- [p2p] [\#2857](https://github.com/tendermint/tendermint/issues/2857) "Send failed" is logged at debug level instead of error.
-- [rpc] [\#2780](https://github.com/tendermint/tendermint/issues/2780) Add read and write timeouts to HTTP servers
-- [state] [\#2848](https://github.com/tendermint/tendermint/issues/2848) Make "Update to validators" msg value pretty (@danil-lashin)
+- [p2p] [\#2857](https://github.com/DeAI-Artist/MintAI/issues/2857) "Send failed" is logged at debug level instead of error.
+- [rpc] [\#2780](https://github.com/DeAI-Artist/MintAI/issues/2780) Add read and write timeouts to HTTP servers
+- [state] [\#2848](https://github.com/DeAI-Artist/MintAI/issues/2848) Make "Update to validators" msg value pretty (@danil-lashin)
 
 ### BUG FIXES:
-- [consensus] [\#2819](https://github.com/tendermint/tendermint/issues/2819) Don't send proposalHearbeat if not a validator
-- [docs] [\#2859](https://github.com/tendermint/tendermint/issues/2859) Fix ConsensusParams details in spec
-- [libs/autofile] [\#2760](https://github.com/tendermint/tendermint/issues/2760) Comment out autofile permissions check - should fix
+- [consensus] [\#2819](https://github.com/DeAI-Artist/MintAI/issues/2819) Don't send proposalHearbeat if not a validator
+- [docs] [\#2859](https://github.com/DeAI-Artist/MintAI/issues/2859) Fix ConsensusParams details in spec
+- [libs/autofile] [\#2760](https://github.com/DeAI-Artist/MintAI/issues/2760) Comment out autofile permissions check - should fix
   running Tendermint on Windows
-- [p2p] [\#2869](https://github.com/tendermint/tendermint/issues/2869) Set connection config properly instead of always using default
-- [p2p/pex] [\#2802](https://github.com/tendermint/tendermint/issues/2802) Seed mode fixes:
+- [p2p] [\#2869](https://github.com/DeAI-Artist/MintAI/issues/2869) Set connection config properly instead of always using default
+- [p2p/pex] [\#2802](https://github.com/DeAI-Artist/MintAI/issues/2802) Seed mode fixes:
   - Only disconnect from inbound peers
   - Use FlushStop instead of Sleep to ensure all messages are sent before
     disconnecting
@@ -2451,14 +2451,14 @@ Special thanks to external contributors on this release: @hleb-albau, @zhuzeyu
 
 ### FEATURES:
 
-- [rpc] [\#2582](https://github.com/tendermint/tendermint/issues/2582) Enable CORS on RPC API (@hleb-albau)
+- [rpc] [\#2582](https://github.com/DeAI-Artist/MintAI/issues/2582) Enable CORS on RPC API (@hleb-albau)
 
 ### BUG FIXES:
 
-- [abci] [\#2748](https://github.com/tendermint/tendermint/issues/2748) Unlock mutex in localClient so even when app panics (e.g. during CheckTx), consensus continue working
-- [abci] [\#2748](https://github.com/tendermint/tendermint/issues/2748) Fix DATA RACE in localClient
-- [amino] [\#2822](https://github.com/tendermint/tendermint/issues/2822) Update to v0.14.1 to support compiling on 32-bit platforms
-- [rpc] [\#2748](https://github.com/tendermint/tendermint/issues/2748) Drain channel before calling Unsubscribe(All) in `/broadcast_tx_commit`
+- [abci] [\#2748](https://github.com/DeAI-Artist/MintAI/issues/2748) Unlock mutex in localClient so even when app panics (e.g. during CheckTx), consensus continue working
+- [abci] [\#2748](https://github.com/DeAI-Artist/MintAI/issues/2748) Fix DATA RACE in localClient
+- [amino] [\#2822](https://github.com/DeAI-Artist/MintAI/issues/2822) Update to v0.14.1 to support compiling on 32-bit platforms
+- [rpc] [\#2748](https://github.com/DeAI-Artist/MintAI/issues/2748) Drain channel before calling Unsubscribe(All) in `/broadcast_tx_commit`
 
 ## v0.26.1
 
@@ -2468,21 +2468,21 @@ Special thanks to external contributors on this release: @katakonst
 
 ### IMPROVEMENTS:
 
-- [consensus] [\#2704](https://github.com/tendermint/tendermint/issues/2704) Simplify valid POL round logic
-- [docs] [\#2749](https://github.com/tendermint/tendermint/issues/2749) Deduplicate some ABCI docs
+- [consensus] [\#2704](https://github.com/DeAI-Artist/MintAI/issues/2704) Simplify valid POL round logic
+- [docs] [\#2749](https://github.com/DeAI-Artist/MintAI/issues/2749) Deduplicate some ABCI docs
 - [mempool] More detailed log messages
-    - [\#2724](https://github.com/tendermint/tendermint/issues/2724)
-    - [\#2762](https://github.com/tendermint/tendermint/issues/2762)
+    - [\#2724](https://github.com/DeAI-Artist/MintAI/issues/2724)
+    - [\#2762](https://github.com/DeAI-Artist/MintAI/issues/2762)
 
 ### BUG FIXES:
 
-- [autofile] [\#2703](https://github.com/tendermint/tendermint/issues/2703) Do not panic when checking Head size
-- [crypto/merkle] [\#2756](https://github.com/tendermint/tendermint/issues/2756) Fix crypto/merkle ProofOperators.Verify to check bounds on keypath parts.
+- [autofile] [\#2703](https://github.com/DeAI-Artist/MintAI/issues/2703) Do not panic when checking Head size
+- [crypto/merkle] [\#2756](https://github.com/DeAI-Artist/MintAI/issues/2756) Fix crypto/merkle ProofOperators.Verify to check bounds on keypath parts.
 - [mempool] fix a bug where we create a WAL despite `wal_dir` being empty
-- [p2p] [\#2771](https://github.com/tendermint/tendermint/issues/2771) Fix `peer-id` label name to `peer_id` in prometheus metrics
-- [p2p] [\#2797](https://github.com/tendermint/tendermint/pull/2797) Fix IDs in peer NodeInfo and require them for addresses
+- [p2p] [\#2771](https://github.com/DeAI-Artist/MintAI/issues/2771) Fix `peer-id` label name to `peer_id` in prometheus metrics
+- [p2p] [\#2797](https://github.com/DeAI-Artist/MintAI/pull/2797) Fix IDs in peer NodeInfo and require them for addresses
   in AddressBook
-- [p2p] [\#2797](https://github.com/tendermint/tendermint/pull/2797) Do not close conn immediately after sending pex addrs in seed mode. Partial fix for [\#2092](https://github.com/tendermint/tendermint/issues/2092).
+- [p2p] [\#2797](https://github.com/DeAI-Artist/MintAI/pull/2797) Do not close conn immediately after sending pex addrs in seed mode. Partial fix for [\#2092](https://github.com/DeAI-Artist/MintAI/issues/2092).
 
 ## v0.26.0
 
@@ -2516,116 +2516,116 @@ increasing attention to backwards compatibility. Thanks for bearing with us!
 ### BREAKING CHANGES:
 
 * CLI/RPC/Config
-  * [config] [\#2232](https://github.com/tendermint/tendermint/issues/2232) Timeouts are now strings like "3s" and "100ms", not ints
-  * [config] [\#2505](https://github.com/tendermint/tendermint/issues/2505) Remove Mempool.RecheckEmpty (it was effectively useless anyways)
-  * [config] [\#2490](https://github.com/tendermint/tendermint/issues/2490) `mempool.wal` is disabled by default
-  * [privval] [\#2459](https://github.com/tendermint/tendermint/issues/2459) Split `SocketPVMsg`s implementations into Request and Response, where the Response may contain a error message (returned by the remote signer)
-  * [state] [\#2644](https://github.com/tendermint/tendermint/issues/2644) Add Version field to State, breaking the format of State as
+  * [config] [\#2232](https://github.com/DeAI-Artist/MintAI/issues/2232) Timeouts are now strings like "3s" and "100ms", not ints
+  * [config] [\#2505](https://github.com/DeAI-Artist/MintAI/issues/2505) Remove Mempool.RecheckEmpty (it was effectively useless anyways)
+  * [config] [\#2490](https://github.com/DeAI-Artist/MintAI/issues/2490) `mempool.wal` is disabled by default
+  * [privval] [\#2459](https://github.com/DeAI-Artist/MintAI/issues/2459) Split `SocketPVMsg`s implementations into Request and Response, where the Response may contain a error message (returned by the remote signer)
+  * [state] [\#2644](https://github.com/DeAI-Artist/MintAI/issues/2644) Add Version field to State, breaking the format of State as
     encoded on disk.
-  * [rpc] [\#2298](https://github.com/tendermint/tendermint/issues/2298) `/abci_query` takes `prove` argument instead of `trusted` and switches the default
+  * [rpc] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) `/abci_query` takes `prove` argument instead of `trusted` and switches the default
     behaviour to `prove=false`
-  * [rpc] [\#2654](https://github.com/tendermint/tendermint/issues/2654) Remove all `node_info.other.*_version` fields in `/status` and
+  * [rpc] [\#2654](https://github.com/DeAI-Artist/MintAI/issues/2654) Remove all `node_info.other.*_version` fields in `/status` and
     `/net_info`
-  * [rpc] [\#2636](https://github.com/tendermint/tendermint/issues/2636) Remove
+  * [rpc] [\#2636](https://github.com/DeAI-Artist/MintAI/issues/2636) Remove
     `_params` suffix from fields in `consensus_params`.
 
 * Apps
-  * [abci] [\#2298](https://github.com/tendermint/tendermint/issues/2298) ResponseQuery.Proof is now a structured merkle.Proof, not just
+  * [abci] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) ResponseQuery.Proof is now a structured merkle.Proof, not just
     arbitrary bytes
-  * [abci] [\#2644](https://github.com/tendermint/tendermint/issues/2644) Add Version to Header and shift all fields by one
-  * [abci] [\#2662](https://github.com/tendermint/tendermint/issues/2662) Bump the field numbers for some `ResponseInfo` fields to make room for
+  * [abci] [\#2644](https://github.com/DeAI-Artist/MintAI/issues/2644) Add Version to Header and shift all fields by one
+  * [abci] [\#2662](https://github.com/DeAI-Artist/MintAI/issues/2662) Bump the field numbers for some `ResponseInfo` fields to make room for
       `AppVersion`
-  * [abci] [\#2636](https://github.com/tendermint/tendermint/issues/2636) Updates to ConsensusParams
+  * [abci] [\#2636](https://github.com/DeAI-Artist/MintAI/issues/2636) Updates to ConsensusParams
     * Remove `Params` suffix from field names
     * Add `Params` suffix to message types
     * Add new field and type, `Validator ValidatorParams`, to control what types of validator keys are allowed.
 
 * Go API
-  * [config] [\#2232](https://github.com/tendermint/tendermint/issues/2232) Timeouts are time.Duration, not ints
-  * [crypto/merkle & lite] [\#2298](https://github.com/tendermint/tendermint/issues/2298) Various changes to accomodate General Merkle trees
-  * [crypto/merkle] [\#2595](https://github.com/tendermint/tendermint/issues/2595) Remove all Hasher objects in favor of byte slices
-  * [crypto/merkle] [\#2635](https://github.com/tendermint/tendermint/issues/2635) merkle.SimpleHashFromTwoHashes is no longer exported
-  * [node] [\#2479](https://github.com/tendermint/tendermint/issues/2479) Remove node.RunForever
-  * [rpc/client] [\#2298](https://github.com/tendermint/tendermint/issues/2298) `ABCIQueryOptions.Trusted` -> `ABCIQueryOptions.Prove`
-  * [types] [\#2298](https://github.com/tendermint/tendermint/issues/2298) Remove `Index` and `Total` fields from `TxProof`.
-  * [types] [\#2598](https://github.com/tendermint/tendermint/issues/2598)
+  * [config] [\#2232](https://github.com/DeAI-Artist/MintAI/issues/2232) Timeouts are time.Duration, not ints
+  * [crypto/merkle & lite] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) Various changes to accomodate General Merkle trees
+  * [crypto/merkle] [\#2595](https://github.com/DeAI-Artist/MintAI/issues/2595) Remove all Hasher objects in favor of byte slices
+  * [crypto/merkle] [\#2635](https://github.com/DeAI-Artist/MintAI/issues/2635) merkle.SimpleHashFromTwoHashes is no longer exported
+  * [node] [\#2479](https://github.com/DeAI-Artist/MintAI/issues/2479) Remove node.RunForever
+  * [rpc/client] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) `ABCIQueryOptions.Trusted` -> `ABCIQueryOptions.Prove`
+  * [types] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) Remove `Index` and `Total` fields from `TxProof`.
+  * [types] [\#2598](https://github.com/DeAI-Artist/MintAI/issues/2598)
     `VoteTypeXxx` are now of type `SignedMsgType byte` and named `XxxType`, eg.
     `PrevoteType`, `PrecommitType`.
-  * [types] [\#2636](https://github.com/tendermint/tendermint/issues/2636) Rename fields in ConsensusParams to remove `Params` suffixes
-  * [types] [\#2735](https://github.com/tendermint/tendermint/issues/2735) Simplify Proposal message to align with spec
+  * [types] [\#2636](https://github.com/DeAI-Artist/MintAI/issues/2636) Rename fields in ConsensusParams to remove `Params` suffixes
+  * [types] [\#2735](https://github.com/DeAI-Artist/MintAI/issues/2735) Simplify Proposal message to align with spec
 
 * Blockchain Protocol
-  * [crypto/tmhash] [\#2732](https://github.com/tendermint/tendermint/issues/2732) TMHASH is now full 32-byte SHA256
+  * [crypto/tmhash] [\#2732](https://github.com/DeAI-Artist/MintAI/issues/2732) TMHASH is now full 32-byte SHA256
     * All hashes in the block header and Merkle trees are now 32-bytes
     * PubKey Addresses are still only 20-bytes
-  * [state] [\#2587](https://github.com/tendermint/tendermint/issues/2587) Require block.Time of the fist block to be genesis time
-  * [state] [\#2644](https://github.com/tendermint/tendermint/issues/2644) Require block.Version to match state.Version
+  * [state] [\#2587](https://github.com/DeAI-Artist/MintAI/issues/2587) Require block.Time of the fist block to be genesis time
+  * [state] [\#2644](https://github.com/DeAI-Artist/MintAI/issues/2644) Require block.Version to match state.Version
   * [types] Update SignBytes for `Vote`/`Proposal`/`Heartbeat`:
-    * [\#2459](https://github.com/tendermint/tendermint/issues/2459) Use amino encoding instead of JSON in `SignBytes`.
-    * [\#2598](https://github.com/tendermint/tendermint/issues/2598) Reorder fields and use fixed sized encoding.
-    * [\#2598](https://github.com/tendermint/tendermint/issues/2598) Change `Type` field from `string` to `byte` and use new
+    * [\#2459](https://github.com/DeAI-Artist/MintAI/issues/2459) Use amino encoding instead of JSON in `SignBytes`.
+    * [\#2598](https://github.com/DeAI-Artist/MintAI/issues/2598) Reorder fields and use fixed sized encoding.
+    * [\#2598](https://github.com/DeAI-Artist/MintAI/issues/2598) Change `Type` field from `string` to `byte` and use new
       `SignedMsgType` to enumerate.
-  * [types] [\#2730](https://github.com/tendermint/tendermint/issues/2730) Use
+  * [types] [\#2730](https://github.com/DeAI-Artist/MintAI/issues/2730) Use
     same order for fields in `Vote` as in the SignBytes
-  * [types] [\#2732](https://github.com/tendermint/tendermint/issues/2732) Remove the address field from the validator hash
-  * [types] [\#2644](https://github.com/tendermint/tendermint/issues/2644) Add Version struct to Header
-  * [types] [\#2609](https://github.com/tendermint/tendermint/issues/2609) ConsensusParams.Hash() is the hash of the amino encoded
+  * [types] [\#2732](https://github.com/DeAI-Artist/MintAI/issues/2732) Remove the address field from the validator hash
+  * [types] [\#2644](https://github.com/DeAI-Artist/MintAI/issues/2644) Add Version struct to Header
+  * [types] [\#2609](https://github.com/DeAI-Artist/MintAI/issues/2609) ConsensusParams.Hash() is the hash of the amino encoded
     struct instead of the Merkle tree of the fields
-  * [types] [\#2670](https://github.com/tendermint/tendermint/issues/2670) Header.Hash() builds Merkle tree out of fields in the same
+  * [types] [\#2670](https://github.com/DeAI-Artist/MintAI/issues/2670) Header.Hash() builds Merkle tree out of fields in the same
     order they appear in the header, instead of sorting by field name
-  * [types] [\#2682](https://github.com/tendermint/tendermint/issues/2682) Use proto3 `varint` encoding for ints that are usually unsigned (instead of zigzag encoding).
-  * [types] [\#2636](https://github.com/tendermint/tendermint/issues/2636) Add Validator field to ConsensusParams
+  * [types] [\#2682](https://github.com/DeAI-Artist/MintAI/issues/2682) Use proto3 `varint` encoding for ints that are usually unsigned (instead of zigzag encoding).
+  * [types] [\#2636](https://github.com/DeAI-Artist/MintAI/issues/2636) Add Validator field to ConsensusParams
       (Used to control which pubkey types validators can use, by abci type).
 
 * P2P Protocol
-  * [consensus] [\#2652](https://github.com/tendermint/tendermint/issues/2652)
+  * [consensus] [\#2652](https://github.com/DeAI-Artist/MintAI/issues/2652)
     Replace `CommitStepMessage` with `NewValidBlockMessage`
-  * [consensus] [\#2735](https://github.com/tendermint/tendermint/issues/2735) Simplify `Proposal` message to align with spec
-  * [consensus] [\#2730](https://github.com/tendermint/tendermint/issues/2730)
+  * [consensus] [\#2735](https://github.com/DeAI-Artist/MintAI/issues/2735) Simplify `Proposal` message to align with spec
+  * [consensus] [\#2730](https://github.com/DeAI-Artist/MintAI/issues/2730)
     Add `Type` field to `Proposal` and use same order of fields as in the
     SignBytes for both `Proposal` and `Vote`
-  * [p2p] [\#2654](https://github.com/tendermint/tendermint/issues/2654) Add `ProtocolVersion` struct with protocol versions to top of
+  * [p2p] [\#2654](https://github.com/DeAI-Artist/MintAI/issues/2654) Add `ProtocolVersion` struct with protocol versions to top of
     DefaultNodeInfo and require `ProtocolVersion.Block` to match during peer handshake
 
 
 ### FEATURES:
-- [abci] [\#2557](https://github.com/tendermint/tendermint/issues/2557) Add `Codespace` field to `Response{CheckTx, DeliverTx, Query}`
-- [abci] [\#2662](https://github.com/tendermint/tendermint/issues/2662) Add `BlockVersion` and `P2PVersion` to `RequestInfo`
-- [crypto/merkle] [\#2298](https://github.com/tendermint/tendermint/issues/2298) General Merkle Proof scheme for chaining various types of Merkle trees together
-- [docs/architecture] [\#1181](https://github.com/tendermint/tendermint/issues/1181) S
+- [abci] [\#2557](https://github.com/DeAI-Artist/MintAI/issues/2557) Add `Codespace` field to `Response{CheckTx, DeliverTx, Query}`
+- [abci] [\#2662](https://github.com/DeAI-Artist/MintAI/issues/2662) Add `BlockVersion` and `P2PVersion` to `RequestInfo`
+- [crypto/merkle] [\#2298](https://github.com/DeAI-Artist/MintAI/issues/2298) General Merkle Proof scheme for chaining various types of Merkle trees together
+- [docs/architecture] [\#1181](https://github.com/DeAI-Artist/MintAI/issues/1181) S
 plit immutable and mutable parts of priv_validator.json
 
 ### IMPROVEMENTS:
 - Additional Metrics
     - [consensus] [\#2169](https://github.com/cosmos/cosmos-sdk/issues/2169)
     - [p2p] [\#2169](https://github.com/cosmos/cosmos-sdk/issues/2169)
-- [config] [\#2232](https://github.com/tendermint/tendermint/issues/2232) Added ValidateBasic method, which performs basic checks
-- [crypto/ed25519] [\#2558](https://github.com/tendermint/tendermint/issues/2558) Switch to use latest `golang.org/x/crypto` through our fork at
+- [config] [\#2232](https://github.com/DeAI-Artist/MintAI/issues/2232) Added ValidateBasic method, which performs basic checks
+- [crypto/ed25519] [\#2558](https://github.com/DeAI-Artist/MintAI/issues/2558) Switch to use latest `golang.org/x/crypto` through our fork at
   github.com/tendermint/crypto
-- [libs/log] [\#2707](https://github.com/tendermint/tendermint/issues/2707) Add year to log format (@yutianwu)
-- [tools] [\#2238](https://github.com/tendermint/tendermint/issues/2238) Binary dependencies are now locked to a specific git commit
+- [libs/log] [\#2707](https://github.com/DeAI-Artist/MintAI/issues/2707) Add year to log format (@yutianwu)
+- [tools] [\#2238](https://github.com/DeAI-Artist/MintAI/issues/2238) Binary dependencies are now locked to a specific git commit
 
 ### BUG FIXES:
-- [\#2711](https://github.com/tendermint/tendermint/issues/2711) Validate all incoming reactor messages. Fixes various bugs due to negative ints.
-- [autofile] [\#2428](https://github.com/tendermint/tendermint/issues/2428) Group.RotateFile need call Flush() before rename (@goolAdapter)
-- [common] [\#2533](https://github.com/tendermint/tendermint/issues/2533) Fixed a bug in the `BitArray.Or` method
-- [common] [\#2506](https://github.com/tendermint/tendermint/issues/2506) Fixed a bug in the `BitArray.Sub` method (@james-ray)
-- [common] [\#2534](https://github.com/tendermint/tendermint/issues/2534) Fix `BitArray.PickRandom` to choose uniformly from true bits
-- [consensus] [\#1690](https://github.com/tendermint/tendermint/issues/1690) Wait for
+- [\#2711](https://github.com/DeAI-Artist/MintAI/issues/2711) Validate all incoming reactor messages. Fixes various bugs due to negative ints.
+- [autofile] [\#2428](https://github.com/DeAI-Artist/MintAI/issues/2428) Group.RotateFile need call Flush() before rename (@goolAdapter)
+- [common] [\#2533](https://github.com/DeAI-Artist/MintAI/issues/2533) Fixed a bug in the `BitArray.Or` method
+- [common] [\#2506](https://github.com/DeAI-Artist/MintAI/issues/2506) Fixed a bug in the `BitArray.Sub` method (@james-ray)
+- [common] [\#2534](https://github.com/DeAI-Artist/MintAI/issues/2534) Fix `BitArray.PickRandom` to choose uniformly from true bits
+- [consensus] [\#1690](https://github.com/DeAI-Artist/MintAI/issues/1690) Wait for
   timeoutPrecommit before starting next round
-- [consensus] [\#1745](https://github.com/tendermint/tendermint/issues/1745) Wait for
+- [consensus] [\#1745](https://github.com/DeAI-Artist/MintAI/issues/1745) Wait for
   Proposal or timeoutProposal before entering prevote
-- [consensus] [\#2642](https://github.com/tendermint/tendermint/issues/2642) Only propose ValidBlock, not LockedBlock
-- [consensus] [\#2642](https://github.com/tendermint/tendermint/issues/2642) Initialized ValidRound and LockedRound to -1
-- [consensus] [\#1637](https://github.com/tendermint/tendermint/issues/1637) Limit the amount of evidence that can be included in a
+- [consensus] [\#2642](https://github.com/DeAI-Artist/MintAI/issues/2642) Only propose ValidBlock, not LockedBlock
+- [consensus] [\#2642](https://github.com/DeAI-Artist/MintAI/issues/2642) Initialized ValidRound and LockedRound to -1
+- [consensus] [\#1637](https://github.com/DeAI-Artist/MintAI/issues/1637) Limit the amount of evidence that can be included in a
   block
-- [consensus] [\#2652](https://github.com/tendermint/tendermint/issues/2652) Ensure valid block property with faulty proposer
-- [evidence] [\#2515](https://github.com/tendermint/tendermint/issues/2515) Fix db iter leak (@goolAdapter)
-- [libs/event] [\#2518](https://github.com/tendermint/tendermint/issues/2518) Fix event concurrency flaw (@goolAdapter)
-- [node] [\#2434](https://github.com/tendermint/tendermint/issues/2434) Make node respond to signal interrupts while sleeping for genesis time
-- [state] [\#2616](https://github.com/tendermint/tendermint/issues/2616) Pass nil to NewValidatorSet() when genesis file's Validators field is nil
-- [p2p] [\#2555](https://github.com/tendermint/tendermint/issues/2555) Fix p2p switch FlushThrottle value (@goolAdapter)
-- [p2p] [\#2668](https://github.com/tendermint/tendermint/issues/2668) Reconnect to originally dialed address (not self-reported address) for persistent peers
+- [consensus] [\#2652](https://github.com/DeAI-Artist/MintAI/issues/2652) Ensure valid block property with faulty proposer
+- [evidence] [\#2515](https://github.com/DeAI-Artist/MintAI/issues/2515) Fix db iter leak (@goolAdapter)
+- [libs/event] [\#2518](https://github.com/DeAI-Artist/MintAI/issues/2518) Fix event concurrency flaw (@goolAdapter)
+- [node] [\#2434](https://github.com/DeAI-Artist/MintAI/issues/2434) Make node respond to signal interrupts while sleeping for genesis time
+- [state] [\#2616](https://github.com/DeAI-Artist/MintAI/issues/2616) Pass nil to NewValidatorSet() when genesis file's Validators field is nil
+- [p2p] [\#2555](https://github.com/DeAI-Artist/MintAI/issues/2555) Fix p2p switch FlushThrottle value (@goolAdapter)
+- [p2p] [\#2668](https://github.com/DeAI-Artist/MintAI/issues/2668) Reconnect to originally dialed address (not self-reported address) for persistent peers
 
 ## v0.25.0
 
@@ -2637,48 +2637,48 @@ Special thanks to external contributors on this release:
 This release is mostly about the ConsensusParams - removing fields and enforcing MaxGas.
 It also addresses some issues found via security audit, removes various unused
 functions from `libs/common`, and implements
-[ADR-012](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-012-peer-transport.md).
+[ADR-012](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-012-peer-transport.md).
 
 BREAKING CHANGES:
 
 * CLI/RPC/Config
-  * [rpc] [\#2391](https://github.com/tendermint/tendermint/issues/2391) /status `result.node_info.other` became a map
-  * [types] [\#2364](https://github.com/tendermint/tendermint/issues/2364) Remove `TxSize` and `BlockGossip` from `ConsensusParams`
+  * [rpc] [\#2391](https://github.com/DeAI-Artist/MintAI/issues/2391) /status `result.node_info.other` became a map
+  * [types] [\#2364](https://github.com/DeAI-Artist/MintAI/issues/2364) Remove `TxSize` and `BlockGossip` from `ConsensusParams`
     * Maximum tx size is now set implicitly via the `BlockSize.MaxBytes`
     * The size of block parts in the consensus is now fixed to 64kB
 
 * Apps
-  * [mempool] [\#2360](https://github.com/tendermint/tendermint/issues/2360) Mempool tracks the `ResponseCheckTx.GasWanted` and
+  * [mempool] [\#2360](https://github.com/DeAI-Artist/MintAI/issues/2360) Mempool tracks the `ResponseCheckTx.GasWanted` and
     `ConsensusParams.BlockSize.MaxGas` and enforces:
     - `GasWanted <= MaxGas` for every tx
     - `(sum of GasWanted in block) <= MaxGas` for block proposal
 
 * Go API
-  * [libs/common] [\#2431](https://github.com/tendermint/tendermint/issues/2431) Remove Word256 due to lack of use
-  * [libs/common] [\#2452](https://github.com/tendermint/tendermint/issues/2452) Remove the following functions due to lack of use:
+  * [libs/common] [\#2431](https://github.com/DeAI-Artist/MintAI/issues/2431) Remove Word256 due to lack of use
+  * [libs/common] [\#2452](https://github.com/DeAI-Artist/MintAI/issues/2452) Remove the following functions due to lack of use:
     * byteslice.go: cmn.IsZeros, cmn.RightPadBytes, cmn.LeftPadBytes, cmn.PrefixEndBytes
     * strings.go: cmn.IsHex, cmn.StripHex
     * int.go: Uint64Slice, all put/get int64 methods
 
 FEATURES:
-- [rpc] [\#2415](https://github.com/tendermint/tendermint/issues/2415) New `/consensus_params?height=X` endpoint to query the consensus
+- [rpc] [\#2415](https://github.com/DeAI-Artist/MintAI/issues/2415) New `/consensus_params?height=X` endpoint to query the consensus
   params at any height (@scriptonist)
-- [types] [\#1714](https://github.com/tendermint/tendermint/issues/1714) Add Address to GenesisValidator
-- [metrics] [\#2337](https://github.com/tendermint/tendermint/issues/2337) `consensus.block_interval_metrics` is now gauge, not histogram (you will be able to see spikes, if any)
-- [libs] [\#2286](https://github.com/tendermint/tendermint/issues/2286) Panic if `autofile` or `db/fsdb` permissions change from 0600.
+- [types] [\#1714](https://github.com/DeAI-Artist/MintAI/issues/1714) Add Address to GenesisValidator
+- [metrics] [\#2337](https://github.com/DeAI-Artist/MintAI/issues/2337) `consensus.block_interval_metrics` is now gauge, not histogram (you will be able to see spikes, if any)
+- [libs] [\#2286](https://github.com/DeAI-Artist/MintAI/issues/2286) Panic if `autofile` or `db/fsdb` permissions change from 0600.
 
 IMPROVEMENTS:
-- [libs/db] [\#2371](https://github.com/tendermint/tendermint/issues/2371) Output error instead of panic when the given `db_backend` is not initialised (@bradyjoestar)
-- [mempool] [\#2399](https://github.com/tendermint/tendermint/issues/2399) Make mempool cache a proper LRU (@bradyjoestar)
-- [p2p] [\#2126](https://github.com/tendermint/tendermint/issues/2126) Introduce PeerTransport interface to improve isolation of concerns
-- [libs/common] [\#2326](https://github.com/tendermint/tendermint/issues/2326) Service returns ErrNotStarted
+- [libs/db] [\#2371](https://github.com/DeAI-Artist/MintAI/issues/2371) Output error instead of panic when the given `db_backend` is not initialised (@bradyjoestar)
+- [mempool] [\#2399](https://github.com/DeAI-Artist/MintAI/issues/2399) Make mempool cache a proper LRU (@bradyjoestar)
+- [p2p] [\#2126](https://github.com/DeAI-Artist/MintAI/issues/2126) Introduce PeerTransport interface to improve isolation of concerns
+- [libs/common] [\#2326](https://github.com/DeAI-Artist/MintAI/issues/2326) Service returns ErrNotStarted
 
 BUG FIXES:
-- [node] [\#2294](https://github.com/tendermint/tendermint/issues/2294) Delay starting node until Genesis time
-- [consensus] [\#2048](https://github.com/tendermint/tendermint/issues/2048) Correct peer statistics for marking peer as good
-- [rpc] [\#2460](https://github.com/tendermint/tendermint/issues/2460) StartHTTPAndTLSServer() now passes StartTLS() errors back to the caller rather than hanging forever.
-- [p2p] [\#2047](https://github.com/tendermint/tendermint/issues/2047) Accept new connections asynchronously
-- [tm-bench] [\#2410](https://github.com/tendermint/tendermint/issues/2410) Enforce minimum transaction size (@WALL-E)
+- [node] [\#2294](https://github.com/DeAI-Artist/MintAI/issues/2294) Delay starting node until Genesis time
+- [consensus] [\#2048](https://github.com/DeAI-Artist/MintAI/issues/2048) Correct peer statistics for marking peer as good
+- [rpc] [\#2460](https://github.com/DeAI-Artist/MintAI/issues/2460) StartHTTPAndTLSServer() now passes StartTLS() errors back to the caller rather than hanging forever.
+- [p2p] [\#2047](https://github.com/DeAI-Artist/MintAI/issues/2047) Accept new connections asynchronously
+- [tm-bench] [\#2410](https://github.com/DeAI-Artist/MintAI/issues/2410) Enforce minimum transaction size (@WALL-E)
 
 ## 0.24.0
 
@@ -2702,95 +2702,95 @@ are affected by a change.
 
 A few more breaking changes are in the works - each will come with a clear
 Architecture Decision Record (ADR) explaining the change. You can review ADRs
-[here](https://github.com/tendermint/tendermint/tree/develop/docs/architecture)
-or in the [open Pull Requests](https://github.com/tendermint/tendermint/pulls).
+[here](https://github.com/DeAI-Artist/MintAI/tree/develop/docs/architecture)
+or in the [open Pull Requests](https://github.com/DeAI-Artist/MintAI/pulls).
 You can also check in on the [issues marked as
-breaking](https://github.com/tendermint/tendermint/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking).
+breaking](https://github.com/DeAI-Artist/MintAI/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking).
 
 BREAKING CHANGES:
 
 * CLI/RPC/Config
-  - [config] [\#2169](https://github.com/tendermint/tendermint/issues/2169) Replace MaxNumPeers with MaxNumInboundPeers and MaxNumOutboundPeers
-  - [config] [\#2300](https://github.com/tendermint/tendermint/issues/2300) Reduce default mempool size from 100k to 5k, until ABCI rechecking is implemented.
-  - [rpc] [\#1815](https://github.com/tendermint/tendermint/issues/1815) `/commit` returns a `signed_header` field instead of everything being top-level
+  - [config] [\#2169](https://github.com/DeAI-Artist/MintAI/issues/2169) Replace MaxNumPeers with MaxNumInboundPeers and MaxNumOutboundPeers
+  - [config] [\#2300](https://github.com/DeAI-Artist/MintAI/issues/2300) Reduce default mempool size from 100k to 5k, until ABCI rechecking is implemented.
+  - [rpc] [\#1815](https://github.com/DeAI-Artist/MintAI/issues/1815) `/commit` returns a `signed_header` field instead of everything being top-level
 
 * Apps
   - [abci] Added address of the original proposer of the block to Header
   - [abci] Change ABCI Header to match Tendermint exactly
-  - [abci] [\#2159](https://github.com/tendermint/tendermint/issues/2159) Update use of `Validator` (see
-    [ADR-018](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-018-ABCI-Validators.md)):
+  - [abci] [\#2159](https://github.com/DeAI-Artist/MintAI/issues/2159) Update use of `Validator` (see
+    [ADR-018](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-018-ABCI-Validators.md)):
     - Remove PubKey from `Validator` (so it's just Address and Power)
     - Introduce `ValidatorUpdate` (with just PubKey and Power)
     - InitChain and EndBlock use ValidatorUpdate
     - Update field names and types in BeginBlock
-  - [state] [\#1815](https://github.com/tendermint/tendermint/issues/1815) Validator set changes are now delayed by one block
+  - [state] [\#1815](https://github.com/DeAI-Artist/MintAI/issues/1815) Validator set changes are now delayed by one block
     - updates returned in ResponseEndBlock for block H will be included in RequestBeginBlock for block H+2
 
 * Go API
-  - [lite] [\#1815](https://github.com/tendermint/tendermint/issues/1815) Complete refactor of the package
-  - [node] [\#2212](https://github.com/tendermint/tendermint/issues/2212) NewNode now accepts a `*p2p.NodeKey` (@bradyjoestar)
-  - [libs/common] [\#2199](https://github.com/tendermint/tendermint/issues/2199) Remove Fmt, in favor of fmt.Sprintf
+  - [lite] [\#1815](https://github.com/DeAI-Artist/MintAI/issues/1815) Complete refactor of the package
+  - [node] [\#2212](https://github.com/DeAI-Artist/MintAI/issues/2212) NewNode now accepts a `*p2p.NodeKey` (@bradyjoestar)
+  - [libs/common] [\#2199](https://github.com/DeAI-Artist/MintAI/issues/2199) Remove Fmt, in favor of fmt.Sprintf
   - [libs/common] SplitAndTrim was deleted
-  - [libs/common] [\#2274](https://github.com/tendermint/tendermint/issues/2274) Remove unused Math functions like MaxInt, MaxInt64,
+  - [libs/common] [\#2274](https://github.com/DeAI-Artist/MintAI/issues/2274) Remove unused Math functions like MaxInt, MaxInt64,
     MinInt, MinInt64 (@Ahmah2009)
   - [libs/clist] Panics if list extends beyond MaxLength
-  - [crypto] [\#2205](https://github.com/tendermint/tendermint/issues/2205) Rename AminoRoute variables to no longer be prefixed by signature type.
+  - [crypto] [\#2205](https://github.com/DeAI-Artist/MintAI/issues/2205) Rename AminoRoute variables to no longer be prefixed by signature type.
 
 * Blockchain Protocol
-  - [state] [\#1815](https://github.com/tendermint/tendermint/issues/1815) Validator set changes are now delayed by one block (!)
+  - [state] [\#1815](https://github.com/DeAI-Artist/MintAI/issues/1815) Validator set changes are now delayed by one block (!)
     - Add NextValidatorSet to State, changes on-disk representation of state
-  - [state] [\#2184](https://github.com/tendermint/tendermint/issues/2184) Enforce ConsensusParams.BlockSize.MaxBytes (See
-    [ADR-020](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-020-block-size.md)).
+  - [state] [\#2184](https://github.com/DeAI-Artist/MintAI/issues/2184) Enforce ConsensusParams.BlockSize.MaxBytes (See
+    [ADR-020](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-020-block-size.md)).
     - Remove ConsensusParams.BlockSize.MaxTxs
     - Introduce maximum sizes for all components of a block, including ChainID
   - [types] Updates to the block Header:
-    - [\#1815](https://github.com/tendermint/tendermint/issues/1815) NextValidatorsHash - hash of the validator set for the next block,
+    - [\#1815](https://github.com/DeAI-Artist/MintAI/issues/1815) NextValidatorsHash - hash of the validator set for the next block,
       so the current validators actually sign over the hash for the new
       validators
-    - [\#2106](https://github.com/tendermint/tendermint/issues/2106) ProposerAddress - address of the block's original proposer
-  - [consensus] [\#2203](https://github.com/tendermint/tendermint/issues/2203) Implement BFT time
+    - [\#2106](https://github.com/DeAI-Artist/MintAI/issues/2106) ProposerAddress - address of the block's original proposer
+  - [consensus] [\#2203](https://github.com/DeAI-Artist/MintAI/issues/2203) Implement BFT time
     - Timestamp in block must be monotonic and equal the median of timestamps in block's LastCommit
-  - [crypto] [\#2239](https://github.com/tendermint/tendermint/issues/2239) Secp256k1 signature changes (See
-    [ADR-014](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-014-secp-malleability.md)):
+  - [crypto] [\#2239](https://github.com/DeAI-Artist/MintAI/issues/2239) Secp256k1 signature changes (See
+    [ADR-014](https://github.com/DeAI-Artist/MintAI/blob/main/docs/architecture/adr-014-secp-malleability.md)):
     - format changed from DER to `r || s`, both little endian encoded as 32 bytes.
     - malleability removed by requiring `s` to be in canonical form.
 
 * P2P Protocol
-  - [p2p] [\#2263](https://github.com/tendermint/tendermint/issues/2263) Update secret connection to use a little endian encoded nonce
-  - [blockchain] [\#2213](https://github.com/tendermint/tendermint/issues/2213) Fix Amino routes for blockchain reactor messages
+  - [p2p] [\#2263](https://github.com/DeAI-Artist/MintAI/issues/2263) Update secret connection to use a little endian encoded nonce
+  - [blockchain] [\#2213](https://github.com/DeAI-Artist/MintAI/issues/2213) Fix Amino routes for blockchain reactor messages
     (@peerlink)
 
 
 FEATURES:
-- [types] [\#2015](https://github.com/tendermint/tendermint/issues/2015) Allow genesis file to have 0 validators (@b00f)
+- [types] [\#2015](https://github.com/DeAI-Artist/MintAI/issues/2015) Allow genesis file to have 0 validators (@b00f)
   - Initial validator set can be determined by the app in ResponseInitChain
-- [rpc] [\#2161](https://github.com/tendermint/tendermint/issues/2161) New event `ValidatorSetUpdates` for when the validator set changes
-- [crypto/multisig] [\#2164](https://github.com/tendermint/tendermint/issues/2164) Introduce multisig pubkey and signature format
-- [libs/db] [\#2293](https://github.com/tendermint/tendermint/issues/2293) Allow passing options through when creating instances of leveldb dbs
+- [rpc] [\#2161](https://github.com/DeAI-Artist/MintAI/issues/2161) New event `ValidatorSetUpdates` for when the validator set changes
+- [crypto/multisig] [\#2164](https://github.com/DeAI-Artist/MintAI/issues/2164) Introduce multisig pubkey and signature format
+- [libs/db] [\#2293](https://github.com/DeAI-Artist/MintAI/issues/2293) Allow passing options through when creating instances of leveldb dbs
 
 IMPROVEMENTS:
 - [docs] Lint documentation with `write-good` and `stop-words`.
-- [docs] [\#2249](https://github.com/tendermint/tendermint/issues/2249) Refactor, deduplicate, and improve the ABCI docs and spec (with thanks to @ttmc).
-- [scripts] [\#2196](https://github.com/tendermint/tendermint/issues/2196) Added json2wal tool, which is supposed to help our users restore (@bradyjoestar)
+- [docs] [\#2249](https://github.com/DeAI-Artist/MintAI/issues/2249) Refactor, deduplicate, and improve the ABCI docs and spec (with thanks to @ttmc).
+- [scripts] [\#2196](https://github.com/DeAI-Artist/MintAI/issues/2196) Added json2wal tool, which is supposed to help our users restore (@bradyjoestar)
   corrupted WAL files and compose test WAL files (@bradyjoestar)
-- [mempool] [\#2234](https://github.com/tendermint/tendermint/issues/2234) Now stores txs by hash inside of the cache, to mitigate memory leakage
-- [mempool] [\#2166](https://github.com/tendermint/tendermint/issues/2166) Set explicit capacity for map when updating txs (@bluele)
+- [mempool] [\#2234](https://github.com/DeAI-Artist/MintAI/issues/2234) Now stores txs by hash inside of the cache, to mitigate memory leakage
+- [mempool] [\#2166](https://github.com/DeAI-Artist/MintAI/issues/2166) Set explicit capacity for map when updating txs (@bluele)
 
 BUG FIXES:
-- [config] [\#2284](https://github.com/tendermint/tendermint/issues/2284) Replace `db_path` with `db_dir` from automatically generated configuration files.
-- [mempool] [\#2188](https://github.com/tendermint/tendermint/issues/2188) Fix OOM issue from cache map and list getting out of sync
-- [state] [\#2051](https://github.com/tendermint/tendermint/issues/2051) KV store index supports searching by `tx.height` (@ackratos)
-- [rpc] [\#2327](https://github.com/tendermint/tendermint/issues/2327) `/dial_peers` does not try to dial existing peers
-- [node] [\#2323](https://github.com/tendermint/tendermint/issues/2323) Filter empty strings from config lists (@james-ray)
-- [abci/client] [\#2236](https://github.com/tendermint/tendermint/issues/2236) Fix closing GRPC connection (@bradyjoestar)
+- [config] [\#2284](https://github.com/DeAI-Artist/MintAI/issues/2284) Replace `db_path` with `db_dir` from automatically generated configuration files.
+- [mempool] [\#2188](https://github.com/DeAI-Artist/MintAI/issues/2188) Fix OOM issue from cache map and list getting out of sync
+- [state] [\#2051](https://github.com/DeAI-Artist/MintAI/issues/2051) KV store index supports searching by `tx.height` (@ackratos)
+- [rpc] [\#2327](https://github.com/DeAI-Artist/MintAI/issues/2327) `/dial_peers` does not try to dial existing peers
+- [node] [\#2323](https://github.com/DeAI-Artist/MintAI/issues/2323) Filter empty strings from config lists (@james-ray)
+- [abci/client] [\#2236](https://github.com/DeAI-Artist/MintAI/issues/2236) Fix closing GRPC connection (@bradyjoestar)
 
 ## 0.23.1
 
 *August 22nd, 2018*
 
 BUG FIXES:
-- [libs/autofile] [\#2261](https://github.com/tendermint/tendermint/issues/2261) Fix log rotation so it actually happens.
-    - Fixes issues with consensus WAL growing unbounded ala [\#2259](https://github.com/tendermint/tendermint/issues/2259)
+- [libs/autofile] [\#2261](https://github.com/DeAI-Artist/MintAI/issues/2261) Fix log rotation so it actually happens.
+    - Fixes issues with consensus WAL growing unbounded ala [\#2259](https://github.com/DeAI-Artist/MintAI/issues/2259)
 
 ## 0.23.0
 
@@ -2811,10 +2811,10 @@ BREAKING CHANGES:
 - [abci] Changed Validators to LastCommitInfo in RequestBeginBlock
 - [abci] Removed Fee from ResponseDeliverTx and ResponseCheckTx
 - [crypto] Switch crypto.Signature from interface to []byte for space efficiency
-  [#2128](https://github.com/tendermint/tendermint/pull/2128)
+  [#2128](https://github.com/DeAI-Artist/MintAI/pull/2128)
     - NOTE: this means signatures no longer have the prefix bytes in Amino
       binary nor the `type` field in Amino JSON. They're just bytes.
-- [p2p] Remove salsa and ripemd primitives, in favor of using chacha as a stream cipher, and hkdf [#2054](https://github.com/tendermint/tendermint/pull/2054)
+- [p2p] Remove salsa and ripemd primitives, in favor of using chacha as a stream cipher, and hkdf [#2054](https://github.com/DeAI-Artist/MintAI/pull/2054)
 - [tools] Removed `make ensure_deps` in favor of `make get_vendor_deps`
 - [types] CanonicalTime uses nanoseconds instead of clipping to ms
     - breaks serialization/signing of all messages with a timestamp
@@ -2826,21 +2826,21 @@ FEATURES:
 
 IMPROVEMENTS:
 - [blockchain] Improve fast-sync logic
-  [#1805](https://github.com/tendermint/tendermint/pull/1805)
+  [#1805](https://github.com/DeAI-Artist/MintAI/pull/1805)
     - tweak params
     - only process one block at a time to avoid starving
 - [common] bit array functions which take in another parameter are now thread safe
 - [crypto] Switch hkdfchachapoly1305 to xchachapoly1305
-- [p2p] begin connecting to peers as soon a seed node provides them to you ([#2093](https://github.com/tendermint/tendermint/issues/2093))
+- [p2p] begin connecting to peers as soon a seed node provides them to you ([#2093](https://github.com/DeAI-Artist/MintAI/issues/2093))
 
 BUG FIXES:
-- [common] Safely handle cases where atomic write files already exist [#2109](https://github.com/tendermint/tendermint/issues/2109)
+- [common] Safely handle cases where atomic write files already exist [#2109](https://github.com/DeAI-Artist/MintAI/issues/2109)
 - [privval] fix a deadline for accepting new connections in socket private
   validator.
-- [p2p] Allow startup if a configured seed node's IP can't be resolved ([#1716](https://github.com/tendermint/tendermint/issues/1716))
-- [node] Fully exit when CTRL-C is pressed even if consensus state panics [#2072](https://github.com/tendermint/tendermint/issues/2072)
+- [p2p] Allow startup if a configured seed node's IP can't be resolved ([#1716](https://github.com/DeAI-Artist/MintAI/issues/1716))
+- [node] Fully exit when CTRL-C is pressed even if consensus state panics [#2072](https://github.com/DeAI-Artist/MintAI/issues/2072)
 
-[i1815]: https://github.com/tendermint/tendermint/pull/1815
+[i1815]: https://github.com/DeAI-Artist/MintAI/pull/1815
 
 ## 0.22.8
 
@@ -3230,7 +3230,7 @@ Some of these are breaking in the RPC response, but they're really bugs!
 BREAKING:
 - [cmd] improved `testnet` command; now it can fill in `persistent_peers` for you in the config file and much more (see `tendermint testnet --help` for details)
 - [cmd] `show_node_id` now returns an error if there is no node key
-- [rpc]: changed the output format for the `/status` endpoint (see https://godoc.org/github.com/tendermint/tendermint/rpc/core#Status)
+- [rpc]: changed the output format for the `/status` endpoint (see https://godoc.org/github.com/DeAI-Artist/MintAI/rpc/core#Status)
 
 Upgrade from go-wire to go-amino. This is a sweeping change that breaks everything that is
 serialized to disk or over the network.
@@ -3376,7 +3376,7 @@ FEATURES:
     NOTE it is currently insecure and its APIs are not yet covered by semver
 
 IMPROVEMENTS:
-- rpc/client: can act as event bus subscriber (See https://github.com/tendermint/tendermint/issues/945).
+- rpc/client: can act as event bus subscriber (See https://github.com/DeAI-Artist/MintAI/issues/945).
 - p2p: use exponential backoff from seconds to hours when attempting to reconnect to persistent peer
 - config: moniker defaults to the machine's hostname instead of "anonymous"
 
@@ -3551,7 +3551,7 @@ Also includes the Grand Repo-Merge of 2017.
 BREAKING CHANGES:
 
 - Config and Flags:
-  - The `config` map is replaced with a [`Config` struct](https://github.com/tendermint/tendermint/blob/v0.10.0/config/config.go#L11),
+  - The `config` map is replaced with a [`Config` struct](https://github.com/DeAI-Artist/MintAI/blob/v0.10.0/config/config.go#L11),
 containing substructs: `BaseConfig`, `P2PConfig`, `MempoolConfig`, `ConsensusConfig`, `RPCConfig`
   - This affects the following flags:
     - `--seeds` is now `--p2p.seeds`

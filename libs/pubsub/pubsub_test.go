@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/DeAI-Artist/MintAI/libs/log"
 
-	"github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
+	"github.com/DeAI-Artist/MintAI/libs/pubsub"
+	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
 )
 
 const (

@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abcimocks "github.com/tendermint/tendermint/abci/client/mocks"
-	"github.com/tendermint/tendermint/proxy/mocks"
+	abcimocks "github.com/DeAI-Artist/MintAI/abci/client/mocks"
+	"github.com/DeAI-Artist/MintAI/proxy/mocks"
 )
 
 func TestAppConns_Start_Stop(t *testing.T) {

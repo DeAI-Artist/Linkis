@@ -135,9 +135,9 @@ command will scrap all the available info and kill the process. See
 [Debugging](../tools/debugging.md) for the exact format.
 
 You can inspect the resulting archive yourself or create an issue on
-[Github](https://github.com/tendermint/tendermint). Before opening an issue
+[Github](https://github.com/DeAI-Artist/MintAI). Before opening an issue
 however, be sure to check if there's [no existing
-issue](https://github.com/tendermint/tendermint/issues) already.
+issue](https://github.com/DeAI-Artist/MintAI/issues) already.
 
 ## Monitoring Tendermint
 
@@ -259,7 +259,7 @@ Recommended:
 
 While for now, Tendermint stores all the history and it may require significant
 disk space over time, we are planning to implement state syncing (See [this
-issue](https://github.com/tendermint/tendermint/issues/828)). So, storing all
+issue](https://github.com/DeAI-Artist/MintAI/issues/828)). So, storing all
 the past blocks will not be necessary.
 
 ### Validator signing on 32 bit architectures (or ARM)
@@ -350,7 +350,7 @@ proposing the next block).
 By default, Tendermint checks whenever a peer's address is routable before
 saving it to the address book. The address is considered as routable if the IP
 is [valid and within allowed
-ranges](https://github.com/tendermint/tendermint/blob/27bd1deabe4ba6a2d9b463b8f3e3f1e31b993e61/p2p/netaddress.go#L209).
+ranges](https://github.com/DeAI-Artist/MintAI/blob/27bd1deabe4ba6a2d9b463b8f3e3f1e31b993e61/p2p/netaddress.go#L209).
 
 This may not be the case for private or local networks, where your IP range is usually
 strictly limited and private. If that case, you need to set `addr_book_strict`

@@ -13,25 +13,25 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmflags "github.com/tendermint/tendermint/libs/cli/flags"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/test/e2e/app"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	mcs "github.com/tendermint/tendermint/test/maverick/consensus"
-	maverick "github.com/tendermint/tendermint/test/maverick/node"
+	"github.com/DeAI-Artist/MintAI/abci/server"
+	"github.com/DeAI-Artist/MintAI/config"
+	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
+	tmflags "github.com/DeAI-Artist/MintAI/libs/cli/flags"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	"github.com/DeAI-Artist/MintAI/light"
+	lproxy "github.com/DeAI-Artist/MintAI/light/proxy"
+	lrpc "github.com/DeAI-Artist/MintAI/light/rpc"
+	dbs "github.com/DeAI-Artist/MintAI/light/store/db"
+	"github.com/DeAI-Artist/MintAI/node"
+	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/MintAI/privval"
+	"github.com/DeAI-Artist/MintAI/proxy"
+	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
+	"github.com/DeAI-Artist/MintAI/test/e2e/app"
+	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
+	mcs "github.com/DeAI-Artist/MintAI/test/maverick/consensus"
+	maverick "github.com/DeAI-Artist/MintAI/test/maverick/node"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))
@@ -182,7 +182,7 @@ func startLightClient(cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/DeAI-Artist/MintAI/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

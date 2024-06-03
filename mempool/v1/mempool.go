@@ -10,13 +10,13 @@ import (
 
 	"github.com/creachadair/taskgroup"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/clist"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	"github.com/DeAI-Artist/MintAI/config"
+	"github.com/DeAI-Artist/MintAI/libs/clist"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/MintAI/mempool"
+	"github.com/DeAI-Artist/MintAI/proxy"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 var _ mempool.Mempool = (*TxMempool)(nil)

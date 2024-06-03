@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/DeAI-Artist/MintAI/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

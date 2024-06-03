@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	"github.com/DeAI-Artist/MintAI/libs/log"
+	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
 )
 
 // Wait waits for a number of blocks to be produced, and for all nodes to catch

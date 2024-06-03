@@ -8,7 +8,7 @@ Tendermint emits different events, which you can subscribe to via
 [Websocket](https://en.wikipedia.org/wiki/WebSocket). This can be useful
 for third-party applications (for analysis) or for inspecting state.
 
-[List of events](https://godoc.org/github.com/tendermint/tendermint/types#pkg-constants)
+[List of events](https://godoc.org/github.com/DeAI-Artist/MintAI/types#pkg-constants)
 
 To connect to a node via websocket from the CLI, you can use a tool such as
 [wscat](https://github.com/websockets/wscat) and run:
@@ -43,7 +43,7 @@ transactions](./indexing-transactions.md) for details.
 When validator set changes, ValidatorSetUpdates event is published. The
 event carries a list of pubkey/power pairs. The list is the same
 Tendermint receives from ABCI application (see [EndBlock
-section](https://github.com/tendermint/tendermint/blob/v0.34.x/spec/abci/abci.md#endblock) in
+section](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/abci/abci.md#endblock) in
 the ABCI spec).
 
 Response:

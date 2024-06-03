@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/types"
+	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
+	"github.com/DeAI-Artist/MintAI/types"
 )
 
 var (
