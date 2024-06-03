@@ -8,8 +8,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cmd "github.com/DeAI-Artist/MintAI/cmd/tendermint/commands"
-	"github.com/DeAI-Artist/MintAI/cmd/tendermint/commands/debug"
+	cmd "github.com/DeAI-Artist/MintAI/cmd/mintai/commands"
+	"github.com/DeAI-Artist/MintAI/cmd/mintai/commands/debug"
 	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/libs/cli"
 	tmflags "github.com/DeAI-Artist/MintAI/libs/cli/flags"
