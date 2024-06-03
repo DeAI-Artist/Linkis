@@ -1,7 +1,7 @@
 PACKAGES=$(shell go list ./...)
-OUTPUT?=build/tendermint
+OUTPUT?=build/mintai
 
-BUILD_TAGS?=tendermint
+BUILD_TAGS?=mintai
 
 # If building a release, please checkout the version tag to get the correct version setting
 ifneq ($(shell git symbolic-ref -q --short HEAD),)
@@ -58,7 +58,7 @@ all: check build test install
 include tests.mk
 
 ###############################################################################
-###                                Build Tendermint                        ###
+###                                Build MintAI                        ###
 ###############################################################################
 
 build:
