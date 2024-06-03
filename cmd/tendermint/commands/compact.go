@@ -15,10 +15,10 @@ import (
 
 var CompactGoLevelDBCmd = &cobra.Command{
 	Use:   "experimental-compact-goleveldb",
-	Short: "force compacts the tendermint storage engine (only GoLevelDB supported)",
+	Short: "force compacts the MintAI storage engine (only GoLevelDB supported)",
 	Long: `
-This is a temporary utility command that performs a force compaction on the state 
-and blockstores to reduce disk space for a pruning node. This should only be run 
+This is a temporary utility command that performs a force compaction on the state
+and blockstores to reduce disk space for a pruning node. This should only be run
 once the node has stopped. This command will likely be omitted in the future after
 the planned refactor to the storage engine.
 
@@ -49,7 +49,7 @@ func compactGoLevelDBs(rootDir string, logger log.Logger) {
 			dbPath := filepath.Join(rootDir, "data", dbName+".db")
 			store, err := leveldb.OpenFile(dbPath, o)
 			if err != nil {
-				logger.Error("failed to initialize tendermint db", "path", dbPath, "err", err)
+				logger.Error("failed to initialize MintAI db", "path", dbPath, "err", err)
 				return
 			}
 			defer store.Close()
@@ -58,7 +58,7 @@ func compactGoLevelDBs(rootDir string, logger log.Logger) {
 
 			err = store.CompactRange(util.Range{Start: nil, Limit: nil})
 			if err != nil {
-				logger.Error("failed to compact tendermint db", "path", dbPath, "err", err)
+				logger.Error("failed to compact MintAI db", "path", dbPath, "err", err)
 			}
 		}()
 	}
