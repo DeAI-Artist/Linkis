@@ -62,11 +62,11 @@ include tests.mk
 ###############################################################################
 
 build:
-	CGO_ENABLED=$(CGO_ENABLED) go build $(BUILD_FLAGS) -tags '$(BUILD_TAGS)' -o $(OUTPUT) ./cmd/tendermint/
+	CGO_ENABLED=$(CGO_ENABLED) go build $(BUILD_FLAGS) -tags '$(BUILD_TAGS)' -o $(OUTPUT) ./cmd/mintai/
 .PHONY: build
 
 install:
-	CGO_ENABLED=$(CGO_ENABLED) go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) ./cmd/tendermint
+	CGO_ENABLED=$(CGO_ENABLED) go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) ./cmd/mintai
 .PHONY: install
 
 
@@ -164,7 +164,7 @@ draw_deps:
 
 get_deps_bin_size:
 	@# Copy of build recipe with additional flags to perform binary size analysis
-	$(eval $(shell go build -work -a $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o $(OUTPUT) ./cmd/tendermint/ 2>&1))
+	$(eval $(shell go build -work -a $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o $(OUTPUT) ./cmd/mintai/ 2>&1))
 	@find $(WORK) -type f -name "*.a" | xargs -I{} du -hxs "{}" | sort -rh | sed -e s:${WORK}/::g > deps_bin_size.log
 	@echo "Results can be found here: $(CURDIR)/deps_bin_size.log"
 .PHONY: get_deps_bin_size
@@ -250,9 +250,9 @@ build-docker-localnode:
 	@cd networks/local && make
 .PHONY: build-docker-localnode
 
-# Runs `make build TENDERMINT_BUILD_OPTIONS=cleveldb` from within an Amazon
+# Runs `make build MINTAI_BUILD_OPTIONS=cleveldb` from within an Amazon
 # Linux (v2)-based Docker build container in order to build an Amazon
-# Linux-compatible binary. Produces a compatible binary at ./build/tendermint
+# Linux-compatible binary. Produces a compatible binary at ./build/mintai
 build_c-amazonlinux:
 	$(MAKE) -C ./DOCKER build_amazonlinux_buildimage
 	docker run --rm -it -v `pwd`:/tendermint tendermint/tendermint:build_c-amazonlinux
