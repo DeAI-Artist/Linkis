@@ -4,8 +4,8 @@ RUN apk update && \
     apk upgrade && \
     apk --no-cache add curl jq file
 
-VOLUME [ /tendermint ]
-WORKDIR /tendermint
+VOLUME [ /mintai ]
+WORKDIR /mintai
 EXPOSE 26656 26657
 ENTRYPOINT ["/usr/bin/wrapper.sh"]
 CMD ["node", "--proxy_app", "kvstore"]
