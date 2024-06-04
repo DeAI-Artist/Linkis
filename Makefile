@@ -5,7 +5,7 @@ BUILD_TAGS?=mintai
 
 # If building a release, please checkout the version tag to get the correct version setting
 ifneq ($(shell git symbolic-ref -q --short HEAD),)
-VERSION := unreleased-$(shell git symbolic-ref -q --short HEAD)-$(shell git rev-parse HEAD)
+VERSION := $(shell git symbolic-ref -q --short HEAD)-$(shell git rev-parse HEAD)
 else
 VERSION := $(shell git describe)
 endif
@@ -16,36 +16,36 @@ HTTPS_GIT := https://github.com/DeAI-Artist/MintAI.git
 CGO_ENABLED ?= 0
 
 # handle nostrip
-ifeq (,$(findstring nostrip,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (,$(findstring nostrip,$(MINTAI_BUILD_OPTIONS)))
   BUILD_FLAGS += -trimpath
   LD_FLAGS += -s -w
 endif
 
 # handle race
-ifeq (race,$(findstring race,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (race,$(findstring race,$(MINTAI_BUILD_OPTIONS)))
   CGO_ENABLED=1
   BUILD_FLAGS += -race
 endif
 
 # handle cleveldb
-ifeq (cleveldb,$(findstring cleveldb,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (cleveldb,$(findstring cleveldb,$(MINTAI_BUILD_OPTIONS)))
   CGO_ENABLED=1
   BUILD_TAGS += cleveldb
 endif
 
 # handle badgerdb
-ifeq (badgerdb,$(findstring badgerdb,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (badgerdb,$(findstring badgerdb,$(MINTAI_BUILD_OPTIONS)))
   BUILD_TAGS += badgerdb
 endif
 
 # handle rocksdb
-ifeq (rocksdb,$(findstring rocksdb,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (rocksdb,$(findstring rocksdb,$(MINTAI_BUILD_OPTIONS)))
   CGO_ENABLED=1
   BUILD_TAGS += rocksdb
 endif
 
 # handle boltdb
-ifeq (boltdb,$(findstring boltdb,$(TENDERMINT_BUILD_OPTIONS)))
+ifeq (boltdb,$(findstring boltdb,$(MINTAI_BUILD_OPTIONS)))
   BUILD_TAGS += boltdb
 endif
 
@@ -97,7 +97,7 @@ endif
 proto-gen: check-proto-deps
 	@echo "Generating Protobuf files"
 	@go run github.com/bufbuild/buf/cmd/buf generate
-	@mv ./proto/tendermint/abci/types.pb.go ./abci/types/
+	@mv ./proto/mintai/abci/types.pb.go ./abci/types/
 .PHONY: proto-gen
 
 # These targets are provided for convenience and are intended for local
@@ -159,7 +159,7 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/DeAI-Artist/MintAI/cmd/tendermint -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/DeAI-Artist/MintAI/cmd/mintai -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:
@@ -175,9 +175,9 @@ get_deps_bin_size:
 
 # generates certificates for TLS testing in remotedb and RPC server
 gen_certs: clean_certs
-	certstrap init --common-name "tendermint.com" --passphrase ""
+	certstrap init --common-name "mintai.network" --passphrase ""
 	certstrap request-cert --common-name "server" -ip "127.0.0.1" --passphrase ""
-	certstrap sign "server" --CA "tendermint.com" --passphrase ""
+	certstrap sign "server" --CA "mintai.network" --passphrase ""
 	mv out/server.crt rpc/jsonrpc/server/test.crt
 	mv out/server.key rpc/jsonrpc/server/test.key
 	rm -rf out
@@ -232,9 +232,9 @@ sync-docs:
 ###############################################################################
 
 build-docker: build-linux
-	cp $(OUTPUT) DOCKER/tendermint
-	docker build --label=tendermint --tag="tendermint/tendermint" DOCKER
-	rm -rf DOCKER/tendermint
+	cp $(OUTPUT) DOCKER/mintai
+	docker build --label=mintai --tag="mintai/mintai" DOCKER
+	rm -rf DOCKER/mintai
 .PHONY: build-docker
 
 ###############################################################################
@@ -255,12 +255,12 @@ build-docker-localnode:
 # Linux-compatible binary. Produces a compatible binary at ./build/mintai
 build_c-amazonlinux:
 	$(MAKE) -C ./DOCKER build_amazonlinux_buildimage
-	docker run --rm -it -v `pwd`:/tendermint tendermint/tendermint:build_c-amazonlinux
+	docker run --rm -it -v `pwd`:/mintai mintai/mintai:build_c-amazonlinux
 .PHONY: build_c-amazonlinux
 
 # Run a 4-node testnet locally
 localnet-start: localnet-stop build-docker-localnode
-	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/tendermint:Z tendermint/localnode testnet --config /etc/tendermint/config-template.toml --o . --starting-ip-address 192.167.10.2; fi
+	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/mintai:Z mintai/localnode testnet --config /etc/mintai/config-template.toml --o . --starting-ip-address 192.167.10.2; fi
 	docker-compose up
 .PHONY: localnet-start
 
