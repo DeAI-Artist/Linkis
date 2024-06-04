@@ -18,7 +18,7 @@ test_cover:
 
 test_apps:
 	# run the app tests using bash
-	# requires `abci-cli` and `tendermint` binaries installed
+	# requires `abci-cli` and `mintai` binaries installed
 	bash test/app/test.sh
 .PHONY: test_apps
 
@@ -71,5 +71,5 @@ test_race:
 
 test_deadlock:
 	@echo "--> Running go test --deadlock"
-	@go test -p 1 -v  $(PACKAGES) -tags deadlock 
+	@go test -p 1 -v  $(PACKAGES) -tags deadlock
 .PHONY: test_race

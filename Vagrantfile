@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
     echo 'cd go/src/github.com/DeAI-Artist/MintAI' >> /home/vagrant/.bash_profile
 
     mkdir -p /home/vagrant/go/bin
-    mkdir -p /home/vagrant/go/src/github.com/tendermint
+    mkdir -p /home/vagrant/go/src/github.com/mintai
     ln -s /vagrant /home/vagrant/go/src/github.com/DeAI-Artist/MintAI
 
     chown -R vagrant:vagrant /home/vagrant/go
