@@ -37,7 +37,7 @@ const (
 // config/toml.go
 // NOTE: libs/cli must know to look in the config dir!
 var (
-	DefaultTendermintDir = ".tendermint"
+	DefaultTendermintDir = ".mintai"
 	defaultConfigDir     = "config"
 	defaultDataDir       = "data"
 
@@ -237,7 +237,7 @@ func DefaultBaseConfig() BaseConfig {
 		PrivValidatorState: defaultPrivValStatePath,
 		NodeKey:            defaultNodeKeyPath,
 		Moniker:            defaultMoniker,
-		ProxyApp:           "tcp://127.0.0.1:26658",
+		ProxyApp:           "kvstore",
 		ABCI:               "socket",
 		LogLevel:           DefaultLogLevel,
 		LogFormat:          LogFormatPlain,
@@ -251,7 +251,7 @@ func DefaultBaseConfig() BaseConfig {
 // TestBaseConfig returns a base configuration for testing a Tendermint node
 func TestBaseConfig() BaseConfig {
 	cfg := DefaultBaseConfig()
-	cfg.chainID = "tendermint_test"
+	cfg.chainID = "mintai_test"
 	cfg.ProxyApp = "kvstore"
 	cfg.FastSyncMode = false
 	cfg.DBBackend = "memdb"
