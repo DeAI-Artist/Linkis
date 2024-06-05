@@ -23,7 +23,7 @@ fi
 ##
 ## Run binary with all parameters
 ##
-export TMHOME="/MintAI/node${ID}"
+export TMHOME="/mintai/node${ID}"
 
 if [ -d "`dirname ${TMHOME}/${LOG}`" ]; then
   "$BINARY" "$@" | tee "${TMHOME}/${LOG}"
