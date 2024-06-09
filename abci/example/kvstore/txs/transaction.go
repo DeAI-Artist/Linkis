@@ -45,6 +45,55 @@ func (m *Message) UnmarshalJSON(data []byte) error {
 	return err
 }
 
+func (m *Message) DecodeContent() (MessageContent, error) {
+	switch m.Type {
+	case ClientRegistrationType:
+		var cr ClientRegistrationMsg
+		if err := json.Unmarshal(m.Content, &cr); err != nil {
+			return nil, err
+		}
+		return cr, nil
+	case ServiceRequestType:
+		var sr ServiceRequestMsg
+		if err := json.Unmarshal(m.Content, &sr); err != nil {
+			return nil, err
+		}
+		return sr, nil
+	case ClientRatingMsgType:
+		var cr ClientRatingMsg
+		if err := json.Unmarshal(m.Content, &cr); err != nil {
+			return nil, err
+		}
+		return cr, nil
+	case MinerRegistrationType:
+		var mr MinerRegistrationMsg
+		if err := json.Unmarshal(m.Content, &mr); err != nil {
+			return nil, err
+		}
+		return mr, nil
+	case MinerServiceDoneType:
+		var msd MinerServiceDoneMsg
+		if err := json.Unmarshal(m.Content, &msd); err != nil {
+			return nil, err
+		}
+		return msd, nil
+	case MinerStatusUpdateType:
+		var msu MinerStatusUpdateMsg
+		if err := json.Unmarshal(m.Content, &msu); err != nil {
+			return nil, err
+		}
+		return msu, nil
+	case MinerRewardClaimType:
+		var mrc MinerRewardClaimMsg
+		if err := json.Unmarshal(m.Content, &mrc); err != nil {
+			return nil, err
+		}
+		return mrc, nil
+	default:
+		return nil, fmt.Errorf("unknown message type: %d", m.Type)
+	}
+}
+
 func (t Transaction) ToString() (string, error) {
 	// Marshal the Msg field to JSON
 	msgBytes, err := json.Marshal(t.Msg)
