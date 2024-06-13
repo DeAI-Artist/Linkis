@@ -68,6 +68,29 @@ func TestHexToBytes(t *testing.T) {
 	}
 }
 
+func TestEncodeDecodeMessageAndSignature(t *testing.T) {
+	message := "Example `personal_sign` message"
+	signature := "0x7635254a22cd7762ded328cdb27292884ee2ea21500bbff52ff549b09ef0aaa80dc5e5bc03d67c3ce5176747dcec576bf64d3959bf4a5b0b890fa188026825531b"
+
+	encoded, err := EncodeMessageAndSignature(message, signature)
+	if err != nil {
+		t.Errorf("EncodeMessageAndSignature returned an error: %v", err)
+	}
+
+	decodedMessage, decodedSignature, err := DecodeMessageAndSignature(encoded)
+	if err != nil {
+		t.Errorf("DecodeMessageAndSignature returned an error: %v", err)
+	}
+
+	if decodedMessage != message {
+		t.Errorf("Decoded message does not match original. Got %s, want %s", decodedMessage, message)
+	}
+
+	if decodedSignature != signature {
+		t.Errorf("Decoded signature does not match original. Got %s, want %s", decodedSignature, signature)
+	}
+}
+
 // compareBytes compares two byte slices for equality.
 func compareBytes(a, b []byte) bool {
 	if len(a) != len(b) {
