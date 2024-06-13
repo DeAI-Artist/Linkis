@@ -76,8 +76,11 @@ func TestEncodeDecodeMessageAndSignature(t *testing.T) {
 	if err != nil {
 		t.Errorf("EncodeMessageAndSignature returned an error: %v", err)
 	}
-
+	//spew.Dump(encoded)
 	decodedMessage, decodedSignature, err := DecodeMessageAndSignature(encoded)
+	//spew.Dump(decodedMessage)
+	//spew.Dump(decodedSignature)
+	//only signature is 0x prefixed
 	if err != nil {
 		t.Errorf("DecodeMessageAndSignature returned an error: %v", err)
 	}
