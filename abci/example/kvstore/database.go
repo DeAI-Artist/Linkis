@@ -16,7 +16,7 @@ type EthereumAddressMap struct {
 }
 
 // BuildKey generates a database key for a given Ethereum address.
-func BuildKey(ethereumAddress string) []byte {
+func BuildKeyForClientRegistration(ethereumAddress string) []byte {
 	return []byte(fmt.Sprintf("clientRegistration_%s", ethereumAddress))
 }
 
@@ -26,12 +26,12 @@ func StoreClientInfo(db db.DB, ethereumAddress string, info ClientInfo) error {
 	if err != nil {
 		return err
 	}
-	return db.Set(BuildKey(ethereumAddress), dataBytes)
+	return db.Set(BuildKeyForClientRegistration(ethereumAddress), dataBytes)
 }
 
 // GetClientInfo retrieves ClientInfo from the database using the Ethereum address.
 func GetClientInfo(db db.DB, ethereumAddress string) (ClientInfo, error) {
-	dataBytes, err := db.Get(BuildKey(ethereumAddress))
+	dataBytes, err := db.Get(BuildKeyForClientRegistration(ethereumAddress))
 	if err != nil {
 		return ClientInfo{}, err
 	}
