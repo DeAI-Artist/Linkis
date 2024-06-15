@@ -8,11 +8,7 @@ import (
 
 type ClientInfo struct {
 	Name  string
-	power uint64
-}
-
-type EthereumAddressMap struct {
-	Clients map[string]ClientInfo
+	Power uint64
 }
 
 // BuildKey generates a database key for a given Ethereum address.
