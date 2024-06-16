@@ -6,6 +6,12 @@ import (
 	db "github.com/tendermint/tm-db"
 )
 
+const (
+	Stale uint8 = iota
+	Ready
+	Busy
+)
+
 type ClientInfo struct {
 	Name  string
 	Power uint64
