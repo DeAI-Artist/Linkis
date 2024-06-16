@@ -2,10 +2,12 @@ package kvstore
 
 import (
 	"encoding/json"
+	"fmt"
 	dbm "github.com/tendermint/tm-db"
 	"reflect"
 	"strconv"
 	"testing"
+	"time"
 )
 
 // TestStoreAndGetClientInfo tests the storing and retrieval of ClientInfo in the database.
@@ -238,4 +240,76 @@ func BenchmarkStatusOperations(b *testing.B) {
 			}
 		})
 	}
+}
+
+func PrepopulateDatabase(db dbm.DB) error {
+	statuses := make(MinerStatuses) // Create a new map to store the statuses
+
+	// Populate the statuses map in memory
+	for i := 0; i < 100000; i++ {
+		address := "miner" + strconv.Itoa(i)
+		status := uint8(i % 3)     // Cycle statuses between 0, 1, and 2
+		statuses[address] = status // Directly update the map
+	}
+
+	// Save the updated map back to the database only once after all updates
+	if err := SaveMinerStatuses(db, statuses); err != nil {
+		return fmt.Errorf("failed to save miner statuses: %v", err)
+	}
+	return nil
+}
+
+// TestDatabaseOperations tests add, remove, update, and query operations on a large dataset.
+func TestDatabaseOperations(t *testing.T) {
+	db := dbm.NewMemDB()
+	// Populate the database with initial data
+	if err := PrepopulateDatabase(db); err != nil {
+		t.Fatalf("Error prepopulating database: %v", err)
+	}
+	println("data generation complete")
+
+	// Start testing operations
+	t.Run("AddOperation", func(t *testing.T) {
+		// Measure time taken to add a new status
+		start := time.Now()
+		err := AddOrUpdateMinerStatus(db, "miner10001", 1)
+		duration := time.Since(start)
+		if err != nil {
+			t.Errorf("Failed to add new miner status: %v", err)
+		}
+		t.Logf("Time taken to add new miner status: %v", duration)
+	})
+
+	t.Run("UpdateOperation", func(t *testing.T) {
+		// Measure time taken to update an existing status
+		start := time.Now()
+		err := AddOrUpdateMinerStatus(db, "miner500000", 2) // Update miner at halfway point
+		duration := time.Since(start)
+		if err != nil {
+			t.Errorf("Failed to update miner status: %v", err)
+		}
+		t.Logf("Time taken to update miner status: %v", duration)
+	})
+
+	t.Run("RemoveOperation", func(t *testing.T) {
+		// Measure time taken to remove a status
+		start := time.Now()
+		err := RemoveMinerStatus(db, "miner500000")
+		duration := time.Since(start)
+		if err != nil {
+			t.Errorf("Failed to remove miner status: %v", err)
+		}
+		t.Logf("Time taken to remove miner status: %v", duration)
+	})
+
+	t.Run("QueryOperation", func(t *testing.T) {
+		// Measure time taken to query a status
+		start := time.Now()
+		_, err := GetMinerStatus(db, "miner50000")
+		duration := time.Since(start)
+		if err != nil {
+			t.Errorf("Failed to query miner status: %v", err)
+		}
+		t.Logf("Time taken to query miner status: %v", duration)
+	})
 }
