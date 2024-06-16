@@ -167,3 +167,44 @@ func TestRegisterMiner(t *testing.T) {
 	// You could mock the database to throw errors and verify that RegisterMiner handles it properly.
 	// This would typically require an interface for the database and a mock implementation.
 }
+
+// TestMinerStatusManagement tests adding, updating, querying, and removing miner statuses.
+func TestMinerStatusManagement(t *testing.T) {
+	db := dbm.NewMemDB()
+	address := "0x123"
+	initialStatus := uint8(Ready)
+	updatedStatus := uint8(Busy)
+
+	// Add a new miner
+	if err := AddOrUpdateMinerStatus(db, address, initialStatus); err != nil {
+		t.Fatalf("Failed to add new miner status: %v", err)
+	}
+
+	// Verify initial status
+	status, err := GetMinerStatus(db, address)
+	if err != nil || status != initialStatus {
+		t.Errorf("Expected initial status %d for address %s; got %d", initialStatus, address, status)
+	}
+
+	// Update the miner's status
+	if err := AddOrUpdateMinerStatus(db, address, updatedStatus); err != nil {
+		t.Errorf("Failed to update miner status: %v", err)
+	}
+
+	// Verify updated status
+	status, err = GetMinerStatus(db, address)
+	if err != nil || status != updatedStatus {
+		t.Errorf("Expected updated status %d for address %s; got %d", updatedStatus, address, status)
+	}
+
+	// Remove the miner's status
+	if err := RemoveMinerStatus(db, address); err != nil {
+		t.Errorf("Failed to remove miner status: %v", err)
+	}
+
+	// Verify removal
+	_, err = GetMinerStatus(db, address)
+	if err == nil {
+		t.Errorf("Expected error for fetching status of removed miner, got none")
+	}
+}

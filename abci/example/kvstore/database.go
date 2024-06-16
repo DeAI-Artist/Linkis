@@ -137,3 +137,67 @@ func RegisterMiner(db db.DB, miner MinerInfo, minerAddress string) error {
 
 	return nil
 }
+
+const allMinersKey = "allMinerStatus"
+
+type MinerStatuses map[string]uint8 // Map from address to status
+
+// SaveMinerStatuses helper to store the entire map in the database.
+func SaveMinerStatuses(db db.DB, statuses MinerStatuses) error {
+	data, err := json.Marshal(statuses)
+	if err != nil {
+		return fmt.Errorf("error marshaling miner statuses: %v", err)
+	}
+	return db.Set([]byte(allMinersKey), data)
+}
+
+// LoadMinerStatuses helper to retrieve the entire map from the database.
+func LoadMinerStatuses(db db.DB) (MinerStatuses, error) {
+	data, err := db.Get([]byte(allMinersKey))
+	if err != nil {
+		return nil, fmt.Errorf("error retrieving miner statuses: %v", err)
+	}
+	if data == nil {
+		return make(MinerStatuses), nil // Return an empty map if no data found
+	}
+
+	var statuses MinerStatuses
+	err = json.Unmarshal(data, &statuses)
+	if err != nil {
+		return nil, fmt.Errorf("error unmarshaling miner statuses: %v", err)
+	}
+	return statuses, nil
+}
+
+// AddOrUpdateMinerStatus adds a new miner or updates an existing miner's status.
+func AddOrUpdateMinerStatus(db db.DB, address string, status uint8) error {
+	statuses, err := LoadMinerStatuses(db)
+	if err != nil {
+		return err
+	}
+	statuses[address] = status // Add new or update existing
+	return SaveMinerStatuses(db, statuses)
+}
+
+// RemoveMinerStatus removes a miner's status from the map.
+func RemoveMinerStatus(db db.DB, address string) error {
+	statuses, err := LoadMinerStatuses(db)
+	if err != nil {
+		return err
+	}
+	delete(statuses, address) // Remove the miner from the map
+	return SaveMinerStatuses(db, statuses)
+}
+
+// GetMinerStatus queries a single miner's status.
+func GetMinerStatus(db db.DB, address string) (uint8, error) {
+	statuses, err := LoadMinerStatuses(db)
+	if err != nil {
+		return 0, err
+	}
+	status, found := statuses[address]
+	if !found {
+		return 0, fmt.Errorf("miner status not found for address: %s", address)
+	}
+	return status, nil
+}
