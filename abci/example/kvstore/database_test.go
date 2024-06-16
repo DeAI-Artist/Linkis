@@ -74,3 +74,42 @@ func TestMapInMemDB(t *testing.T) {
 		}
 	}
 }
+
+func TestStoreAndGetMinerInfo(t *testing.T) {
+	// Initialize the in-memory database
+	db := dbm.NewMemDB()
+
+	// Example miner information
+	minerInfo := MinerInfo{
+		Name:         "Miner Bob",
+		Power:        500,
+		ServiceTypes: []uint64{1, 2, 3},
+		IP:           "192.168.1.100:8080", // IP address and port combined in one string
+	}
+	ethereumAddress := "0x456def"
+
+	// Store miner information
+	err := StoreMinerInfo(db, ethereumAddress, minerInfo)
+	if err != nil {
+		t.Fatalf("StoreMinerInfo failed: %s", err)
+	}
+
+	// Retrieve miner information
+	retrievedInfo, err := GetMinerInfo(db, ethereumAddress)
+	if err != nil {
+		t.Fatalf("GetMinerInfo failed: %s", err)
+	}
+
+	// Compare the stored and retrieved information
+	if retrievedInfo.Name != minerInfo.Name || retrievedInfo.Power != minerInfo.Power ||
+		len(retrievedInfo.ServiceTypes) != len(minerInfo.ServiceTypes) || retrievedInfo.IP != minerInfo.IP {
+		t.Errorf("Retrieved info does not match stored info. Got %+v, want %+v", retrievedInfo, minerInfo)
+	}
+
+	// Optionally check if all service types match
+	for i, serviceType := range retrievedInfo.ServiceTypes {
+		if serviceType != minerInfo.ServiceTypes[i] {
+			t.Errorf("Service type mismatch at index %d: got %d, want %d", i, serviceType, minerInfo.ServiceTypes[i])
+		}
+	}
+}
