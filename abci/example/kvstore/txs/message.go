@@ -34,6 +34,7 @@ type MinerRegistrationMsg struct {
 	MinerName    string   `json:"miner_name"`    // The name of the miner
 	ServiceTypes []uint64 `json:"service_types"` // An array of service type identifiers
 	IP           string   `json:"ip"`            // The IP address of the miner for network connections
+	Status       uint8    `json:"status"`
 }
 
 type MinerServiceDoneMsg struct {
@@ -43,7 +44,7 @@ type MinerServiceDoneMsg struct {
 type MinerStatusUpdateMsg struct {
 	AddServiceTypes    []uint64 `json:"service_types"`
 	RemoveServiceTypes []uint64 `json:"service_types"`
-	Status             string   `json:"status"`
+	Status             uint8    `json:"status"`
 }
 
 type MinerRewardClaimMsg struct{}
