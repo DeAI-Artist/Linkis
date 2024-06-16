@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	dbm "github.com/tendermint/tm-db"
 	"reflect"
+	"strconv"
 	"testing"
 )
 
@@ -206,5 +207,35 @@ func TestMinerStatusManagement(t *testing.T) {
 	_, err = GetMinerStatus(db, address)
 	if err == nil {
 		t.Errorf("Expected error for fetching status of removed miner, got none")
+	}
+}
+
+// BenchmarkStatusOperations benchmarks adding, retrieving, and removing miner statuses.
+func BenchmarkStatusOperations(b *testing.B) {
+	db := dbm.NewMemDB()
+	for n := 1; n <= b.N; n++ {
+		address := "miner" + strconv.Itoa(n) // Create unique miner address
+		status := uint8(n % 3)               // Cycle through 0, 1, 2 statuses
+
+		// Add or update miner status
+		b.Run("AddOrUpdate", func(b *testing.B) {
+			if err := AddOrUpdateMinerStatus(db, address, status); err != nil {
+				b.Error("Failed to add/update miner status:", err)
+			}
+		})
+
+		// Get miner status
+		b.Run("GetStatus", func(b *testing.B) {
+			if _, err := GetMinerStatus(db, address); err != nil {
+				b.Error("Failed to get miner status:", err)
+			}
+		})
+
+		// Remove miner status
+		b.Run("RemoveStatus", func(b *testing.B) {
+			if err := RemoveMinerStatus(db, address); err != nil {
+				b.Error("Failed to remove miner status:", err)
+			}
+		})
 	}
 }
