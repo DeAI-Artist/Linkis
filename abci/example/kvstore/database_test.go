@@ -172,8 +172,8 @@ func TestRegisterMiner(t *testing.T) {
 func TestMinerStatusManagement(t *testing.T) {
 	db := dbm.NewMemDB()
 	address := "0x123"
-	initialStatus := uint8(Ready)
-	updatedStatus := uint8(Busy)
+	initialStatus := Ready
+	updatedStatus := Busy
 
 	// Add a new miner
 	if err := AddOrUpdateMinerStatus(db, address, initialStatus); err != nil {
