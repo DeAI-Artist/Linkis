@@ -3,6 +3,7 @@ package kvstore
 import (
 	"encoding/json"
 	dbm "github.com/tendermint/tm-db"
+	"reflect"
 	"testing"
 )
 
@@ -112,4 +113,57 @@ func TestStoreAndGetMinerInfo(t *testing.T) {
 			t.Errorf("Service type mismatch at index %d: got %d, want %d", i, serviceType, minerInfo.ServiceTypes[i])
 		}
 	}
+}
+
+func TestRegisterMiner(t *testing.T) {
+	db := dbm.NewMemDB()
+
+	minerInfo := MinerInfo{
+		Name:         "Miner Bob",
+		Power:        500,
+		ServiceTypes: []uint64{1, 2},
+		IP:           "192.168.1.100:8080",
+	}
+	minerAddress := "0x456def"
+
+	// Case 1: No service type key exists yet
+	err := RegisterMiner(db, minerInfo, minerAddress)
+	if err != nil {
+		t.Fatalf("RegisterMiner failed: %s", err)
+	}
+	for _, serviceType := range minerInfo.ServiceTypes {
+		miners, _ := GetMinersForServiceType(db, serviceType)
+		if len(miners) != 1 || miners[0] != minerAddress {
+			t.Errorf("Expected [%s] for service type %d, got %v", minerAddress, serviceType, miners)
+		}
+	}
+
+	// Case 2: Service type key exists and already includes the specified miner
+	err = RegisterMiner(db, minerInfo, minerAddress)
+	if err != nil {
+		t.Fatalf("RegisterMiner failed on second call: %s", err)
+	}
+	for _, serviceType := range minerInfo.ServiceTypes {
+		miners, _ := GetMinersForServiceType(db, serviceType)
+		if len(miners) != 1 || miners[0] != minerAddress { // No duplicate should be added
+			t.Errorf("Unexpected duplicate or change in miners list for service type %d, got %v", serviceType, miners)
+		}
+	}
+
+	// Case 3: Service type key exists but does not include the specified miner
+	newMinerAddress := "0x123abc"
+	err = RegisterMiner(db, minerInfo, newMinerAddress)
+	if err != nil {
+		t.Fatalf("RegisterMiner failed on third call: %s", err)
+	}
+	for _, serviceType := range minerInfo.ServiceTypes {
+		miners, _ := GetMinersForServiceType(db, serviceType)
+		if !reflect.DeepEqual(miners, []string{minerAddress, newMinerAddress}) {
+			t.Errorf("Expected [%s, %s] for service type %d, got %v", minerAddress, newMinerAddress, serviceType, miners)
+		}
+	}
+
+	// Additional case: Database operations error handling
+	// You could mock the database to throw errors and verify that RegisterMiner handles it properly.
+	// This would typically require an interface for the database and a mock implementation.
 }
