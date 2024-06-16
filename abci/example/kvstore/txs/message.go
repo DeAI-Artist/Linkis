@@ -31,8 +31,9 @@ type ClientRatingMsg struct {
 }
 
 type MinerRegistrationMsg struct {
-	MinerName    string   `json:"miner_name"`
-	ServiceTypes []uint64 `json:"service_types"`
+	MinerName    string   `json:"miner_name"`    // The name of the miner
+	ServiceTypes []uint64 `json:"service_types"` // An array of service type identifiers
+	IP           string   `json:"ip"`            // The IP address of the miner for network connections
 }
 
 type MinerServiceDoneMsg struct {
