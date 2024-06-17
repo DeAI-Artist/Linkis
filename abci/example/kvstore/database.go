@@ -201,3 +201,51 @@ func GetMinerStatus(db db.DB, address string) (uint8, error) {
 	}
 	return status, nil
 }
+
+// RemoveMinerFromServiceTypeMapping removes a miner's address from the service type mapping in the database.
+func RemoveMinerFromServiceTypeMapping(db db.DB, serviceType uint64, minerAddr string) error {
+	miners, err := GetMinersForServiceType(db, serviceType)
+	if err != nil {
+		return fmt.Errorf("failed to get miners for service type %d: %v", serviceType, err)
+	}
+
+	// Find and remove the miner's address
+	for i, addr := range miners {
+		if addr == minerAddr {
+			miners = append(miners[:i], miners[i+1:]...)
+			break
+		}
+	}
+
+	// Store the updated miner list for the service type
+	if err := StoreMinersForServiceType(db, serviceType, miners); err != nil {
+		return fmt.Errorf("failed to store miners for service type %d: %v", serviceType, err)
+	}
+
+	return nil
+}
+
+// AddMinerToServiceTypeMapping adds a miner's address to the service type mapping in the database.
+func AddMinerToServiceTypeMapping(db db.DB, serviceType uint64, minerAddr string) error {
+	miners, err := GetMinersForServiceType(db, serviceType)
+	if err != nil {
+		return fmt.Errorf("failed to get miners for service type %d: %v", serviceType, err)
+	}
+
+	// Check if the miner's address is already in the list
+	for _, addr := range miners {
+		if addr == minerAddr {
+			return nil // Already exists, no need to add
+		}
+	}
+
+	// Add the miner's address to the list
+	miners = append(miners, minerAddr)
+
+	// Store the updated miner list for the service type
+	if err := StoreMinersForServiceType(db, serviceType, miners); err != nil {
+		return fmt.Errorf("failed to store miners for service type %d: %v", serviceType, err)
+	}
+
+	return nil
+}

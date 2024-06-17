@@ -3,6 +3,7 @@ package kvstore
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/stretchr/testify/assert"
 	dbm "github.com/tendermint/tm-db"
 	"reflect"
 	"strconv"
@@ -312,4 +313,44 @@ func TestDatabaseOperations(t *testing.T) {
 		}
 		t.Logf("Time taken to query miner status: %v", duration)
 	})
+}
+
+// TestAddMinerToServiceTypeMapping tests the addition of a miner to a service type.
+func TestAddMinerToServiceTypeMapping(t *testing.T) {
+	db := dbm.NewMemDB() // Using Tendermint's in-memory DB for testing
+	serviceType := uint64(1)
+	minerAddr := "miner123"
+
+	// Initially no miners registered for this service type
+	miners, _ := GetMinersForServiceType(db, serviceType)
+	assert.Equal(t, 0, len(miners), "Service type should initially have no miners")
+
+	// Add miner and check
+	err := AddMinerToServiceTypeMapping(db, serviceType, minerAddr)
+	assert.NoError(t, err, "Adding miner to service type should not produce an error")
+
+	miners, _ = GetMinersForServiceType(db, serviceType)
+	assert.Equal(t, 1, len(miners), "Service type should have one miner after adding")
+	assert.Equal(t, minerAddr, miners[0], "The added miner address should match")
+}
+
+// TestRemoveMinerFromServiceTypeMapping tests the removal of a miner from a service type.
+func TestRemoveMinerFromServiceTypeMapping(t *testing.T) {
+	db := dbm.NewMemDB() // Using Tendermint's in-memory DB for testing
+	serviceType := uint64(1)
+	minerAddr := "miner123"
+
+	// Add a miner first
+	_ = AddMinerToServiceTypeMapping(db, serviceType, minerAddr)
+
+	// Check miner is added
+	miners, _ := GetMinersForServiceType(db, serviceType)
+	assert.Equal(t, 1, len(miners), "Service type should have one miner before removal")
+
+	// Remove miner and check
+	err := RemoveMinerFromServiceTypeMapping(db, serviceType, minerAddr)
+	assert.NoError(t, err, "Removing miner from service type should not produce an error")
+
+	miners, _ = GetMinersForServiceType(db, serviceType)
+	assert.Equal(t, 0, len(miners), "Service type should have no miners after removal")
 }
