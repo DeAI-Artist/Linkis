@@ -249,3 +249,35 @@ func AddMinerToServiceTypeMapping(db db.DB, serviceType uint64, minerAddr string
 
 	return nil
 }
+
+// BuildKeyForMinerRating generates a database key for a given miner's address.
+func BuildKeyForMinerRating(minerAddress string) []byte {
+	return []byte(fmt.Sprintf("minerRating_%s", minerAddress))
+}
+
+// StoreClientRating stores the map of client ratings in the database under the key derived from the miner's address.
+func StoreClientRating(db db.DB, minerAddress string, ratings map[string]uint8) error {
+	dataBytes, err := json.Marshal(ratings)
+	if err != nil {
+		return err
+	}
+	return db.Set(BuildKeyForMinerRating(minerAddress), dataBytes)
+}
+
+// GetClientRating retrieves the map of client ratings from the database using the miner's address.
+func GetClientRating(db db.DB, minerAddress string) (map[string]uint8, error) {
+	dataBytes, err := db.Get(BuildKeyForMinerRating(minerAddress))
+	if err != nil {
+		return nil, err
+	}
+	if dataBytes == nil {
+		return make(map[string]uint8), nil // Return an empty map if no data found
+	}
+
+	var ratings map[string]uint8
+	err = json.Unmarshal(dataBytes, &ratings)
+	if err != nil {
+		return nil, err
+	}
+	return ratings, nil
+}

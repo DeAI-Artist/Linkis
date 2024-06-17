@@ -354,3 +354,45 @@ func TestRemoveMinerFromServiceTypeMapping(t *testing.T) {
 	miners, _ = GetMinersForServiceType(db, serviceType)
 	assert.Equal(t, 0, len(miners), "Service type should have no miners after removal")
 }
+
+// TestStoreAndGetClientRating tests the storing and retrieving functionality of client ratings.
+func TestStoreAndGetClientRating(t *testing.T) {
+	db := dbm.NewMemDB() // Initialize in-memory database
+	minerAddress := "miner1"
+
+	// Test case 1: Initial store and retrieve
+	initialRatings := map[string]uint8{"client1": 5, "client2": 4}
+	err := StoreClientRating(db, minerAddress, initialRatings)
+	assert.NoError(t, err, "Storing initial ratings should not produce an error")
+
+	retrievedRatings, err := GetClientRating(db, minerAddress)
+	assert.NoError(t, err, "Retrieving initial ratings should not produce an error")
+	assert.Equal(t, initialRatings, retrievedRatings, "Retrieved initial ratings should match the stored ratings")
+
+	// Test case 2: Update an existing rating
+	updatedRatings := map[string]uint8{"client1": 3}
+	err = StoreClientRating(db, minerAddress, updatedRatings)
+	assert.NoError(t, err, "Updating ratings should not produce an error")
+
+	retrievedRatings, err = GetClientRating(db, minerAddress)
+	assert.NoError(t, err, "Retrieving updated ratings should not produce an error")
+	assert.Equal(t, updatedRatings, retrievedRatings, "Retrieved ratings after update should match the stored ratings")
+
+	// Test case 3: Add a new rating
+	updatedRatings["client3"] = 5
+	err = StoreClientRating(db, minerAddress, updatedRatings)
+	assert.NoError(t, err, "Adding a new rating should not produce an error")
+
+	retrievedRatings, err = GetClientRating(db, minerAddress)
+	assert.NoError(t, err, "Retrieving ratings after adding a new client should not produce an error")
+	assert.Equal(t, updatedRatings, retrievedRatings, "Retrieved ratings after adding a new client should match the stored ratings")
+
+	// Test case 4: Empty ratings
+	emptyRatings := make(map[string]uint8)
+	err = StoreClientRating(db, "miner2", emptyRatings)
+	assert.NoError(t, err, "Storing empty ratings should not produce an error")
+
+	retrievedRatings, err = GetClientRating(db, "miner2")
+	assert.NoError(t, err, "Retrieving empty ratings should not produce an error")
+	assert.Equal(t, emptyRatings, retrievedRatings, "Retrieved empty ratings should be empty")
+}
