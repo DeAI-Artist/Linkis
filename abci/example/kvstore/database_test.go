@@ -400,7 +400,7 @@ func TestStoreAndGetClientRating(t *testing.T) {
 func TestGenerateHashForMinerInfo(t *testing.T) {
 	minerAddress := "miner123"
 	metadata := []byte("test data")
-	blockHeight := uint64(12345)
+	blockHeight := int64(12345)
 
 	// Generate hash
 	hash := GenerateHashForServiceInfo(minerAddress, metadata, blockHeight)
