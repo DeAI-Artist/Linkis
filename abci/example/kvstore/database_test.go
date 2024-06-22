@@ -396,3 +396,22 @@ func TestStoreAndGetClientRating(t *testing.T) {
 	assert.NoError(t, err, "Retrieving empty ratings should not produce an error")
 	assert.Equal(t, emptyRatings, retrievedRatings, "Retrieved empty ratings should be empty")
 }
+
+func TestGenerateHashForMinerInfo(t *testing.T) {
+	minerAddress := "miner123"
+	metadata := []byte("test data")
+	blockHeight := uint64(12345)
+
+	// Generate hash
+	hash := GenerateHashForServiceInfo(minerAddress, metadata, blockHeight)
+	//spew.Dump(hash)
+	// Ensure hash is not empty
+	assert.NotEmpty(t, hash, "The generated hash should not be empty")
+
+	// Test for changes in any input resulting in a different hash
+	differentMetadata := []byte("different data")
+
+	differentHash := GenerateHashForServiceInfo(minerAddress, differentMetadata, blockHeight)
+	//spew.Dump(differentHash)
+	assert.NotEqual(t, hash, differentHash, "Hashes should differ with different metadata")
+}

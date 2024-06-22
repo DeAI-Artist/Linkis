@@ -1,6 +1,8 @@
 package kvstore
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	db "github.com/tendermint/tm-db"
@@ -280,4 +282,16 @@ func GetClientRating(db db.DB, minerAddress string) (map[string]uint8, error) {
 		return nil, err
 	}
 	return ratings, nil
+}
+
+// GenerateHashForMinerInfo creates a unique hash for given miner information which includes
+// the miner's address, any relevant metadata, and the block height.
+func GenerateHashForServiceInfo(clientAddress string, metadata []byte, blockHeight uint64) string {
+	hasher := sha256.New()
+	hasher.Write([]byte(clientAddress))                  // Include the miner's address
+	hasher.Write(metadata)                               // Include the service request metadata
+	hasher.Write([]byte(fmt.Sprintf("%d", blockHeight))) // Include the block height
+
+	// Return the resulting hash as a hexadecimal string
+	return hex.EncodeToString(hasher.Sum(nil))
 }
