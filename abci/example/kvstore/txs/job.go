@@ -7,7 +7,7 @@ import (
 )
 
 // SelectPseudorandomMiner selects a miner pseudorandomly based on the block height, app hash, and service ID.
-func SelectPseudorandomMiner(miners []string, blockHeight int, appHash string, serviceID string) string {
+func SelectPseudorandomMiner(miners []string, blockHeight int64, appHash []byte, serviceID string) string {
 	// Combine block height, app hash, and service ID into a single string
 	combinedInput := fmt.Sprintf("%d%s%s", blockHeight, appHash, serviceID)
 
