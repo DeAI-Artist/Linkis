@@ -286,7 +286,7 @@ func GetClientRating(db db.DB, minerAddress string) (map[string]uint8, error) {
 
 // GenerateHashForMinerInfo creates a unique hash for given miner information which includes
 // the miner's address, any relevant metadata, and the block height.
-func GenerateHashForServiceInfo(clientAddress string, metadata []byte, blockHeight uint64) string {
+func GenerateHashForServiceInfo(clientAddress string, metadata []byte, blockHeight int64) string {
 	hasher := sha256.New()
 	hasher.Write([]byte(clientAddress))                  // Include the miner's address
 	hasher.Write(metadata)                               // Include the service request metadata
