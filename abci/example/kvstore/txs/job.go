@@ -6,10 +6,10 @@ import (
 	"math/big"
 )
 
-// selectPseudorandomMiner selects a miner pseudorandomly based on the block height, app hash, and nonce.
-func selectPseudorandomMiner(miners []string, blockHeight int, appHash string, nonce int) string {
-	// Combine block height, app hash, and nonce into a single string
-	combinedInput := fmt.Sprintf("%d%s%d", blockHeight, appHash, nonce)
+// selectPseudorandomMiner selects a miner pseudorandomly based on the block height, app hash, and service ID.
+func selectPseudorandomMiner(miners []string, blockHeight int, appHash string, serviceID string) string {
+	// Combine block height, app hash, and service ID into a single string
+	combinedInput := fmt.Sprintf("%d%s%s", blockHeight, appHash, serviceID)
 
 	// Generate a SHA-256 hash of the combined input
 	hash := sha256.New()
