@@ -295,3 +295,43 @@ func GenerateHashForServiceInfo(clientAddress string, metadata []byte, blockHeig
 	// Return the resulting hash as a hexadecimal string
 	return hex.EncodeToString(hasher.Sum(nil))
 }
+
+// JobInfo represents information about a specific job or task associated with a service.
+type JobInfo struct {
+	ServiceID   string `json:"service_id"`   // The unique identifier for the service
+	ClientID    string `json:"client_id"`    // The identifier of the client requesting the service
+	ServiceType uint64 `json:"service_type"` // The numeric identifier of the type of service
+}
+
+// BuildKeyForMinerJob generates a database key for a given miner's job.
+func BuildKeyForMinerJob(minerID string) []byte {
+	return []byte(fmt.Sprintf("minerjobs_%s", minerID))
+}
+
+// StoreJobInfo stores JobInfo in the database under the key derived from the miner's ID.
+func StoreJobInfo(db db.DB, minerID string, job JobInfo) error {
+	key := BuildKeyForMinerJob(minerID)
+	dataBytes, err := json.Marshal(job)
+	if err != nil {
+		return err
+	}
+	return db.Set(key, dataBytes)
+}
+
+// GetJobInfo retrieves JobInfo from the database using the miner's ID.
+func GetJobInfo(db db.DB, minerID string) (JobInfo, error) {
+	key := BuildKeyForMinerJob(minerID)
+	dataBytes, err := db.Get(key)
+	if err != nil {
+		return JobInfo{}, err
+	}
+	if dataBytes == nil {
+		return JobInfo{}, fmt.Errorf("no job found for miner ID '%s'", minerID)
+	}
+	var job JobInfo
+	err = json.Unmarshal(dataBytes, &job)
+	if err != nil {
+		return JobInfo{}, err
+	}
+	return job, nil
+}

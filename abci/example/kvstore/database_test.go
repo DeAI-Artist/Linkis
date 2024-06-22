@@ -415,3 +415,21 @@ func TestGenerateHashForMinerInfo(t *testing.T) {
 	//spew.Dump(differentHash)
 	assert.NotEqual(t, hash, differentHash, "Hashes should differ with different metadata")
 }
+
+func TestJobInfoStorageAndRetrieval(t *testing.T) {
+	db := dbm.NewMemDB()
+	minerID := "miner123"
+	job := JobInfo{
+		ServiceID:   "service123",
+		ClientID:    "client456",
+		ServiceType: 789,
+	}
+
+	// Store the job info
+	assert.NoError(t, StoreJobInfo(db, minerID, job), "Storing job info should not produce an error")
+
+	// Retrieve the job info
+	retrievedJob, err := GetJobInfo(db, minerID)
+	assert.NoError(t, err, "Retrieving job info should not produce an error")
+	assert.Equal(t, job, retrievedJob, "The retrieved job info should match the stored info")
+}
