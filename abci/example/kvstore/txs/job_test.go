@@ -28,7 +28,7 @@ func TestSelectPseudorandomMiner(t *testing.T) {
 	}
 
 	// Test for variability: different inputs should yield different results
-	result3 := SelectPseudorandomMiner(miners, 101, appHash1[:], "service1") // Changing blockHeight
+	result3 := SelectPseudorandomMiner(miners, 106, appHash1[:], "service1") // Changing blockHeight
 	result4 := SelectPseudorandomMiner(miners, 100, appHash2[:], "service1") // Changing appHash
 	result5 := SelectPseudorandomMiner(miners, 100, appHash1[:], "service2") // Changing serviceID
 
