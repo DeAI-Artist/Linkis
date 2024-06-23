@@ -434,7 +434,6 @@ func TestJobInfoStorageAndRetrieval(t *testing.T) {
 	assert.Equal(t, job, retrievedJob, "The retrieved job info should match the stored info")
 }
 
-// Combined test function for service request utilities
 func TestServiceRequestUtilities(t *testing.T) {
 	// Initialize the in-memory database
 	memDB := dbm.NewMemDB()
@@ -451,23 +450,53 @@ func TestServiceRequestUtilities(t *testing.T) {
 	assert.Equal(t, "miner5678", requests[0].MinerID, "MinerID should match")
 	assert.Equal(t, int64(102), requests[0].Height, "Height should match")
 
-	// Test updating the service request list by adding another request
-	err = AddServiceRequest(memDB, "service2345", "miner8765", 103)
-	assert.Nil(t, err, "AddServiceRequest should not return an error")
-
-	// Verify the addition of the new service request
-	requests, err = LoadServiceRequests(memDB)
-	assert.Nil(t, err, "LoadServiceRequests should not return an error")
-	assert.Equal(t, 2, len(requests), "There should be two service requests")
-	assert.Equal(t, "service2345", requests[1].ServiceID, "ServiceID should match on second add")
-
-	// Test retaining service requests above a certain height
+	// Remove the added service request by retaining above its height
 	err = RetainServiceRequestsAboveHeight(memDB, 102)
 	assert.Nil(t, err, "RetainServiceRequestsAboveHeight should not return an error")
 
-	// Verify that only one request remains, and it's the correct one
+	// Verify removal
 	requests, err = LoadServiceRequests(memDB)
-	assert.Nil(t, err, "LoadServiceRequests should not return an error")
-	assert.Equal(t, 1, len(requests), "There should be one service request retained")
-	assert.Equal(t, "service2345", requests[0].ServiceID, "The retained request should have the correct ServiceID")
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after removal")
+	assert.Equal(t, 0, len(requests), "All requests should be removed")
+
+	// Add multiple new service requests
+	heights := []int64{100, 101, 102, 103, 103, 104, 105, 105, 105, 106}
+	for i, height := range heights {
+		err = AddServiceRequest(memDB, fmt.Sprintf("service%d", i), fmt.Sprintf("miner%d", i), height)
+		assert.Nil(t, err, "AddServiceRequest should not return an error when adding multiple")
+	}
+
+	// Verify all are added
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after multiple adds")
+	assert.Equal(t, 10, len(requests), "There should be ten service requests added")
+
+	// Retain requests above a height of 105, which is repeated
+	err = RetainServiceRequestsAboveHeight(memDB, 105)
+	assert.Nil(t, err, "RetainServiceRequestsAboveHeight should not return an error on height 105")
+
+	// Verify retention
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after retention")
+	assert.Equal(t, 1, len(requests), "Only one request should remain")
+	assert.Equal(t, "service9", requests[0].ServiceID, "The remaining request should have the highest height")
+
+	// Test retention below the smallest height in the list
+	err = RetainServiceRequestsAboveHeight(memDB, 99)
+	assert.Nil(t, err, "RetainServiceRequestsAboveHeight should not return an error on height below min")
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after extreme low retention")
+	assert.Equal(t, 1, len(requests), "All requests should remain when retaining below the smallest height")
+
+	// Re-add and test retention above the maximum height in the list
+	for i, height := range heights {
+		err = AddServiceRequest(memDB, fmt.Sprintf("service%d", i), fmt.Sprintf("miner%d", i), height)
+		assert.Nil(t, err, "Re-adding service requests should not return an error")
+	}
+
+	err = RetainServiceRequestsAboveHeight(memDB, 107)
+	assert.Nil(t, err, "RetainServiceRequestsAboveHeight should not return an error on height above max")
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after extreme high retention")
+	assert.Equal(t, 0, len(requests), "No requests should remain when retaining above the highest height")
 }
