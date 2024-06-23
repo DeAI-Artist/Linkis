@@ -45,10 +45,11 @@ func GetClientInfo(db db.DB, ethereumAddress string) (ClientInfo, error) {
 }
 
 type MinerInfo struct {
-	Name         string   // The name of the miner
-	Power        uint64   // The computational power of the miner, possibly in hashes per second
-	ServiceTypes []uint64 // An array of service type identifiers that the miner provides
-	IP           string   // The IP address of the miner for network connections
+	Name          string   // The name of the miner
+	Power         uint64   // The computational power of the miner, possibly in hashes per second
+	ServiceTypes  []uint64 // An array of service type identifiers that the miner provides
+	IP            string   // The IP address of the miner for network connections
+	InitialStatus uint8
 }
 
 // BuildKeyForMinerRegistration generates a database key for a given Ethereum address.
@@ -334,4 +335,68 @@ func GetJobInfo(db db.DB, minerID string) (JobInfo, error) {
 		return JobInfo{}, err
 	}
 	return job, nil
+}
+
+const allServiceRequestsKey = "allServiceRequests"
+
+type ServiceRequest struct {
+	ServiceID string
+	MinerID   string
+	Height    int64
+}
+
+type ServiceRequests []ServiceRequest
+
+func SaveServiceRequests(db db.DB, requests ServiceRequests) error {
+	data, err := json.Marshal(requests)
+	if err != nil {
+		return fmt.Errorf("error marshaling service requests: %v", err)
+	}
+	return db.Set([]byte(allServiceRequestsKey), data) // Use SetSync for immediate writes
+}
+
+func LoadServiceRequests(db db.DB) (ServiceRequests, error) {
+	data, err := db.Get([]byte(allServiceRequestsKey))
+	if err != nil {
+		return nil, fmt.Errorf("error retrieving service requests: %v", err)
+	}
+	if data == nil {
+		return make(ServiceRequests, 0), nil // Return an empty slice if no data found
+	}
+
+	var requests ServiceRequests
+	err = json.Unmarshal(data, &requests)
+	if err != nil {
+		return nil, fmt.Errorf("error unmarshaling service requests: %v", err)
+	}
+	return requests, nil
+}
+
+func AddServiceRequest(db db.DB, serviceID, minerID string, height int64) error {
+	requests, err := LoadServiceRequests(db)
+	if err != nil {
+		return err
+	}
+	requests = append(requests, ServiceRequest{ServiceID: serviceID, MinerID: minerID, Height: height})
+	return SaveServiceRequests(db, requests)
+}
+
+func RetainServiceRequestsAboveHeight(db db.DB, retainHeight int64) error {
+	requests, err := LoadServiceRequests(db)
+	if err != nil {
+		return err
+	}
+
+	var lastIndex = -1
+	for i, request := range requests {
+		if request.Height <= retainHeight {
+			lastIndex = i
+		} else {
+			break
+		}
+	}
+	if lastIndex != -1 {
+		requests = requests[lastIndex+1:]
+	}
+	return SaveServiceRequests(db, requests)
 }

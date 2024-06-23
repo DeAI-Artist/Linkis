@@ -500,3 +500,12 @@ func (app *Application) handleServiceRequest(senderAddr string, msg txs.Message)
 
 	return nil
 }
+
+// handleMinerServiceDone processes a miner service done event, always returns nil error
+func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Message) error {
+	// Your logic to handle the miner service done event goes here
+	// This could involve updating states, logging information, etc.
+
+	// Since this template function is meant to always return nil for error
+	return nil
+}

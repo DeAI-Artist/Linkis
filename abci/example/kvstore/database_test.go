@@ -433,3 +433,41 @@ func TestJobInfoStorageAndRetrieval(t *testing.T) {
 	assert.NoError(t, err, "Retrieving job info should not produce an error")
 	assert.Equal(t, job, retrievedJob, "The retrieved job info should match the stored info")
 }
+
+// Combined test function for service request utilities
+func TestServiceRequestUtilities(t *testing.T) {
+	// Initialize the in-memory database
+	memDB := dbm.NewMemDB()
+
+	// Test adding a new service request
+	err := AddServiceRequest(memDB, "service1234", "miner5678", 102)
+	assert.Nil(t, err, "AddServiceRequest should not return an error")
+
+	// Verify that the service request has been added correctly
+	requests, err := LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error")
+	assert.Equal(t, 1, len(requests), "There should be one service request")
+	assert.Equal(t, "service1234", requests[0].ServiceID, "ServiceID should match")
+	assert.Equal(t, "miner5678", requests[0].MinerID, "MinerID should match")
+	assert.Equal(t, int64(102), requests[0].Height, "Height should match")
+
+	// Test updating the service request list by adding another request
+	err = AddServiceRequest(memDB, "service2345", "miner8765", 103)
+	assert.Nil(t, err, "AddServiceRequest should not return an error")
+
+	// Verify the addition of the new service request
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error")
+	assert.Equal(t, 2, len(requests), "There should be two service requests")
+	assert.Equal(t, "service2345", requests[1].ServiceID, "ServiceID should match on second add")
+
+	// Test retaining service requests above a certain height
+	err = RetainServiceRequestsAboveHeight(memDB, 102)
+	assert.Nil(t, err, "RetainServiceRequestsAboveHeight should not return an error")
+
+	// Verify that only one request remains, and it's the correct one
+	requests, err = LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error")
+	assert.Equal(t, 1, len(requests), "There should be one service request retained")
+	assert.Equal(t, "service2345", requests[0].ServiceID, "The retained request should have the correct ServiceID")
+}
