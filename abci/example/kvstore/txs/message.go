@@ -7,13 +7,14 @@ type MessageContent interface {
 }
 
 const (
-	ClientRegistrationType = 1
-	ServiceRequestType     = 2
-	ClientRatingMsgType    = 3
-	MinerRegistrationType  = 4
-	MinerServiceDoneType   = 5
-	MinerStatusUpdateType  = 6
-	MinerRewardClaimType   = 7
+	ClientRegistrationType   = 1
+	ServiceRequestType       = 2
+	ClientRatingMsgType      = 3
+	MinerRegistrationType    = 4
+	MinerServiceDoneType     = 5
+	MinerStatusUpdateType    = 6
+	MinerRewardClaimType     = 7
+	MinerServiceStartingType = 8
 )
 
 type ClientRegistrationMsg struct {
