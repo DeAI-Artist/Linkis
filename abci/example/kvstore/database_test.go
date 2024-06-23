@@ -453,6 +453,15 @@ func TestJobInfoStorageAndRetrieval(t *testing.T) {
 	assert.NoError(t, StoreJobInfo(db, minerID, job3))
 	assert.NoError(t, StoreJobInfo(db, minerID, job4))
 
+	retrievedJob, err := GetJobInfoByServiceID(db, minerID, "service123")
+	assert.NoError(t, err, "Retrieving job by ServiceID should not produce an error")
+	assert.Equal(t, job1, retrievedJob, "The job retrieved by ServiceID should match the stored job1")
+
+	// Test retrieving a job by a non-existent ServiceID
+	_, err = GetJobInfoByServiceID(db, minerID, "non_existent_service_id")
+	assert.Error(t, err, "Retrieving a non-existent job should produce an error")
+	assert.Equal(t, "no job found with ServiceID 'non_existent_service_id'", err.Error(), "Error message should be correct")
+
 	// Attempt to remove job2
 	assert.NoError(t, RemoveJobInfo(db, minerID, job2.ServiceID), "Removing job2 should not produce an error")
 
@@ -537,4 +546,31 @@ func TestServiceRequestUtilities(t *testing.T) {
 	requests, err = LoadServiceRequests(memDB)
 	assert.Nil(t, err, "LoadServiceRequests should not return an error after extreme high retention")
 	assert.Equal(t, 0, len(requests), "No requests should remain when retaining above the highest height")
+}
+
+func TestRemoveServiceRequestUtilities(t *testing.T) {
+	memDB := dbm.NewMemDB()
+
+	// Adding multiple service requests with the same ServiceID for different miners
+	err := AddServiceRequest(memDB, "service1234", "miner5678", 102)
+	assert.Nil(t, err)
+	err = AddServiceRequest(memDB, "service1234", "miner1234", 103)
+	assert.Nil(t, err)
+	err = AddServiceRequest(memDB, "service5678", "miner5678", 104)
+	assert.Nil(t, err)
+
+	// Verify initial add
+	requests, err := LoadServiceRequests(memDB)
+	assert.Nil(t, err)
+	assert.Equal(t, 3, len(requests), "Three service requests should be added initially")
+
+	// Remove service requests with a specific ServiceID
+	err = RemoveServiceRequest(memDB, "service1234")
+	assert.Nil(t, err, "RemoveServiceRequest should not return an error")
+
+	// Verify that only the requests with the different ServiceID remain
+	remainingRequests, err := LoadServiceRequests(memDB)
+	assert.Nil(t, err, "LoadServiceRequests should not return an error after removing specific service requests")
+	assert.Equal(t, 1, len(remainingRequests), "Only one request should remain after removal of specific ServiceID")
+	assert.Equal(t, "service5678", remainingRequests[0].ServiceID, "The remaining request should have the ServiceID 'service5678'")
 }

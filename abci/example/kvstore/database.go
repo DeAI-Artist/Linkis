@@ -366,6 +366,32 @@ func GetJobInfos(db db.DB, minerID string) ([]JobInfo, error) {
 	return jobs, nil
 }
 
+// GetJobInfoByServiceID retrieves a single JobInfo by ServiceID from a specified miner's list of jobs.
+func GetJobInfoByServiceID(db db.DB, minerID string, serviceID string) (JobInfo, error) {
+	key := BuildKeyForMinerJob(minerID)
+	dataBytes, err := db.Get(key)
+	if err != nil {
+		return JobInfo{}, fmt.Errorf("failed to retrieve jobs for miner ID '%s': %v", minerID, err)
+	}
+	if dataBytes == nil {
+		return JobInfo{}, fmt.Errorf("no jobs found for miner ID '%s'", minerID)
+	}
+
+	var jobs []JobInfo
+	err = json.Unmarshal(dataBytes, &jobs)
+	if err != nil {
+		return JobInfo{}, fmt.Errorf("error unmarshaling jobs data: %v", err)
+	}
+
+	for _, job := range jobs {
+		if job.ServiceID == serviceID {
+			return job, nil
+		}
+	}
+
+	return JobInfo{}, fmt.Errorf("no job found with ServiceID '%s'", serviceID)
+}
+
 // RemoveJobInfo removes a JobInfo from the list stored in the database under the miner's ID based on the ServiceID.
 func RemoveJobInfo(db db.DB, minerID string, serviceID string) error {
 	key := BuildKeyForMinerJob(minerID)
@@ -442,6 +468,23 @@ func AddServiceRequest(db db.DB, serviceID, minerID string, height int64) error 
 	}
 	requests = append(requests, ServiceRequest{ServiceID: serviceID, MinerID: minerID, Height: height})
 	return SaveServiceRequests(db, requests)
+}
+
+func RemoveServiceRequest(db db.DB, serviceID string) error {
+	requests, err := LoadServiceRequests(db)
+	if err != nil {
+		return err
+	}
+
+	// Filter out the service request by ServiceID only
+	filteredRequests := make(ServiceRequests, 0)
+	for _, req := range requests {
+		if req.ServiceID != serviceID {
+			filteredRequests = append(filteredRequests, req)
+		}
+	}
+
+	return SaveServiceRequests(db, filteredRequests)
 }
 
 func RetainServiceRequestsAboveHeight(db db.DB, retainHeight int64) error {
