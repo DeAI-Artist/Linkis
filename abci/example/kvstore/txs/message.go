@@ -50,6 +50,12 @@ type MinerStatusUpdateMsg struct {
 
 type MinerRewardClaimMsg struct{}
 
+// ServiceStartingMsg defines the data structure for initiating a service process.
+type ServiceStartingMsg struct {
+	ServiceID       string `json:"service_id"`        // Unique identifier for the service
+	MaxTimeoutBlock int64  `json:"max_timeout_block"` // Maximum number of blocks the service should run before automatic termination
+}
+
 // Implement ToBytes for each struct
 func (m ClientRegistrationMsg) ToBytes() ([]byte, error) {
 	return json.Marshal(m)
@@ -76,5 +82,10 @@ func (m MinerStatusUpdateMsg) ToBytes() ([]byte, error) {
 }
 
 func (m MinerRewardClaimMsg) ToBytes() ([]byte, error) {
+	return json.Marshal(m)
+}
+
+// ToBytes converts the ServiceStartingMsg to a byte slice for easy transmission and storage.
+func (m ServiceStartingMsg) ToBytes() ([]byte, error) {
 	return json.Marshal(m)
 }

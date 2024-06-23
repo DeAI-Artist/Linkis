@@ -153,6 +153,13 @@ func (app *Application) DeliverTx(req types.RequestDeliverTx) types.ResponseDeli
 		}
 		app.state.Size++
 
+	case txs.MinerServiceStartingType:
+		err := app.handleMinerServiceStarting(senderAddr, transaction.Msg)
+		if err != nil {
+			return types.ResponseDeliverTx{Code: code.CodeTypeUnknownError, GasWanted: 0, Log: err.Error()}
+		}
+		app.state.Size++
+
 	default:
 		return types.ResponseDeliverTx{Code: code.CodeTypeUnknownError, GasWanted: 0, Log: "Unknown message type"}
 	}
@@ -491,6 +498,7 @@ func (app *Application) handleServiceRequest(senderAddr string, msg txs.Message)
 		ServiceID:   serviceID,
 		ServiceType: srm.ServiceID,
 		ClientID:    senderAddr,
+		JobStatus:   Registered,
 	}
 
 	// Store JobInfo in the database under the key derived from the miner's ID
@@ -512,5 +520,22 @@ func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Messag
 	// This could involve updating states, logging information, etc.
 
 	// Since this template function is meant to always return nil for error
+	return nil
+}
+
+// handleServiceStarting processes the beginning of a service with conditions.
+func (app *Application) handleMinerServiceStarting(senderAddr string, msg txs.Message) error {
+	// Decode the content from the Message struct, expecting a service starting message.
+	ss, err := msg.DecodeContent()
+	if err != nil {
+		return fmt.Errorf("error decoding service starting info: %v", err)
+	}
+
+	// Type assertion to ServiceStartingMsg
+	ssm, ok := ss.(txs.ServiceStartingMsg)
+	if !ok {
+		return fmt.Errorf("type assertion to ServiceStartingMsg failed")
+	}
+
 	return nil
 }

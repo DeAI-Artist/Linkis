@@ -14,6 +14,12 @@ const (
 	Busy
 )
 
+// Additional constants for specific application states
+const (
+	Registered uint8 = 0 // Indicates an initial state or condition
+	Processing uint8 = 1 // Indicates a state where processing is underway
+)
+
 type ClientInfo struct {
 	Name  string
 	Power uint64
@@ -302,6 +308,7 @@ type JobInfo struct {
 	ServiceID   string `json:"service_id"`   // The unique identifier for the service
 	ClientID    string `json:"client_id"`    // The identifier of the client requesting the service
 	ServiceType uint64 `json:"service_type"` // The numeric identifier of the type of service
+	JobStatus   uint8  `json:"job_status"`   // The status of the job
 }
 
 // BuildKeyForMinerJob generates a database key for a given miner's job.
