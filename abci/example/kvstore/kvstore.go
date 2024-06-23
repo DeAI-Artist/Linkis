@@ -537,6 +537,34 @@ func (app *Application) handleMinerServiceStarting(senderAddr string, msg txs.Me
 		return fmt.Errorf("type assertion to ServiceStartingMsg failed")
 	}
 
-	_ = ssm
+	serviceID := ssm.ServiceID
+	minerID := senderAddr
+	blockOffset := ssm.MaxTimeoutBlock
+	currentBlock := app.state.Height
+
+	// Retrieve the job information by service ID
+	jobInfo, err := GetJobInfoByServiceID(app.state.db, minerID, serviceID)
+	if err != nil {
+		return fmt.Errorf("failed to retrieve job info for ServiceID '%s': %v", serviceID, err)
+	}
+
+	// Check if the jobInfo is effectively empty
+	if (JobInfo{}) == jobInfo {
+		return fmt.Errorf("no valid job info found for ServiceID '%s'", serviceID)
+	}
+
+	jobInfo.TimeoutBlock = blockOffset + currentBlock
+	jobInfo.JobStatus = Processing
+
+	// Store the updated job info back into the database
+	if err := StoreJobInfo(app.state.db, minerID, jobInfo); err != nil {
+		return fmt.Errorf("failed to store updated job info for ServiceID '%s': %v", serviceID, err)
+	}
+
+	// Remove the service request associated with this service ID
+	if err := RemoveServiceRequest(app.state.db, serviceID); err != nil {
+		return fmt.Errorf("failed to remove service request for ServiceID '%s': %v", serviceID, err)
+	}
+
 	return nil
 }
