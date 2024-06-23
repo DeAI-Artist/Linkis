@@ -419,19 +419,37 @@ func TestGenerateHashForMinerInfo(t *testing.T) {
 func TestJobInfoStorageAndRetrieval(t *testing.T) {
 	db := dbm.NewMemDB()
 	minerID := "miner123"
-	job := JobInfo{
+	job1 := JobInfo{
 		ServiceID:   "service123",
 		ClientID:    "client456",
 		ServiceType: 789,
+		JobStatus:   Registered, // Assuming Ready is a predefined constant
 	}
 
-	// Store the job info
-	assert.NoError(t, StoreJobInfo(db, minerID, job), "Storing job info should not produce an error")
+	job2 := JobInfo{
+		ServiceID:   "service123", // Same ServiceID to test update functionality
+		ClientID:    "client789",
+		ServiceType: 790,
+		JobStatus:   Processing, // Different status to verify update mechanism
+	}
 
-	// Retrieve the job info
-	retrievedJob, err := GetJobInfo(db, minerID)
-	assert.NoError(t, err, "Retrieving job info should not produce an error")
-	assert.Equal(t, job, retrievedJob, "The retrieved job info should match the stored info")
+	// Store the first job info
+	assert.NoError(t, StoreJobInfo(db, minerID, job1), "Storing job info should not produce an error")
+
+	// Retrieve the jobs list
+	retrievedJobs, err := GetJobInfos(db, minerID)
+	assert.NoError(t, err, "Retrieving job infos should not produce an error")
+	assert.Len(t, retrievedJobs, 1, "There should be one job info stored initially")
+	assert.Equal(t, job1, retrievedJobs[0], "The retrieved job info should match the initial stored info")
+
+	// Store the second job info which has the same ServiceID to test the update functionality
+	assert.NoError(t, StoreJobInfo(db, minerID, job2), "Updating job info should not produce an error")
+
+	// Retrieve the jobs list again to check updates
+	updatedJobs, err := GetJobInfos(db, minerID)
+	assert.NoError(t, err, "Retrieving job infos after update should not produce an error")
+	assert.Len(t, updatedJobs, 1, "There should still be only one job info after update")
+	assert.Equal(t, job2, updatedJobs[0], "The retrieved job info should match the updated info")
 }
 
 func TestServiceRequestUtilities(t *testing.T) {

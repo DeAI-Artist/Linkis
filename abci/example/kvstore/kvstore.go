@@ -537,5 +537,6 @@ func (app *Application) handleMinerServiceStarting(senderAddr string, msg txs.Me
 		return fmt.Errorf("type assertion to ServiceStartingMsg failed")
 	}
 
+	_ = ssm
 	return nil
 }

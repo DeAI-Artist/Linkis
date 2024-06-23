@@ -316,32 +316,53 @@ func BuildKeyForMinerJob(minerID string) []byte {
 	return []byte(fmt.Sprintf("minerjobs_%s", minerID))
 }
 
-// StoreJobInfo stores JobInfo in the database under the key derived from the miner's ID.
-func StoreJobInfo(db db.DB, minerID string, job JobInfo) error {
+// StoreJobInfo updates or appends a JobInfo in the list stored in the database under the miner's ID.
+func StoreJobInfo(db db.DB, minerID string, newJob JobInfo) error {
 	key := BuildKeyForMinerJob(minerID)
-	dataBytes, err := json.Marshal(job)
+	jobs, err := GetJobInfos(db, minerID)
 	if err != nil {
 		return err
 	}
+
+	// Check if the job with the same ServiceID already exists and update it
+	updated := false
+	for i, job := range jobs {
+		if job.ServiceID == newJob.ServiceID {
+			jobs[i] = newJob
+			updated = true
+			break
+		}
+	}
+
+	// If the job is not found, append the new job to the list
+	if !updated {
+		jobs = append(jobs, newJob)
+	}
+
+	dataBytes, err := json.Marshal(jobs)
+	if err != nil {
+		return err
+	}
+
 	return db.Set(key, dataBytes)
 }
 
-// GetJobInfo retrieves JobInfo from the database using the miner's ID.
-func GetJobInfo(db db.DB, minerID string) (JobInfo, error) {
+// GetJobInfos retrieves a list of JobInfo from the database using the miner's ID.
+func GetJobInfos(db db.DB, minerID string) ([]JobInfo, error) {
 	key := BuildKeyForMinerJob(minerID)
 	dataBytes, err := db.Get(key)
 	if err != nil {
-		return JobInfo{}, err
+		return nil, err
 	}
 	if dataBytes == nil {
-		return JobInfo{}, fmt.Errorf("no job found for miner ID '%s'", minerID)
+		return []JobInfo{}, nil // Return an empty list if no jobs are found
 	}
-	var job JobInfo
-	err = json.Unmarshal(dataBytes, &job)
+	var jobs []JobInfo
+	err = json.Unmarshal(dataBytes, &jobs)
 	if err != nil {
-		return JobInfo{}, err
+		return nil, err
 	}
-	return job, nil
+	return jobs, nil
 }
 
 const allServiceRequestsKey = "allServiceRequests"
