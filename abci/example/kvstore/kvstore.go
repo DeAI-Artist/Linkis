@@ -498,6 +498,11 @@ func (app *Application) handleServiceRequest(senderAddr string, msg txs.Message)
 		return fmt.Errorf("failed to store job info for miner ID '%s': %v", selectedMiner, err)
 	}
 
+	err = AddServiceRequest(app.state.db, serviceID, selectedMiner, currentHeight)
+	if err != nil {
+		return fmt.Errorf("failed to add service request: %v", err)
+	}
+
 	return nil
 }
 
