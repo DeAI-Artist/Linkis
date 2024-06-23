@@ -305,10 +305,11 @@ func GenerateHashForServiceInfo(clientAddress string, metadata []byte, blockHeig
 
 // JobInfo represents information about a specific job or task associated with a service.
 type JobInfo struct {
-	ServiceID   string `json:"service_id"`   // The unique identifier for the service
-	ClientID    string `json:"client_id"`    // The identifier of the client requesting the service
-	ServiceType uint64 `json:"service_type"` // The numeric identifier of the type of service
-	JobStatus   uint8  `json:"job_status"`   // The status of the job
+	ServiceID    string `json:"service_id"`    // The unique identifier for the service
+	ClientID     string `json:"client_id"`     // The identifier of the client requesting the service
+	ServiceType  uint64 `json:"service_type"`  // The numeric identifier of the type of service
+	JobStatus    uint8  `json:"job_status"`    // The status of the job
+	TimeoutBlock int64  `json:"timeout_block"` // The block index when the job will expire
 }
 
 // BuildKeyForMinerJob generates a database key for a given miner's job.
@@ -363,6 +364,40 @@ func GetJobInfos(db db.DB, minerID string) ([]JobInfo, error) {
 		return nil, err
 	}
 	return jobs, nil
+}
+
+// RemoveJobInfo removes a JobInfo from the list stored in the database under the miner's ID based on the ServiceID.
+func RemoveJobInfo(db db.DB, minerID string, serviceID string) error {
+	key := BuildKeyForMinerJob(minerID)
+	jobs, err := GetJobInfos(db, minerID)
+	if err != nil {
+		return err
+	}
+
+	// Filter out the job with the given ServiceID
+	updatedJobs := make([]JobInfo, 0)
+	found := false
+	for _, job := range jobs {
+		if job.ServiceID != serviceID {
+			updatedJobs = append(updatedJobs, job)
+		} else {
+			found = true
+		}
+	}
+
+	// If no job was found with the given ServiceID, return an error
+	if !found {
+		return fmt.Errorf("no job found with ServiceID '%s'", serviceID)
+	}
+
+	// Serialize the updated list of jobs back to JSON
+	dataBytes, err := json.Marshal(updatedJobs)
+	if err != nil {
+		return err
+	}
+
+	// Save the updated list back to the database
+	return db.Set(key, dataBytes)
 }
 
 const allServiceRequestsKey = "allServiceRequests"

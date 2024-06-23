@@ -423,33 +423,53 @@ func TestJobInfoStorageAndRetrieval(t *testing.T) {
 		ServiceID:   "service123",
 		ClientID:    "client456",
 		ServiceType: 789,
-		JobStatus:   Registered, // Assuming Ready is a predefined constant
+		JobStatus:   Processing,
 	}
 
 	job2 := JobInfo{
-		ServiceID:   "service123", // Same ServiceID to test update functionality
+		ServiceID:   "service126",
 		ClientID:    "client789",
-		ServiceType: 790,
-		JobStatus:   Processing, // Different status to verify update mechanism
+		ServiceType: 794,
+		JobStatus:   Registered,
 	}
 
-	// Store the first job info
-	assert.NoError(t, StoreJobInfo(db, minerID, job1), "Storing job info should not produce an error")
+	job3 := JobInfo{
+		ServiceID:   "service124",
+		ClientID:    "client101",
+		ServiceType: 791,
+		JobStatus:   Processing,
+	}
 
-	// Retrieve the jobs list
-	retrievedJobs, err := GetJobInfos(db, minerID)
-	assert.NoError(t, err, "Retrieving job infos should not produce an error")
-	assert.Len(t, retrievedJobs, 1, "There should be one job info stored initially")
-	assert.Equal(t, job1, retrievedJobs[0], "The retrieved job info should match the initial stored info")
+	job4 := JobInfo{
+		ServiceID:   "service125",
+		ClientID:    "client102",
+		ServiceType: 792,
+		JobStatus:   Registered,
+	}
 
-	// Store the second job info which has the same ServiceID to test the update functionality
-	assert.NoError(t, StoreJobInfo(db, minerID, job2), "Updating job info should not produce an error")
+	// Store the jobs
+	assert.NoError(t, StoreJobInfo(db, minerID, job1))
+	assert.NoError(t, StoreJobInfo(db, minerID, job2))
+	assert.NoError(t, StoreJobInfo(db, minerID, job3))
+	assert.NoError(t, StoreJobInfo(db, minerID, job4))
 
-	// Retrieve the jobs list again to check updates
-	updatedJobs, err := GetJobInfos(db, minerID)
-	assert.NoError(t, err, "Retrieving job infos after update should not produce an error")
-	assert.Len(t, updatedJobs, 1, "There should still be only one job info after update")
-	assert.Equal(t, job2, updatedJobs[0], "The retrieved job info should match the updated info")
+	// Attempt to remove job2
+	assert.NoError(t, RemoveJobInfo(db, minerID, job2.ServiceID), "Removing job2 should not produce an error")
+
+	// Retrieve and verify the remaining jobs
+	remainingJobs, err := GetJobInfos(db, minerID)
+	//spew.Dump(remainingJobs[0].TimeoutBlock)
+	assert.NoError(t, err, "Retrieving job infos after removal should not produce an error")
+	assert.Len(t, remainingJobs, 3, "There should be three jobs remaining after one removal")
+	assert.NotContains(t, remainingJobs, job2, "Remaining jobs should not include job2")
+	assert.Contains(t, remainingJobs, job1, "Remaining jobs should include job1")
+	assert.Contains(t, remainingJobs, job3, "Remaining jobs should include job3")
+	assert.Contains(t, remainingJobs, job4, "Remaining jobs should include job4")
+
+	// Attempt to remove a non-existent job
+	err = RemoveJobInfo(db, minerID, "non_existent_service_id")
+	assert.Error(t, err, "Attempting to remove a non-existent job should produce an error")
+	assert.Equal(t, "no job found with ServiceID 'non_existent_service_id'", err.Error(), "Error message should be correct")
 }
 
 func TestServiceRequestUtilities(t *testing.T) {
