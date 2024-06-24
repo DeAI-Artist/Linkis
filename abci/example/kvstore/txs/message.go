@@ -39,7 +39,8 @@ type MinerRegistrationMsg struct {
 }
 
 type MinerServiceDoneMsg struct {
-	ServiceID string `json:"service_id"`
+	ServiceID   string `json:"service_id"`   // Unique identifier for the service
+	ServiceType uint64 `json:"service_type"` // Numeric identifier of the type of service completed
 }
 
 type MinerStatusUpdateMsg struct {

@@ -515,15 +515,6 @@ func (app *Application) handleServiceRequest(senderAddr string, msg txs.Message)
 	return nil
 }
 
-// handleMinerServiceDone processes a miner service done event, always returns nil error
-func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Message) error {
-	// Your logic to handle the miner service done event goes here
-	// This could involve updating states, logging information, etc.
-
-	// Since this template function is meant to always return nil for error
-	return nil
-}
-
 // handleServiceStarting processes the beginning of a service with conditions.
 func (app *Application) handleMinerServiceStarting(senderAddr string, msg txs.Message) error {
 	// Decode the content from the Message struct, expecting a service starting message.
@@ -565,6 +556,32 @@ func (app *Application) handleMinerServiceStarting(senderAddr string, msg txs.Me
 	// Remove the service request associated with this service ID
 	if err := RemoveServiceRequest(app.state.db, serviceID); err != nil {
 		return fmt.Errorf("failed to remove service request for ServiceID '%s': %v", serviceID, err)
+	}
+
+	return nil
+}
+
+// handleMinerServiceDone processes a miner service done event.
+func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Message) error {
+	// Decode the content from the Message struct, expecting a miner service done message.
+	msd, err := msg.DecodeContent()
+	if err != nil {
+		return fmt.Errorf("error decoding miner service done info: %v", err)
+	}
+
+	// Type assertion to MinerServiceDoneMsg
+	msdm, ok := msd.(txs.MinerServiceDoneMsg)
+	if !ok {
+		return fmt.Errorf("type assertion to MinerServiceDoneMsg failed")
+	}
+
+	serviceID := msdm.ServiceID
+	minerID := senderAddr
+
+	// Increment the service type count in the work records
+	currentHeight := app.state.Height // Assuming you track current block height in app.state
+	if err := app.state.MinerActivityRecords.IncrementServiceType(currentHeight, minerID, jobInfo.ServiceType); err != nil {
+		return fmt.Errorf("failed to increment service type count: %v", err)
 	}
 
 	return nil
