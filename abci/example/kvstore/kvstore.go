@@ -576,12 +576,27 @@ func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Messag
 	}
 
 	serviceID := msdm.ServiceID
+	serivceType := msdm.ServiceType
 	minerID := senderAddr
 
 	// Increment the service type count in the work records
 	currentHeight := app.state.Height // Assuming you track current block height in app.state
-	if err := app.state.MinerActivityRecords.IncrementServiceType(currentHeight, minerID, jobInfo.ServiceType); err != nil {
+	if err := app.state.MinerActivityRecords.IncrementServiceType(currentHeight, minerID, serivceType); err != nil {
 		return fmt.Errorf("failed to increment service type count: %v", err)
+	}
+
+	// Retrieve the job information by service ID
+	jobInfo, err := GetJobInfoByServiceID(app.state.db, minerID, serviceID)
+	if err != nil {
+		return fmt.Errorf("failed to retrieve job info for ServiceID '%s': %v", serviceID, err)
+	}
+	// Check if the jobInfo is effectively empty
+	if (JobInfo{}) == jobInfo {
+		return fmt.Errorf("no valid job info found for ServiceID '%s'", serviceID)
+	}
+	// Remove the job info now that the service is completed
+	if err := RemoveJobInfo(app.state.db, minerID, serviceID); err != nil {
+		return fmt.Errorf("failed to remove job info for ServiceID '%s': %v", serviceID, err)
 	}
 
 	return nil
