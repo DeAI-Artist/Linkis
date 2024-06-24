@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	db "github.com/tendermint/tm-db"
+	"sort"
 )
 
 const (
@@ -505,4 +506,95 @@ func RetainServiceRequestsAboveHeight(db db.DB, retainHeight int64) error {
 		requests = requests[lastIndex+1:]
 	}
 	return SaveServiceRequests(db, requests)
+}
+
+// ServiceTypeCount maps a service type to the number of times a miner has served that type.
+type ServiceTypeCount map[uint64]int
+
+// MinerServices contains a miner ID and a map of service types with their respective counts.
+type MinerServices struct {
+	MinerID      string           `json:"miner_id"`
+	ServiceTypes ServiceTypeCount `json:"service_types"`
+}
+
+// BlockServices holds the block height and a list of miner services provided at that height.
+type BlockServices struct {
+	BlockHeight   int64           `json:"block_height"`
+	MinerServices []MinerServices `json:"miner_services"`
+}
+
+// MinerWorkRecords manages a collection of BlockServices, tracking services provided by miners over time.
+type MinerWorkRecords []BlockServices
+
+func (mwr *MinerWorkRecords) AddOrUpdateRecord(newBlock BlockServices) error {
+	index, found := mwr.FindByHeight(newBlock.BlockHeight)
+	if found {
+		(*mwr)[index] = newBlock
+	} else {
+		*mwr = append(*mwr, newBlock)
+		sort.Slice(*mwr, func(i, j int) bool { return (*mwr)[i].BlockHeight < (*mwr)[j].BlockHeight })
+	}
+	return nil
+}
+
+func (mwr MinerWorkRecords) FindByHeight(height int64) (int, bool) {
+	for i, bs := range mwr {
+		if bs.BlockHeight == height {
+			return i, true
+		}
+	}
+	return -1, false
+}
+
+func (mwr *MinerWorkRecords) UpdateMinerServices(height int64, minerServices MinerServices) error {
+	index, found := mwr.FindByHeight(height)
+	if !found {
+		return mwr.AddOrUpdateRecord(BlockServices{
+			BlockHeight:   height,
+			MinerServices: []MinerServices{minerServices},
+		})
+	}
+
+	minerIndex, found := findMiner((*mwr)[index].MinerServices, minerServices.MinerID)
+	if found {
+		(*mwr)[index].MinerServices[minerIndex] = minerServices
+	} else {
+		(*mwr)[index].MinerServices = append((*mwr)[index].MinerServices, minerServices)
+	}
+	return nil
+}
+
+func findMiner(miners []MinerServices, minerID string) (int, bool) {
+	for i, miner := range miners {
+		if miner.MinerID == minerID {
+			return i, true
+		}
+	}
+	return -1, false
+}
+
+func (mwr *MinerWorkRecords) IncrementServiceType(height int64, minerID string, serviceType uint64) error {
+	index, found := mwr.FindByHeight(height)
+	if !found {
+		newBlock := BlockServices{
+			BlockHeight: height,
+			MinerServices: []MinerServices{{
+				MinerID:      minerID,
+				ServiceTypes: ServiceTypeCount{serviceType: 1},
+			}},
+		}
+		return mwr.AddOrUpdateRecord(newBlock)
+	}
+
+	minerIndex, found := findMiner((*mwr)[index].MinerServices, minerID)
+	if !found {
+		(*mwr)[index].MinerServices = append((*mwr)[index].MinerServices, MinerServices{
+			MinerID:      minerID,
+			ServiceTypes: ServiceTypeCount{serviceType: 1},
+		})
+		return nil
+	}
+
+	(*mwr)[index].MinerServices[minerIndex].ServiceTypes[serviceType]++
+	return nil
 }

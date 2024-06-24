@@ -574,3 +574,39 @@ func TestRemoveServiceRequestUtilities(t *testing.T) {
 	assert.Equal(t, 1, len(remainingRequests), "Only one request should remain after removal of specific ServiceID")
 	assert.Equal(t, "service5678", remainingRequests[0].ServiceID, "The remaining request should have the ServiceID 'service5678'")
 }
+
+func TestIncrementServiceType(t *testing.T) {
+	var workRecords MinerWorkRecords
+
+	// Example incrementing service type count
+	if err := workRecords.IncrementServiceType(100, "miner123", 1); err != nil {
+		t.Errorf("Failed to increment service type: %v", err)
+	}
+	if len(workRecords) != 1 || len(workRecords[0].MinerServices) != 1 || workRecords[0].MinerServices[0].ServiceTypes[1] != 1 {
+		t.Errorf("Unexpected work records after first increment: %+v", workRecords)
+	}
+
+	// Adding another service type count to the same miner and block
+	if err := workRecords.IncrementServiceType(100, "miner123", 2); err != nil {
+		t.Errorf("Failed to increment second service type: %v", err)
+	}
+	if serviceCount, ok := workRecords[0].MinerServices[0].ServiceTypes[2]; !ok || serviceCount != 1 {
+		t.Errorf("Service type 2 count was not incremented correctly. Got: %+v", workRecords[0].MinerServices[0].ServiceTypes)
+	}
+
+	// Adding a new service type count to a new block
+	if err := workRecords.IncrementServiceType(101, "miner123", 1); err != nil {
+		t.Errorf("Failed to add a new block: %v", err)
+	}
+	if len(workRecords) != 2 {
+		t.Errorf("New block was not added correctly. Total blocks: %d", len(workRecords))
+	}
+
+	// Adding a new miner to an existing block
+	if err := workRecords.IncrementServiceType(100, "miner124", 1); err != nil {
+		t.Errorf("Failed to add a new miner to existing block: %v", err)
+	}
+	if len(workRecords[0].MinerServices) != 2 || workRecords[0].MinerServices[1].ServiceTypes[1] != 1 {
+		t.Errorf("New miner was not added correctly to block 100: %+v", workRecords[0].MinerServices)
+	}
+}

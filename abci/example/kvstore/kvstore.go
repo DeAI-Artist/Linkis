@@ -22,10 +22,11 @@ var (
 )
 
 type State struct {
-	db      dbm.DB
-	Size    int64  `json:"size"`
-	Height  int64  `json:"height"`
-	AppHash []byte `json:"app_hash"`
+	db                   dbm.DB
+	Size                 int64            `json:"size"`
+	Height               int64            `json:"height"`
+	AppHash              []byte           `json:"app_hash"`
+	MinerActivityRecords MinerWorkRecords `json:"miner_activity_records"`
 }
 
 func loadState(db dbm.DB) State {
