@@ -47,14 +47,16 @@ require (
 	google.golang.org/grpc v1.50.1
 )
 
-require github.com/vektra/mockery/v2 v2.14.0
+require (
+	github.com/ethereum/c-kzg-4844/bindings/go v0.0.0-20230126171313-363c7d7593b4
+	github.com/ethereum/go-ethereum v1.14.5
+	github.com/vektra/mockery/v2 v2.14.0
+)
 
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.2.0
 	github.com/consensys/gnark-crypto v0.12.1
 	github.com/crate-crypto/go-kzg-4844 v1.0.0
-	github.com/ethereum/c-kzg-4844 v1.0.0
-	github.com/ethereum/go-ethereum v1.14.5
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/gofuzz v1.2.0
 	github.com/informalsystems/tm-load-test v1.0.0
