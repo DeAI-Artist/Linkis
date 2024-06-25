@@ -203,31 +203,40 @@ func (app *Application) CheckTx(req types.RequestCheckTx) types.ResponseCheckTx 
 }
 
 func (app *Application) Commit() types.ResponseCommit {
-	// Compute a hash of the application state
 	hasher := sha256.New()
 
-	// Iterate over all key-value pairs in the database
-	iterator, err := app.state.db.Iterator(nil, nil)
+	// Serialize and hash critical parts of the state
+	// This approach assumes you keep track of changes rather than iterate through the entire DB
+	stateData, err := json.Marshal(struct {
+		Size   int64  `json:"size"`
+		Height int64  `json:"height"`
+		Hash   []byte `json:"app_hash"`
+	}{
+		Size:   app.state.Size,
+		Height: app.state.Height,
+		Hash:   app.state.AppHash,
+	})
 	if err != nil {
-		panic(err) // handle the error appropriately in your application
+		panic(err) // handle the error more gracefully in production
 	}
-	defer iterator.Close()
+	hasher.Write(stateData)
 
-	for ; iterator.Valid(); iterator.Next() {
-		key := iterator.Key()
-		value := iterator.Value()
-		hasher.Write(key)
-		hasher.Write(value)
+	// Optionally include miner activity records
+	activityData, err := json.Marshal(app.state.MinerActivityRecords)
+	if err != nil {
+		panic(err) // handle the error appropriately
 	}
+	hasher.Write(activityData)
 
-	// Get the final hash sum
+	// Compute the new app hash
 	appHash := hasher.Sum(nil)
 
-	// Update the state with the new hash and height
+	// Update the state with the new hash and increment the height
 	app.state.AppHash = appHash
 	app.state.Height++
-	saveState(app.state)
+	saveState(app.state) // Save the updated state to the database or config
 
+	// Prepare the commit response
 	resp := types.ResponseCommit{Data: appHash}
 	if app.RetainBlocks > 0 && app.state.Height >= app.RetainBlocks {
 		resp.RetainHeight = app.state.Height - app.RetainBlocks + 1
