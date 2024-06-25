@@ -13,7 +13,7 @@ endif
 LD_FLAGS = -X github.com/DeAI-Artist/MintAI/version.TMCoreSemVer=$(VERSION)
 BUILD_FLAGS = -mod=readonly -ldflags "$(LD_FLAGS)"
 HTTPS_GIT := https://github.com/DeAI-Artist/MintAI.git
-CGO_ENABLED ?= 0
+CGO_ENABLED ?= 1
 
 # handle nostrip
 ifeq (,$(findstring nostrip,$(MINTAI_BUILD_OPTIONS)))

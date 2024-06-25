@@ -8,10 +8,10 @@ BUILD_FLAGS = -ldflags "-X github.com/DeAI-Artist/MintAI/version.TMCoreSemVer=$(
 .DEFAULT_GOAL := build
 
 build:
-	CGO_ENABLED=0 go build $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o ../../build/tm-signer-harness main.go
+	CGO_ENABLED=1 go build $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o ../../build/tm-signer-harness main.go
 
 install:
-	CGO_ENABLED=0 go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) .
+	CGO_ENABLED=1 go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) .
 
 docker-image:
 	GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o tm-signer-harness main.go
