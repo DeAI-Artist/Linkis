@@ -57,8 +57,10 @@ func EncodeMessageAndSignature(message string, signature string) (string, error)
 	messageBytes := []byte(message)
 	messageLength := uint32(len(messageBytes))
 
-	// Remove the "0x" prefix from the hex string
-	signature = signature[2:]
+	// Check if the signature has "0x" prefix and remove it if present
+	if strings.HasPrefix(signature, "0x") {
+		signature = signature[2:]
+	}
 
 	// Decode the hex string to a byte slice
 	signatureBytes, err := hex.DecodeString(signature)
@@ -97,7 +99,7 @@ func DecodeMessageAndSignature(data string) (string, string, error) {
 	// Read the signature bytes
 	signatureBytes := dataBytes[4+messageLength:]
 
-	return string(messageBytes), "0x" + hex.EncodeToString(signatureBytes), nil
+	return string(messageBytes), hex.EncodeToString(signatureBytes), nil
 }
 
 /*

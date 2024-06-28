@@ -70,7 +70,7 @@ func TestHexToBytes(t *testing.T) {
 
 func TestEncodeDecodeMessageAndSignature(t *testing.T) {
 	message := "Example `personal_sign` message"
-	signature := "0x7635254a22cd7762ded328cdb27292884ee2ea21500bbff52ff549b09ef0aaa80dc5e5bc03d67c3ce5176747dcec576bf64d3959bf4a5b0b890fa188026825531b"
+	signature := "7635254a22cd7762ded328cdb27292884ee2ea21500bbff52ff549b09ef0aaa80dc5e5bc03d67c3ce5176747dcec576bf64d3959bf4a5b0b890fa188026825531b"
 
 	encoded, err := EncodeMessageAndSignature(message, signature)
 	if err != nil {
