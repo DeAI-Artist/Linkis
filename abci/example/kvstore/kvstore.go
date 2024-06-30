@@ -247,7 +247,7 @@ func (app *Application) Commit() types.ResponseCommit {
 // Returns an associated value or nil if missing.
 func (app *Application) Query(reqQuery types.RequestQuery) (resQuery types.ResponseQuery) {
 	if reqQuery.Prove {
-		value, err := app.state.db.Get(prefixKey(reqQuery.Data))
+		value, err := app.state.db.Get(reqQuery.Data)
 		if err != nil {
 			panic(err)
 		}
@@ -265,7 +265,7 @@ func (app *Application) Query(reqQuery types.RequestQuery) (resQuery types.Respo
 	}
 
 	resQuery.Key = reqQuery.Data
-	value, err := app.state.db.Get(prefixKey(reqQuery.Data))
+	value, err := app.state.db.Get(reqQuery.Data)
 	if err != nil {
 		panic(err)
 	}
