@@ -225,7 +225,7 @@ func testFreeAddr(t *testing.T) string {
 func TestCreateProposalBlock(t *testing.T) {
 	config := cfg.ResetTestRoot("node_create_proposal")
 	defer os.RemoveAll(config.RootDir)
-	cc := proxy.NewLocalClientCreator(kvstore.NewApplication())
+	cc := proxy.NewLocalClientCreator(kvstore.NewApplication(cfg.GetDefaultDBDir()))
 	proxyApp := proxy.NewAppConns(cc)
 	err := proxyApp.Start()
 	require.Nil(t, err)
@@ -332,7 +332,7 @@ func TestCreateProposalBlock(t *testing.T) {
 func TestMaxProposalBlockSize(t *testing.T) {
 	config := cfg.ResetTestRoot("node_create_proposal")
 	defer os.RemoveAll(config.RootDir)
-	cc := proxy.NewLocalClientCreator(kvstore.NewApplication())
+	cc := proxy.NewLocalClientCreator(kvstore.NewApplication(cfg.GetDefaultDBDir()))
 	proxyApp := proxy.NewAppConns(cc)
 	err := proxyApp.Start()
 	require.Nil(t, err)
