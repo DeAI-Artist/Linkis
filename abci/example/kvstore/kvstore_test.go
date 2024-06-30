@@ -59,7 +59,7 @@ func testKVStore(t *testing.T, app types.Application, tx []byte, key, value stri
 }
 
 func TestKVStoreKV(t *testing.T) {
-	kvstore := NewApplication()
+	kvstore := NewApplication("")
 	key := testKey
 	value := key
 	tx := []byte(key)
@@ -273,7 +273,7 @@ func makeGRPCClientServer(app types.Application, name string) (abcicli.Client, s
 
 func TestClientServer(t *testing.T) {
 	// set up socket app
-	kvstore := NewApplication()
+	kvstore := NewApplication("")
 	client, server, err := makeSocketClientServer(kvstore, "kvstore-socket")
 	require.NoError(t, err)
 	t.Cleanup(func() {
@@ -290,7 +290,7 @@ func TestClientServer(t *testing.T) {
 	runClientTests(t, client)
 
 	// set up grpc app
-	kvstore = NewApplication()
+	kvstore = NewApplication("")
 	gclient, gserver, err := makeGRPCClientServer(kvstore, "/tmp/kvstore-grpc")
 	require.NoError(t, err)
 
