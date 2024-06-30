@@ -15,6 +15,7 @@ import (
 	"github.com/DeAI-Artist/MintAI/abci/example/code"
 	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
 	"github.com/DeAI-Artist/MintAI/abci/types"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
 )
 
@@ -59,7 +60,7 @@ func testKVStore(t *testing.T, app types.Application, tx []byte, key, value stri
 }
 
 func TestKVStoreKV(t *testing.T) {
-	kvstore := NewApplication("")
+	kvstore := NewApplication(cfg.GetDefaultDBDir())
 	key := testKey
 	value := key
 	tx := []byte(key)
@@ -273,7 +274,7 @@ func makeGRPCClientServer(app types.Application, name string) (abcicli.Client, s
 
 func TestClientServer(t *testing.T) {
 	// set up socket app
-	kvstore := NewApplication("")
+	kvstore := NewApplication(cfg.GetDefaultDBDir())
 	client, server, err := makeSocketClientServer(kvstore, "kvstore-socket")
 	require.NoError(t, err)
 	t.Cleanup(func() {
@@ -290,7 +291,7 @@ func TestClientServer(t *testing.T) {
 	runClientTests(t, client)
 
 	// set up grpc app
-	kvstore = NewApplication("")
+	kvstore = NewApplication(cfg.GetDefaultDBDir())
 	gclient, gserver, err := makeGRPCClientServer(kvstore, "/tmp/kvstore-grpc")
 	require.NoError(t, err)
 
