@@ -11,6 +11,7 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/libs/log"
 	"github.com/DeAI-Artist/MintAI/light"
 	"github.com/DeAI-Artist/MintAI/light/provider"
@@ -156,7 +157,7 @@ func ExampleClient_VerifyLightBlockAtHeight() {
 
 func TestMain(m *testing.M) {
 	// start a tendermint node (and kvstore) in the background to test against
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	node := rpctest.StartTendermint(app, rpctest.SuppressStdout)
 
 	code := m.Run()
