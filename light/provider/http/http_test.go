@@ -11,6 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/light/provider"
 	lighthttp "github.com/DeAI-Artist/MintAI/light/provider/http"
 	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
@@ -34,7 +35,7 @@ func TestNewProvider(t *testing.T) {
 }
 
 func TestProvider(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	app.RetainBlocks = 10
 	node := rpctest.StartTendermint(app)
 
