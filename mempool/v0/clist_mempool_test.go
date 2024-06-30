@@ -21,6 +21,7 @@ import (
 	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
 	abci "github.com/DeAI-Artist/MintAI/abci/types"
 	"github.com/DeAI-Artist/MintAI/config"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/libs/log"
 	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
 	"github.com/DeAI-Artist/MintAI/libs/service"
@@ -119,7 +120,7 @@ func checkTxs(t *testing.T, mp mempool.Mempool, count int, peerID uint16) types.
 }
 
 func TestReapMaxBytesMaxGas(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -168,7 +169,7 @@ func TestReapMaxBytesMaxGas(t *testing.T) {
 }
 
 func TestMempoolFilters(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -207,7 +208,7 @@ func TestMempoolFilters(t *testing.T) {
 }
 
 func TestMempoolUpdate(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -254,7 +255,7 @@ func TestMempoolUpdateDoesNotPanicWhenApplicationMissedTx(t *testing.T) {
 	mockClient.On("FlushAsync", mock.Anything).Return(abciclient.NewReqRes(abci.ToRequestFlush()), nil)
 	mockClient.On("SetResponseCallback", mock.MatchedBy(func(cb abciclient.Callback) bool { callback = cb; return true }))
 
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup, err := newMempoolWithAppMock(cc, mockClient)
 	require.NoError(t, err)
@@ -295,7 +296,7 @@ func TestMempoolUpdateDoesNotPanicWhenApplicationMissedTx(t *testing.T) {
 }
 
 func TestMempool_KeepInvalidTxsInCache(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	wcfg := config.DefaultConfig()
 	wcfg.Mempool.KeepInvalidTxsInCache = true
@@ -347,7 +348,7 @@ func TestMempool_KeepInvalidTxsInCache(t *testing.T) {
 }
 
 func TestTxsAvailable(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -391,7 +392,7 @@ func TestTxsAvailable(t *testing.T) {
 }
 
 func TestSerialReap(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 
 	mp, cleanup := newMempoolWithApp(cc)
@@ -501,7 +502,7 @@ func TestSerialReap(t *testing.T) {
 }
 
 func TestMempool_CheckTxChecksTxSize(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 
 	mempl, cleanup := newMempoolWithApp(cc)
@@ -547,7 +548,7 @@ func TestMempool_CheckTxChecksTxSize(t *testing.T) {
 }
 
 func TestMempoolTxsBytes(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 
 	cfg := config.ResetTestRoot("mempool_test")
@@ -591,7 +592,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 	}
 
 	// 6. zero after tx is rechecked and removed due to not being valid anymore
-	app2 := kvstore.NewApplication()
+	app2 := kvstore.NewApplication(config.GetDefaultDBDir())
 	cc = proxy.NewLocalClientCreator(app2)
 
 	mp, cleanup = newMempoolWithApp(cc)
@@ -644,7 +645,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 // since otherwise we're not actually testing the concurrency of the mempool here!
 func TestMempoolRemoteAppConcurrency(t *testing.T) {
 	sockPath := fmt.Sprintf("unix:///tmp/echo_%v.sock", tmrand.Str(6))
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	_, server := newRemoteApp(t, sockPath, app)
 	t.Cleanup(func() {
 		if err := server.Stop(); err != nil {
