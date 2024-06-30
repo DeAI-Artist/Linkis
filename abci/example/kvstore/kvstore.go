@@ -93,7 +93,7 @@ func (app *Application) DeliverTx(req types.RequestDeliverTx) types.ResponseDeli
 	tx := string(req.Tx)
 
 	msg, sig, _ := txs.DecodeMessageAndSignature(tx)
-	msgBytes, _ := hex.DecodeString(msg)
+	msgBytes := []byte(msg)
 	sigBytes, _ := hex.DecodeString(sig)
 	pubKey, _ := txs.RecoverPubKey(txs.HashPersonalMessage(msgBytes), sigBytes)
 	senderAddr := txs.AddressFromPublicKey(pubKey)
