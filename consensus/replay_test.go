@@ -73,7 +73,7 @@ func startNewStateAndWaitForBlock(t *testing.T, consensusReplayConfig *cfg.Confi
 		consensusReplayConfig,
 		state,
 		privValidator,
-		kvstore.NewApplication(),
+		kvstore.NewApplication(cfg.GetDefaultDBDir()),
 		blockDB,
 	)
 	cs.SetLogger(logger)
@@ -174,7 +174,7 @@ LOOP:
 			consensusReplayConfig,
 			state,
 			privValidator,
-			kvstore.NewApplication(),
+			kvstore.NewApplication(cfg.GetDefaultDBDir()),
 			blockDB,
 		)
 		cs.SetLogger(logger)
