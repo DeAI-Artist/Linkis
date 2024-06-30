@@ -75,7 +75,7 @@ func (app *application) CheckTx(req abci.RequestCheckTx) abci.ResponseCheckTx {
 func setup(t testing.TB, cacheSize int, options ...TxMempoolOption) *TxMempool {
 	t.Helper()
 
-	app := &application{kvstore.NewApplication()}
+	app := &application{kvstore.NewApplication(config.GetDefaultDBDir())}
 	cc := proxy.NewLocalClientCreator(app)
 
 	cfg := config.ResetTestRoot(strings.ReplaceAll(t.Name(), "/", "|"))
