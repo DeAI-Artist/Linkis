@@ -81,6 +81,10 @@ func NewApplication(dbDir string) *Application {
 	return &Application{state: state}
 }
 
+func (app *Application) SetLogger(l log.Logger) {
+	app.logger = l
+}
+
 func (app *Application) Info(req types.RequestInfo) (resInfo types.ResponseInfo) {
 	return types.ResponseInfo{
 		Data:             fmt.Sprintf("{\"size\":%v}", app.state.Size),
