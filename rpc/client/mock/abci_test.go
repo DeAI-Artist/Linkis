@@ -11,6 +11,7 @@ import (
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/libs/bytes"
 	"github.com/DeAI-Artist/MintAI/rpc/client"
 	"github.com/DeAI-Artist/MintAI/rpc/client/mock"
@@ -161,7 +162,7 @@ func TestABCIRecorder(t *testing.T) {
 
 func TestABCIApp(t *testing.T) {
 	assert, require := assert.New(t), require.New(t)
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	m := mock.ABCIApp{app}
 
 	// get some info
