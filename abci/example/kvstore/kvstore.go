@@ -1,12 +1,17 @@
 package kvstore
 
 import (
+	"bytes"
 	"crypto/sha256"
+	"encoding/base64"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore/txs"
+	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
 	pc "github.com/DeAI-Artist/MintAI/proto/tendermint/crypto"
+	"strconv"
+	"strings"
 
 	dbm "github.com/tendermint/tm-db"
 
@@ -77,12 +82,26 @@ type Application struct {
 }
 
 func NewApplication(dbDir string) *Application {
-	state := loadState(dbm.NewMemDB())
-	return &Application{state: state}
+	name := "kvstore"
+	db, err := dbm.NewGoLevelDB(name, dbDir)
+	if err != nil {
+		panic(err)
+	}
+	state := loadState(db)
+
+	return &Application{
+		state:              state,
+		valAddrToPubKeyMap: make(map[string]pc.PublicKey),
+		logger:             log.NewNopLogger(),
+	}
 }
 
 func (app *Application) SetLogger(l log.Logger) {
 	app.logger = l
+}
+
+func (app *Application) SetOption(req types.RequestSetOption) types.ResponseSetOption {
+	return app.SetOption(req)
 }
 
 func (app *Application) Info(req types.RequestInfo) (resInfo types.ResponseInfo) {
@@ -93,6 +112,115 @@ func (app *Application) Info(req types.RequestInfo) (resInfo types.ResponseInfo)
 		LastBlockHeight:  app.state.Height,
 		LastBlockAppHash: app.state.AppHash,
 	}
+}
+
+// Track the block hash and header information
+func (app *Application) BeginBlock(req types.RequestBeginBlock) types.ResponseBeginBlock {
+	// reset valset changes
+	app.ValUpdates = make([]types.ValidatorUpdate, 0)
+
+	// Punish validators who committed equivocation.
+	for _, ev := range req.ByzantineValidators {
+		if ev.Type == types.EvidenceType_DUPLICATE_VOTE {
+			addr := string(ev.Validator.Address)
+			if pubKey, ok := app.valAddrToPubKeyMap[addr]; ok {
+				app.updateValidator(types.ValidatorUpdate{
+					PubKey: pubKey,
+					Power:  ev.Validator.Power - 1,
+				})
+				app.logger.Info("Decreased val power by 1 because of the equivocation",
+					"val", addr)
+			} else {
+				app.logger.Error("Wanted to punish val, but can't find it",
+					"val", addr)
+			}
+		}
+	}
+
+	return types.ResponseBeginBlock{}
+}
+
+// Update the validator set
+func (app *Application) EndBlock(req types.RequestEndBlock) types.ResponseEndBlock {
+	return types.ResponseEndBlock{ValidatorUpdates: app.ValUpdates}
+}
+
+func (app *Application) ListSnapshots(
+	req types.RequestListSnapshots) types.ResponseListSnapshots {
+	return types.ResponseListSnapshots{}
+}
+
+func (app *Application) LoadSnapshotChunk(
+	req types.RequestLoadSnapshotChunk) types.ResponseLoadSnapshotChunk {
+	return types.ResponseLoadSnapshotChunk{}
+}
+
+func (app *Application) OfferSnapshot(
+	req types.RequestOfferSnapshot) types.ResponseOfferSnapshot {
+	return types.ResponseOfferSnapshot{Result: types.ResponseOfferSnapshot_ABORT}
+}
+
+func (app *Application) ApplySnapshotChunk(
+	req types.RequestApplySnapshotChunk) types.ResponseApplySnapshotChunk {
+	return types.ResponseApplySnapshotChunk{Result: types.ResponseApplySnapshotChunk_ABORT}
+}
+
+//---------------------------------------------
+// update validators
+
+func (app *Application) Validators() (validators []types.ValidatorUpdate) {
+	itr, err := app.state.db.Iterator(nil, nil)
+	if err != nil {
+		panic(err)
+	}
+	for ; itr.Valid(); itr.Next() {
+		if isValidatorTx(itr.Key()) {
+			validator := new(types.ValidatorUpdate)
+			err := types.ReadMessage(bytes.NewBuffer(itr.Value()), validator)
+			if err != nil {
+				panic(err)
+			}
+			validators = append(validators, *validator)
+		}
+	}
+	if err = itr.Error(); err != nil {
+		panic(err)
+	}
+	return
+}
+
+// format is "val:pubkey!power"
+// pubkey is a base64-encoded 32-byte ed25519 key
+func (app *Application) execValidatorTx(tx []byte) types.ResponseDeliverTx {
+	tx = tx[len(ValidatorSetChangePrefix):]
+
+	//  get the pubkey and power
+	pubKeyAndPower := strings.Split(string(tx), "!")
+	if len(pubKeyAndPower) != 2 {
+		return types.ResponseDeliverTx{
+			Code: code.CodeTypeEncodingError,
+			Log:  fmt.Sprintf("Expected 'pubkey!power'. Got %v", pubKeyAndPower)}
+	}
+	pubkeyS, powerS := pubKeyAndPower[0], pubKeyAndPower[1]
+
+	// decode the pubkey
+	pubkey, err := base64.StdEncoding.DecodeString(pubkeyS)
+	if err != nil {
+		return types.ResponseDeliverTx{
+			Code: code.CodeTypeEncodingError,
+			Log:  fmt.Sprintf("Pubkey (%s) is invalid base64", pubkeyS)}
+	}
+
+	// decode the power
+	power, err := strconv.ParseInt(powerS, 10, 64)
+	if err != nil {
+		return types.ResponseDeliverTx{
+			Code: code.CodeTypeEncodingError,
+			Log:  fmt.Sprintf("Power (%s) is not an int", powerS)}
+	}
+
+	// update
+	return app.updateValidator(types.UpdateValidator(pubkey, power, ""))
 }
 
 // tx is either "key=value" or just arbitrary bytes
@@ -614,4 +742,48 @@ func (app *Application) handleMinerServiceDone(senderAddr string, msg txs.Messag
 	}
 
 	return nil
+}
+
+// add, update, or remove a validator
+func (app *Application) updateValidator(v types.ValidatorUpdate) types.ResponseDeliverTx {
+	pubkey, err := cryptoenc.PubKeyFromProto(v.PubKey)
+	if err != nil {
+		panic(fmt.Errorf("can't decode public key: %w", err))
+	}
+	key := []byte("val:" + string(pubkey.Bytes()))
+
+	if v.Power == 0 {
+		// remove validator
+		hasKey, err := app.state.db.Has(key)
+		if err != nil {
+			panic(err)
+		}
+		if !hasKey {
+			pubStr := base64.StdEncoding.EncodeToString(pubkey.Bytes())
+			return types.ResponseDeliverTx{
+				Code: code.CodeTypeUnauthorized,
+				Log:  fmt.Sprintf("Cannot remove non-existent validator %s", pubStr)}
+		}
+		if err = app.state.db.Delete(key); err != nil {
+			panic(err)
+		}
+		delete(app.valAddrToPubKeyMap, string(pubkey.Address()))
+	} else {
+		// add or update validator
+		value := bytes.NewBuffer(make([]byte, 0))
+		if err := types.WriteMessage(&v, value); err != nil {
+			return types.ResponseDeliverTx{
+				Code: code.CodeTypeEncodingError,
+				Log:  fmt.Sprintf("Error encoding validator: %v", err)}
+		}
+		if err = app.state.db.Set(key, value.Bytes()); err != nil {
+			panic(err)
+		}
+		app.valAddrToPubKeyMap[string(pubkey.Address())] = v.PubKey
+	}
+
+	// we only update the changes array if we successfully updated the tree
+	app.ValUpdates = append(app.ValUpdates, v)
+
+	return types.ResponseDeliverTx{Code: code.CodeTypeOK}
 }
