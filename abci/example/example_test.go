@@ -23,6 +23,7 @@ import (
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
 	"github.com/DeAI-Artist/MintAI/abci/types"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 )
 
 func init() {
@@ -31,7 +32,7 @@ func init() {
 
 func TestKVStore(t *testing.T) {
 	fmt.Println("### Testing KVStore")
-	testStream(t, kvstore.NewApplication(""))
+	testStream(t, kvstore.NewApplication(cfg.GetDefaultDBDir()))
 }
 
 func TestBaseApp(t *testing.T) {
