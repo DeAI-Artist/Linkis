@@ -8,13 +8,14 @@ import (
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/mempool"
 	"github.com/DeAI-Artist/MintAI/proxy"
 	"github.com/DeAI-Artist/MintAI/types"
 )
 
 func TestCacheAfterUpdate(t *testing.T) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
