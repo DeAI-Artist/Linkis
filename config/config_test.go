@@ -1,6 +1,7 @@
 package config
 
 import (
+	"path/filepath"
 	"reflect"
 	"testing"
 	"time"
@@ -189,4 +190,17 @@ func TestInstrumentationConfigValidateBasic(t *testing.T) {
 	// tamper with maximum open connections
 	cfg.MaxOpenConnections = -1
 	assert.Error(t, cfg.ValidateBasic())
+}
+
+func TestGetDefaultDBDir(t *testing.T) {
+	// Define the expected value
+	expectedDBDir := filepath.Join(DefaultTendermintDir, "data")
+
+	// Get the actual value from the function
+	actualDBDir := GetDefaultDBDir()
+	//spew.Dump(actualDBDir)
+	// Compare the actual value with the expected value
+	if actualDBDir != expectedDBDir {
+		t.Fatalf("expected DBDir to be %s, but got %s", expectedDBDir, actualDBDir)
+	}
 }

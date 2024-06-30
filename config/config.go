@@ -1215,3 +1215,17 @@ func getDefaultMoniker() string {
 	}
 	return moniker
 }
+
+// GetDefaultDBDir returns the default database directory based on the package configuration
+func GetDefaultDBDir() string {
+	// Create a default base configuration
+	baseConfig := DefaultBaseConfig()
+
+	// Set the root directory (this can be adjusted as needed)
+	rootDir := DefaultTendermintDir
+
+	// Combine the root directory with the default data directory
+	defaultDBDir := filepath.Join(rootDir, baseConfig.DBPath)
+
+	return defaultDBDir
+}
