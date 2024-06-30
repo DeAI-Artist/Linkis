@@ -3,6 +3,7 @@ package v0
 import (
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	"github.com/DeAI-Artist/MintAI/config"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	mempl "github.com/DeAI-Artist/MintAI/mempool"
 	mempoolv0 "github.com/DeAI-Artist/MintAI/mempool/v0"
 	"github.com/DeAI-Artist/MintAI/proxy"
@@ -11,7 +12,7 @@ import (
 var mempool mempl.Mempool
 
 func init() {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	appConnMem, _ := cc.NewABCIClient()
 	err := appConnMem.Start()
