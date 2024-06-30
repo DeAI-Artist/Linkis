@@ -8,13 +8,14 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	core_grpc "github.com/DeAI-Artist/MintAI/rpc/grpc"
 	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
 )
 
 func TestMain(m *testing.M) {
 	// start a tendermint node in the background to test against
-	app := kvstore.NewApplication("")
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	node := rpctest.StartTendermint(app)
 
 	code := m.Run()
