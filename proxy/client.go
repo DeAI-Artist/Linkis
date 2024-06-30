@@ -79,7 +79,7 @@ func DefaultClientCreator(addr, transport, dbDir string) ClientCreator {
 	case "counter_serial":
 		return NewLocalClientCreator(counter.NewApplication(true))
 	case "kvstore":
-		return NewLocalClientCreator(kvstore.NewApplication())
+		return NewLocalClientCreator(kvstore.NewApplication(dbDir))
 	case "persistent_kvstore":
 		return NewLocalClientCreator(kvstore.NewPersistentKVStoreApplication(dbDir))
 	case "e2e":
