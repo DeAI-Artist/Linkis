@@ -6,11 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore/txs"
+	pc "github.com/DeAI-Artist/MintAI/proto/tendermint/crypto"
 
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/code"
 	"github.com/DeAI-Artist/MintAI/abci/types"
+	"github.com/DeAI-Artist/MintAI/libs/log"
 	"github.com/DeAI-Artist/MintAI/version"
 )
 
@@ -57,10 +59,6 @@ func saveState(state State) {
 	}
 }
 
-func prefixKey(key []byte) []byte {
-	return append(kvPairPrefixKey, key...)
-}
-
 //---------------------------------------------------
 
 var _ types.Application = (*Application)(nil)
@@ -70,9 +68,15 @@ type Application struct {
 
 	state        State
 	RetainBlocks int64 // blocks to retain after commit (via ResponseCommit.RetainHeight)
+	// validator set
+	ValUpdates []types.ValidatorUpdate
+
+	valAddrToPubKeyMap map[string]pc.PublicKey
+
+	logger log.Logger
 }
 
-func NewApplication() *Application {
+func NewApplication(dbDir string) *Application {
 	state := loadState(dbm.NewMemDB())
 	return &Application{state: state}
 }
