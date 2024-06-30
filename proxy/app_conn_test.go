@@ -9,6 +9,7 @@ import (
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	"github.com/DeAI-Artist/MintAI/abci/server"
 	"github.com/DeAI-Artist/MintAI/abci/types"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/libs/log"
 	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
 )
@@ -50,7 +51,7 @@ func TestEcho(t *testing.T) {
 	clientCreator := NewRemoteClientCreator(sockPath, SOCKET, true)
 
 	// Start server
-	s := server.NewSocketServer(sockPath, kvstore.NewApplication())
+	s := server.NewSocketServer(sockPath, kvstore.NewApplication(cfg.GetDefaultDBDir()))
 	s.SetLogger(log.TestingLogger().With("module", "abci-server"))
 	if err := s.Start(); err != nil {
 		t.Fatalf("Error starting socket server: %v", err.Error())
@@ -88,7 +89,7 @@ func BenchmarkEcho(b *testing.B) {
 	clientCreator := NewRemoteClientCreator(sockPath, SOCKET, true)
 
 	// Start server
-	s := server.NewSocketServer(sockPath, kvstore.NewApplication())
+	s := server.NewSocketServer(sockPath, kvstore.NewApplication(cfg.GetDefaultDBDir()))
 	s.SetLogger(log.TestingLogger().With("module", "abci-server"))
 	if err := s.Start(); err != nil {
 		b.Fatalf("Error starting socket server: %v", err.Error())
@@ -131,7 +132,7 @@ func TestInfo(t *testing.T) {
 	clientCreator := NewRemoteClientCreator(sockPath, SOCKET, true)
 
 	// Start server
-	s := server.NewSocketServer(sockPath, kvstore.NewApplication())
+	s := server.NewSocketServer(sockPath, kvstore.NewApplication(cfg.GetDefaultDBDir()))
 	s.SetLogger(log.TestingLogger().With("module", "abci-server"))
 	if err := s.Start(); err != nil {
 		t.Fatalf("Error starting socket server: %v", err.Error())
