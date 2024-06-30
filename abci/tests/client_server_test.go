@@ -8,12 +8,13 @@ import (
 	abciclient "github.com/DeAI-Artist/MintAI/abci/client"
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
 	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 )
 
 func TestClientServerNoAddrPrefix(t *testing.T) {
 	addr := "localhost:26658"
 	transport := "socket"
-	app := kvstore.NewApplication("")
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 
 	server, err := abciserver.NewServer(addr, transport, app)
 	assert.NoError(t, err, "expected no error on NewServer")
