@@ -6,12 +6,13 @@ import (
 	"testing"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	"github.com/DeAI-Artist/MintAI/mempool"
 	"github.com/DeAI-Artist/MintAI/proxy"
 )
 
 func BenchmarkReap(b *testing.B) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -33,7 +34,7 @@ func BenchmarkReap(b *testing.B) {
 }
 
 func BenchmarkCheckTx(b *testing.B) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -55,7 +56,7 @@ func BenchmarkCheckTx(b *testing.B) {
 }
 
 func BenchmarkParallelCheckTx(b *testing.B) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
@@ -80,7 +81,7 @@ func BenchmarkParallelCheckTx(b *testing.B) {
 }
 
 func BenchmarkCheckDuplicateTx(b *testing.B) {
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	cc := proxy.NewLocalClientCreator(app)
 	mp, cleanup := newMempoolWithApp(cc)
 	defer cleanup()
