@@ -7,6 +7,7 @@ import (
 	"log"
 
 	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/MintAI/config"
 	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
 	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
 	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
@@ -14,7 +15,7 @@ import (
 
 func ExampleHTTP_simple() {
 	// Start a tendermint node (and kvstore) in the background to test against
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	node := rpctest.StartTendermint(app, rpctest.SuppressStdout, rpctest.RecreateConfig)
 	defer rpctest.StopTendermint(node)
 
@@ -67,7 +68,7 @@ func ExampleHTTP_simple() {
 
 func ExampleHTTP_batching() {
 	// Start a tendermint node (and kvstore) in the background to test against
-	app := kvstore.NewApplication()
+	app := kvstore.NewApplication(cfg.GetDefaultDBDir())
 	node := rpctest.StartTendermint(app, rpctest.SuppressStdout, rpctest.RecreateConfig)
 
 	// Create our RPC client
