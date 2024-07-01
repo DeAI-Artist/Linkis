@@ -11,7 +11,6 @@ variable "TESTNET_NAME" {
 
 variable "SSH_KEY_FILE" {
   description = "SSH public key file to be used on the nodes"
-  type = "string"
 }
 
 variable "SERVERS" {
