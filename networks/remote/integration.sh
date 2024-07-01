@@ -3,7 +3,7 @@
 # XXX: this script is intended to be run from a fresh Digital Ocean droplet
 
 # NOTE: you must set this manually now
-echo "export DO_API_TOKEN=\"yourtoken\"" >> ~/.profile
+echo "export DO_API_TOKEN=\"123\"" >> ~/.profile
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -21,20 +21,20 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
 mkdir goApps
 echo "export GOPATH=/root/goApps" >> ~/.profile
 echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.profile
-# **turn on the go module, default is auto. The value is off, if tendermint source code
+# **turn on the go module, default is auto. The value is off, if mintai source code
 #is downloaded under $GOPATH/src directory
 echo "export GO111MODULE=on" >> ~/.profile
 
 source ~/.profile
 
-mkdir -p $GOPATH/src/github.com/tendermint
-cd $GOPATH/src/github.com/tendermint
+mkdir -p $GOPATH/src/github.com/DeAI-Artist
+cd $GOPATH/src/github.com/DeAI-Artist
 # ** use git clone instead of go get.
 # once go module is on, go get will download source code to
 # specific version directory under $GOPATH/pkg/mod the make
 # script will not work
 git clone https://github.com/DeAI-Artist/MintAI.git
-cd tendermint
+cd MintAI
 ## build
 make tools
 make build
@@ -91,10 +91,10 @@ ip3=$(strip $ip3)
 cd $GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible
 
 # create config dirs
-tendermint testnet
+mintai testnet
 
 ansible-playbook -i inventory/digital_ocean.py -l sentrynet install.yml
-ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/src/github.com/DeAI-Artist/MintAI/build/tendermint -e CONFIGDIR=$GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible/mytestnet
+ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/src/github.com/DeAI-Artist/MintAI/build/mintai -e CONFIGDIR=$GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible/mytestnet
 
 sleep 10
 
@@ -124,7 +124,7 @@ Restart=on-failure
 User={{service}}
 Group={{service}}
 PermissionsStartOnly=true
-ExecStart=/usr/bin/tendermint node --proxy_app=kvstore --p2p.persistent_peers=$id0@$ip0:26656,$id1@$ip1:26656,$id2@$ip2:26656,$id3@$ip3:26656
+ExecStart=/usr/bin/mintai node --p2p.persistent_peers=$id0@$ip0:26656,$id1@$ip1:26656,$id2@$ip2:26656,$id3@$ip3:26656
 ExecReload=/bin/kill -HUP \$MAINPID
 KillSignal=SIGTERM
 
