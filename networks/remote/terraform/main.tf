@@ -6,7 +6,7 @@ variable "DO_API_TOKEN" {
 
 variable "TESTNET_NAME" {
   description = "Name of the testnet"
-  default = "sentrynet"
+  default = "peggyv0"
 }
 
 variable "SSH_KEY_FILE" {
