@@ -8,7 +8,7 @@
   any_errors_fatal: true
   gather_facts: yes
   vars:
-    - service: tendermint
+    - service: mintai
     - N: 4
   roles:
     - stop
