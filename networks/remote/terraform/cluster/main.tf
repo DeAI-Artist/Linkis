@@ -18,12 +18,13 @@ resource "digitalocean_ssh_key" "cluster" {
 
 resource "digitalocean_droplet" "cluster" {
   name = "${var.name}-node${count.index}"
-  image = "centos-7-x64"
+  image = "ubuntu-20-04-x64"  # Specify the Ubuntu image here
   size = "${var.instance_size}"
   region = "${element(var.regions, count.index)}"
   ssh_keys = ["${digitalocean_ssh_key.cluster.id}"]
   count = "${var.servers}"
   tags = ["${digitalocean_tag.cluster.id}"]
+
 
   lifecycle {
     prevent_destroy = false
