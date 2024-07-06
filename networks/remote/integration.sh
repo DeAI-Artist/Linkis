@@ -3,7 +3,7 @@
 # XXX: this script is intended to be run from a fresh Digital Ocean droplet
 
 # NOTE: you must set this manually now
-echo "export DO_API_TOKEN=\"dop_v1_3f6be3c1dee4d73d3d61984a5d8ef210524411df205228997ec256cab12fa628\"" >> ~/.profile
+echo "export DO_API_TOKEN=\"DO_API_TOKEN\"" >> ~/.profile
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -94,8 +94,7 @@ cd $GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible
 mintai testnet
 
 ansible-playbook -i inventory/digital_ocean.py -l sentrynet install.yml
-ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/src/github.com/DeAI-Artist/MintAI/build/mintai -e CONFIGDIR=$GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible/mytestnet
-
+ansible-playbook -i inventory/digital_ocean.py -l sentrynet config.yml -e BINARY=$GOPATH/srcgithub.com/DeAI-Artist/MintAI/build/mintai -e CONFIGDIR=$GOPATH/src/github.com/DeAI-Artist/MintAI/networks/remote/ansible/mytestnet
 sleep 10
 
 # get each nodes ID then populate the ansible file
