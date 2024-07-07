@@ -56,8 +56,8 @@ source ~/.profile
 cd
 mkdir /root/.mintai
 
-#Copy your config files to the directory
-#......................................
+#Copy your config files to the directory, replace corresponding node file and ips needed
+scp -r $HOME/MintAI/mytestnet/node0/* root@$IP0:/root/.mintai/
 
 mintai node
 
