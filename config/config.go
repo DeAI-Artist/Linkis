@@ -602,7 +602,7 @@ func DefaultP2PConfig() *P2PConfig {
 		AddrBookStrict:               true,
 		MaxNumInboundPeers:           40,
 		MaxNumOutboundPeers:          10,
-		PersistentPeersMaxDialPeriod: 0 * time.Second,
+		PersistentPeersMaxDialPeriod: 1 * time.Second,
 		FlushThrottleTimeout:         100 * time.Millisecond,
 		MaxPacketMsgPayloadSize:      1024,    // 1 kB
 		SendRate:                     5120000, // 5 mB/s
@@ -955,18 +955,18 @@ type ConsensusConfig struct {
 func DefaultConsensusConfig() *ConsensusConfig {
 	return &ConsensusConfig{
 		WalPath:                     filepath.Join(defaultDataDir, "cs.wal", "wal"),
-		TimeoutPropose:              3000 * time.Millisecond,
-		TimeoutProposeDelta:         500 * time.Millisecond,
-		TimeoutPrevote:              1000 * time.Millisecond,
-		TimeoutPrevoteDelta:         500 * time.Millisecond,
-		TimeoutPrecommit:            1000 * time.Millisecond,
-		TimeoutPrecommitDelta:       500 * time.Millisecond,
-		TimeoutCommit:               1000 * time.Millisecond,
+		TimeoutPropose:              5000 * time.Millisecond,
+		TimeoutProposeDelta:         1500 * time.Millisecond,
+		TimeoutPrevote:              2500 * time.Millisecond,
+		TimeoutPrevoteDelta:         1300 * time.Millisecond,
+		TimeoutPrecommit:            2500 * time.Millisecond,
+		TimeoutPrecommitDelta:       1300 * time.Millisecond,
+		TimeoutCommit:               2500 * time.Millisecond,
 		SkipTimeoutCommit:           false,
 		CreateEmptyBlocks:           true,
-		CreateEmptyBlocksInterval:   0 * time.Second,
-		PeerGossipSleepDuration:     100 * time.Millisecond,
-		PeerQueryMaj23SleepDuration: 2000 * time.Millisecond,
+		CreateEmptyBlocksInterval:   5 * time.Second,
+		PeerGossipSleepDuration:     1500 * time.Millisecond,
+		PeerQueryMaj23SleepDuration: 2500 * time.Millisecond,
 		DoubleSignCheckHeight:       int64(0),
 	}
 }
