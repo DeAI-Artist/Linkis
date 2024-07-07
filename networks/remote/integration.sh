@@ -12,6 +12,10 @@ sudo apt-get install -y jq unzip python-pip software-properties-common make
 # get golang
 sudo snap install go --classic
 
+#install make for building binaries of the project
+apt install make        # version 4.2.1-1.2, or
+
+
 ## move binary and add to path
 mv go /usr/local
 echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
