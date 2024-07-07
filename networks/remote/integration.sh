@@ -9,9 +9,8 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install -y jq unzip python-pip software-properties-common make
 
-# get and unpack golang
-curl -O https://dl.google.com/go/go1.15.4.linux-amd64.tar.gz
-tar -xvf go1.15.4.linux-amd64.tar.gz
+# get golang
+sudo snap install go --classic
 
 ## move binary and add to path
 mv go /usr/local
