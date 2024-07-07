@@ -52,4 +52,13 @@ ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ''
 echo "export SSH_KEY_FILE=\"\$HOME/.ssh/id_rsa.pub\"" >> ~/.profile
 source ~/.profile
 
+# return to root and create /.mintai/ directory
+cd
+mkdir /root/.mintai
+
+#Copy your config files to the directory
+#......................................
+
+mintai node
+
 echo "congratulations, your testnet is ready to run :)"
