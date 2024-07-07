@@ -4,7 +4,7 @@
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y jq unzip python-pip software-properties-common make
+sudo apt-get install -y jq unzip python3-pip software-properties-common make
 
 # get golang
 sudo snap install go --classic
