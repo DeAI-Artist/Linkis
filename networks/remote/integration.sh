@@ -2,9 +2,6 @@
 
 # XXX: this script is intended to be run from a fresh Digital Ocean droplet
 
-# NOTE: you must set this manually now
-echo "export DO_API_TOKEN=\"DO_API_TOKEN\"" >> ~/.profile
-
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install -y jq unzip python-pip software-properties-common make
