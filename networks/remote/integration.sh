@@ -15,6 +15,9 @@ sudo snap install go --classic
 #install make for building binaries of the project
 apt install make        # version 4.2.1-1.2, or
 
+#install gcc
+sudo apt update
+sudo apt install build-essential
 
 ## move binary and add to path
 mv go /usr/local
@@ -38,8 +41,8 @@ cd $GOPATH/src/github.com/DeAI-Artist
 # script will not work
 git clone https://github.com/DeAI-Artist/MintAI.git
 cd MintAI
+
 ## build
-make tools
 make build
 #** need to install the package, otherwise terdermint testnet will not execute
 make install
