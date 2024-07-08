@@ -154,7 +154,7 @@ for-profit entity that also maintains [tendermint.com](https://tendermint.com).
 [go-url]: https://github.com/moovweb/gvm
 [discord-badge]: https://img.shields.io/discord/669268347736686612.svg
 [discord-url]: https://discord.gg/cosmosnetwork
-[license-badge]: https://img.shields.io/github/license/tendermint/tendermint.svg
+[license-badge]: https://img.shields.io/badge/License-GPL--3.0-lightgreen
 [license-url]: https://github.com/DeAI-Artist/MintAI/blob/main/LICENSE
 [sg-badge]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI/-/badge.svg
 [sg-url]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI?badge
