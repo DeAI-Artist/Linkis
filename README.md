@@ -148,7 +148,7 @@ for-profit entity that also maintains [tendermint.com](https://tendermint.com).
 [Blockchain]: https://en.wikipedia.org/wiki/Blockchain
 [version-badge]: https://img.shields.io/github/tag/tendermint/tendermint.svg
 [version-url]: https://github.com/DeAI-Artist/MintAI/releases/latest
-[api-badge]: https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
+[api-badge]: https://img.shields.io/badge/API-Online-brightgreen
 [api-url]: https://pkg.go.dev/github.com/DeAI-Artist/MintAI
 [go-badge]: https://img.shields.io/badge/go-1.21-blue.svg
 [go-url]: https://github.com/moovweb/gvm
