@@ -1,4 +1,4 @@
-# MintAI Core
+# MintAI: A Blockchain L1-L2 Ecosystem Unlocking the Potential of Decentralized AI
 
 ![banner](docs/tendermint-core-image.jpg)
 
@@ -7,44 +7,17 @@
 [![Go version][go-badge]][go-url]
 [![License][license-badge]][license-url]
 
-Tendermint Core is a DeAI Layer-1 infrastructure that coordinates and takes records of MintAI network activities while securely replicating it on many machines.
 
-For protocol details, refer to the [MintAI WhitePaper](./spec/README.md).
+Tendermint Core includes both Layer-1 (L1) and Layer-2 (L2) implementations. L1 coordinates and records network activities, securely replicating them across many machines. Meanwhile, L2 contracts handle the storage and transportation of value, including coins and tokens in all kinds of types and formats.
 
-For detailed analysis of the consensus protocol, including safety and liveness
-proofs, read our paper, "[The latest gossip on BFT
-consensus](https://arxiv.org/abs/1807.04938)".
+For protocol details, refer to the [MintAI WhitePaper](https://mintai.gitbook.io/whitepaper/).
 
-## Documentation
+For a detailed analysis of the consensus framework in the L1 layer, including BFT safety and liveness proofs, refer to the paper, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)" and its corresponding [Tendermint GitHub repo](https://github.com/tendermint/tendermint).
 
-Complete documentation can be found on the
-[website](https://docs.tendermint.com/).
 
-## Releases
+_NOTE: This is only the dev version of Tendermint, both in the L1 and L2 implementations, for testnet purposes. As the project moves further, more features in both layers are to be included, and major upgrades compared to the current ones are to be expected. For contribution, see [our security policy](SECURITY.md).
 
-Please do not depend on `main` as your production branch. Use
-[releases](https://github.com/DeAI-Artist/MintAI/releases) instead.
 
-Tendermint has been in the production of private and public environments, most
-notably the blockchains of the Cosmos Network. we haven't released v1.0 yet
-since we are making breaking changes to the protocol and the APIs. See below for
-more details about [versioning](#versioning).
-
-In any case, if you intend to run Tendermint in production, we're happy to help.
-You can contact us [over email](mailto:hello@interchain.io) or [join the
-chat](https://discord.gg/cosmosnetwork).
-
-More on how releases are conducted can be found [here](./RELEASES.md).
-
-## Security
-
-To report a security vulnerability, see our [bug bounty
-program](https://hackerone.com/cosmos). For examples of the kinds of bugs we're
-looking for, see [our security policy](SECURITY.md).
-
-We also maintain a dedicated mailing list for security updates. We will only
-ever use this mailing list to notify you of vulnerabilities and fixes in
-Tendermint Core. You can subscribe [here](http://eepurl.com/gZ5hQD).
 
 ## Minimum requirements
 
@@ -52,15 +25,6 @@ Tendermint Core. You can subscribe [here](http://eepurl.com/gZ5hQD).
 |-------------|-------------------|
 | Go version  | Go 1.18 or higher |
 
-### Install
-
-See the [install instructions](./docs/introduction/install.md).
-
-### Quick Start
-
-- [Single node](./docs/introduction/quick-start.md)
-- [Local cluster using docker-compose](./docs/tools/docker-compose.md)
-- [Remote cluster using Terraform and Ansible](./docs/tools/terraform-and-ansible.md)
 
 ## Contributing
 
