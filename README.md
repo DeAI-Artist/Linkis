@@ -15,7 +15,7 @@ For protocol details, refer to the [MintAI WhitePaper](https://mintai.gitbook.io
 For a detailed analysis of the consensus framework in the L1 layer, including BFT safety and liveness proofs, refer to the paper, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)" and its corresponding [Tendermint GitHub repo](https://github.com/tendermint/tendermint).
 
 
-_NOTE: This is only the dev version of Tendermint, both in the L1 and L2 implementations, for testnet purposes. As the project moves further, more features in both layers are to be included, and major upgrades compared to the current ones are to be expected. For contribution, see [our security policy](SECURITY.md).
+_NOTE: This is only the dev version of MintAI core, both in the L1 and L2 implementations, for testnet purposes. As the project progresses, we are excited to include more features in both layers and anticipate major upgrades compared to the current versions. We warmly welcome any kind of contributions! For more information, see [our contribution policy](SECURITY.md)._
 
 
 
