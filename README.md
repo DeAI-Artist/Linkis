@@ -1,30 +1,15 @@
-# Tendermint
-
-_UPDATE: TendermintCore featureset is frozen for LTS, see issue https://github.com/DeAI-Artist/MintAI/issues/9972_<br/>
-_This is the latest stable release used by cosmoshub-4, version 0.34.24_<br/>
-_The previous main branch (v0.38.xx) can now be found under "main_backup"_<br/>
+# MintAI Core
 
 ![banner](docs/tendermint-core-image.jpg)
-
-[Byzantine-Fault Tolerant][bft] [State Machine Replication][smr]. Or
-[Blockchain], for short.
 
 [![Version][version-badge]][version-url]
 [![API Reference][api-badge]][api-url]
 [![Go version][go-badge]][go-url]
-[![Discord chat][discord-badge]][discord-url]
 [![License][license-badge]][license-url]
-[![Sourcegraph][sg-badge]][sg-url]
 
-| Branch | Tests                              | Linting                         |
-|--------|------------------------------------|---------------------------------|
-| main   | [![Tests][tests-badge]][tests-url] | [![Lint][lint-badge]][lint-url] |
+Tendermint Core is a DeAI Layer-1 infrastructure that coordinates and takes records of MintAI network activities while securely replicating it on many machines.
 
-Tendermint Core is a Byzantine Fault Tolerant (BFT) middleware that takes a
-state transition machine - written in any programming language - and securely
-replicates it on many machines.
-
-For protocol details, refer to the [Tendermint Specification](./spec/README.md).
+For protocol details, refer to the [MintAI WhitePaper](./spec/README.md).
 
 For detailed analysis of the consensus protocol, including safety and liveness
 proofs, read our paper, "[The latest gossip on BFT
@@ -165,7 +150,7 @@ for-profit entity that also maintains [tendermint.com](https://tendermint.com).
 [version-url]: https://github.com/DeAI-Artist/MintAI/releases/latest
 [api-badge]: https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
 [api-url]: https://pkg.go.dev/github.com/DeAI-Artist/MintAI
-[go-badge]: https://img.shields.io/badge/go-1.18-blue.svg
+[go-badge]: https://img.shields.io/badge/go-1.21-blue.svg
 [go-url]: https://github.com/moovweb/gvm
 [discord-badge]: https://img.shields.io/discord/669268347736686612.svg
 [discord-url]: https://discord.gg/cosmosnetwork
