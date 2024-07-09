@@ -1,46 +1,77 @@
 linters:
   enable:
+    # Checks for non-ASCII characters in the source code.
     - asciicheck
+    # Ensures HTTP response bodies are closed properly to prevent resource leaks.
     - bodyclose
+    # Blocks the use of specified packages to enforce dependencies policy.
     - depguard
+    # Flags assignments with too many blank identifiers (_), which can reduce clarity.
     - dogsled
+    # Detects duplicated code to encourage DRY principles.
     - dupl
+    # Checks for errors that are not checked.
     - errcheck
+    # Prevents capturing loop variables in closures, which can lead to bugs.
     - exportloopref
+    # Identifies strings that could be declared as constants.
     - goconst
+    # Formats Go programs according to the Golang standard.
     - gofmt
+    # Adjusts your Go import lines, adding missing ones and removing unreferenced ones.
     - goimports
+    # A linter for Go, aimed to replace golint.
     - revive
+    # Scans code for security vulnerabilities.
     - gosec
+    # Simplifies code and removes code redundancies.
     - gosimple
+    # Examines Go source code and reports suspicious constructs.
     - govet
+    # Detects when assignments to existing variables are not used.
     - ineffassign
+    # Corrects commonly misspelled words in comments.
     - misspell
+    # Warns about naked returns in functions greater than a specified function length.
     - nakedret
+    # Ensures that nolint directives are specific and used correctly.
     - nolintlint
+    # Suggests preallocation of slices to improve performance.
     - prealloc
+    # A comprehensive static analysis tool that checks for bugs and performance issues.
     - staticcheck
-    # - structcheck // to be fixed by golangci-lint
+    # Checks for unnecessary style discrepancies.
     - stylecheck
+    # Performs type checking on your code.
     - typecheck
+    # Identifies unnecessary type conversions.
     - unconvert
+    # Reports unused code, reducing bloat and improving maintainability.
     - unused
+    # structcheck is currently commented out pending a fix by golangci-lint
+    # - structcheck
 
 issues:
   exclude-rules:
+    # Exclude gosec linter for test files to avoid false positives on test data.
     - path: _test\.go
       linters:
         - gosec
+  # Limits the maximum number of same issues reported to reduce noise.
   max-same-issues: 50
 
 linters-settings:
+  # Limits the number of blank identifiers to 3 to enforce clearer code.
   dogsled:
     max-blank-identifiers: 3
+  # Runs golint without any confidence threshold, reporting all potential style mistakes.
   golint:
     min-confidence: 0
+  # Suggests more memory efficient struct alignments.
   maligned:
     suggest-new: true
 
 run:
+  # Excludes auto-generated files from lint checks.
   skip-files:
     - libs/pubsub/query/query.peg.go
