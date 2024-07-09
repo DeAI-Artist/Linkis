@@ -46,7 +46,7 @@ From here your validator node is up and running :)
 #### Send transactions:
 The general transaction format in the MintAI network is:
 ```sh
-curl -s '${VALIDATOR_IP}:26657/broadcast_tx_commit?tx="${TX_CONTENT}"'
+curl -s 'RPC_ENDPOINT:26657/broadcast_tx_commit?tx="TX_CONTENT"'
 ```
 
 ## Minimum requirements
