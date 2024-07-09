@@ -61,7 +61,8 @@ We can validate this by using the `query` API on another validator in the networ
 ```shell
 curl -s '178.128.168.223:26657/abci_query?data="clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb"'
 ```
-To send transactions that can be passed into the mempool, one needs to formulate the transaction according to the messagetype and transaction format specified in this documentation.
+To send transactions that can be passed into the mempool, one needs to formulate the transaction according to the message type and transaction format specified in [this documentation](./spec/abci/abci.md).
+
 #### Transaction fees:
 Unlike interacting with mainnets like Solana or Ethereum, MintAI L1 transactions are completely **free of gas fees**, allowing clients to navigate the network without any economic friction.
 One can refer to the [MintAI protocol](https://arxiv.org/pdf/2310.19099) to understand how this is accomplished in a secure and robust manner.
