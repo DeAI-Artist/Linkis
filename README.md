@@ -24,14 +24,30 @@ The network is composed of validators, service providers (miners), and clients. 
 ### Validators
 Validators are responsible for securing the network by proposing and validating new blocks. To set up a validator node, follow these steps:
 
-1. Install MintAI:
-   ```sh
-   wget https://github.com/tendermint/tendermint/releases/download/v0.34.24/tendermint_0.34.24_linux_amd64.tar.gz
-   tar -xvf tendermint_0.34.24_linux_amd64.tar.gz
-   sudo mv tendermint /usr/local/bin/
-   ```
+#### Install MintAI:
+```sh
+git clone https://github.com/DeAI-Artist/MintAI.git
+cd MintAI
+make build
+make install
+```
+#### Initialize the validator node:
+```sh
+mintai node
+```
+#### Start the validator node:
+```sh
+mintai node
+```
+From here your validator node is up and running :)
 
-If you want to participate in MintAI network as a validator then
+> Note: The current implementations listen to all incoming transactions through the p2p module. To run a local node for testing purposes, modify the configuration file located at `.mintai/config/.config.toml`. Inside the file, change `laddr = "tcp://0.0.0.0:26656"` to `tcp://127.0.0.1"` to restrict network access to localhost only.
+
+#### Send transactions:
+The general transaction format in the MintAI network is:
+```sh
+curl -s '${VALIDATOR_IP}:26657/broadcast_tx_commit?tx="${TX_CONTENT}"'
+```
 
 ## Minimum requirements
 
