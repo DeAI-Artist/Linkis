@@ -25,18 +25,18 @@ The network is composed of validators, service providers (miners), and clients. 
 Validators are responsible for securing the network by proposing and validating new blocks. To set up a validator node, follow these steps:
 
 #### Install MintAI:
-```sh
+```shell
 git clone https://github.com/DeAI-Artist/MintAI.git
 cd MintAI
 make build
 make install
 ```
 #### Initialize the validator node:
-```sh
-mintai node
+```shell
+mintai init
 ```
 #### Start the validator node:
-```sh
+```shell
 mintai node
 ```
 From here your validator node is up and running :)
@@ -45,10 +45,26 @@ From here your validator node is up and running :)
 
 #### Send transactions:
 The general transaction format in the MintAI network is:
-```sh
-curl -s 'RPC_ENDPOINT:26657/broadcast_tx_commit?tx="TX_CONTENT"'
+```shell
+curl -s 'RPC_laddr:26657/broadcast_tx_commit?tx="TX_CONTENT"'
 ```
-
+For example, if we register a client with the `client_name` field set to `Client1`, have one of the validators' `RPC_laddr` as `134.209.85.94`, and set `TX_CONTENT` as `0000003b7b22636f6e74...`, then:
+```shell
+curl -s '134.209.85.94:26657/broadcast_tx_commit?tx="0000003b7b22636f6e74656e74223a2265794a6a62476c6c626e5266626d46745a534936496b4e73615756756444456966513d3d222c2274797065223a317dffef7045be04d7de12b68871a6837c67e26a0d89ca4af124bf0b449041f12a6b25f4d388962f0f7e704cfc93f8a47ba0dc9b15118819cf2067ecd9542b17b4251c"'
+```
+with the expected output as follows:
+```text
+{"jsonrpc":"2.0","id":-1,"result":{"check_tx":{"code":0,"data":null,"log":"","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":"","sender":"","priority":"0","mempoolError":""},"deliver_tx":{"code":0,"data":null,"log":"","info":"","gas_wanted":"0","gas_used":"0","events":[{"type":"app","attributes":[{"key":"dHJhbnNhY3Rpb24gc2VuZGVy","value":"MHg2YzI1YjcyQ0Q2ODA3RDEwNjc4QjQ1N0I2RTYzRkI3OTNhZTAzMEVi","index":true}]}],"codespace":""},"hash":"39EB7DB89963695E683D862C48C1EB167C757E74E435D6B0C3505A12FE4B4686","height":"88083"}}
+```
+If `check_tx` and `deliver_tx` have a `code` of `0`, then the transaction is successfully validated and processed, with its content being included in the global states.
+We can validate this by using the `query` API on another validator in the network with the command below:
+```shell
+curl -s '178.128.168.223:26657/abci_query?data="clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb"'
+```
+To send transactions that can be passed into the mempool, one needs to formulate the transaction according to the messagetype and transaction format specified in this documentation.
+#### Transaction fees:
+Unlike interacting with mainnets like Solana or Ethereum, MintAI L1 transactions are completely **free of gas fees**, allowing clients to navigate the network without any economic friction.
+One can refer to the [MintAI protocol](https://arxiv.org/pdf/2310.19099) to understand how this is accomplished in a secure and robust manner.
 ## Minimum requirements
 
 | Requirement | Notes             |
