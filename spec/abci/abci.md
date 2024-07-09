@@ -1,4 +1,4 @@
-# Transaction System Documentation
+# ABCI Transaction Documentation
 
 This document provides an overview of the transaction system implemented in the provided `message.go` and `transaction.go` files. The system facilitates various types of transactions, each encapsulating specific types of messages with detailed structures and functionalities.
 
