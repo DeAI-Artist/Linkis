@@ -5,8 +5,8 @@ env:
   - GO111MODULE=on
 
 builds:
-  - id: "Tendermint"
-    main: ./cmd/tendermint/main.go
+  - id: "mintai"
+    main: ./cmd/mintai/main.go
     ldflags:
       - -s -w -X github.com/DeAI-Artist/MintAI/version.TMCoreSemVer={{ .Version }}
     env:
