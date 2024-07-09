@@ -17,7 +17,21 @@ For a detailed analysis of the consensus framework in the L1 layer, including BF
 
 _NOTE: This is only the dev version of MintAI core, both in the L1 and L2 implementations, for testnet purposes. As the project progresses, we are excited to include more features in both layers and anticipate major upgrades compared to the current versions. We warmly welcome any kind of contributions! For more information, see [our contribution policy](SECURITY.md)._
 
+## Quick Start
+### Overview
+The network is composed of validators, service providers (miners), and clients. To earn network rewards, you need to either participate as a service provider or a validator.
 
+### Validators
+Validators are responsible for securing the network by proposing and validating new blocks. To set up a validator node, follow these steps:
+
+1. Install MintAI:
+   ```sh
+   wget https://github.com/tendermint/tendermint/releases/download/v0.34.24/tendermint_0.34.24_linux_amd64.tar.gz
+   tar -xvf tendermint_0.34.24_linux_amd64.tar.gz
+   sudo mv tendermint /usr/local/bin/
+   ```
+
+If you want to participate in MintAI network as a validator then
 
 ## Minimum requirements
 

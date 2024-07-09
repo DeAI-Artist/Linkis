@@ -41,7 +41,7 @@ cd MintAI
 
 ## build
 make build
-#** need to install the package, otherwise terdermint testnet will not execute
+#** need to install the package, otherwise mintai testnet will not execute
 make install
 
 # generate an ssh key
