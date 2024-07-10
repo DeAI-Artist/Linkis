@@ -16,21 +16,27 @@ var ServiceStart = &cobra.Command{
 }
 
 func serviceStartWithConfig(cmd *cobra.Command, args []string) error {
-	const keyfilePath = "path/to/your/keystore"
+	keyfilePath := config.NodeMinerKeyFile() // Adjust as necessary or pull from configuration
 
 	// Check if the key file exists
 	_, err := os.Stat(keyfilePath)
 	if os.IsNotExist(err) {
 		fmt.Println("No keyfile found. Creating a new key...")
-		password := miner.PromptPassword(true) // Ask for password with confirmation
+		password, err := miner.PromptPassword(true) // Ask for password with confirmation
+		if err != nil {
+			return fmt.Errorf("prompt for password failed: %v", err)
+		}
 		if err := miner.CreateNewKey(keyfilePath, password); err != nil {
 			return fmt.Errorf("failed to create new key: %v", err)
 		}
 	} else if err != nil {
-		return fmt.Errorf("Failed to check key file: %v", err)
+		return fmt.Errorf("failed to check key file: %v", err)
 	} else {
 		fmt.Println("Keyfile found. Loading key...")
-		password := miner.PromptPassword(false) // Ask for password without confirmation
+		password, err := miner.PromptPassword(false) // Ask for password without confirmation
+		if err != nil {
+			return fmt.Errorf("prompt for password failed: %v", err)
+		}
 		if err := miner.LoadKey(keyfilePath, password); err != nil {
 			return fmt.Errorf("failed to load key: %v", err)
 		}
