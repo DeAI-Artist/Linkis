@@ -3,7 +3,7 @@ version: 2.1
 executors:
   golang:
     docker:
-      - image: tendermintdev/docker-tendermint-build
+      - image: mintaidev/docker-mintai-build:latest
     working_directory: /go/src/github.com/DeAI-Artist/MintAI
     environment:
       GOBIN: /tmp/bin
@@ -11,7 +11,7 @@ executors:
     machine: true
   docs:
     docker:
-      - image: tendermintdev/docker-website-deployment
+      - image: mintaidev/docker-website-deployment:latest
     environment:
       AWS_REGION: us-east-1
 
@@ -26,16 +26,17 @@ commands:
       - restore_cache:
           name: "Restore source code cache"
           keys:
-            - go-src-v1-{{ .Revision }}
+            - go-src-v2-{{ .Revision }}
       - checkout
       - restore_cache:
           name: "Restore go modules cache"
           keys:
-            - go-mod-v1-{{ checksum "go.sum" }}
+            - go-mod-v2-{{ checksum "go.mod" }}  # Updated cache key
       - run:
           name: "Running test"
           command: |
             bash << parameters.script_path >>
+
 jobs:
   setup_dependencies:
     executor: golang
@@ -44,7 +45,7 @@ jobs:
       - restore_cache:
           name: "Restore go modules cache"
           keys:
-            - go-mod-v1-{{ checksum "go.sum" }}
+            - go-mod-v2-{{ checksum "go.mod" }}
       - run:
           command: |
             mkdir -p /tmp/bin
@@ -59,12 +60,12 @@ jobs:
           command: make install install_abci
       - save_cache:
           name: "Save go modules cache"
-          key: go-mod-v1-{{ checksum "go.sum" }}
+          key: go-mod-v2-{{ checksum "go.mod" }}  # Updated cache key
           paths:
             - "/go/pkg/mod"
       - save_cache:
           name: "Save source code cache"
-          key: go-src-v1-{{ .Revision }}
+          key: go-src-v2-{{ .Revision }}
           paths:
             - ".git"
       - persist_to_workspace:
@@ -92,7 +93,7 @@ jobs:
       - restore_cache:
           name: "Restore source code cache"
           keys:
-            - go-src-v1-{{ .Revision }}
+            - go-src-v2-{{ .Revision }}  # Ensured consistency in naming
       - checkout
       - run:
           name: Get next release number
@@ -114,42 +115,42 @@ jobs:
           paths:
             - "release-version.source"
       - save_cache:
-          key: v2-release-deps-{{ checksum "go.sum" }}
+          key: v2-release-deps-{{ checksum "go.mod" }}
           paths:
             - "/go/pkg/mod"
 
-  # # Test RPC implementation against the swagger documented specs
-  # contract_tests:
-  #   working_directory: /home/circleci/.go_workspace/src/github.com/DeAI-Artist/MintAI
-  #   machine:
-  #     image: circleci/classic:latest
-  #   environment:
-  #     GOBIN: /home/circleci/.go_workspace/bin
-  #     GOPATH: /home/circleci/.go_workspace/
-  #     GOOS: linux
-  #     GOARCH: amd64
-  #   parallelism: 1
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         name: Test RPC endpoints against swagger documentation
-  #         command: |
-  #           set -x
-  #           export PATH=~/.local/bin:$PATH
-  #           # install node and dredd
-  #           ./scripts/get_nodejs.sh
-  #           # build the binaries with a proper version of Go
-  #           docker run --rm -v "$PWD":/go/src/github.com/DeAI-Artist/MintAI -w /go/src/github.com/DeAI-Artist/MintAI golang make build-linux build-contract-tests-hooks
-  #           # This docker image works with go 1.7, we can install here the hook handler that contract-tests is going to use
-  #           go get github.com/snikch/goodman/cmd/goodman
-  #           make contract-tests
+  # Re-enabled Contract Tests
+  contract_tests:
+    working_directory: /home/circleci/.go_workspace/src/github.com/DeAI-Artist/MintAI
+    machine:
+      image: circleci/classic:latest
+    environment:
+      GOBIN: /home/circleci/.go_workspace/bin
+      GOPATH: /home/circleci/.go_workspace/
+      GOOS: linux
+      GOARCH: amd64
+    parallelism: 1
+    steps:
+      - checkout
+      - run:
+          name: Test RPC endpoints against swagger documentation
+          command: |
+            set -x
+            export PATH=~/.local/bin:$PATH
+            # install node and dredd
+            ./scripts/get_nodejs.sh
+            # build the binaries with a proper version of Go
+            docker run --rm -v "$PWD":/go/src/github.com/DeAI-Artist/MintAI -w /go/src/github.com/DeAI-Artist/MintAI golang make build-linux build-contract-tests-hooks
+            # This docker image works with go 1.7, we can install here the hook handler that contract-tests is going to use
+            go get github.com/snikch/goodman/cmd/goodman
+            make contract-tests
 
 workflows:
   version: 2
   docs:
     jobs:
       - deploy_docs:
-          context: tendermint-docs
+          context: mintai-docs
           filters:
             branches:
               only:
@@ -158,11 +159,11 @@ workflows:
               only:
                 - /^v.*/
       - deploy_docs:
-          context: tendermint-docs-staging
+          context: mintai-docs-staging
           filters:
             branches:
               only:
                 - docs-staging
-      # - contract_tests:
-      #     requires:
-      #       - setup_dependencies
+      - contract_tests:
+          requires:
+            - setup_dependencies
