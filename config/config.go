@@ -282,6 +282,10 @@ func (cfg BaseConfig) NodeKeyFile() string {
 	return rootify(cfg.NodeKey, cfg.RootDir)
 }
 
+func (cfg BaseConfig) NodeMinerKeyFile() string {
+	return rootify(cfg.NodeKey+"_miner", cfg.RootDir)
+}
+
 // DBDir returns the full path to the database directory
 func (cfg BaseConfig) DBDir() string {
 	return rootify(cfg.DBPath, cfg.RootDir)
