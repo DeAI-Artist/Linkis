@@ -2,6 +2,7 @@ package miner
 
 import (
 	"fmt"
+	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/ethereum/go-ethereum/crypto"
 	"golang.org/x/crypto/ssh/terminal"
@@ -32,36 +33,53 @@ func PromptPassword(confirm bool) (string, error) {
 	return string(passwordBytes), nil
 }
 
-// CreateNewKey generates a new key and stores it in a keystore file.
-func CreateNewKey(filePath, password string) error {
+// CreateNewKey generates a new key and stores it in a keystore file, returning the account.
+func CreateNewKey(filePath, password string) (accounts.Account, error) {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
-		return fmt.Errorf("failed to generate private key: %v", err)
+		return accounts.Account{}, fmt.Errorf("failed to generate private key: %v", err)
 	}
 
 	ks := keystore.NewKeyStore(filePath, keystore.StandardScryptN, keystore.StandardScryptP)
 	account, err := ks.ImportECDSA(privateKey, password)
 	if err != nil {
-		return fmt.Errorf("failed to save the key file: %v", err)
+		return accounts.Account{}, fmt.Errorf("failed to save the key file: %v", err)
 	}
 
 	fmt.Printf("New key created: %s\n", account.Address.Hex())
-	return nil
+	return account, nil
 }
 
-// LoadKey loads a key from a keystore file using the provided password.
-func LoadKey(filePath, password string) error {
+// LoadKey loads a key from a keystore file using the provided password and returns the account.
+func LoadKey(filePath, password string) (accounts.Account, error) {
 	ks := keystore.NewKeyStore(filePath, keystore.StandardScryptN, keystore.StandardScryptP)
 	if len(ks.Accounts()) == 0 {
-		return fmt.Errorf("no accounts found in the key store")
+		return accounts.Account{}, fmt.Errorf("no accounts found in the key store")
 	}
 	account := ks.Accounts()[0]
 
 	err := ks.Unlock(account, password)
 	if err != nil {
-		return fmt.Errorf("failed to unlock the account: %v", err)
+		return accounts.Account{}, fmt.Errorf("failed to unlock the account: %v", err)
 	}
 
 	fmt.Printf("Account %s loaded\n", account.Address.Hex())
-	return nil
+	return account, nil
+}
+
+// ExportPrivateKey exports the private key for a given account from the keystore
+func ExportPrivateKey(ks *keystore.KeyStore, account accounts.Account, password string) (string, error) {
+	key, err := ks.Export(account, password, password)
+	if err != nil {
+		return "", fmt.Errorf("failed to export private key: %v", err)
+	}
+
+	// Decrypt the exported key to get the private key
+	privateKey, err := keystore.DecryptKey(key, password)
+	if err != nil {
+		return "", fmt.Errorf("failed to decrypt private key: %v", err)
+	}
+
+	privateKeyBytes := crypto.FromECDSA(privateKey.PrivateKey)
+	return fmt.Sprintf("%x", privateKeyBytes), nil
 }
