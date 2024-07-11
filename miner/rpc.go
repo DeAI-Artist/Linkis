@@ -83,3 +83,29 @@ func QueryRPCStatus(rpcEndpoint string) error {
 	fmt.Println("Node is reachable and JSON is valid.")
 	return nil
 }
+
+// QueryRPC makes an RPC query to the given endpoint with the provided query content
+func QueryRPC(endpoint string, queryContent string) (string, error) {
+	// Construct the query URL
+	url := fmt.Sprintf("http://%s/abci_query?data=%s", endpoint, queryContent)
+
+	// Execute the HTTP GET request
+	resp, err := http.Get(url)
+	if err != nil {
+		return "", fmt.Errorf("failed to send request: %v", err)
+	}
+	defer resp.Body.Close()
+
+	// Check if the HTTP status is 200 (OK)
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
+	}
+
+	// Read the response body
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return "", fmt.Errorf("failed to read response body: %v", err)
+	}
+
+	return string(body), nil
+}

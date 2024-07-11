@@ -1,7 +1,10 @@
 package miner
 
 import (
+	"fmt"
 	"github.com/jarcoal/httpmock"
+	"net/http"
+	"net/http/httptest"
 	"testing"
 )
 
@@ -28,5 +31,55 @@ func TestQueryRPCStatus(t *testing.T) {
 	err = QueryRPCStatus("localhost:26657")
 	if err == nil {
 		t.Errorf("Expected an error for localhost:26657, got nil")
+	}
+}
+
+func TestQueryRPC(t *testing.T) {
+	// Create a test server that simulates the RPC endpoint
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Check the query parameter 'data' to determine response
+		if r.URL.Query().Get("data") == "clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb" {
+			fmt.Fprintln(w, `{"result": "success"}`)
+		} else {
+			http.Error(w, `{"error": "query not found"}`, http.StatusNotFound)
+		}
+	}))
+	defer ts.Close()
+
+	// Test cases
+	tests := []struct {
+		name         string
+		endpoint     string
+		queryContent string
+		expected     string
+		expectErr    bool
+	}{
+		{
+			name:         "Successful query",
+			endpoint:     ts.URL[7:], // Removing 'http://'
+			queryContent: "clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb",
+			expected:     `{"result": "success"}` + "\n",
+			expectErr:    false,
+		},
+		{
+			name:         "Failed query",
+			endpoint:     ts.URL[7:], // Removing 'http://'
+			queryContent: "nonexistent_query",
+			expected:     "",
+			expectErr:    true,
+		},
+	}
+
+	// Execute test cases
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			result, err := QueryRPC(tc.endpoint, tc.queryContent)
+			if (err != nil) != tc.expectErr {
+				t.Errorf("Expected error: %v, got %v", tc.expectErr, err)
+			}
+			if result != tc.expected {
+				t.Errorf("Expected result: %s, got %s", tc.expected, result)
+			}
+		})
 	}
 }
