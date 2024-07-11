@@ -19,6 +19,7 @@ type RPCResponse struct {
 				Block string `json:"block"`
 				App   string `json:"app"`
 			} `json:"protocol_version"`
+
 			ID         string `json:"id"`
 			ListenAddr string `json:"listen_addr"`
 			Network    string `json:"network"`
