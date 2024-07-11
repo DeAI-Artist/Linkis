@@ -51,10 +51,22 @@ func NewMiner(rpcEndpoint, keyFilePath string) *Miner {
 
 // Initialize checks or creates a key, sets up the wallet, and updates the RPC status
 func (m *Miner) Initialize() error {
+	// Check or create a key for the miner
 	if err := m.checkOrCreateKey(); err != nil {
-		return err
+		return fmt.Errorf("failed to check or create key: %v", err)
 	}
-	return m.UpdateRPCStatus()
+
+	// Update the RPC status to ensure it is current before registration
+	if err := m.UpdateRPCStatus(); err != nil {
+		return fmt.Errorf("failed to update RPC status: %v", err)
+	}
+
+	// Register the miner if not already registered
+	if err := m.RegisterMiner(); err != nil {
+		return fmt.Errorf("failed to register miner: %v", err)
+	}
+
+	return nil
 }
 
 // UpdateRPCStatus checks the RPC status and updates the Miner struct

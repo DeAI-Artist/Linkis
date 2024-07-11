@@ -2,10 +2,12 @@ package commands
 
 import (
 	"fmt"
-	"github.com/DeAI-Artist/MintAI/miner" // Adjust this import path to where your wallet.go resides
+	"github.com/DeAI-Artist/MintAI/miner"
 	"github.com/spf13/cobra"
-	"os"
+	"log"
 )
+
+var rpcEndpoint string
 
 var ServiceStart = &cobra.Command{
 	Use:     "service-start",
@@ -15,32 +17,37 @@ var ServiceStart = &cobra.Command{
 	RunE:    serviceStartWithConfig,
 }
 
-func serviceStartWithConfig(cmd *cobra.Command, args []string) error {
-	keyfilePath := config.NodeMinerKeyFile() // Adjust as necessary or pull from configuration
+func init() {
+	// Define the flag for the RPC endpoint
+	ServiceStart.Flags().StringVarP(&rpcEndpoint, "rpc-endpoint", "r", "http://localhost:8545", "RPC endpoint URL")
+}
 
-	// Check if the key file exists
-	_, err := os.Stat(keyfilePath)
-	if os.IsNotExist(err) {
-		fmt.Println("No keyfile found. Creating a new key...")
-		password, err := miner.PromptPassword(true) // Ask for password with confirmation
-		if err != nil {
-			return fmt.Errorf("prompt for password failed: %v", err)
-		}
-		if err := miner.CreateNewKey(keyfilePath, password); err != nil {
-			return fmt.Errorf("failed to create new key: %v", err)
-		}
-	} else if err != nil {
-		return fmt.Errorf("failed to check key file: %v", err)
-	} else {
-		fmt.Println("Keyfile found. Loading key...")
-		password, err := miner.PromptPassword(false) // Ask for password without confirmation
-		if err != nil {
-			return fmt.Errorf("prompt for password failed: %v", err)
-		}
-		if err := miner.LoadKey(keyfilePath, password); err != nil {
-			return fmt.Errorf("failed to load key: %v", err)
-		}
+func serviceStartWithConfig(cmd *cobra.Command, args []string) error {
+	fmt.Printf("Using RPC Endpoint: %s\n", rpcEndpoint) // Example usage of the RPC endpoint
+
+	// Here you fetch the key file path from your configuration, adjust as necessary
+	keyfilePath := config.NodeMinerKeyFile() // Assuming there's a function in config package
+
+	// Create a new Miner instance with the specified RPC endpoint and key file path
+	minerInstance := miner.NewMiner(rpcEndpoint, keyfilePath)
+
+	// Initialize the miner (checks or creates a key, sets up the wallet, updates RPC status)
+	if err := minerInstance.Initialize(); err != nil {
+		log.Fatalf("Failed to initialize miner: %v", err)
+		return err
 	}
 
+	fmt.Println("Miner initialized and ready.")
 	return nil
 }
+
+/*
+# Basic syntax
+mintai service-start --rpc-endpoint "http://your-rpc-server:port"
+
+# Example usage
+mintai service-start --rpc-endpoint "http://localhost:8545"
+
+# Or using the shorthand for the flag
+mintai service-start -r "http://localhost:8545"
+*/
