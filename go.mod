@@ -55,6 +55,7 @@ require (
 require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/informalsystems/tm-load-test v1.0.0
+	github.com/jarcoal/httpmock v1.3.1
 	gonum.org/v1/gonum v0.12.0
 	google.golang.org/protobuf v1.33.0
 )
