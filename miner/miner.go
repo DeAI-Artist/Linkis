@@ -3,6 +3,7 @@ package miner
 import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/accounts/keystore"
+	"github.com/ethereum/go-ethereum/common"
 	"os"
 )
 
@@ -75,4 +76,22 @@ func (m *Miner) checkOrCreateKey() error {
 		}
 	}
 	return nil
+}
+
+// ToAddress returns the Ethereum address associated with the miner's primary account
+func (m *Miner) ToAddress() (common.Address, error) {
+	if len(m.Wallet.Keystore.Accounts()) == 0 {
+		return common.Address{}, fmt.Errorf("no accounts in keystore")
+	}
+	account := m.Wallet.Keystore.Accounts()[0] // Get the first account
+	return account.Address, nil
+}
+
+// ToAddressHex returns the Ethereum address in hexadecimal string format
+func (m *Miner) ToAddressHex() (string, error) {
+	address, err := m.ToAddress()
+	if err != nil {
+		return "", err
+	}
+	return address.Hex(), nil
 }
