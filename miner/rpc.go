@@ -149,3 +149,9 @@ func IsMinerRegistered(endpoint string, minerAddress string) (bool, error) {
 
 	return false, nil
 }
+
+// GetSystemServiceTypes - Simulates retrieving service types.
+func GetSystemServiceTypes(endpoint string) ([]uint64, error) {
+	// Return a sample list of service types.
+	return []uint64{101, 202, 303, 404}, nil
+}
