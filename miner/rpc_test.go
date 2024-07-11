@@ -38,7 +38,9 @@ func TestQueryRPC(t *testing.T) {
 	// Create a test server that simulates the RPC endpoint
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// Check the query parameter 'data' to determine response
-		if r.URL.Query().Get("data") == "clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb" {
+		// Expect the queryContent to be enclosed in quotes
+		expectedQuery := `"clientRegistration_0x6c25b72CD6807D10678B457B6E63FB793ae030Eb"`
+		if r.URL.Query().Get("data") == expectedQuery {
 			fmt.Fprintln(w, `{"result": "success"}`)
 		} else {
 			http.Error(w, `{"error": "query not found"}`, http.StatusNotFound)

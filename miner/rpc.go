@@ -87,8 +87,8 @@ func QueryRPCStatus(rpcEndpoint string) error {
 // QueryRPC makes an RPC query to the given endpoint with the provided query content
 func QueryRPC(endpoint string, queryContent string) (string, error) {
 	// Construct the query URL
-	url := fmt.Sprintf("http://%s/abci_query?data=%s", endpoint, queryContent)
-
+	url := fmt.Sprintf("http://%s/abci_query?data=\"%s\"", endpoint, queryContent)
+	println(url)
 	// Execute the HTTP GET request
 	resp, err := http.Get(url)
 	if err != nil {
