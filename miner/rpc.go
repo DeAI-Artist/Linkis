@@ -53,6 +53,23 @@ type RPCResponse struct {
 	} `json:"result"`
 }
 
+// MinerResponse defines the JSON response structure for miner registration checks
+type MinerResponse struct {
+	Jsonrpc string `json:"jsonrpc"`
+	ID      int    `json:"id"`
+	Result  struct {
+		Response struct {
+			Code      int         `json:"code"`
+			Log       string      `json:"log"`
+			Key       string      `json:"key"`
+			Value     string      `json:"value"`
+			Height    string      `json:"height"`
+			ProofOps  interface{} `json:"proofOps"`
+			Codespace string      `json:"codespace"`
+		} `json:"response"`
+	} `json:"result"`
+}
+
 // QueryRPCStatus sends a GET request to the RPC endpoint and checks the response
 func QueryRPCStatus(rpcEndpoint string) error {
 	resp, err := http.Get(fmt.Sprintf("http://%s/status", rpcEndpoint))
@@ -108,4 +125,27 @@ func QueryRPC(endpoint string, queryContent string) (string, error) {
 	}
 
 	return string(body), nil
+}
+
+// IsMinerRegistered checks if a miner is registered in the network
+func IsMinerRegistered(endpoint string, minerAddress string) (bool, error) {
+	queryContent := fmt.Sprintf("minerRegistration_%s", minerAddress)
+	response, err := QueryRPC(endpoint, queryContent)
+	if err != nil {
+		return false, fmt.Errorf("failed to query RPC: %v", err)
+	}
+
+	// Parse the JSON response
+	var minerResp MinerResponse
+	err = json.Unmarshal([]byte(response), &minerResp)
+	if err != nil {
+		return false, fmt.Errorf("failed to unmarshal JSON response: %v", err)
+	}
+
+	// Check if the log message indicates that the miner exists
+	if minerResp.Result.Response.Log == "exists" {
+		return true, nil
+	}
+
+	return false, nil
 }
