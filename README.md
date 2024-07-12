@@ -7,6 +7,27 @@
 [![Go version][go-badge]][go-url]
 [![License][license-badge]][license-url]
 
+## Table Of Content
+- [Introduction](#introduction)
+- [Quick Start](#quick-start)
+    - [Overview](#overview)
+    - [Validator Nodes](#validator-nodes)
+        - [Install MintAI](#install-mintai)
+        - [Initialize the Validator Node](#initialize-the-validator-node)
+        - [Start the Validator Node](#start-the-validator-node)
+        - [Send Transactions](#send-transactions)
+        - [Transaction Fees](#transaction-fees)
+    - [Worker Nodes](#worker-nodes)
+    - [Minimum Requirements](#minimum-requirements)
+- [MintAI Tokens](#mintai-tokens)
+    - [Overview](#overview-1)
+- [Versioning](#versioning)
+    - [Semantic Versioning](#semantic-versioning)
+    - [Upgrades](#upgrades)
+    - [Supported Versions](#supported-versions)
+- [Resources](#resources)
+    - [Research](#research)
+- [Contribution](#contribution)
 
 Tendermint Core includes both Layer-1 (L1) and Layer-2 (L2) implementations. L1 coordinates and records network activities, securely replicating them across many machines. Meanwhile, L2 contracts handle the storage and transportation of value, including coins and tokens in all kinds of types and formats.
 
