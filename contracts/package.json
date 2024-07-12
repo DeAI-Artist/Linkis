@@ -1,0 +1,15 @@
+{
+  "name": "mintail2",
+  "version": "1.0.0",
+  "description": "the l2 implementation of the MintAI network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  }
+}
