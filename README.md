@@ -1,4 +1,4 @@
-# MintAI: A Blockchain L1-L2 Ecosystem Unlocking the Potential of Decentralized AI
+# MintAI Core: Reference Implementation of MintAI protocol
 
 ![banner](docs/tendermint-core-image.jpg)
 
@@ -131,16 +131,8 @@ Because we are a small core team, we only ship patch updates, including security
 - [The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)
 - [Master's Thesis on Tendermint](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769)
 
-## Join us!
-
-Tendermint Core is maintained by [Interchain GmbH](https://interchain.berlin).
-If you'd like to work full-time on Tendermint Core,
-[we're hiring](https://interchain-gmbh.breezy.hr/)!
-
-Funding for Tendermint Core development comes primarily from the
-[Interchain Foundation](https://interchain.io), a Swiss non-profit. The
-Tendermint trademark is owned by [Tendermint Inc.](https://tendermint.com), the
-for-profit entity that also maintains [tendermint.com](https://tendermint.com).
+## Contribution
+We appreciate your interest in contributing to our open-source initiative. We'll provide a document of contribution guidelines soon, outlining the steps for contributing to MintAI. We welcome contributions from anyone on the internet and are grateful for even the smallest of fixes🤝!
 
 [bft]: https://en.wikipedia.org/wiki/Byzantine_fault_tolerance
 [smr]: https://en.wikipedia.org/wiki/State_machine_replication
