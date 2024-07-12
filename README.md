@@ -99,75 +99,37 @@ The MintAI token (MAI) is the primary utility token supporting network participa
 
 Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/MintAI/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the MintAI network, cross-chain features will also be gradually supported so that MAI can be transferred between chains such as Solana and Tron.
 
-## Contributing
-
-Please abide by the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
-
-Before contributing to the project, please take a look at the [contributing
-guidelines](CONTRIBUTING.md) and the [style guide](STYLE_GUIDE.md). You may also
-find it helpful to read the [specifications](./spec/README.md), and familiarize
-yourself with our [Architectural Decision Records
-(ADRs)](./docs/architecture/README.md) and
-[Request For Comments (RFCs)](./docs/rfc/README.md).
-
 ## Versioning
 
 ### Semantic Versioning
 
-Tendermint uses [Semantic Versioning](http://semver.org/) to determine when and
+MintAI uses [Semantic Versioning](http://semver.org/) to determine when and
 how the version changes. According to SemVer, anything in the public API can
 change at any time before version 1.0.0
 
-To provide some stability to users of 0.X.X versions of Tendermint, the MINOR
-version is used to signal breaking changes across Tendermint's API. This API
+To provide some stability to users of 0.X.X versions of MintAI, the MINOR
+version is used to signal breaking changes across MintAI's API. This API
 includes all publicly exposed types, functions, and methods in non-internal Go
-packages as well as the types and methods accessible via the Tendermint RPC
+packages as well as the types and methods accessible via the MintAI RPC
 interface.
 
 Breaking changes to these public APIs will be documented in the CHANGELOG.
 
 ### Upgrades
 
-In an effort to avoid accumulating technical debt prior to 1.0.0, we do not
-guarantee that breaking changes (ie. bumps in the MINOR version) will work with
-existing Tendermint blockchains. In these cases you will have to start a new
-blockchain, or write something custom to get the old data into the new chain.
-However, any bump in the PATCH version should be compatible with existing
-blockchain histories.
-
-For more information on upgrading, see [UPGRADING.md](./UPGRADING.md).
+In an effort to avoid accumulating technical debt prior to 1.0.0, we do not guarantee that breaking changes (i.e., bumps in the MINOR version) will work with existing MintAI blockchains. In these cases, you will have to start a new blockchain or write something custom to get the old data into the new chain. However, any bump in the PATCH version should be compatible with existing blockchain histories.
 
 ### Supported Versions
 
-Because we are a small core team, we only ship patch updates, including security
-updates, to the most recent minor release and the second-most recent minor
-release. Consequently, we strongly recommend keeping Tendermint up-to-date.
-Upgrading instructions can be found in [UPGRADING.md](./UPGRADING.md).
-
+Because we are a small core team, we only ship patch updates, including security updates, to the most recent minor release and the second-most recent minor release. Consequently, we strongly recommend keeping MintAI up-to-date when joining as validator or worker nodes. We will try our best to ensure that every major upgrade will be technically supported to the extent that the validator node restart will be as smooth as possible.
 ## Resources
 
-### Libraries
-
-- [Cosmos SDK](http://github.com/cosmos/cosmos-sdk); A framework for building
-  applications in Golang
-- [Tendermint in Rust](https://github.com/informalsystems/tendermint-rs)
-- [ABCI Tower](https://github.com/penumbra-zone/tower-abci)
-
-### Applications
-
-- [Cosmos Hub](https://hub.cosmos.network/)
-- [Terra](https://www.terra.money/)
-- [Celestia](https://celestia.org/)
-- [Anoma](https://anoma.network/)
-- [Vocdoni](https://docs.vocdoni.io/)
-
 ### Research
-
+- [MintAI Protocol](https://mintai.gitbook.io/whitepaper/)
+- [Proof of Training](https://arxiv.org/pdf/2307.07066)
+- [DeAI Overview](https://arxiv.org/pdf/2310.19099)
 - [The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)
 - [Master's Thesis on Tendermint](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769)
-- [Original Whitepaper: "Tendermint: Consensus Without Mining"](https://tendermint.com/static/docs/tendermint.pdf)
-- [Tendermint Core Blog](https://medium.com/tendermint/tagged/tendermint-core)
-- [Cosmos Blog](https://blog.cosmos.network/tendermint/home)
 
 ## Join us!
 
