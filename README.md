@@ -21,7 +21,7 @@ _NOTE: This is only the dev version of MintAI core, both in the L1 and L2 implem
 ### Overview
 The network is composed of validators, service providers (miners), and clients. To earn network rewards, you need to either participate as a service provider or a validator.
 
-### Validators
+### Validator nodes
 Validators are responsible for securing the network by proposing and validating new blocks. To set up a validator node, follow these steps:
 
 #### Install MintAI:
@@ -66,6 +66,19 @@ To send transactions that can be passed into the mempool, one needs to formulate
 #### Transaction fees:
 Unlike interacting with mainnets like Solana or Ethereum, MintAI L1 transactions are completely **free of gas fees**, allowing clients to navigate the network without any economic friction.
 One can refer to the [MintAI protocol](https://arxiv.org/pdf/2310.19099) to understand how this is accomplished in a secure and robust manner.
+
+### Worker nodes
+The MintAI protocol coordinates services by routing clients' requests to workers (miners) in the network. Participating as a worker can help one earn network rewards based on the amount of services they have accepted and completed (through network transactions). To start with a certain `RPCENDPOINT`:
+```shell
+mintai service-start --rpc-endpoint ${RPCENDPOINT}
+```
+It will prompt the user for some registration info and wallet generation.
+
+> Note: The `service-start` command is still under development and will become fully functional with the launch of the testnet. This command aims to simplify the process for anyone with the necessary resources to set up a worker node.
+
+## MintAI tokens
+
+
 ## Minimum requirements
 
 | Requirement | Notes             |
