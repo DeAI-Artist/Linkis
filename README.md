@@ -76,15 +76,28 @@ It will prompt the user for some registration info and wallet generation.
 
 > Note: The `service-start` command is still under development and will become fully functional with the launch of the testnet. This command aims to simplify the process for anyone with the necessary resources to set up a worker node.
 
-## MintAI tokens
-
-
-## Minimum requirements
+### Minimum requirements
 
 | Requirement | Notes             |
 |-------------|-------------------|
 | Go version  | Go 1.18 or higher |
 
+## MintAI tokens
+### Overview
+The MintAI token (MAI) is the primary utility token supporting network participants such as clients, workers, and validators. Participants are required to hold a certain amount of tokens to be accepted into the MintAI network. Clients must hold tokens to use AI and ML services on the network, while validators need to stake tokens to gain the voting power necessary for recording network activities. Consequently, the MintAI token should have the following considerations:
+- **Security**: Mainnets supporting MAI should be secure, typically characterized by a large Total Value Locked (TVL) and a broad community base.
+- **Upgradability**: MAI utilizes proxy contracts, allowing for updates to system logic and design without impacting the underlying database.
+- **Cross-chain Capability**: Cross-chain functionality improves accessibility, enabling holders of various cryptocurrencies to engage with the MintAI network and utilize AI and ML services.
+- **User Experience**: MAI should operate on chains known for low transaction fees and fast confirmation times, ensuring a smooth user experience.
+
+| Feature\Mainnets            | BSC<br/>![img_1.png](docs/img_1.png)  | Ethereum<br/>![img.png](docs/img.png)    | Polygon<br/>![img_2.png](docs/img_2.png) | Solana<br/>![img_3.png](docs/img_3.png)             | Near<br/>![img_5.png](docs/img_5.png)        | Tron<br/>![img_4.png](docs/img_4.png)                |
+|-----------------------------|---------------------------------------|-------------------------------------|-------------------------------------|------------------------------------------------|-----------------------------------------|--------------------------------------------|
+| **Security**                | ✅ Large TVL, Large User Base          | ✅ Large TVL, Large User Base        | ✅ Growing community size            | ✅ Large TVL, Large User Base ⚠️Fair robustness | ⚠️ Fair TVL and moderate community base | ✅ Large TVL, Large User Base                        |
+| **Upgradability**           | ✅ Proxy contracts patterns            | ✅ Proxy contracts patterns          | ✅ Proxy contracts pattern           | ✅ Upgradable by upgrad authority               | ✅ Upgradable contracts                  | ✅ Proxy contracts patterns                          |
+| **Developer Tools**         | ✅ Many frameworks and tools available | ✅ Many frameworks and tools available      | ✅ Well-supported development tools  | ✅ Growing ecosystem of tools                   | ✅ Well-supported development tools        | ✅ Many frameworks and tools available           |
+| **Transaction Efficiency**  | ✅ Low fees, fast times                | ❌ Extremely high fees, slower times | ⚠️ Low fees, but slow speed          | ✅✅ Super-fast, Super low fees                  | ✅ Low fees, fast times                        | ✅ Low fees, fast times                 |
+
+Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/MintAI/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the MintAI network, cross-chain features will also be gradually supported so that MAI can be transferred between chains such as Solana and Tron.
 
 ## Contributing
 
