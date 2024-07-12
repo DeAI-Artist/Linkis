@@ -28,7 +28,7 @@
 - [Resources](#resources)
     - [Research](#research)
 - [Contribution](#contribution)
-
+## Introduction
 Tendermint Core includes both Layer-1 (L1) and Layer-2 (L2) implementations. L1 coordinates and records network activities, securely replicating them across many machines. Meanwhile, L2 contracts handle the storage and transportation of value, including coins and tokens in all kinds of types and formats.
 
 For protocol details, refer to the [MintAI WhitePaper](https://mintai.gitbook.io/whitepaper/).
