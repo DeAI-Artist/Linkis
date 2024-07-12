@@ -31,6 +31,12 @@
 ## Introduction
 Tendermint Core includes both Layer-1 (L1) and Layer-2 (L2) implementations. L1 coordinates and records network activities, securely replicating them across many machines. Meanwhile, L2 contracts handle the storage and transportation of value, including coins and tokens in all kinds of types and formats.
 
+<p align="center">
+  <img src="docs/figdiagram.png" alt="Decentralized AI Service Network">
+  <br>
+  <em><strong>Figure 1:</strong> Overview of the decentralized AI service network components and their interactions.</em>
+</p>
+
 For protocol details, refer to the [MintAI WhitePaper](https://mintai.gitbook.io/whitepaper/).
 
 For a detailed analysis of the consensus framework in the L1 layer, including BFT safety and liveness proofs, refer to the paper, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)" and its corresponding [Tendermint GitHub repo](https://github.com/tendermint/tendermint).
