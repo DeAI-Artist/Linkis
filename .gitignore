@@ -33,7 +33,7 @@ scripts/cutWALUntil/cutWALUntil
 *.iml
 
 .vscode/
-
+contracts/node_modules
 libs/pubsub/query/fuzz_test/output
 shunit2
 
