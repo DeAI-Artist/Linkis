@@ -6,6 +6,8 @@
 [![API Reference][api-badge]][api-url]
 [![Go version][go-badge]][go-url]
 [![License][license-badge]][license-url]
+![COMMIT_ACTIVITY](https://img.shields.io/github/commit-activity/m/DeAI-Artist/MintAI?style=for-the-badge)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FMintAI&labelColor=%23f47373&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FMintAI)
 
 ## Table Of Content
 - [Introduction](#introduction)
