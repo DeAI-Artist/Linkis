@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra"
-	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra/docker"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/test/e2e/pkg/infra"
+	"github.com/DeAI-Artist/Linkis/test/e2e/pkg/infra/docker"
 )
 
 var (

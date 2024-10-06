@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
-	"github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 const maxPingPongPacketSize = 1024 // bytes
@@ -276,7 +276,7 @@ func TestMConnectionMultiplePings(t *testing.T) {
 	defer mconn.Stop() //nolint:errcheck // ignore for tests
 
 	// sending 3 pings in a row (abuse)
-	// see https://github.com/DeAI-Artist/MintAI/issues/1190
+	// see https://github.com/DeAI-Artist/Linkis/issues/1190
 	protoReader := protoio.NewDelimitedReader(server, maxPingPongPacketSize)
 	protoWriter := protoio.NewDelimitedWriter(server)
 	var pkt tmp2p.Packet

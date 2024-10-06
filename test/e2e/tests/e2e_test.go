@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/types"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func init() {

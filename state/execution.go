@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/libs/fail"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/libs/fail"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //-----------------------------------------------------------------------------

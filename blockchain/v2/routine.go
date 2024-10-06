@@ -7,7 +7,7 @@ import (
 
 	"github.com/Workiva/go-datastructures/queue"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 type handleFunc = func(event Event) (Event, error)

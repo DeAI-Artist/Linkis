@@ -15,16 +15,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 func TestMain(m *testing.M) {

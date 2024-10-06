@@ -20,7 +20,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
 )
 
 func TestRFC6962Hasher(t *testing.T) {

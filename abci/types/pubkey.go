@@ -3,9 +3,9 @@ package types
 import (
 	fmt "fmt"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/crypto/secp256k1"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/crypto/secp256k1"
 )
 
 func Ed25519ValidatorUpdate(pk []byte, power int64) ValidatorUpdate {

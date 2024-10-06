@@ -4,7 +4,7 @@ executors:
   golang:
     docker:
       - image: mintaidev/docker-mintai-build:latest
-    working_directory: /go/src/github.com/DeAI-Artist/MintAI
+    working_directory: /go/src/github.com/DeAI-Artist/Linkis
     environment:
       GOBIN: /tmp/bin
   release:
@@ -121,7 +121,7 @@ jobs:
 
   # Re-enabled Contract Tests
   contract_tests:
-    working_directory: /home/circleci/.go_workspace/src/github.com/DeAI-Artist/MintAI
+    working_directory: /home/circleci/.go_workspace/src/github.com/DeAI-Artist/Linkis
     machine:
       image: circleci/classic:latest
     environment:
@@ -140,7 +140,7 @@ jobs:
             # install node and dredd
             ./scripts/get_nodejs.sh
             # build the binaries with a proper version of Go
-            docker run --rm -v "$PWD":/go/src/github.com/DeAI-Artist/MintAI -w /go/src/github.com/DeAI-Artist/MintAI golang make build-linux build-contract-tests-hooks
+            docker run --rm -v "$PWD":/go/src/github.com/DeAI-Artist/Linkis -w /go/src/github.com/DeAI-Artist/Linkis golang make build-linux build-contract-tests-hooks
             # This docker image works with go 1.7, we can install here the hook handler that contract-tests is going to use
             go get github.com/snikch/goodman/cmd/goodman
             make contract-tests

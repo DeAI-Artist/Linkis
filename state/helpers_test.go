@@ -7,16 +7,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 type paramsChangeTestCase struct {

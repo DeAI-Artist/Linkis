@@ -36,7 +36,7 @@ cd $GOPATH/src/github.com/DeAI-Artist
 # once go module is on, go get will download source code to
 # specific version directory under $GOPATH/pkg/mod the make
 # script will not work
-git clone https://github.com/DeAI-Artist/MintAI.git
+git clone https://github.com/DeAI-Artist/Linkis.git
 cd MintAI
 
 ## build

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	abcicli "github.com/DeAI-Artist/MintAI/abci/client"
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	abcicli "github.com/DeAI-Artist/Linkis/abci/client"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 func startClient(abciType string) abcicli.Client {

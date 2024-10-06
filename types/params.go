@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 const (

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/types"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Tests that validator sets are available and correct according to

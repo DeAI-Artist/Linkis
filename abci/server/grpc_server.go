@@ -5,9 +5,9 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	"github.com/DeAI-Artist/MintAI/libs/service"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	"github.com/DeAI-Artist/Linkis/libs/service"
 )
 
 type GRPCServer struct {

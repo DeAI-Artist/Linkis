@@ -1,7 +1,7 @@
 package mempool
 
 import (
-	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // TxInfo are parameters that get passed when attempting to add a tx to the

@@ -10,15 +10,15 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	service "github.com/DeAI-Artist/MintAI/libs/service"
-	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	service "github.com/DeAI-Artist/Linkis/libs/service"
+	rpcclient "github.com/DeAI-Artist/Linkis/rpc/client"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 var errNegOrZeroHeight = errors.New("negative or zero height")

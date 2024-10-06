@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
 )
 
 // TrustOptions are the trust parameters needed when a new light client

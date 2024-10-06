@@ -7,8 +7,8 @@ import (
 
 	"context"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	coregrpc "github.com/DeAI-Artist/MintAI/rpc/grpc"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	coregrpc "github.com/DeAI-Artist/Linkis/rpc/grpc"
 )
 
 var grpcAddr = "tcp://localhost:36656"

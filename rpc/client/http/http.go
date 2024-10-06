@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	jsonrpcclient "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/client"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	rpcclient "github.com/DeAI-Artist/Linkis/rpc/client"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	jsonrpcclient "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/client"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 /*

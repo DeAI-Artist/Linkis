@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // BroadcastEvidence broadcasts evidence of the misbehavior.

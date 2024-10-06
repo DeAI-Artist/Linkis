@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/privval"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/privval"
 )
 
 // ResetAllCmd removes the database of this MintAI core

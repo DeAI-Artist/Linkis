@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 // a wrapper to emulate a sum type: jsonrpcid = string | int

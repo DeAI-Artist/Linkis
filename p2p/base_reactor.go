@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

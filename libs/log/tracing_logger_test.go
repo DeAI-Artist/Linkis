@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 func TestTracingLogger(t *testing.T) {

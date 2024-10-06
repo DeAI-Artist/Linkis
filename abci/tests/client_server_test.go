@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	abciclient "github.com/DeAI-Artist/MintAI/abci/client"
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
-	cfg "github.com/DeAI-Artist/MintAI/config"
+	abciclient "github.com/DeAI-Artist/Linkis/abci/client"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	abciserver "github.com/DeAI-Artist/Linkis/abci/server"
+	cfg "github.com/DeAI-Artist/Linkis/config"
 )
 
 func TestClientServerNoAddrPrefix(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 // HTTP + URI handler

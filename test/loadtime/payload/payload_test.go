@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/DeAI-Artist/MintAI/test/loadtime/payload"
+	"github.com/DeAI-Artist/Linkis/test/loadtime/payload"
 )
 
 const payloadSizeTarget = 1024 // 1kb

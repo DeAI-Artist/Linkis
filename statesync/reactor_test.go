@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	p2pmocks "github.com/DeAI-Artist/MintAI/p2p/mocks"
-	ssproto "github.com/DeAI-Artist/MintAI/proto/tendermint/statesync"
-	proxymocks "github.com/DeAI-Artist/MintAI/proxy/mocks"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	p2pmocks "github.com/DeAI-Artist/Linkis/p2p/mocks"
+	ssproto "github.com/DeAI-Artist/Linkis/proto/tendermint/statesync"
+	proxymocks "github.com/DeAI-Artist/Linkis/proxy/mocks"
 )
 
 func TestReactor_Receive_ChunkRequest(t *testing.T) {

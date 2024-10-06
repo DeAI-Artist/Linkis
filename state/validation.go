@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //-----------------------------------------------------

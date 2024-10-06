@@ -18,42 +18,42 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	bcv0 "github.com/DeAI-Artist/MintAI/blockchain/v0"
-	bcv1 "github.com/DeAI-Artist/MintAI/blockchain/v1"
-	bcv2 "github.com/DeAI-Artist/MintAI/blockchain/v2"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/consensus"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/evidence"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/light"
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	mempoolv0 "github.com/DeAI-Artist/MintAI/mempool/v0"
-	mempoolv1 "github.com/DeAI-Artist/MintAI/mempool/v1"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/p2p/pex"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	rpccore "github.com/DeAI-Artist/MintAI/rpc/core"
-	grpccore "github.com/DeAI-Artist/MintAI/rpc/grpc"
-	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/state/indexer"
-	blockidxkv "github.com/DeAI-Artist/MintAI/state/indexer/block/kv"
-	blockidxnull "github.com/DeAI-Artist/MintAI/state/indexer/block/null"
-	"github.com/DeAI-Artist/MintAI/state/txindex"
-	"github.com/DeAI-Artist/MintAI/state/txindex/kv"
-	"github.com/DeAI-Artist/MintAI/state/txindex/null"
-	"github.com/DeAI-Artist/MintAI/statesync"
-	"github.com/DeAI-Artist/MintAI/store"
-	cs "github.com/DeAI-Artist/MintAI/test/maverick/consensus"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
-	"github.com/DeAI-Artist/MintAI/version"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	bcv0 "github.com/DeAI-Artist/Linkis/blockchain/v0"
+	bcv1 "github.com/DeAI-Artist/Linkis/blockchain/v1"
+	bcv2 "github.com/DeAI-Artist/Linkis/blockchain/v2"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/consensus"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/evidence"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/light"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	mempoolv0 "github.com/DeAI-Artist/Linkis/mempool/v0"
+	mempoolv1 "github.com/DeAI-Artist/Linkis/mempool/v1"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/pex"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	rpccore "github.com/DeAI-Artist/Linkis/rpc/core"
+	grpccore "github.com/DeAI-Artist/Linkis/rpc/grpc"
+	rpcserver "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/state/indexer"
+	blockidxkv "github.com/DeAI-Artist/Linkis/state/indexer/block/kv"
+	blockidxnull "github.com/DeAI-Artist/Linkis/state/indexer/block/null"
+	"github.com/DeAI-Artist/Linkis/state/txindex"
+	"github.com/DeAI-Artist/Linkis/state/txindex/kv"
+	"github.com/DeAI-Artist/Linkis/state/txindex/null"
+	"github.com/DeAI-Artist/Linkis/statesync"
+	"github.com/DeAI-Artist/Linkis/store"
+	cs "github.com/DeAI-Artist/Linkis/test/maverick/consensus"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 //------------------------------------------------------------------------------
@@ -164,7 +164,7 @@ func DefaultMetricsProvider(config *cfg.InstrumentationConfig) MetricsProvider {
 type Option func(*Node)
 
 // Temporary interface for switching to fast sync, we should get rid of v0 and v1 reactors.
-// See: https://github.com/DeAI-Artist/MintAI/issues/4595
+// See: https://github.com/DeAI-Artist/Linkis/issues/4595
 type fastSyncReactor interface {
 	SwitchToFastSync(sm.State) error
 }
@@ -650,7 +650,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 			// blocks assuming 10s blocks ~ 28 hours.
 			// TODO (melekes): make it dynamic based on the actual block latencies
 			// from the live network.
-			// https://github.com/DeAI-Artist/MintAI/issues/3523
+			// https://github.com/DeAI-Artist/Linkis/issues/3523
 			SeedDisconnectWaitPeriod:     28 * time.Hour,
 			PersistentPeersMaxDialPeriod: config.P2P.PersistentPeersMaxDialPeriod,
 		})
@@ -848,7 +848,7 @@ func NewNode(config *cfg.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> fast sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/DeAI-Artist/MintAI/issues/4644
+	// https://github.com/DeAI-Artist/Linkis/issues/4644
 	stateSyncReactor := statesync.NewReactor(
 		*config.StateSync,
 		proxyApp.Snapshot(),
@@ -1113,7 +1113,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/DeAI-Artist/MintAI/issues/3435
+	// See https://github.com/DeAI-Artist/Linkis/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}
@@ -1192,7 +1192,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 		config.MaxOpenConnections = n.config.RPC.GRPCMaxOpenConnections
 		// If necessary adjust global WriteTimeout to ensure it's greater than
 		// TimeoutBroadcastTxCommit.
-		// See https://github.com/DeAI-Artist/MintAI/issues/3435
+		// See https://github.com/DeAI-Artist/Linkis/issues/3435
 		if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 			config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 		}

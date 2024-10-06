@@ -5,7 +5,7 @@ package blockchain
 
 import (
 	fmt "fmt"
-	types "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	types "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"
 	math "math"

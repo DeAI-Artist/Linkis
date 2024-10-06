@@ -10,11 +10,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/libs/timer"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/libs/timer"
 )
 
 const (

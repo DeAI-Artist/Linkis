@@ -6,11 +6,11 @@ import (
 	"strings"
 	"sync"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 type RoundVoteSet struct {

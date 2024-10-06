@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 func TestGenesisBad(t *testing.T) {

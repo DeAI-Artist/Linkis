@@ -8,10 +8,10 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/light/store"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/light/store"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 var (

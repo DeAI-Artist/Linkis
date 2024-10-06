@@ -2,7 +2,7 @@
 
 # events
 
-`import "github.com/DeAI-Artist/MintAI/libs/events"`
+`import "github.com/DeAI-Artist/Linkis/libs/events"`
 
 * [Overview](#pkg-overview)
 * [Index](#pkg-index)
@@ -27,7 +27,7 @@ Pub-Sub in go with event caching
 
 ### Package files
 
-[event_cache.go](/src/github.com/DeAI-Artist/MintAI/libs/events/event_cache.go) [events.go](/src/github.com/DeAI-Artist/MintAI/libs/events/events.go)
+[event_cache.go](/src/github.com/DeAI-Artist/Linkis/libs/events/event_cache.go) [events.go](/src/github.com/DeAI-Artist/Linkis/libs/events/events.go)
 
 
 

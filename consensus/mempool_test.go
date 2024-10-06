@@ -12,11 +12,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/code"
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/code"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // for testing

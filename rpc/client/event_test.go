@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 var waitForEventTimeout = 8 * time.Second

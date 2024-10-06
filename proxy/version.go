@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/version"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 // RequestInfo contains all the information for sending

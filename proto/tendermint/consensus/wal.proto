@@ -1,7 +1,7 @@
 syntax = "proto3";
 package tendermint.consensus;
 
-option go_package = "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus";
+option go_package = "github.com/DeAI-Artist/Linkis/proto/tendermint/consensus";
 
 import "gogoproto/gogo.proto";
 import "tendermint/consensus/types.proto";

@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/privval"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/privval"
 )
 
 // ShowValidatorCmd adds capabilities for showing the validator info.

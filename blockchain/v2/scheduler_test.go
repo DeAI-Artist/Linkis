@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 type scTestParams struct {

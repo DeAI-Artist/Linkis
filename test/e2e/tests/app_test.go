@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/types"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Tests that any initial state given in genesis has made it into the app.

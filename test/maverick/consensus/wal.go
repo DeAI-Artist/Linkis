@@ -11,14 +11,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	// tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmcon "github.com/DeAI-Artist/MintAI/consensus"
-	auto "github.com/DeAI-Artist/MintAI/libs/autofile"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmcons "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	// tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmcon "github.com/DeAI-Artist/Linkis/consensus"
+	auto "github.com/DeAI-Artist/Linkis/libs/autofile"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmcons "github.com/DeAI-Artist/Linkis/proto/tendermint/consensus"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 const (

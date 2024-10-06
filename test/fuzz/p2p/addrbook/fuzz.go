@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/p2p/pex"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/pex"
 )
 
 var addrBook = pex.NewAddrBook("./testdata/addrbook.json", true)

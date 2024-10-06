@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	kv "github.com/DeAI-Artist/MintAI/abci/example/kvstore"
+	kv "github.com/DeAI-Artist/Linkis/abci/example/kvstore"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/accounts/keystore"

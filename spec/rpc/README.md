@@ -11,14 +11,14 @@ This file defines the JSON-RPC spec of Tendermint. This is meant to be implement
 
 ## Support
 
-  |              | [Tendermint-Go](https://github.com/DeAI-Artist/MintAI/) | [endermint-Rs](https://github.com/informalsystems/tendermint-rs) |
+  |              | [Tendermint-Go](https://github.com/DeAI-Artist/Linkis/) | [endermint-Rs](https://github.com/informalsystems/tendermint-rs) |
   |--------------|:----------------------------------------------------------:|:----------------------------------------------------------------:|
   | JSON-RPC 2.0 |                             ✅                              |                                ✅                                 |
   | HTTP         |                             ✅                              |                                ✅                                 |
   | HTTPS        |                             ✅                              |                                ❌                                 |
   | WS           |                             ✅                              |                                ✅                                 |
 
-  | Routes                                  | [Tendermint-Go](https://github.com/DeAI-Artist/MintAI/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
+  | Routes                                  | [Tendermint-Go](https://github.com/DeAI-Artist/Linkis/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
   |-----------------------------------------|:----------------------------------------------------------:|:-----------------------------------------------------------------:|
   | [Health](#health)                       |                             ✅                              |                                 ✅                                 |
   | [Status](#status)                       |                             ✅                              |                                 ✅                                 |

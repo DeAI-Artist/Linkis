@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 // VersionCmd ...

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/p2p"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // errDone is returned by chunkQueue.Next() when all chunks have been returned.

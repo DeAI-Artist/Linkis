@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 func TestParseJSONMap(t *testing.T) {

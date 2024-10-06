@@ -8,11 +8,11 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/DeAI-Artist/MintAI/libs/cmap"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/libs/service"
+	"github.com/DeAI-Artist/Linkis/libs/cmap"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/service"
 
-	tmconn "github.com/DeAI-Artist/MintAI/p2p/conn"
+	tmconn "github.com/DeAI-Artist/Linkis/p2p/conn"
 )
 
 //go:generate ../scripts/mockery_generate.sh Peer

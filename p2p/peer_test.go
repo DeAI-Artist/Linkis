@@ -11,14 +11,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 
-	"github.com/DeAI-Artist/MintAI/config"
-	tmconn "github.com/DeAI-Artist/MintAI/p2p/conn"
+	"github.com/DeAI-Artist/Linkis/config"
+	tmconn "github.com/DeAI-Artist/Linkis/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

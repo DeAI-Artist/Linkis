@@ -9,14 +9,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	"github.com/DeAI-Artist/MintAI/rpc/client/mock"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	"github.com/DeAI-Artist/Linkis/rpc/client/mock"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func TestABCIMock(t *testing.T) {

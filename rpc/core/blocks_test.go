@@ -9,12 +9,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func TestBlockchainInfo(t *testing.T) {

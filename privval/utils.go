@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
 )
 
 // IsConnTimeout returns a boolean indicating whether the error is known to

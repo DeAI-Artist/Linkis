@@ -41,7 +41,7 @@ import (
 	"github.com/gogo/protobuf/test"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
 )
 
 func iotest(writer protoio.WriteCloser, reader protoio.ReadCloser) error {

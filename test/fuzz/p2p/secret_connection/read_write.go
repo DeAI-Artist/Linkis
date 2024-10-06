@@ -6,9 +6,9 @@ import (
 	"io"
 	"log"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/async"
-	sc "github.com/DeAI-Artist/MintAI/p2p/conn"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/async"
+	sc "github.com/DeAI-Artist/Linkis/p2p/conn"
 )
 
 func Fuzz(data []byte) int {

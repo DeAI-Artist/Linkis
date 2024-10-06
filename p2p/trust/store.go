@@ -10,8 +10,8 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 const defaultStorePeriodicSaveInterval = 1 * time.Minute

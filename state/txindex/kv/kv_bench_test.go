@@ -9,9 +9,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func BenchmarkTxSearch(b *testing.B) {

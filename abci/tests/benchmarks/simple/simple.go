@@ -7,8 +7,8 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
 )
 
 func main() {

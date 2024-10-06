@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	ce "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	ce "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 // Volatile state for each Validator

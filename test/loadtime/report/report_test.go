@@ -7,9 +7,9 @@ import (
 	"github.com/google/uuid"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/DeAI-Artist/MintAI/test/loadtime/payload"
-	"github.com/DeAI-Artist/MintAI/test/loadtime/report"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/test/loadtime/payload"
+	"github.com/DeAI-Artist/Linkis/test/loadtime/report"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 type mockBlockStore struct {

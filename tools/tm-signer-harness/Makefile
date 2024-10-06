@@ -3,7 +3,7 @@
 TENDERMINT_VERSION?=latest
 BUILD_TAGS?='mintai'
 VERSION := $(shell git describe --always)
-BUILD_FLAGS = -ldflags "-X github.com/DeAI-Artist/MintAI/version.TMCoreSemVer=$(VERSION)
+BUILD_FLAGS = -ldflags "-X github.com/DeAI-Artist/Linkis/version.TMCoreSemVer=$(VERSION)
 
 .DEFAULT_GOAL := build
 

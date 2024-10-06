@@ -19,12 +19,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
-	p2pproto "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
+	p2pproto "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 )
 
 var cfg *config.P2PConfig

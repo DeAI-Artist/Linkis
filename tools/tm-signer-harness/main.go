@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/tools/tm-signer-harness/internal"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/tools/tm-signer-harness/internal"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 const (

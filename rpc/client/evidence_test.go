@@ -9,16 +9,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/privval"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/privval"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	rpctest "github.com/DeAI-Artist/Linkis/rpc/test"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // For some reason the empty node used in tests has a time of

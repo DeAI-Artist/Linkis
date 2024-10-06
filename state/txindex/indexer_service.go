@@ -3,9 +3,9 @@ package txindex
 import (
 	"context"
 
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/state/indexer"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/state/indexer"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

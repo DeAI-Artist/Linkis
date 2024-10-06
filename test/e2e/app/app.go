@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/code"
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/abci/example/code"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 const appVersion = 1

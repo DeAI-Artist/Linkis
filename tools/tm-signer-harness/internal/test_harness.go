@@ -8,17 +8,17 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/state"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/state"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Test harness error codes (which act as exit codes when the test harness fails).

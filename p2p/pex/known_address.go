@@ -3,7 +3,7 @@ package pex
 import (
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // knownAddress tracks information about a known network address

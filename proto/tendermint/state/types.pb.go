@@ -5,9 +5,9 @@ package state
 
 import (
 	fmt "fmt"
-	types "github.com/DeAI-Artist/MintAI/abci/types"
-	types1 "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	version "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
+	types "github.com/DeAI-Artist/Linkis/abci/types"
+	types1 "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	version "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"

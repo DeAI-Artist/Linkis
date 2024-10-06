@@ -15,19 +15,19 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/DeAI-Artist/MintAI/abci/client"
-	abciclimocks "github.com/DeAI-Artist/MintAI/abci/client/mocks"
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/config"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	abciclient "github.com/DeAI-Artist/Linkis/abci/client"
+	abciclimocks "github.com/DeAI-Artist/Linkis/abci/client/mocks"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	abciserver "github.com/DeAI-Artist/Linkis/abci/server"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/config"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular
@@ -640,7 +640,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 }
 
 // This will non-deterministically catch some concurrency failures like
-// https://github.com/DeAI-Artist/MintAI/issues/3509
+// https://github.com/DeAI-Artist/Linkis/issues/3509
 // TODO: all of the tests should probably also run using the remote proxy app
 // since otherwise we're not actually testing the concurrency of the mempool here!
 func TestMempoolRemoteAppConcurrency(t *testing.T) {

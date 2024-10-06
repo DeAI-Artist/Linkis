@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 func TestVoteSet_AddVote_Good(t *testing.T) {

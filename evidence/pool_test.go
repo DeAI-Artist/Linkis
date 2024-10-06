@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/evidence"
-	"github.com/DeAI-Artist/MintAI/evidence/mocks"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	smmocks "github.com/DeAI-Artist/MintAI/state/mocks"
-	"github.com/DeAI-Artist/MintAI/store"
-	"github.com/DeAI-Artist/MintAI/types"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/evidence"
+	"github.com/DeAI-Artist/Linkis/evidence/mocks"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	smmocks "github.com/DeAI-Artist/Linkis/state/mocks"
+	"github.com/DeAI-Artist/Linkis/store"
+	"github.com/DeAI-Artist/Linkis/types"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 func TestMain(m *testing.M) {

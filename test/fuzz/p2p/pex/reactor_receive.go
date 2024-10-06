@@ -3,13 +3,13 @@ package pex
 import (
 	"net"
 
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/p2p/pex"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/pex"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 var (

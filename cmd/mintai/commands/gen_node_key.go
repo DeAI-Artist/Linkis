@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/p2p"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // GenNodeKeyCmd allows the generation of a node key. It prints node's ID to

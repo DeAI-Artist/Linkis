@@ -10,13 +10,13 @@ import (
 
 	"github.com/creachadair/taskgroup"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/clist"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/clist"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 var _ mempool.Mempool = (*TxMempool)(nil)

@@ -8,13 +8,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/DeAI-Artist/MintAI/libs/cmap"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/libs/cmap"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 )
 
 type Peer = p2p.Peer

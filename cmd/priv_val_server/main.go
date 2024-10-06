@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
 
-	"github.com/DeAI-Artist/MintAI/privval"
+	"github.com/DeAI-Artist/Linkis/privval"
 )
 
 func main() {

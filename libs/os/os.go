@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 type logger interface {

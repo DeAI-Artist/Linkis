@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 const (

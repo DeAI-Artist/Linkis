@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
 )
 
 // Perturbs a running testnet.

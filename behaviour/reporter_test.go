@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	bh "github.com/DeAI-Artist/MintAI/behaviour"
-	"github.com/DeAI-Artist/MintAI/p2p"
+	bh "github.com/DeAI-Artist/Linkis/behaviour"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // TestMockReporter tests the MockReporter's ability to store reported

@@ -10,15 +10,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/counter"
-	cstypes "github.com/DeAI-Artist/MintAI/consensus/types"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	p2pmock "github.com/DeAI-Artist/MintAI/p2p/mock"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/counter"
+	cstypes "github.com/DeAI-Artist/Linkis/consensus/types"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	p2pmock "github.com/DeAI-Artist/Linkis/p2p/mock"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 /*

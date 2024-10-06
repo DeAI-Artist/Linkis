@@ -10,7 +10,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	"github.com/syndtr/goleveldb/leveldb/util"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 var CompactGoLevelDBCmd = &cobra.Command{

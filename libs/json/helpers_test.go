@@ -3,7 +3,7 @@ package json_test
 import (
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 // Register Car, an instance of the Vehicle interface.

@@ -8,18 +8,18 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/light"
-	lightprovider "github.com/DeAI-Artist/MintAI/light/provider"
-	lighthttp "github.com/DeAI-Artist/MintAI/light/provider/http"
-	lightrpc "github.com/DeAI-Artist/MintAI/light/rpc"
-	lightdb "github.com/DeAI-Artist/MintAI/light/store/db"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/light"
+	lightprovider "github.com/DeAI-Artist/Linkis/light/provider"
+	lighthttp "github.com/DeAI-Artist/Linkis/light/provider/http"
+	lightrpc "github.com/DeAI-Artist/Linkis/light/rpc"
+	lightdb "github.com/DeAI-Artist/Linkis/light/store/db"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 //go:generate ../scripts/mockery_generate.sh StateProvider

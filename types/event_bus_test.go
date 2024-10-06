@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	tmquery "github.com/DeAI-Artist/MintAI/libs/pubsub/query"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	tmquery "github.com/DeAI-Artist/Linkis/libs/pubsub/query"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 func TestEventBusPublishEventTx(t *testing.T) {

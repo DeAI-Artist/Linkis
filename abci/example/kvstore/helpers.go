@@ -1,8 +1,8 @@
 package kvstore
 
 import (
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 // RandVal creates one random validator, with a key derived

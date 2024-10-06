@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/light/provider"
-	lighthttp "github.com/DeAI-Artist/MintAI/light/provider/http"
-	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/light/provider"
+	lighthttp "github.com/DeAI-Artist/Linkis/light/provider/http"
+	rpcclient "github.com/DeAI-Artist/Linkis/rpc/client"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	rpctest "github.com/DeAI-Artist/Linkis/rpc/test"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func TestNewProvider(t *testing.T) {

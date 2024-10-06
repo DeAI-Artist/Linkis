@@ -18,13 +18,13 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	"github.com/DeAI-Artist/MintAI/rpc/core"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	"github.com/DeAI-Artist/Linkis/rpc/core"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Client wraps arbitrary implementations of the various interfaces.

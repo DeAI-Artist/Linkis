@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 const (

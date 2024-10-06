@@ -1,13 +1,13 @@
 package v1
 
 import (
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/proxy"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/proxy"
 
-	mempoolv1 "github.com/DeAI-Artist/MintAI/mempool/v1"
+	mempoolv1 "github.com/DeAI-Artist/Linkis/mempool/v1"
 )
 
 var mempool mempl.Mempool

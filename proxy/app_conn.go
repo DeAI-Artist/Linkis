@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abcicli "github.com/DeAI-Artist/MintAI/abci/client"
-	"github.com/DeAI-Artist/MintAI/abci/types"
+	abcicli "github.com/DeAI-Artist/Linkis/abci/client"
+	"github.com/DeAI-Artist/Linkis/abci/types"
 )
 
 //go:generate ../scripts/mockery_generate.sh AppConnConsensus|AppConnMempool|AppConnQuery|AppConnSnapshot

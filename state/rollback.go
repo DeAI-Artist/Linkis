@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	"github.com/DeAI-Artist/MintAI/version"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 // Rollback overwrites the current Tendermint state (height n) with the most

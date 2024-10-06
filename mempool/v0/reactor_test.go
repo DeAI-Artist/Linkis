@@ -14,17 +14,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/p2p/mock"
-	memproto "github.com/DeAI-Artist/MintAI/proto/tendermint/mempool"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/mock"
+	memproto "github.com/DeAI-Artist/Linkis/proto/tendermint/mempool"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (
@@ -67,7 +67,7 @@ func TestReactorBroadcastTxsMessage(t *testing.T) {
 	waitForTxsOnReactors(t, txs, reactors)
 }
 
-// regression test for https://github.com/DeAI-Artist/MintAI/issues/5408
+// regression test for https://github.com/DeAI-Artist/Linkis/issues/5408
 func TestReactorConcurrency(t *testing.T) {
 	config := cfg.TestConfig()
 	const N = 2
@@ -268,7 +268,7 @@ func TestMempoolIDsPanicsIfNodeRequestsOvermaxActiveIDs(t *testing.T) {
 // TODO: This test tests that we don't panic and are able to generate new
 // PeerIDs for each peer we add. It seems as though we should be able to test
 // this in a much more direct way.
-// https://github.com/DeAI-Artist/MintAI/issues/9639
+// https://github.com/DeAI-Artist/Linkis/issues/9639
 func TestDontExhaustMaxActiveIDs(t *testing.T) {
 	config := cfg.TestConfig()
 	const N = 1

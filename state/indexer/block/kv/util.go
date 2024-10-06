@@ -7,8 +7,8 @@ import (
 
 	"github.com/google/orderedcode"
 
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func intInSlice(a int, list []int) bool {

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	privvalproto "github.com/DeAI-Artist/MintAI/proto/tendermint/privval"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	privvalproto "github.com/DeAI-Artist/Linkis/proto/tendermint/privval"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // SignerClient implements PrivValidator.

@@ -56,7 +56,7 @@ Validators are responsible for securing the network by proposing and validating 
 
 #### Install MintAI:
 ```shell
-git clone https://github.com/DeAI-Artist/MintAI.git
+git clone https://github.com/DeAI-Artist/Linkis.git
 cd MintAI
 make build
 make install
@@ -127,7 +127,7 @@ The MintAI token (MAI) is the primary utility token supporting network participa
 | **Developer Tools**         | ✅ Many frameworks and tools available | ✅ Many frameworks and tools available      | ✅ Well-supported development tools  | ✅ Growing ecosystem of tools                   | ✅ Well-supported development tools        | ✅ Many frameworks and tools available           |
 | **Transaction Efficiency**  | ✅ Low fees, fast times                | ❌ Extremely high fees, slower times | ⚠️ Low fees, but slow speed          | ✅✅ Super-fast, Super low fees                  | ✅ Low fees, fast times                        | ✅ Low fees, fast times                 |
 
-Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/MintAI/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the MintAI network, cross-chain features will also be gradually supported so that MAI can be transferred between chains such as Solana and Tron.
+Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/Linkis/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the MintAI network, cross-chain features will also be gradually supported so that MAI can be transferred between chains such as Solana and Tron.
 
 ## Versioning
 
@@ -168,18 +168,18 @@ We appreciate your interest in contributing to our open-source initiative. We'll
 [smr]: https://en.wikipedia.org/wiki/State_machine_replication
 [Blockchain]: https://en.wikipedia.org/wiki/Blockchain
 [version-badge]: https://img.shields.io/github/tag/tendermint/tendermint.svg
-[version-url]: https://github.com/DeAI-Artist/MintAI/releases/latest
+[version-url]: https://github.com/DeAI-Artist/Linkis/releases/latest
 [api-badge]: https://img.shields.io/badge/API-Online-brightgreen
-[api-url]: https://pkg.go.dev/github.com/DeAI-Artist/MintAI
+[api-url]: https://pkg.go.dev/github.com/DeAI-Artist/Linkis
 [go-badge]: https://img.shields.io/badge/go-1.21-blue.svg
 [go-url]: https://github.com/moovweb/gvm
 [discord-badge]: https://img.shields.io/discord/669268347736686612.svg
 [discord-url]: https://discord.gg/cosmosnetwork
 [license-badge]: https://img.shields.io/badge/License-GPL--3.0-lightgreen
-[license-url]: https://github.com/DeAI-Artist/MintAI/blob/main/LICENSE
-[sg-badge]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI/-/badge.svg
-[sg-url]: https://sourcegraph.com/github.com/DeAI-Artist/MintAI?badge
-[tests-url]: https://github.com/DeAI-Artist/MintAI/actions/workflows/tests.yml
-[tests-badge]: https://github.com/DeAI-Artist/MintAI/actions/workflows/tests.yml/badge.svg?branch=main
-[lint-badge]: https://github.com/DeAI-Artist/MintAI/actions/workflows/lint.yml/badge.svg
-[lint-url]: https://github.com/DeAI-Artist/MintAI/actions/workflows/lint.yml
+[license-url]: https://github.com/DeAI-Artist/Linkis/blob/main/LICENSE
+[sg-badge]: https://sourcegraph.com/github.com/DeAI-Artist/Linkis/-/badge.svg
+[sg-url]: https://sourcegraph.com/github.com/DeAI-Artist/Linkis?badge
+[tests-url]: https://github.com/DeAI-Artist/Linkis/actions/workflows/tests.yml
+[tests-badge]: https://github.com/DeAI-Artist/Linkis/actions/workflows/tests.yml/badge.svg?branch=main
+[lint-badge]: https://github.com/DeAI-Artist/Linkis/actions/workflows/lint.yml/badge.svg
+[lint-url]: https://github.com/DeAI-Artist/Linkis/actions/workflows/lint.yml

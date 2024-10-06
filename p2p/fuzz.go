@@ -4,9 +4,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/config"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/Linkis/config"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

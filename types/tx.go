@@ -6,10 +6,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 // TxKeySize is the size of the transaction key index

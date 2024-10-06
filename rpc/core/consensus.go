@@ -1,11 +1,11 @@
 package core
 
 import (
-	cm "github.com/DeAI-Artist/MintAI/consensus"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	cm "github.com/DeAI-Artist/Linkis/consensus"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Validators gets the validator set at the given block height.

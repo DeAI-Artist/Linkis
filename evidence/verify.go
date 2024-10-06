@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/light"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/light"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // verify verifies the evidence fully by checking:

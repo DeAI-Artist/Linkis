@@ -6,7 +6,7 @@ package coregrpc
 import (
 	context "context"
 	fmt "fmt"
-	types "github.com/DeAI-Artist/MintAI/abci/types"
+	types "github.com/DeAI-Artist/Linkis/abci/types"
 	proto "github.com/gogo/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"

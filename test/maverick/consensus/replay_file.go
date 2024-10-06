@@ -12,14 +12,14 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	tmcon "github.com/DeAI-Artist/MintAI/consensus"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/store"
-	"github.com/DeAI-Artist/MintAI/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	tmcon "github.com/DeAI-Artist/Linkis/consensus"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/store"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

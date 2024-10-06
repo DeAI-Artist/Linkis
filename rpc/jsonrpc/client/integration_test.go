@@ -16,7 +16,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 func TestWSClientReconnectWithJitter(t *testing.T) {

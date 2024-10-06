@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	"github.com/DeAI-Artist/MintAI/version"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 func MakeCommit(blockID BlockID, height int64, round int32,

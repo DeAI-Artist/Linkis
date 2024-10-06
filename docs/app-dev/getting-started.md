@@ -32,8 +32,8 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 Then run
 
 ```sh
-go get github.com/DeAI-Artist/MintAI
-cd $GOPATH/src/github.com/DeAI-Artist/MintAI
+go get github.com/DeAI-Artist/Linkis
+cd $GOPATH/src/github.com/DeAI-Artist/Linkis
 make install_abci
 ```
 
@@ -147,7 +147,7 @@ of the ASCII of `abcd`. You can verify this in a python 2 shell by
 running `"YWJjZA==".decode('base64')` or in python 3 shell by running
 `import codecs; codecs.decode(b"YWJjZA==", 'base64').decode('ascii')`.
 Stay tuned for a future release that [makes this output more
-human-readable](https://github.com/DeAI-Artist/MintAI/issues/1794).
+human-readable](https://github.com/DeAI-Artist/Linkis/issues/1794).
 
 Now let's try setting a different key and value:
 

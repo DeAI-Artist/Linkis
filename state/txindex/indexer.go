@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

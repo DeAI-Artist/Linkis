@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 type ErrAddrBookNonRoutable struct {

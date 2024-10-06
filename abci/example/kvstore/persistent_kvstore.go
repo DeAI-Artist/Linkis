@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/code"
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	pc "github.com/DeAI-Artist/MintAI/proto/tendermint/crypto"
+	"github.com/DeAI-Artist/Linkis/abci/example/code"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	pc "github.com/DeAI-Artist/Linkis/proto/tendermint/crypto"
 )
 
 const (

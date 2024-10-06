@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 )
 
 var defaultNodeName = "host_peer"

@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	nm "github.com/DeAI-Artist/MintAI/node"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	core_grpc "github.com/DeAI-Artist/MintAI/rpc/grpc"
-	rpcclient "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/client"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	nm "github.com/DeAI-Artist/Linkis/node"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	core_grpc "github.com/DeAI-Artist/Linkis/rpc/grpc"
+	rpcclient "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

@@ -5,7 +5,7 @@ package consensus
 
 import (
 	fmt "fmt"
-	types "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	types "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"

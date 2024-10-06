@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // ShowNodeIDCmd dumps node's ID to the standard output.

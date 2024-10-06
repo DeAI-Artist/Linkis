@@ -1,7 +1,7 @@
 package behaviour
 
 import (
-	"github.com/DeAI-Artist/MintAI/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // PeerBehaviour is a struct describing a behaviour a peer performed.

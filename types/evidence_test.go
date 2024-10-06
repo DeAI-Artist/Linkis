@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 var defaultVoteTime = time.Date(2019, 1, 1, 0, 0, 0, 0, time.UTC)

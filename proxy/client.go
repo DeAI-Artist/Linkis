@@ -3,12 +3,12 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/DeAI-Artist/MintAI/abci/client"
-	"github.com/DeAI-Artist/MintAI/abci/example/counter"
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/app"
+	abcicli "github.com/DeAI-Artist/Linkis/abci/client"
+	"github.com/DeAI-Artist/Linkis/abci/example/counter"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/app"
 )
 
 //go:generate ../scripts/mockery_generate.sh ClientCreator

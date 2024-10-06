@@ -14,14 +14,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	flow "github.com/DeAI-Artist/MintAI/libs/flowrate"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/libs/timer"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	flow "github.com/DeAI-Artist/Linkis/libs/flowrate"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/libs/timer"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 )
 
 const (
@@ -610,7 +610,7 @@ FOR_LOOP:
 		switch pkt := packet.Sum.(type) {
 		case *tmp2p.Packet_PacketPing:
 			// TODO: prevent abuse, as they cause flush()'s.
-			// https://github.com/DeAI-Artist/MintAI/issues/1190
+			// https://github.com/DeAI-Artist/Linkis/issues/1190
 			c.Logger.Debug("Receive Ping")
 			select {
 			case c.pong <- struct{}{}:

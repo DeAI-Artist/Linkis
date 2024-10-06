@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	"github.com/DeAI-Artist/MintAI/rpc/client/mock"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	"github.com/DeAI-Artist/Linkis/rpc/client/mock"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
 )
 
 func TestWaitForHeight(t *testing.T) {

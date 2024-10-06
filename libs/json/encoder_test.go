@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 func TestMarshal(t *testing.T) {

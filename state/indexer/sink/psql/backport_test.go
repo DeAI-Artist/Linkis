@@ -1,8 +1,8 @@
 package psql
 
 import (
-	"github.com/DeAI-Artist/MintAI/state/indexer"
-	"github.com/DeAI-Artist/MintAI/state/txindex"
+	"github.com/DeAI-Artist/Linkis/state/indexer"
+	"github.com/DeAI-Artist/Linkis/state/txindex"
 )
 
 var (

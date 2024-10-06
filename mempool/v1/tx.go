@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // WrappedTx defines a wrapper around a raw transaction with additional metadata

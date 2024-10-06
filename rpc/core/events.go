@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	tmquery "github.com/DeAI-Artist/MintAI/libs/pubsub/query"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	tmquery "github.com/DeAI-Artist/Linkis/libs/pubsub/query"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 const (

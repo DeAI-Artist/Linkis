@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 var (

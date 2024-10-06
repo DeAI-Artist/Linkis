@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/code"
-	"github.com/DeAI-Artist/MintAI/abci/types"
+	"github.com/DeAI-Artist/Linkis/abci/example/code"
+	"github.com/DeAI-Artist/Linkis/abci/types"
 )
 
 var abciType string

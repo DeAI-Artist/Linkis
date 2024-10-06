@@ -1,6 +1,6 @@
 #! /bin/bash
 
-PKGS=$(go list github.com/DeAI-Artist/MintAI/...)
+PKGS=$(go list github.com/DeAI-Artist/Linkis/...)
 
 set -e
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 // ValidateTime does a basic time validation ensuring time does not drift too

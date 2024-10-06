@@ -1,8 +1,8 @@
 package state
 
 import (
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/types"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // TxPreCheck returns a function to filter transactions before processing.

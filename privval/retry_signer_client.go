@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // RetrySignerClient wraps SignerClient adding retry for each operation (except

@@ -12,8 +12,8 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/DeAI-Artist/MintAI/consensus"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	cs "github.com/DeAI-Artist/Linkis/consensus"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 func main() {

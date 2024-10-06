@@ -3,12 +3,12 @@ package mock
 import (
 	"context"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/rpc/client"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/rpc/client"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // ABCIApp will send all abci related request to the named app,

@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	tmcons "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	tmcons "github.com/DeAI-Artist/Linkis/proto/tendermint/consensus"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func TestMsgToProto(t *testing.T) {

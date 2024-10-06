@@ -1,13 +1,13 @@
 package proxy
 
 import (
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	lrpc "github.com/DeAI-Artist/MintAI/light/rpc"
-	rpcclient "github.com/DeAI-Artist/MintAI/rpc/client"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	lrpc "github.com/DeAI-Artist/Linkis/light/rpc"
+	rpcclient "github.com/DeAI-Artist/Linkis/rpc/client"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpcserver "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func RPCRoutes(c *lrpc.Client) map[string]*rpcserver.RPCFunc {

@@ -3,7 +3,7 @@ package pubsub
 import (
 	"errors"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 var (

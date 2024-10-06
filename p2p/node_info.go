@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"reflect"
 
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmstrings "github.com/DeAI-Artist/MintAI/libs/strings"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
-	"github.com/DeAI-Artist/MintAI/version"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmstrings "github.com/DeAI-Artist/Linkis/libs/strings"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 const (

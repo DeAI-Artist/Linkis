@@ -1,7 +1,7 @@
 package test
 
 import (
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 // Contract: !bytes.Equal(input, output) && len(input) >= len(output)

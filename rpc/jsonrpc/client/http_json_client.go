@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 const (

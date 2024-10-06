@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 func unmarshalResponseBytes(

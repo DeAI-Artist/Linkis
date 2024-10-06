@@ -10,9 +10,9 @@ else
 VERSION := $(shell git describe)
 endif
 
-LD_FLAGS = -X github.com/DeAI-Artist/MintAI/version.TMCoreSemVer=$(VERSION)
+LD_FLAGS = -X github.com/DeAI-Artist/Linkis/version.TMCoreSemVer=$(VERSION)
 BUILD_FLAGS = -mod=readonly -ldflags "$(LD_FLAGS)"
-HTTPS_GIT := https://github.com/DeAI-Artist/MintAI.git
+HTTPS_GIT := https://github.com/DeAI-Artist/Linkis.git
 CGO_ENABLED ?= 1
 
 # handle nostrip
@@ -159,7 +159,7 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/DeAI-Artist/MintAI/cmd/mintai -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/DeAI-Artist/Linkis/cmd/mintai -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:
@@ -195,7 +195,7 @@ clean_certs:
 
 format:
 	find . -name '*.go' -type f -not -path "*.git*" -not -name '*.pb.go' -not -name '*pb_test.go' | xargs gofmt -w -s
-	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/DeAI-Artist/MintAI
+	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/DeAI-Artist/Linkis
 .PHONY: format
 
 lint:

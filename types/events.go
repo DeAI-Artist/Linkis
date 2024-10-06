@@ -3,10 +3,10 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	tmquery "github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	tmquery "github.com/DeAI-Artist/Linkis/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

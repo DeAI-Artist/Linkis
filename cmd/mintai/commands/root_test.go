@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/cli"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/cli"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
 )
 
 var defaultRoot = os.ExpandEnv("$HOME/.some/test/dir")

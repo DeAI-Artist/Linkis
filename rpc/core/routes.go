@@ -1,7 +1,7 @@
 package core
 
 import (
-	rpc "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
+	rpc "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
 )
 
 // TODO: better system than "unsafe" prefix

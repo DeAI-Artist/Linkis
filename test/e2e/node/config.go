@@ -6,7 +6,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/DeAI-Artist/MintAI/test/e2e/app"
+	"github.com/DeAI-Artist/Linkis/test/e2e/app"
 )
 
 // Config is the application configuration.

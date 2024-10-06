@@ -15,8 +15,8 @@ import (
 
 	"golang.org/x/net/netutil"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 // Config is a RPC server configuration.

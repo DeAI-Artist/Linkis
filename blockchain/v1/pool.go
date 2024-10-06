@@ -3,9 +3,9 @@ package v1
 import (
 	"sort"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // BlockPool keeps track of the fast sync peers, block requests and block responses.

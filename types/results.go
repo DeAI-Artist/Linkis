@@ -1,8 +1,8 @@
 package types
 
 import (
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
 )
 
 // ABCIResults wraps the deliver tx results to return a proof.

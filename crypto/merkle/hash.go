@@ -1,7 +1,7 @@
 package merkle
 
 import (
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
 )
 
 // TODO: make these have a large predefined capacity

@@ -3,13 +3,13 @@ package consensus
 import (
 	"fmt"
 
-	tmcon "github.com/DeAI-Artist/MintAI/consensus"
-	cstypes "github.com/DeAI-Artist/MintAI/consensus/types"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	tmcons "github.com/DeAI-Artist/MintAI/proto/tendermint/consensus"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmcon "github.com/DeAI-Artist/Linkis/consensus"
+	cstypes "github.com/DeAI-Artist/Linkis/consensus/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	tmcons "github.com/DeAI-Artist/Linkis/proto/tendermint/consensus"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // MisbehaviorList encompasses a list of all possible behaviors

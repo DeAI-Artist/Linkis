@@ -7,14 +7,14 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	"github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/state/mocks"
-	"github.com/DeAI-Artist/MintAI/types"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	"github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/state/mocks"
+	"github.com/DeAI-Artist/Linkis/types"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 func TestRollback(t *testing.T) {

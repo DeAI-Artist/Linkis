@@ -5,18 +5,18 @@ crypto is the cryptographic package adapted for Tendermint's uses
 ## Importing it
 
 To get the interfaces,
-`import "github.com/DeAI-Artist/MintAI/crypto"`
+`import "github.com/DeAI-Artist/Linkis/crypto"`
 
 For any specific algorithm, use its specific module e.g.
-`import "github.com/DeAI-Artist/MintAI/crypto/ed25519"`
+`import "github.com/DeAI-Artist/Linkis/crypto/ed25519"`
 
 ## Binary encoding
 
-For Binary encoding, please refer to the [Tendermint encoding specification](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/core/encoding.md).
+For Binary encoding, please refer to the [Tendermint encoding specification](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/spec/core/encoding.md).
 
 ## JSON Encoding
 
-JSON encoding is done using tendermint's internal json encoder. For more information on JSON encoding, please refer to [Tendermint JSON encoding](https://github.com/DeAI-Artist/MintAI/blob/ccc990498df70f5a3df06d22476c9bb83812cbe3/libs/json/doc.go)
+JSON encoding is done using tendermint's internal json encoder. For more information on JSON encoding, please refer to [Tendermint JSON encoding](https://github.com/DeAI-Artist/Linkis/blob/ccc990498df70f5a3df06d22476c9bb83812cbe3/libs/json/doc.go)
 
 ```go
 Example JSON encodings:

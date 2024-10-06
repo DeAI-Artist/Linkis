@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	clist "github.com/DeAI-Artist/MintAI/libs/clist"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	clist "github.com/DeAI-Artist/Linkis/libs/clist"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 	"github.com/gogo/protobuf/proto"
 )
 

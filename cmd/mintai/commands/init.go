@@ -5,13 +5,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 // InitFilesCmd initialises a fresh MintAI Core instance.

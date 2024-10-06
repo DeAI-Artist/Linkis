@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/privval"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/privval"
 )
 
 func Test_ResetAll(t *testing.T) {

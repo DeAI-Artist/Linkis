@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/service"
+	"github.com/DeAI-Artist/Linkis/libs/service"
 )
 
 const (

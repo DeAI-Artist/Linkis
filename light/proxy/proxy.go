@@ -6,12 +6,12 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	"github.com/DeAI-Artist/MintAI/light"
-	lrpc "github.com/DeAI-Artist/MintAI/light/rpc"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	"github.com/DeAI-Artist/Linkis/light"
+	lrpc "github.com/DeAI-Artist/Linkis/light/rpc"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	rpcserver "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
 )
 
 // A Proxy defines parameters for running an HTTP server proxy.

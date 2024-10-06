@@ -1,7 +1,7 @@
 # tm-signer-harness
 
 Located under the `tools/tm-signer-harness` folder in the [Tendermint
-repository](https://github.com/DeAI-Artist/MintAI).
+repository](https://github.com/DeAI-Artist/Linkis).
 
 The Tendermint remote signer test harness facilitates integration testing
 between Tendermint and remote signers such as
@@ -23,7 +23,7 @@ When executed, `tm-signer-harness`:
 ## Prerequisites
 
 Requires the same prerequisites as for building
-[Tendermint](https://github.com/DeAI-Artist/MintAI).
+[Tendermint](https://github.com/DeAI-Artist/Linkis).
 
 ## Building
 

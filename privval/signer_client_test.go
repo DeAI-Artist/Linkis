@@ -8,13 +8,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	cryptoproto "github.com/DeAI-Artist/MintAI/proto/tendermint/crypto"
-	privvalproto "github.com/DeAI-Artist/MintAI/proto/tendermint/privval"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	cryptoproto "github.com/DeAI-Artist/Linkis/proto/tendermint/crypto"
+	privvalproto "github.com/DeAI-Artist/Linkis/proto/tendermint/privval"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 type signerTestCase struct {

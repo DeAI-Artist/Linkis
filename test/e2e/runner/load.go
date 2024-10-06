@@ -8,10 +8,10 @@ import (
 	"math"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Load generates transactions against the network until the given context is

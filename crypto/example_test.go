@@ -17,7 +17,7 @@ package crypto_test
 import (
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto"
 )
 
 func ExampleSha256() {

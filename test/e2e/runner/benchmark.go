@@ -6,8 +6,8 @@ import (
 	"math"
 	"time"
 
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/types"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Benchmark is a simple function for fetching, calculating and printing

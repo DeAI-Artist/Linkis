@@ -3,7 +3,7 @@ package provider
 import (
 	"context"
 
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Provider provides information for the light client to sync (verification

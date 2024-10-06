@@ -15,15 +15,15 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
 
-	abcicli "github.com/DeAI-Artist/MintAI/abci/client"
-	"github.com/DeAI-Artist/MintAI/abci/example/code"
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	cfg "github.com/DeAI-Artist/MintAI/config"
+	abcicli "github.com/DeAI-Artist/Linkis/abci/client"
+	"github.com/DeAI-Artist/Linkis/abci/example/code"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	abciserver "github.com/DeAI-Artist/Linkis/abci/server"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
 )
 
 func init() {

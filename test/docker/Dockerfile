@@ -6,7 +6,7 @@ RUN apt-get update && \
   jq bsdmainutils vim-common psmisc netcat curl
 
 # Setup tendermint repo
-ENV REPO $GOPATH/src/github.com/DeAI-Artist/MintAI
+ENV REPO $GOPATH/src/github.com/DeAI-Artist/Linkis
 ENV GOBIN $GOPATH/bin
 WORKDIR $REPO
 

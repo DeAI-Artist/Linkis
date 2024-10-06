@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //-----------------------------------------------------------------------------

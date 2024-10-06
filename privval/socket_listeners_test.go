@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
 )
 
 //-------------------------------------------

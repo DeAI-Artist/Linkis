@@ -8,16 +8,16 @@ import (
 	"github.com/spf13/cobra"
 	dbm "github.com/tendermint/tm-db"
 
-	abcitypes "github.com/DeAI-Artist/MintAI/abci/types"
-	tmcfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/progressbar"
-	"github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/state/indexer"
-	blockidxkv "github.com/DeAI-Artist/MintAI/state/indexer/block/kv"
-	"github.com/DeAI-Artist/MintAI/state/indexer/sink/psql"
-	"github.com/DeAI-Artist/MintAI/state/txindex"
-	"github.com/DeAI-Artist/MintAI/state/txindex/kv"
-	"github.com/DeAI-Artist/MintAI/types"
+	abcitypes "github.com/DeAI-Artist/Linkis/abci/types"
+	tmcfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/progressbar"
+	"github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/state/indexer"
+	blockidxkv "github.com/DeAI-Artist/Linkis/state/indexer/block/kv"
+	"github.com/DeAI-Artist/Linkis/state/indexer/sink/psql"
+	"github.com/DeAI-Artist/Linkis/state/txindex"
+	"github.com/DeAI-Artist/Linkis/state/txindex/kv"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

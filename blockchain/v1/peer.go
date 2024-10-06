@@ -5,10 +5,10 @@ import (
 	"math"
 	"time"
 
-	flow "github.com/DeAI-Artist/MintAI/libs/flowrate"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/types"
+	flow "github.com/DeAI-Artist/Linkis/libs/flowrate"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //--------

@@ -7,14 +7,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/clist"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	protomem "github.com/DeAI-Artist/MintAI/proto/tendermint/mempool"
-	"github.com/DeAI-Artist/MintAI/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/clist"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	protomem "github.com/DeAI-Artist/Linkis/proto/tendermint/mempool"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Reactor handles mempool tx broadcasting amongst peers.
@@ -258,7 +258,7 @@ func (memR *Reactor) broadcastTxRoutine(peer p2p.Peer) {
 		}
 
 		// NOTE: Transaction batching was disabled due to
-		// https://github.com/DeAI-Artist/MintAI/issues/5796
+		// https://github.com/DeAI-Artist/Linkis/issues/5796
 
 		if _, ok := memTx.senders.Load(peerID); !ok {
 			success := p2p.SendEnvelopeShim(peer, p2p.Envelope{ //nolint: staticcheck

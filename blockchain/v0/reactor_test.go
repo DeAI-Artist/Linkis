@@ -13,17 +13,17 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/mempool/mock"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	bcproto "github.com/DeAI-Artist/MintAI/proto/tendermint/blockchain"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/store"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/mempool/mock"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	bcproto "github.com/DeAI-Artist/Linkis/proto/tendermint/blockchain"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/store"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 var config *cfg.Config

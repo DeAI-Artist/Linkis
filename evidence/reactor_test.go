@@ -16,17 +16,17 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/evidence"
-	"github.com/DeAI-Artist/MintAI/evidence/mocks"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	p2pmocks "github.com/DeAI-Artist/MintAI/p2p/mocks"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/evidence"
+	"github.com/DeAI-Artist/Linkis/evidence/mocks"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	p2pmocks "github.com/DeAI-Artist/Linkis/p2p/mocks"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 var (

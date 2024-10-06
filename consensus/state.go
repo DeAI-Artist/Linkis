@@ -12,22 +12,22 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	cstypes "github.com/DeAI-Artist/MintAI/consensus/types"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmevents "github.com/DeAI-Artist/MintAI/libs/events"
-	"github.com/DeAI-Artist/MintAI/libs/fail"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	cstypes "github.com/DeAI-Artist/Linkis/consensus/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmevents "github.com/DeAI-Artist/Linkis/libs/events"
+	"github.com/DeAI-Artist/Linkis/libs/fail"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 // Consensus sentinel errors
@@ -860,7 +860,7 @@ func (cs *State) handleMsg(mi msgInfo) {
 		// We probably don't want to stop the peer here. The vote does not
 		// necessarily comes from a malicious peer but can be just broadcasted by
 		// a typical peer.
-		// https://github.com/DeAI-Artist/MintAI/issues/1281
+		// https://github.com/DeAI-Artist/Linkis/issues/1281
 		// }
 
 		// NOTE: the vote is broadcast to peers by the reactor listening
@@ -1983,7 +1983,7 @@ func (cs *State) tryAddVote(vote *types.Vote, peerID p2p.ID) (bool, error) {
 			// 1) bad peer OR
 			// 2) not a bad peer? this can also err sometimes with "Unexpected step" OR
 			// 3) tmkms use with multiple validators connecting to a single tmkms instance
-			// 		(https://github.com/DeAI-Artist/MintAI/issues/3839).
+			// 		(https://github.com/DeAI-Artist/Linkis/issues/3839).
 			cs.Logger.Info("failed attempting to add vote", "err", err)
 			return added, ErrAddingVote
 		}
@@ -2207,11 +2207,11 @@ func (cs *State) voteTime() time.Time {
 	now := tmtime.Now()
 	minVoteTime := now
 	// TODO: We should remove next line in case we don't vote for v in case cs.ProposalBlock == nil,
-	// even if cs.LockedBlock != nil. See https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/spec/.
+	// even if cs.LockedBlock != nil. See https://github.com/DeAI-Artist/Linkis/tree/v0.34.x/spec/.
 	timeIota := time.Duration(cs.state.ConsensusParams.Block.TimeIotaMs) * time.Millisecond
 	if cs.LockedBlock != nil {
 		// See the BFT time spec
-		// https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/consensus/bft-time.md
+		// https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/spec/consensus/bft-time.md
 		minVoteTime = cs.LockedBlock.Time.Add(timeIota)
 	} else if cs.ProposalBlock != nil {
 		minVoteTime = cs.ProposalBlock.Time.Add(timeIota)

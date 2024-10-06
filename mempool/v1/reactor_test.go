@@ -12,17 +12,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	"github.com/DeAI-Artist/MintAI/p2p/mock"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	"github.com/DeAI-Artist/Linkis/p2p/mock"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
+	cfg "github.com/DeAI-Artist/Linkis/config"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/mempool"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	memproto "github.com/DeAI-Artist/MintAI/proto/tendermint/mempool"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/mempool"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	memproto "github.com/DeAI-Artist/Linkis/proto/tendermint/mempool"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

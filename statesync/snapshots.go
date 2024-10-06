@@ -6,8 +6,8 @@ import (
 	"math/rand"
 	"sort"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/p2p"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/p2p"
 )
 
 // snapshotKey is a snapshot key used for lookups.

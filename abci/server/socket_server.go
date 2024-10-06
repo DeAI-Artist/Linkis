@@ -8,11 +8,11 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	tmlog "github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	tmlog "github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // var maxNumberConnections = 2

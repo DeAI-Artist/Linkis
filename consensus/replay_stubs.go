@@ -1,12 +1,12 @@
 package consensus
 
 import (
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/clist"
-	mempl "github.com/DeAI-Artist/MintAI/mempool"
-	tmstate "github.com/DeAI-Artist/MintAI/proto/tendermint/state"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	"github.com/DeAI-Artist/MintAI/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/clist"
+	mempl "github.com/DeAI-Artist/Linkis/mempool"
+	tmstate "github.com/DeAI-Artist/Linkis/proto/tendermint/state"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //-----------------------------------------------------------------------------

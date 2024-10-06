@@ -3,7 +3,7 @@ package p2p
 import (
 	"net"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // ConnSet is a lookup table for connections and all their ips.

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	rs "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	rs "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 var rpcFuncMap = map[string]*rs.RPCFunc{

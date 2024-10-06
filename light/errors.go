@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // ErrOldHeaderExpired means the old (trusted) header has expired according to

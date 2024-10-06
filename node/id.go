@@ -3,7 +3,7 @@ package node
 import (
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto"
 )
 
 type ID struct {

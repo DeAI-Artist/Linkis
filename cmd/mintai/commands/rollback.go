@@ -8,10 +8,10 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/store"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/store"
 )
 
 var RollbackStateCmd = &cobra.Command{

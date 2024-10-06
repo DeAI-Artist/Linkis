@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // Monitor monitors and limits the transfer rate of a data stream.

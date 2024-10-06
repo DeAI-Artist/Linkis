@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 func TestGenLoadValidator(t *testing.T) {

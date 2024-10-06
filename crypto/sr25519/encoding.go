@@ -1,8 +1,8 @@
 package sr25519
 
 import (
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 var _ crypto.PrivKey = PrivKey{}

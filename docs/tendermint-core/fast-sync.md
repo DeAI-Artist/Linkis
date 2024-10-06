@@ -26,7 +26,7 @@ daemon will switch out of fast sync and into the normal consensus mode.
 After running for some time, the node is considered `caught up` if it
 has at least one peer and it's height is at least as high as the max
 reported peer height. See [the IsCaughtUp
-method](https://github.com/DeAI-Artist/MintAI/blob/b467515719e686e4678e6da4e102f32a491b85a0/blockchain/pool.go#L128).
+method](https://github.com/DeAI-Artist/Linkis/blob/b467515719e686e4678e6da4e102f32a491b85a0/blockchain/pool.go#L128).
 
 Note: There are three versions of fast sync. We recommend using v0 as v1 and v2 are still in beta.
   If you would like to use a different version you can do so by changing the version in the `config.toml`:
@@ -45,4 +45,4 @@ version = "v0"
 ```
 
 If we're lagging sufficiently, we should go back to fast syncing, but
-this is an [open issue](https://github.com/DeAI-Artist/MintAI/issues/129).
+this is an [open issue](https://github.com/DeAI-Artist/Linkis/issues/129).

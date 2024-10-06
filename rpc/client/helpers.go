@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Waiter is informed of current height, decided whether to quit early

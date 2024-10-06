@@ -6,7 +6,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
 )
 
 // Config is an gRPC server configuration.

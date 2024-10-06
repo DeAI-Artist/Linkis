@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/chacha20poly1305"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 )
 
 type buffer struct {

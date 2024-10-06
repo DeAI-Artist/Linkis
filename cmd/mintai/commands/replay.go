@@ -3,7 +3,7 @@ package commands
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/DeAI-Artist/MintAI/consensus"
+	"github.com/DeAI-Artist/Linkis/consensus"
 )
 
 // ReplayCmd allows replaying of messages from the WAL.

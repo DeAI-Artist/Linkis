@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/crypto/nacl/secretbox"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto"
 )
 
 // TODO, make this into a struct that implements crypto.Symmetric.

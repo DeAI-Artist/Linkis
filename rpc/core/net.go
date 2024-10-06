@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 // NetInfo returns network info.

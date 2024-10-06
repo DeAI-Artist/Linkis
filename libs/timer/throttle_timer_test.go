@@ -8,7 +8,7 @@ import (
 
 	asrt "github.com/stretchr/testify/assert"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 type thCounter struct {

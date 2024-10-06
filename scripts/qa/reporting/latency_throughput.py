@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 A simple script to parse the CSV output from the loadtime reporting tool (see
-https://github.com/DeAI-Artist/MintAI/tree/main/test/loadtime/cmd/report).
+https://github.com/DeAI-Artist/Linkis/tree/main/test/loadtime/cmd/report).
 
 Produces a plot of average transaction latency vs total transaction throughput
 according to the number of load testing tool WebSocket connections to the

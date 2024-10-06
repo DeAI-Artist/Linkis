@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/crypto/secp256k1"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	mcs "github.com/DeAI-Artist/MintAI/test/maverick/consensus"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/crypto/secp256k1"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	mcs "github.com/DeAI-Artist/Linkis/test/maverick/consensus"
 )
 
 const (

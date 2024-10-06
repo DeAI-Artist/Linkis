@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 func examplePrevote() *Vote {

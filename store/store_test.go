@@ -14,16 +14,16 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmstore "github.com/DeAI-Artist/MintAI/proto/tendermint/store"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
-	"github.com/DeAI-Artist/MintAI/version"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmstore "github.com/DeAI-Artist/Linkis/proto/tendermint/store"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular

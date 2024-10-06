@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"reflect"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 func argsToURLValues(args map[string]interface{}) (url.Values, error) {

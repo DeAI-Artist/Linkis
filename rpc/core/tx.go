@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"sort"
 
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmquery "github.com/DeAI-Artist/MintAI/libs/pubsub/query"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
-	"github.com/DeAI-Artist/MintAI/state/txindex/null"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmquery "github.com/DeAI-Artist/Linkis/libs/pubsub/query"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/state/txindex/null"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the

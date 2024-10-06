@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	rpcserver "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 var routes = map[string]*rpcserver.RPCFunc{

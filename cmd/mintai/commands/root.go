@@ -8,10 +8,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/libs/cli"
-	tmflags "github.com/DeAI-Artist/MintAI/libs/cli/flags"
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/libs/cli"
+	tmflags "github.com/DeAI-Artist/Linkis/libs/cli/flags"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 var (

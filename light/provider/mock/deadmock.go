@@ -3,8 +3,8 @@ package mock
 import (
 	"context"
 
-	"github.com/DeAI-Artist/MintAI/light/provider"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/light/provider"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 type deadMock struct {

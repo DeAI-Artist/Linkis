@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 var (

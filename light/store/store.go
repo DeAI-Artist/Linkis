@@ -1,6 +1,6 @@
 package store
 
-import "github.com/DeAI-Artist/MintAI/types"
+import "github.com/DeAI-Artist/Linkis/types"
 
 // Store is anything that can persistently store headers.
 type Store interface {

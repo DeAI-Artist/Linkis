@@ -17,12 +17,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	"github.com/DeAI-Artist/MintAI/crypto/sr25519"
-	"github.com/DeAI-Artist/MintAI/libs/async"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	"github.com/DeAI-Artist/Linkis/crypto/sr25519"
+	"github.com/DeAI-Artist/Linkis/libs/async"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 // Run go test -update from within this module

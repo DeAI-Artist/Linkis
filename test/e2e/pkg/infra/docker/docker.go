@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"text/template"
 
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	"github.com/DeAI-Artist/MintAI/test/e2e/pkg/infra"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	"github.com/DeAI-Artist/Linkis/test/e2e/pkg/infra"
 )
 
 var _ infra.Provider = &Provider{}

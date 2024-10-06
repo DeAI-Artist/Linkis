@@ -3,10 +3,10 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/DeAI-Artist/MintAI/abci/client"
-	tmlog "github.com/DeAI-Artist/MintAI/libs/log"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/libs/service"
+	abcicli "github.com/DeAI-Artist/Linkis/abci/client"
+	tmlog "github.com/DeAI-Artist/Linkis/libs/log"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/libs/service"
 )
 
 const (

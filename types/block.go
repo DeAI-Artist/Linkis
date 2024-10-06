@@ -10,16 +10,16 @@ import (
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/libs/bits"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	tmversion "github.com/DeAI-Artist/MintAI/proto/tendermint/version"
-	"github.com/DeAI-Artist/MintAI/version"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/libs/bits"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	tmversion "github.com/DeAI-Artist/Linkis/proto/tendermint/version"
+	"github.com/DeAI-Artist/Linkis/version"
 )
 
 const (
@@ -321,7 +321,7 @@ func MaxDataBytesNoEvidence(maxBytes int64, valsCount int) int64 {
 // NOTE: changes to the Header should be duplicated in:
 // - header.Hash()
 // - abci.Header
-// - https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/blockchain/blockchain.md
+// - https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/spec/blockchain/blockchain.md
 type Header struct {
 	// basic block info
 	Version tmversion.Consensus `json:"version"`

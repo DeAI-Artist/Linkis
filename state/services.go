@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 //------------------------------------------------------

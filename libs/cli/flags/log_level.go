@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 const (

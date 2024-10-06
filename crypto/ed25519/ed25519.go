@@ -8,9 +8,9 @@ import (
 
 	"golang.org/x/crypto/ed25519"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
 )
 
 //-------------------------------------

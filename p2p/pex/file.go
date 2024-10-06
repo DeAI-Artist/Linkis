@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/DeAI-Artist/MintAI/libs/tempfile"
+	"github.com/DeAI-Artist/Linkis/libs/tempfile"
 )
 
 /* Loading & Saving */

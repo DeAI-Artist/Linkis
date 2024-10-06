@@ -1,4 +1,4 @@
-module github.com/DeAI-Artist/MintAI
+module github.com/DeAI-Artist/Linkis
 
 go 1.21
 

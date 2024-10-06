@@ -24,7 +24,7 @@ guide](introduction/quick-start.md).
 
 To learn about application development on Tendermint, see the [Application
 Blockchain
-Interface](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/spec/abci).
+Interface](https://github.com/DeAI-Artist/Linkis/tree/v0.34.x/spec/abci).
 
 For more details on using Tendermint, see the respective documentation for
 [Tendermint Core](tendermint-core/), [benchmarking and monitoring](tools/), and
@@ -38,5 +38,5 @@ list.
 ## Contribute
 
 To contribute to the documentation, see [this
-file](https://github.com/DeAI-Artist/MintAI/blob/main/docs/DOCS_README.md)
+file](https://github.com/DeAI-Artist/Linkis/blob/main/docs/DOCS_README.md)
 for details of the build process and considerations when making changes.

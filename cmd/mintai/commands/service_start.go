@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	"github.com/DeAI-Artist/MintAI/miner"
+	"github.com/DeAI-Artist/Linkis/miner"
 	"github.com/spf13/cobra"
 	"log"
 )

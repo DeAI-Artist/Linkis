@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
 )
 
 func TestABCIResults(t *testing.T) {

@@ -15,7 +15,7 @@ Make sure you [have Go installed](https://golang.org/doc/install).
 Next, install the `abci-cli` tool and example applications:
 
 ```sh
-git clone https://github.com/DeAI-Artist/MintAI.git
+git clone https://github.com/DeAI-Artist/Linkis.git
 cd tendermint
 make install_abci
 ```
@@ -63,7 +63,7 @@ as `abci-cli` above. The kvstore just stores transactions in a merkle
 tree.
 
 Its code can be found
-[here](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/abci/cmd/abci-cli/abci-cli.go)
+[here](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/abci/cmd/abci-cli/abci-cli.go)
 and looks like:
 
 ```go
@@ -138,7 +138,7 @@ response.
 
 The server may be generic for a particular language, and we provide a
 [reference implementation in
-Golang](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/abci/server). See the
+Golang](https://github.com/DeAI-Artist/Linkis/tree/v0.34.x/abci/server). See the
 [list of other ABCI implementations](https://github.com/tendermint/awesome#ecosystem) for servers in
 other languages.
 
@@ -220,7 +220,7 @@ Now that we've got the hang of it, let's try another application, the
 "counter" app.
 
 Like the kvstore app, its code can be found
-[here](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/abci/cmd/abci-cli/abci-cli.go)
+[here](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/abci/cmd/abci-cli/abci-cli.go)
 and looks like:
 
 ```go
@@ -325,7 +325,7 @@ But the ultimate flexibility comes from being able to write the
 application easily in any language.
 
 We have implemented the counter in a number of languages [see the
-example directory](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/abci/example).
+example directory](https://github.com/DeAI-Artist/Linkis/tree/v0.34.x/abci/example).
 
 To run the Node.js version, fist download & install [the Javascript ABCI server](https://github.com/tendermint/js-abci):
 

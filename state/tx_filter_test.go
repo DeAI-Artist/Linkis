@@ -9,9 +9,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 func TestTxFilter(t *testing.T) {

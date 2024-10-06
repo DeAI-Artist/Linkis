@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
 )
 
 // ID is a hex-encoded crypto.Address

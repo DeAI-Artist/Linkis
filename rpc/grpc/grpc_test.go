@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	core_grpc "github.com/DeAI-Artist/MintAI/rpc/grpc"
-	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	core_grpc "github.com/DeAI-Artist/Linkis/rpc/grpc"
+	rpctest "github.com/DeAI-Artist/Linkis/rpc/test"
 )
 
 func TestMain(m *testing.M) {

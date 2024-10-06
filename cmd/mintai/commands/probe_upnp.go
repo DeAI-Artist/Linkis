@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	"github.com/DeAI-Artist/MintAI/p2p/upnp"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	"github.com/DeAI-Artist/Linkis/p2p/upnp"
 )
 
 // ProbeUpnpCmd adds capabilities to test the UPnP functionality.

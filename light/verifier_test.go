@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	"github.com/DeAI-Artist/MintAI/light"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	"github.com/DeAI-Artist/Linkis/light"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

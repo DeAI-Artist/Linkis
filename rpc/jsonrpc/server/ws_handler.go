@@ -12,9 +12,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	types "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	types "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 // WebSocket handler
@@ -449,7 +449,7 @@ func (wsc *wsConnection) writeRoutine() {
 
 // All writes to the websocket must (re)set the write deadline.
 // If some writes don't set it while others do, they may timeout incorrectly
-// (https://github.com/DeAI-Artist/MintAI/issues/553)
+// (https://github.com/DeAI-Artist/Linkis/issues/553)
 func (wsc *wsConnection) writeMessageWithDeadline(msgType int, msg []byte) error {
 	if err := wsc.baseConn.SetWriteDeadline(time.Now().Add(wsc.writeWait)); err != nil {
 		return err

@@ -1,12 +1,12 @@
 package types
 
 import (
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	cryptoenc "github.com/DeAI-Artist/MintAI/crypto/encoding"
-	"github.com/DeAI-Artist/MintAI/crypto/secp256k1"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	cryptoenc "github.com/DeAI-Artist/Linkis/crypto/encoding"
+	"github.com/DeAI-Artist/Linkis/crypto/secp256k1"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 //-------------------------------------------------------

@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmpubsub "github.com/DeAI-Artist/MintAI/libs/pubsub"
-	"github.com/DeAI-Artist/MintAI/libs/service"
+	"github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmpubsub "github.com/DeAI-Artist/Linkis/libs/pubsub"
+	"github.com/DeAI-Artist/Linkis/libs/service"
 )
 
 const defaultCapacity = 0

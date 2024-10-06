@@ -3,7 +3,7 @@ package timer
 import (
 	"time"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 /*

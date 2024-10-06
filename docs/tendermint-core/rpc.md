@@ -8,4 +8,4 @@ The RPC documentation is hosted here:
 
 - [https://docs.tendermint.com/v0.34/rpc/](https://docs.tendermint.com/v0.34/rpc/)
 
-To update the documentation, edit the relevant `godoc` comments in the [rpc/core directory](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/rpc/core).
+To update the documentation, edit the relevant `godoc` comments in the [rpc/core directory](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/rpc/core).

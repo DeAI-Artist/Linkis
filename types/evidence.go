@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.

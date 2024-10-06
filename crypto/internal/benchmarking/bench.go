@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

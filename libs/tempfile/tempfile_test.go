@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 func TestWriteFileAtomic(t *testing.T) {

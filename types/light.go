@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 // LightBlock is a SignedHeader and a ValidatorSet.

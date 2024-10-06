@@ -3,8 +3,8 @@ package mempool
 import (
 	"container/list"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
-	"github.com/DeAI-Artist/MintAI/types"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // TxCache defines an interface for raw transaction caching in a mempool.

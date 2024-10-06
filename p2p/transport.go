@@ -8,10 +8,10 @@ import (
 
 	"golang.org/x/net/netutil"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 	"github.com/gogo/protobuf/proto"
 )
 
@@ -297,7 +297,7 @@ func (mt *MultiplexTransport) acceptPeers() {
 
 		// Connection upgrade and filtering should be asynchronous to avoid
 		// Head-of-line blocking[0].
-		// Reference:  https://github.com/DeAI-Artist/MintAI/issues/2047
+		// Reference:  https://github.com/DeAI-Artist/Linkis/issues/2047
 		//
 		// [0] https://en.wikipedia.org/wiki/Head-of-line_blocking
 		go func(c net.Conn) {

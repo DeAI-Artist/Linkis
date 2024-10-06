@@ -3,9 +3,9 @@ package coregrpc
 import (
 	"context"
 
-	abci "github.com/DeAI-Artist/MintAI/abci/types"
-	core "github.com/DeAI-Artist/MintAI/rpc/core"
-	rpctypes "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/types"
+	abci "github.com/DeAI-Artist/Linkis/abci/types"
+	core "github.com/DeAI-Artist/Linkis/rpc/core"
+	rpctypes "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/types"
 )
 
 type broadcastAPI struct {

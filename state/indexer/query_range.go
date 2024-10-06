@@ -3,7 +3,7 @@ package indexer
 import (
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
 )
 
 // QueryRanges defines a mapping between a composite event key and a QueryRange.

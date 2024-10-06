@@ -12,11 +12,11 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	dbm "github.com/tendermint/tm-db"
 
-	clist "github.com/DeAI-Artist/MintAI/libs/clist"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	sm "github.com/DeAI-Artist/MintAI/state"
-	"github.com/DeAI-Artist/MintAI/types"
+	clist "github.com/DeAI-Artist/Linkis/libs/clist"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	sm "github.com/DeAI-Artist/Linkis/state"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

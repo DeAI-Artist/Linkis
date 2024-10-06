@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 func TestPanicOnMaxLength(t *testing.T) {

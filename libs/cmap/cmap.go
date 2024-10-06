@@ -1,7 +1,7 @@
 package cmap
 
 import (
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // CMap is a goroutine-safe map

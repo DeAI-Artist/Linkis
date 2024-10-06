@@ -1,7 +1,7 @@
 syntax = "proto3";
 package loadtime.payload;
 
-option go_package = "github.com/DeAI-Artist/MintAI/test/loadtime/payload";
+option go_package = "github.com/DeAI-Artist/Linkis/test/loadtime/payload";
 
 import "google/protobuf/timestamp.proto";
 

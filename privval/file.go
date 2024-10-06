@@ -9,16 +9,16 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmbytes "github.com/DeAI-Artist/MintAI/libs/bytes"
-	tmjson "github.com/DeAI-Artist/MintAI/libs/json"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	"github.com/DeAI-Artist/MintAI/libs/protoio"
-	"github.com/DeAI-Artist/MintAI/libs/tempfile"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
-	"github.com/DeAI-Artist/MintAI/types"
-	tmtime "github.com/DeAI-Artist/MintAI/types/time"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmbytes "github.com/DeAI-Artist/Linkis/libs/bytes"
+	tmjson "github.com/DeAI-Artist/Linkis/libs/json"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	"github.com/DeAI-Artist/Linkis/libs/protoio"
+	"github.com/DeAI-Artist/Linkis/libs/tempfile"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/types"
+	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
 // TODO: type ?

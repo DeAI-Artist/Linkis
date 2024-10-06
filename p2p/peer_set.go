@@ -3,7 +3,7 @@ package p2p
 import (
 	"net"
 
-	tmsync "github.com/DeAI-Artist/MintAI/libs/sync"
+	tmsync "github.com/DeAI-Artist/Linkis/libs/sync"
 )
 
 // IPeerSet has a (immutable) subset of the methods of PeerSet.

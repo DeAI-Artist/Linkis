@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	tmflags "github.com/DeAI-Artist/MintAI/libs/cli/flags"
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	tmflags "github.com/DeAI-Artist/Linkis/libs/cli/flags"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 const (

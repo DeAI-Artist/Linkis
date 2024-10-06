@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 // PrivValidator defines the functionality of a local Tendermint validator

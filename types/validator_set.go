@@ -9,9 +9,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/crypto/merkle"
-	tmmath "github.com/DeAI-Artist/MintAI/libs/math"
-	tmproto "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	"github.com/DeAI-Artist/Linkis/crypto/merkle"
+	tmmath "github.com/DeAI-Artist/Linkis/libs/math"
+	tmproto "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 )
 
 const (

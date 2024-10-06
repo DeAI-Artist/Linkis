@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	rpchttp "github.com/DeAI-Artist/MintAI/rpc/client/http"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	rpchttp "github.com/DeAI-Artist/Linkis/rpc/client/http"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	rpctest "github.com/DeAI-Artist/Linkis/rpc/test"
 )
 
 func ExampleHTTP_simple() {

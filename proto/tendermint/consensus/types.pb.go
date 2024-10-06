@@ -5,8 +5,8 @@ package consensus
 
 import (
 	fmt "fmt"
-	bits "github.com/DeAI-Artist/MintAI/proto/tendermint/libs/bits"
-	types "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	bits "github.com/DeAI-Artist/Linkis/proto/tendermint/libs/bits"
+	types "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"

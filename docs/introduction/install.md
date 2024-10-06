@@ -6,7 +6,7 @@ order: 3
 
 ## From Binary
 
-To download pre-built binaries, see the [releases page](https://github.com/DeAI-Artist/MintAI/releases).
+To download pre-built binaries, see the [releases page](https://github.com/DeAI-Artist/Linkis/releases).
 
 ## From Source
 
@@ -21,7 +21,7 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 ### Get Source Code
 
 ```sh
-git clone https://github.com/DeAI-Artist/MintAI.git
+git clone https://github.com/DeAI-Artist/Linkis.git
 cd tendermint
 ```
 

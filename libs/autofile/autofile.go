@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	tmrand "github.com/DeAI-Artist/MintAI/libs/rand"
+	tmrand "github.com/DeAI-Artist/Linkis/libs/rand"
 )
 
 /* AutoFile usage

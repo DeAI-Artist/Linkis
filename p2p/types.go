@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/DeAI-Artist/MintAI/p2p/conn"
-	tmp2p "github.com/DeAI-Artist/MintAI/proto/tendermint/p2p"
+	"github.com/DeAI-Artist/Linkis/p2p/conn"
+	tmp2p "github.com/DeAI-Artist/Linkis/proto/tendermint/p2p"
 	"github.com/gogo/protobuf/proto"
 )
 

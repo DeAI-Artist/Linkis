@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/DeAI-Artist/MintAI/crypto"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	p2pconn "github.com/DeAI-Artist/MintAI/p2p/conn"
+	"github.com/DeAI-Artist/Linkis/crypto"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	p2pconn "github.com/DeAI-Artist/Linkis/p2p/conn"
 )
 
 // Socket errors.

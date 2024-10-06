@@ -6,8 +6,8 @@ package types
 import (
 	context "context"
 	fmt "fmt"
-	crypto "github.com/DeAI-Artist/MintAI/proto/tendermint/crypto"
-	types1 "github.com/DeAI-Artist/MintAI/proto/tendermint/types"
+	crypto "github.com/DeAI-Artist/Linkis/proto/tendermint/crypto"
+	types1 "github.com/DeAI-Artist/Linkis/proto/tendermint/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"
@@ -3023,7 +3023,7 @@ type Evidence struct {
 	Time time.Time `protobuf:"bytes,4,opt,name=time,proto3,stdtime" json:"time"`
 	// Total voting power of the validator set in case the ABCI application does
 	// not store historical validators.
-	// https://github.com/DeAI-Artist/MintAI/issues/4581
+	// https://github.com/DeAI-Artist/Linkis/issues/4581
 	TotalVotingPower int64 `protobuf:"varint,5,opt,name=total_voting_power,json=totalVotingPower,proto3" json:"total_voting_power,omitempty"`
 }
 

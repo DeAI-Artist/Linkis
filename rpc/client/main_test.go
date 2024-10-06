@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/DeAI-Artist/MintAI/abci/example/kvstore"
-	nm "github.com/DeAI-Artist/MintAI/node"
-	rpctest "github.com/DeAI-Artist/MintAI/rpc/test"
+	"github.com/DeAI-Artist/Linkis/abci/example/kvstore"
+	nm "github.com/DeAI-Artist/Linkis/node"
+	rpctest "github.com/DeAI-Artist/Linkis/rpc/test"
 )
 
 var node *nm.Node

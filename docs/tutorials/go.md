@@ -87,7 +87,7 @@ Hello, Tendermint Core
 
 Tendermint Core communicates with the application through the Application
 BlockChain Interface (ABCI). All message types are defined in the [protobuf
-file](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/proto/tendermint/abci/types.proto).
+file](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/proto/tendermint/abci/types.proto).
 This allows Tendermint Core to run applications written in any programming
 language.
 
@@ -97,7 +97,7 @@ Create a file called `app.go` with the following content:
 package main
 
 import (
-	abcitypes "github.com/DeAI-Artist/MintAI/abci/types"
+	abcitypes "github.com/DeAI-Artist/Linkis/abci/types"
 )
 
 type KVStoreApplication struct {}
@@ -221,7 +221,7 @@ etc.) by Tendermint Core.
 
 Valid transactions will eventually be committed given they are not too big and
 have enough gas. To learn more about gas, check out ["the
-specification"](https://github.com/DeAI-Artist/MintAI/blob/v0.34.x/spec/abci/apps.md#gas).
+specification"](https://github.com/DeAI-Artist/Linkis/blob/v0.34.x/spec/abci/apps.md#gas).
 
 For the underlying key-value store we'll use
 [badger](https://github.com/dgraph-io/badger), which is an embeddable,
@@ -307,7 +307,7 @@ the application's `Query` method.
 
 Applications are free to provide their own APIs. But by using Tendermint Core
 as a proxy, clients (including [light client
-package](https://godoc.org/github.com/DeAI-Artist/MintAI/light)) can leverage
+package](https://godoc.org/github.com/DeAI-Artist/Linkis/light)) can leverage
 the unified API across different applications. Plus they won't have to call the
 otherwise separate Tendermint Core API for additional proofs.
 
@@ -340,7 +340,7 @@ func (app *KVStoreApplication) Query(reqQuery abcitypes.RequestQuery) (resQuery 
 ```
 
 The complete specification can be found
-[here](https://github.com/DeAI-Artist/MintAI/tree/v0.34.x/spec/abci/).
+[here](https://github.com/DeAI-Artist/Linkis/tree/v0.34.x/spec/abci/).
 
 ## 1.4 Starting an application and a Tendermint Core instances
 
@@ -358,8 +358,8 @@ import (
 
 	"github.com/dgraph-io/badger"
 
-	abciserver "github.com/DeAI-Artist/MintAI/abci/server"
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	abciserver "github.com/DeAI-Artist/Linkis/abci/server"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 var socketAddr string
@@ -443,7 +443,7 @@ dependency management.
 
 ```bash
 go mod init github.com/me/example
-go get github.com/DeAI-Artist/MintAI/@v0.34.0
+go get github.com/DeAI-Artist/Linkis/@v0.34.0
 ```
 
 After running the above commands you will see two generated files, go.mod and go.sum. The go.mod file should look similar to:
@@ -455,7 +455,7 @@ go 1.15
 
 require (
 	github.com/dgraph-io/badger v1.6.2
-	github.com/DeAI-Artist/MintAI v0.34.0
+	github.com/DeAI-Artist/Linkis v0.34.0
 )
 ```
 
@@ -564,5 +564,5 @@ curl -s 'localhost:26657/abci_query?data="tendermint"'
 
 I hope everything went smoothly and your first, but hopefully not the last,
 Tendermint Core application is up and running. If not, please [open an issue on
-Github](https://github.com/DeAI-Artist/MintAI/issues/new/choose). To dig
+Github](https://github.com/DeAI-Artist/Linkis/issues/new/choose). To dig
 deeper, read [the docs](https://docs.tendermint.com/v0.34/).

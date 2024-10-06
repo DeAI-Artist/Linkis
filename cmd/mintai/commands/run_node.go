@@ -9,9 +9,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/DeAI-Artist/MintAI/config"
-	tmos "github.com/DeAI-Artist/MintAI/libs/os"
-	nm "github.com/DeAI-Artist/MintAI/node"
+	cfg "github.com/DeAI-Artist/Linkis/config"
+	tmos "github.com/DeAI-Artist/Linkis/libs/os"
+	nm "github.com/DeAI-Artist/Linkis/node"
 )
 
 var (

@@ -3,7 +3,7 @@ package fuzz_test
 import (
 	"fmt"
 
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
 )
 
 func Fuzz(data []byte) int {

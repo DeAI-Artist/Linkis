@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DeAI-Artist/MintAI/libs/pubsub/query"
+	"github.com/DeAI-Artist/Linkis/libs/pubsub/query"
 )
 
 func TestEmptyQueryMatchesAnything(t *testing.T) {

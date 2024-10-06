@@ -162,7 +162,7 @@ message Evidence {
     (gogoproto.nullable) = false, (gogoproto.stdtime) = true];
   // Total voting power of the validator set in case the ABCI application does
   // not store historical validators.
-  // https://github.com/DeAI-Artist/MintAI/issues/4581
+  // https://github.com/DeAI-Artist/Linkis/issues/4581
   int64 total_voting_power = 5;
 }
 ```

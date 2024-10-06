@@ -23,10 +23,10 @@ implementation.
 import (
 	"context"
 
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
-	"github.com/DeAI-Artist/MintAI/libs/service"
-	ctypes "github.com/DeAI-Artist/MintAI/rpc/core/types"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/libs/service"
+	ctypes "github.com/DeAI-Artist/Linkis/rpc/core/types"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 // Client wraps most important rpc calls a client would make if you want to

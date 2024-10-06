@@ -1,8 +1,8 @@
 package crypto
 
 import (
-	"github.com/DeAI-Artist/MintAI/crypto/tmhash"
-	"github.com/DeAI-Artist/MintAI/libs/bytes"
+	"github.com/DeAI-Artist/Linkis/crypto/tmhash"
+	"github.com/DeAI-Artist/Linkis/libs/bytes"
 )
 
 const (

@@ -7,11 +7,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	"github.com/DeAI-Artist/MintAI/light"
-	"github.com/DeAI-Artist/MintAI/light/provider"
-	mockp "github.com/DeAI-Artist/MintAI/light/provider/mock"
-	dbs "github.com/DeAI-Artist/MintAI/light/store/db"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	"github.com/DeAI-Artist/Linkis/light"
+	"github.com/DeAI-Artist/Linkis/light/provider"
+	mockp "github.com/DeAI-Artist/Linkis/light/provider/mock"
+	dbs "github.com/DeAI-Artist/Linkis/light/store/db"
 )
 
 // NOTE: block is produced every minute. Make sure the verification time

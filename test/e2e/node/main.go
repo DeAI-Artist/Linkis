@@ -13,25 +13,25 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/DeAI-Artist/MintAI/abci/server"
-	"github.com/DeAI-Artist/MintAI/config"
-	"github.com/DeAI-Artist/MintAI/crypto/ed25519"
-	tmflags "github.com/DeAI-Artist/MintAI/libs/cli/flags"
-	"github.com/DeAI-Artist/MintAI/libs/log"
-	tmnet "github.com/DeAI-Artist/MintAI/libs/net"
-	"github.com/DeAI-Artist/MintAI/light"
-	lproxy "github.com/DeAI-Artist/MintAI/light/proxy"
-	lrpc "github.com/DeAI-Artist/MintAI/light/rpc"
-	dbs "github.com/DeAI-Artist/MintAI/light/store/db"
-	"github.com/DeAI-Artist/MintAI/node"
-	"github.com/DeAI-Artist/MintAI/p2p"
-	"github.com/DeAI-Artist/MintAI/privval"
-	"github.com/DeAI-Artist/MintAI/proxy"
-	rpcserver "github.com/DeAI-Artist/MintAI/rpc/jsonrpc/server"
-	"github.com/DeAI-Artist/MintAI/test/e2e/app"
-	e2e "github.com/DeAI-Artist/MintAI/test/e2e/pkg"
-	mcs "github.com/DeAI-Artist/MintAI/test/maverick/consensus"
-	maverick "github.com/DeAI-Artist/MintAI/test/maverick/node"
+	"github.com/DeAI-Artist/Linkis/abci/server"
+	"github.com/DeAI-Artist/Linkis/config"
+	"github.com/DeAI-Artist/Linkis/crypto/ed25519"
+	tmflags "github.com/DeAI-Artist/Linkis/libs/cli/flags"
+	"github.com/DeAI-Artist/Linkis/libs/log"
+	tmnet "github.com/DeAI-Artist/Linkis/libs/net"
+	"github.com/DeAI-Artist/Linkis/light"
+	lproxy "github.com/DeAI-Artist/Linkis/light/proxy"
+	lrpc "github.com/DeAI-Artist/Linkis/light/rpc"
+	dbs "github.com/DeAI-Artist/Linkis/light/store/db"
+	"github.com/DeAI-Artist/Linkis/node"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	"github.com/DeAI-Artist/Linkis/privval"
+	"github.com/DeAI-Artist/Linkis/proxy"
+	rpcserver "github.com/DeAI-Artist/Linkis/rpc/jsonrpc/server"
+	"github.com/DeAI-Artist/Linkis/test/e2e/app"
+	e2e "github.com/DeAI-Artist/Linkis/test/e2e/pkg"
+	mcs "github.com/DeAI-Artist/Linkis/test/maverick/consensus"
+	maverick "github.com/DeAI-Artist/Linkis/test/maverick/node"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))
@@ -182,7 +182,7 @@ func startLightClient(cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/DeAI-Artist/MintAI/issues/3435
+	// See https://github.com/DeAI-Artist/Linkis/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

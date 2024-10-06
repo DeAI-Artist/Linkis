@@ -6,9 +6,9 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/DeAI-Artist/MintAI/p2p"
-	bcproto "github.com/DeAI-Artist/MintAI/proto/tendermint/blockchain"
-	"github.com/DeAI-Artist/MintAI/types"
+	"github.com/DeAI-Artist/Linkis/p2p"
+	bcproto "github.com/DeAI-Artist/Linkis/proto/tendermint/blockchain"
+	"github.com/DeAI-Artist/Linkis/types"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/DeAI-Artist/MintAI/libs/log"
+	"github.com/DeAI-Artist/Linkis/libs/log"
 )
 
 // RegisterRPCFuncs adds a route for each function in the funcMap, as well as
