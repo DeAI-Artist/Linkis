@@ -1,6 +1,6 @@
 # Linkis Core: Reference Implementation of Linkis protocol
 
-![banner](docs/tendermint-core-image.jpg)
+![banner](docs/tendermint-core-image.gif)
 
 [![Version][version-badge]][version-url]
 [![API Reference][api-badge]][api-url]
