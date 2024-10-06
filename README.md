@@ -1,4 +1,4 @@
-# MintAI Core: Reference Implementation of MintAI protocol
+# Linkis Core: Reference Implementation of Linkis protocol
 
 ![banner](docs/tendermint-core-image.jpg)
 
