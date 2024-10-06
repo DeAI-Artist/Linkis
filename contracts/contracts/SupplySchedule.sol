@@ -10,7 +10,7 @@ import "./Math.sol";
 
 // Internal references
 import "./Proxy.sol";
-import "./interfaces/IMAI.sol";
+import "./interfaces/ILISA.sol";
 import "./interfaces/IERC20.sol";
 
 contract SupplySchedule is Owned, ISupplySchedule {
@@ -28,7 +28,7 @@ contract SupplySchedule is Owned, ISupplySchedule {
 
     uint public constant INFLATION_START_DATE = 1710457200; // 2024-03-15 00:00:00+00:00
 
-    // The number of MAI rewarded to the caller of MAI.mint()
+    // The number of LISA rewarded to the caller of LISA.mint()
     uint public minterReward = 100 * 1e18;
 
     // The number of MAI minted per week

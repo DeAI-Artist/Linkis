@@ -3,7 +3,7 @@
 ##
 ## Input parameters
 ##
-BINARY=/mintai/${BINARY:-mintai}
+BINARY=/linkis/${BINARY:-linkis}
 ID=${ID:-0}
 LOG=${LOG:-tendermint.log}
 
@@ -11,7 +11,7 @@ LOG=${LOG:-tendermint.log}
 ## Assert linux binary
 ##
 if ! [ -f "${BINARY}" ]; then
-	echo "The binary $(basename "${BINARY}") cannot be found. Please add the binary to the shared folder. Please use the BINARY environment variable if the name of the binary is not 'mintai' E.g.: -e BINARY=tendermint_my_test_version"
+	echo "The binary $(basename "${BINARY}") cannot be found. Please add the binary to the shared folder. Please use the BINARY environment variable if the name of the binary is not 'linkis' E.g.: -e BINARY=tendermint_my_test_version"
 	exit 1
 fi
 BINARY_CHECK="$(file "$BINARY" | grep 'ELF 64-bit LSB executable, x86-64')"
@@ -23,7 +23,7 @@ fi
 ##
 ## Run binary with all parameters
 ##
-export TMHOME="/mintai/node${ID}"
+export TMHOME="/linkis/node${ID}"
 
 if [ -d "`dirname ${TMHOME}/${LOG}`" ]; then
   "$BINARY" "$@" | tee "${TMHOME}/${LOG}"
@@ -31,5 +31,5 @@ else
   "$BINARY" "$@"
 fi
 
-chmod 777 -R /mintai
+chmod 777 -R /linkis
 

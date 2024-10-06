@@ -2,7 +2,7 @@ pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
 // Inheritance
-import "./BaseMAI.sol";
+import "./BaseLI.sol";
 
 // Internal references
 import "./interfaces/IRewardEscrow.sol";

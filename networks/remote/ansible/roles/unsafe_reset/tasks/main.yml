@@ -1,4 +1,4 @@
-- command: "{{service}} unsafe_reset_all {{ (service != 'mintai') | ternary('node','') }} --home /home/{{service}}/.{{service}}"
+- command: "{{service}} unsafe_reset_all {{ (service != 'linkis') | ternary('node','') }} --home /home/{{service}}/.{{service}}"
   become_user: "{{service}}"
   become: yes
 

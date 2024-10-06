@@ -1,7 +1,7 @@
 {
-  "name": "mintail2",
+  "name": "linkisl2",
   "version": "1.0.0",
-  "description": "the l2 implementation of the MintAI network",
+  "description": "the l2 implementation of the Linkis network",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

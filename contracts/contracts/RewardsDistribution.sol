@@ -22,9 +22,9 @@ contract RewardsDistribution is Owned, IRewardsDistribution {
     address public authority;
 
     /**
-     * @notice Address of the MAI ProxyERC20
+     * @notice Address of the LISA ProxyERC20
      */
-    address public MAIProxy;
+    address public LISAProxy;
 
     /**
      * @notice Address of the RewardEscrow contract
@@ -48,12 +48,12 @@ contract RewardsDistribution is Owned, IRewardsDistribution {
     constructor(
         address _owner,
         address _authority,
-        address _MAIProxy,
+        address _LISAProxy,
         address _rewardEscrow,
         address _feePoolProxy
     ) public Owned(_owner) {
         authority = _authority;
-        MAIProxy = _MAIProxy;
+        LISAProxy = _MAIProxy;
         rewardEscrow = _rewardEscrow;
         feePoolProxy = _feePoolProxy;
     }

@@ -14,10 +14,10 @@ import (
 	tmtime "github.com/DeAI-Artist/Linkis/types/time"
 )
 
-// InitFilesCmd initialises a fresh MintAI Core instance.
+// InitFilesCmd initialises a fresh Linkis Core instance.
 var InitFilesCmd = &cobra.Command{
 	Use:   "init",
-	Short: "Initialize MintAI",
+	Short: "Initialize Linkis",
 	RunE:  initFiles,
 }
 

@@ -1,7 +1,7 @@
 PACKAGES=$(shell go list ./...)
-OUTPUT?=build/mintai
+OUTPUT?=build/linkis
 
-BUILD_TAGS?=mintai
+BUILD_TAGS?=linkis
 
 # If building a release, please checkout the version tag to get the correct version setting
 ifneq ($(shell git symbolic-ref -q --short HEAD),)
@@ -58,15 +58,15 @@ all: check build test install
 include tests.mk
 
 ###############################################################################
-###                                Build MintAI                        ###
+###                                Build Linkis                        ###
 ###############################################################################
 
 build:
-	CGO_ENABLED=$(CGO_ENABLED) go build $(BUILD_FLAGS) -tags '$(BUILD_TAGS)' -o $(OUTPUT) ./cmd/mintai/
+	CGO_ENABLED=$(CGO_ENABLED) go build $(BUILD_FLAGS) -tags '$(BUILD_TAGS)' -o $(OUTPUT) ./cmd/linkis/
 .PHONY: build
 
 install:
-	CGO_ENABLED=$(CGO_ENABLED) go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) ./cmd/mintai
+	CGO_ENABLED=$(CGO_ENABLED) go install $(BUILD_FLAGS) -tags $(BUILD_TAGS) ./cmd/linkis
 .PHONY: install
 
 
@@ -97,7 +97,7 @@ endif
 proto-gen: check-proto-deps
 	@echo "Generating Protobuf files"
 	@go run github.com/bufbuild/buf/cmd/buf generate
-	@mv ./proto/mintai/abci/types.pb.go ./abci/types/
+	@mv ./proto/linkis/abci/types.pb.go ./abci/types/
 .PHONY: proto-gen
 
 # These targets are provided for convenience and are intended for local
@@ -159,12 +159,12 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/DeAI-Artist/Linkis/cmd/mintai -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/DeAI-Artist/Linkis/cmd/linkis -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:
 	@# Copy of build recipe with additional flags to perform binary size analysis
-	$(eval $(shell go build -work -a $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o $(OUTPUT) ./cmd/mintai/ 2>&1))
+	$(eval $(shell go build -work -a $(BUILD_FLAGS) -tags $(BUILD_TAGS) -o $(OUTPUT) ./cmd/linkis/ 2>&1))
 	@find $(WORK) -type f -name "*.a" | xargs -I{} du -hxs "{}" | sort -rh | sed -e s:${WORK}/::g > deps_bin_size.log
 	@echo "Results can be found here: $(CURDIR)/deps_bin_size.log"
 .PHONY: get_deps_bin_size
@@ -175,9 +175,9 @@ get_deps_bin_size:
 
 # generates certificates for TLS testing in remotedb and RPC server
 gen_certs: clean_certs
-	certstrap init --common-name "mintai.network" --passphrase ""
+	certstrap init --common-name "linkis.network" --passphrase ""
 	certstrap request-cert --common-name "server" -ip "127.0.0.1" --passphrase ""
-	certstrap sign "server" --CA "mintai.network" --passphrase ""
+	certstrap sign "server" --CA "linkis.network" --passphrase ""
 	mv out/server.crt rpc/jsonrpc/server/test.crt
 	mv out/server.key rpc/jsonrpc/server/test.key
 	rm -rf out
@@ -232,9 +232,9 @@ sync-docs:
 ###############################################################################
 
 build-docker: build-linux
-	cp $(OUTPUT) DOCKER/mintai
-	docker build --label=mintai --tag="mintai/mintai" DOCKER
-	rm -rf DOCKER/mintai
+	cp $(OUTPUT) DOCKER/linkis
+	docker build --label=linkis --tag="linkis/linkis" DOCKER
+	rm -rf DOCKER/linkis
 .PHONY: build-docker
 
 ###############################################################################
@@ -252,15 +252,15 @@ build-docker-localnode:
 
 # Runs `make build MINTAI_BUILD_OPTIONS=cleveldb` from within an Amazon
 # Linux (v2)-based Docker build container in order to build an Amazon
-# Linux-compatible binary. Produces a compatible binary at ./build/mintai
+# Linux-compatible binary. Produces a compatible binary at ./build/linkis
 build_c-amazonlinux:
 	$(MAKE) -C ./DOCKER build_amazonlinux_buildimage
-	docker run --rm -it -v `pwd`:/mintai mintai/mintai:build_c-amazonlinux
+	docker run --rm -it -v `pwd`:/linkis linkis/linkis:build_c-amazonlinux
 .PHONY: build_c-amazonlinux
 
 # Run a 4-node testnet locally
 localnet-start: localnet-stop build-docker-localnode
-	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/mintai:Z mintai/localnode testnet --config /etc/mintai/config-template.toml --o . --starting-ip-address 192.167.10.2; fi
+	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/linkis:Z linkis/localnode testnet --config /etc/linkis/config-template.toml --o . --starting-ip-address 192.167.10.2; fi
 	docker-compose up
 .PHONY: localnet-start
 

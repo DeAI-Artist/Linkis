@@ -24,7 +24,7 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
 mkdir goApps
 echo "export GOPATH=/root/goApps" >> ~/.profile
 echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.profile
-# **turn on the go module, default is auto. The value is off, if mintai source code
+# **turn on the go module, default is auto. The value is off, if linkis source code
 #is downloaded under $GOPATH/src directory
 echo "export GO111MODULE=on" >> ~/.profile
 
@@ -37,11 +37,11 @@ cd $GOPATH/src/github.com/DeAI-Artist
 # specific version directory under $GOPATH/pkg/mod the make
 # script will not work
 git clone https://github.com/DeAI-Artist/Linkis.git
-cd MintAI
+cd Linkis
 
 ## build
 make build
-#** need to install the package, otherwise mintai testnet will not execute
+#** need to install the package, otherwise linkis testnet will not execute
 make install
 
 # generate an ssh key
@@ -49,13 +49,13 @@ ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ''
 echo "export SSH_KEY_FILE=\"\$HOME/.ssh/id_rsa.pub\"" >> ~/.profile
 source ~/.profile
 
-# return to root and create /.mintai/ directory
+# return to root and create /.linkis/ directory
 cd
-mkdir /root/.mintai
+mkdir /root/.linkis
 
 #Copy your config files to the directory, replace corresponding node file and ips needed
-scp -r $HOME/MintAI/mytestnet/node0/* root@$IP0:/root/.mintai/
+scp -r $HOME/Linkis/mytestnet/node0/* root@$IP0:/root/.linkis/
 
-mintai node
+linkis node
 
 echo "congratulations, your testnet is ready to run :)"

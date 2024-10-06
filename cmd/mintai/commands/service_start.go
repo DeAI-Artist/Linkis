@@ -43,11 +43,11 @@ func serviceStartWithConfig(cmd *cobra.Command, args []string) error {
 
 /*
 # Basic syntax
-mintai service-start --rpc-endpoint "http://your-rpc-server:port"
+linkis service-start --rpc-endpoint "http://your-rpc-server:port"
 
 # Example usage
-mintai service-start --rpc-endpoint "http://localhost:8545"
+linkis service-start --rpc-endpoint "http://localhost:8545"
 
 # Or using the shorthand for the flag
-mintai service-start -r "http://localhost:8545"
+linkis service-start -r "http://localhost:8545"
 */

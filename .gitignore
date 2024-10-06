@@ -24,7 +24,7 @@ abci-cli
 docs/node_modules/
 docs/.vuepress/public/rpc
 index.html.md
-.mintai
+.linkis
 mytestnet
 scripts/wal2json/wal2json
 scripts/cutWALUntil/cutWALUntil

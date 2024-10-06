@@ -20,14 +20,14 @@ import (
 
 var killCmd = &cobra.Command{
 	Use:   "kill [pid] [compressed-output-file]",
-	Short: "Kill a MintAI process while aggregating and packaging debugging data",
-	Long: `Kill a MintAI process while also aggregating MintAI process data
+	Short: "Kill a Linkis process while aggregating and packaging debugging data",
+	Long: `Kill a Linkis process while also aggregating Linkis process data
 such as the latest node state, including consensus and networking state,
 go-routine state, and the node's WAL and config information. This aggregated data
 is packaged into a compressed archive.
 
 Example:
-$ mintai debug 34255 /path/to/tm-debug.zip`,
+$ linkis debug 34255 /path/to/tm-debug.zip`,
 	Args: cobra.ExactArgs(2),
 	RunE: killCmdHandler,
 }
@@ -86,7 +86,7 @@ func killCmdHandler(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	logger.Info("killing MintAI process")
+	logger.Info("killing Linkis process")
 	if err := killProc(pid, tmpDir); err != nil {
 		return err
 	}
@@ -95,7 +95,7 @@ func killCmdHandler(cmd *cobra.Command, args []string) error {
 	return zipDir(tmpDir, outFile)
 }
 
-// killProc attempts to kill the MintAI process with a given PID with an
+// killProc attempts to kill the Linkis process with a given PID with an
 // ABORT signal which should result in a goroutine stacktrace. The PID's STDERR
 // is tailed and piped to a file under the directory dir. An error is returned
 // if the output file cannot be created or the tail command cannot be started.
@@ -119,15 +119,15 @@ func killProc(pid uint64, dir string) error {
 		return err
 	}
 
-	// kill the underlying MintAI process and subsequent tailing process
+	// kill the underlying Linkis process and subsequent tailing process
 	go func() {
 		// Killing the Tendermint process with the '-ABRT|-6' signal will result in
 		// a goroutine stacktrace.
 		p, err := os.FindProcess(int(pid))
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "failed to find PID to kill MintAI process: %s", err)
+			fmt.Fprintf(os.Stderr, "failed to find PID to kill Linkis process: %s", err)
 		} else if err = p.Signal(syscall.SIGABRT); err != nil {
-			fmt.Fprintf(os.Stderr, "failed to kill MintAI process: %s", err)
+			fmt.Fprintf(os.Stderr, "failed to kill Linkis process: %s", err)
 		}
 
 		// allow some time to allow the Tendermint process to be killed
@@ -137,7 +137,7 @@ func killProc(pid uint64, dir string) error {
 		time.Sleep(5 * time.Second)
 
 		if err := cmd.Process.Kill(); err != nil {
-			fmt.Fprintf(os.Stderr, "failed to kill MintAI process output redirection: %s", err)
+			fmt.Fprintf(os.Stderr, "failed to kill Linkis process output redirection: %s", err)
 		}
 	}()
 

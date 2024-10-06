@@ -1,7 +1,7 @@
 .PHONY: build install docker-image
 
 TENDERMINT_VERSION?=latest
-BUILD_TAGS?='mintai'
+BUILD_TAGS?='linkis'
 VERSION := $(shell git describe --always)
 BUILD_FLAGS = -ldflags "-X github.com/DeAI-Artist/Linkis/version.TMCoreSemVer=$(VERSION)
 

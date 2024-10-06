@@ -3,7 +3,7 @@ version: 2.1
 executors:
   golang:
     docker:
-      - image: mintaidev/docker-mintai-build:latest
+      - image: linkisdev/docker-linkis-build:latest
     working_directory: /go/src/github.com/DeAI-Artist/Linkis
     environment:
       GOBIN: /tmp/bin
@@ -11,7 +11,7 @@ executors:
     machine: true
   docs:
     docker:
-      - image: mintaidev/docker-website-deployment:latest
+      - image: linkisdev/docker-website-deployment:latest
     environment:
       AWS_REGION: us-east-1
 
@@ -150,7 +150,7 @@ workflows:
   docs:
     jobs:
       - deploy_docs:
-          context: mintai-docs
+          context: linkis-docs
           filters:
             branches:
               only:
@@ -159,7 +159,7 @@ workflows:
               only:
                 - /^v.*/
       - deploy_docs:
-          context: mintai-docs-staging
+          context: linkis-docs-staging
           filters:
             branches:
               only:

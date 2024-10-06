@@ -45,10 +45,10 @@ Note: This operation requires ABCIResponses. Do not set DiscardABCIResponses to 
 want to use this command.
 	`,
 	Example: `
-	mintai reindex-event
-	mintai reindex-event --start-height 2
-	mintai reindex-event --end-height 10
-	mintai reindex-event --start-height 2 --end-height 10
+	linkis reindex-event
+	linkis reindex-event --start-height 2
+	linkis reindex-event --end-height 10
+	linkis reindex-event --start-height 2 --end-height 10
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		bs, ss, err := loadStateAndBlockStore(config)

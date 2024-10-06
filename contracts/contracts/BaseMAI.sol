@@ -11,12 +11,12 @@ import "./interfaces/IExchanger.sol";
 import "./interfaces/IRewardsDistribution.sol";
 import "./interfaces/IRewardEscrowV2.sol";
 
-contract BaseMAI is IERC20, ExternStateToken, MixinResolver {
+contract BaseLISA is IERC20, ExternStateToken, MixinResolver {
     // ========== STATE VARIABLES ==========
 
     // Available Synths which can be used with the system
-    string public constant TOKEN_NAME = "MintAI Network Token";
-    string public constant TOKEN_SYMBOL = "MAI";
+    string public constant TOKEN_NAME = "Linkis Network Token";
+    string public constant TOKEN_SYMBOL = "LISA";
     uint8 public constant DECIMALS = 18;
 
     // ========== ADDRESS RESOLVER CONFIGURATION ==========

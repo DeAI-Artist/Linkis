@@ -7,22 +7,22 @@
 [![Go version][go-badge]][go-url]
 [![Discord](https://img.shields.io/discord/1267176913382670371?color=6A7EC2&logo=discord&logoColor=ffffff)](https://discord.gg/r52AZRFb2T)
 [![License][license-badge]][license-url]
-![COMMIT_ACTIVITY](https://img.shields.io/github/commit-activity/m/DeAI-Artist/MintAI?style=for-the-badge)
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FMintAI&labelColor=%23f47373&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FMintAI)
+![COMMIT_ACTIVITY](https://img.shields.io/github/commit-activity/m/DeAI-Artist/Linkis?style=for-the-badge)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FLinkis&labelColor=%23f47373&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FDeAI-Artist%2FLinkis)
 
 ## Table Of Content
 - [Introduction](#introduction)
 - [Quick Start](#quick-start)
     - [Overview](#overview)
     - [Validator Nodes](#validator-nodes)
-        - [Install MintAI](#install-mintai)
+        - [Install Linkis](#install-linkis)
         - [Initialize the Validator Node](#initialize-the-validator-node)
         - [Start the Validator Node](#start-the-validator-node)
         - [Send Transactions](#send-transactions)
         - [Transaction Fees](#transaction-fees)
     - [Worker Nodes](#worker-nodes)
     - [Minimum Requirements](#minimum-requirements)
-- [MintAI Tokens](#mintai-tokens)
+- [Linkis Tokens](#linkis-tokens)
     - [Overview](#overview-1)
 - [Versioning](#versioning)
     - [Semantic Versioning](#semantic-versioning)
@@ -40,12 +40,12 @@ Tendermint Core includes both Layer-1 (L1) and Layer-2 (L2) implementations. L1 
   <em><strong>Figure 1:</strong> Overview of the decentralized AI service network components and their interactions.</em>
 </p>
 
-For protocol details, refer to the [MintAI WhitePaper](https://mintai.gitbook.io/whitepaper/).
+For protocol details, refer to the [Linkis WhitePaper](https://linkis.gitbook.io/whitepaper/).
 
 For a detailed analysis of the consensus framework in the L1 layer, including BFT safety and liveness proofs, refer to the paper, "[The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)" and its corresponding [Tendermint GitHub repo](https://github.com/tendermint/tendermint).
 
 
-_NOTE: This is only the dev version of MintAI core, both in the L1 and L2 implementations, for testnet purposes. As the project progresses, we are excited to include more features in both layers and anticipate major upgrades compared to the current versions. We warmly welcome any kind of contributions! For more information, see [our contribution policy](SECURITY.md)._
+_NOTE: This is only the dev version of Linkis core, both in the L1 and L2 implementations, for testnet purposes. As the project progresses, we are excited to include more features in both layers and anticipate major upgrades compared to the current versions. We warmly welcome any kind of contributions! For more information, see [our contribution policy](SECURITY.md)._
 
 ## Quick Start
 ### Overview
@@ -54,27 +54,27 @@ The network is composed of validators, service providers (miners), and clients. 
 ### Validator nodes
 Validators are responsible for securing the network by proposing and validating new blocks. To set up a validator node, follow these steps:
 
-#### Install MintAI:
+#### Install Linkis:
 ```shell
 git clone https://github.com/DeAI-Artist/Linkis.git
-cd MintAI
+cd Linkis
 make build
 make install
 ```
 #### Initialize the validator node:
 ```shell
-mintai init
+linkis init
 ```
 #### Start the validator node:
 ```shell
-mintai node
+linkis node
 ```
 From here your validator node is up and running :)
 
-> Note: The current implementations listen to all incoming transactions through the p2p module. To run a local node for testing purposes, modify the configuration file located at `.mintai/config/.config.toml`. Inside the file, change `laddr = "tcp://0.0.0.0:26656"` to `tcp://127.0.0.1"` to restrict network access to localhost only.
+> Note: The current implementations listen to all incoming transactions through the p2p module. To run a local node for testing purposes, modify the configuration file located at `.linkis/config/.config.toml`. Inside the file, change `laddr = "tcp://0.0.0.0:26656"` to `tcp://127.0.0.1"` to restrict network access to localhost only.
 
 #### Send transactions:
-The general transaction format in the MintAI network is:
+The general transaction format in the Linkis network is:
 ```shell
 curl -s 'RPC_laddr:26657/broadcast_tx_commit?tx="TX_CONTENT"'
 ```
@@ -94,13 +94,13 @@ curl -s '178.128.168.223:26657/abci_query?data="clientRegistration_0x6c25b72CD68
 To send transactions that can be passed into the mempool, one needs to formulate the transaction according to the message type and transaction format specified in this [doc](./spec/abci/abci.md).
 
 #### Transaction fees:
-Unlike interacting with mainnets like Solana or Ethereum, MintAI L1 transactions are completely **free of gas fees**, allowing clients to navigate the network without any economic friction.
-One can refer to the [MintAI protocol](https://arxiv.org/pdf/2310.19099) to understand how this is accomplished in a secure and robust manner.
+Unlike interacting with mainnets like Solana or Ethereum, Linkis L1 transactions are completely **free of gas fees**, allowing clients to navigate the network without any economic friction.
+One can refer to the [Linkis protocol](https://arxiv.org/pdf/2310.19099) to understand how this is accomplished in a secure and robust manner.
 
 ### Worker nodes
-The MintAI protocol coordinates services by routing clients' requests to workers (miners) in the network. Participating as a worker can help one earn network rewards based on the amount of services they have accepted and completed (through network transactions). To start with a certain `RPCENDPOINT`:
+The Linkis protocol coordinates services by routing clients' requests to workers (miners) in the network. Participating as a worker can help one earn network rewards based on the amount of services they have accepted and completed (through network transactions). To start with a certain `RPCENDPOINT`:
 ```shell
-mintai service-start --rpc-endpoint ${RPCENDPOINT}
+linkis service-start --rpc-endpoint ${RPCENDPOINT}
 ```
 It will prompt the user for some registration info and wallet generation.
 
@@ -112,13 +112,13 @@ It will prompt the user for some registration info and wallet generation.
 |-------------|-------------------|
 | Go version  | Go 1.18 or higher |
 
-## MintAI tokens
+## Linkis tokens
 ### Overview
-The MintAI token (MAI) is the primary utility token supporting network participants such as clients, workers, and validators. Participants are required to hold a certain amount of tokens to be accepted into the MintAI network. Clients must hold tokens to use AI and ML services on the network, while validators need to stake tokens to gain the voting power necessary for recording network activities. Consequently, the MintAI token should have the following considerations:
-- **Security**: Mainnets supporting MAI should be secure, typically characterized by a large Total Value Locked (TVL) and a broad community base.
-- **Upgradability**: MAI utilizes proxy contracts, allowing for updates to system logic and design without impacting the underlying database.
-- **Cross-chain Capability**: Cross-chain functionality improves accessibility, enabling holders of various cryptocurrencies to engage with the MintAI network and utilize AI and ML services.
-- **User Experience**: MAI should operate on chains known for low transaction fees and fast confirmation times, ensuring a smooth user experience.
+The Linkis token (LISA) is the primary utility token supporting network participants such as clients, workers, and validators. Participants are required to hold a certain amount of tokens to be accepted into the Linkis network. Clients must hold tokens to use AI and ML services on the network, while validators need to stake tokens to gain the voting power necessary for recording network activities. Consequently, the Linkis token should have the following considerations:
+- **Security**: Mainnets supporting LISA should be secure, typically characterized by a large Total Value Locked (TVL) and a broad community base.
+- **Upgradability**: LISA utilizes proxy contracts, allowing for updates to system logic and design without impacting the underlying database.
+- **Cross-chain Capability**: Cross-chain functionality improves accessibility, enabling holders of various cryptocurrencies to engage with the Linkis network and utilize AI and ML services.
+- **User Experience**: LISA should operate on chains known for low transaction fees and fast confirmation times, ensuring a smooth user experience.
 
 | Feature\Mainnets            | BSC<br/>![img_1.png](docs/img_1.png)  | Ethereum<br/>![img.png](docs/img.png)    | Polygon<br/>![img_2.png](docs/img_2.png) | Solana<br/>![img_3.png](docs/img_3.png)             | Near<br/>![img_5.png](docs/img_5.png)        | Tron<br/>![img_4.png](docs/img_4.png)                |
 |-----------------------------|---------------------------------------|-------------------------------------|-------------------------------------|------------------------------------------------|-----------------------------------------|--------------------------------------------|
@@ -127,42 +127,42 @@ The MintAI token (MAI) is the primary utility token supporting network participa
 | **Developer Tools**         | ✅ Many frameworks and tools available | ✅ Many frameworks and tools available      | ✅ Well-supported development tools  | ✅ Growing ecosystem of tools                   | ✅ Well-supported development tools        | ✅ Many frameworks and tools available           |
 | **Transaction Efficiency**  | ✅ Low fees, fast times                | ❌ Extremely high fees, slower times | ⚠️ Low fees, but slow speed          | ✅✅ Super-fast, Super low fees                  | ✅ Low fees, fast times                        | ✅ Low fees, fast times                 |
 
-Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/Linkis/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the MintAI network, cross-chain features will also be gradually supported so that MAI can be transferred between chains such as Solana and Tron.
+Based on the analysis of different main chains, we decided to use the ERC-20 protocol on Binance Smart Chain using [proxy contract patterns](https://github.com/DeAI-Artist/Linkis/tree/main/contracts/contracts). AI is an industry subject to high evolution speed, and all token and utility contracts should be upgradable except the database contracts. Given the growing size of the Linkis network, cross-chain features will also be gradually supported so that LISA can be transferred between chains such as Solana and Tron.
 
 ## Versioning
 
 ### Semantic Versioning
 
-MintAI uses [Semantic Versioning](http://semver.org/) to determine when and
+Linkis uses [Semantic Versioning](http://semver.org/) to determine when and
 how the version changes. According to SemVer, anything in the public API can
 change at any time before version 1.0.0
 
-To provide some stability to users of 0.X.X versions of MintAI, the MINOR
-version is used to signal breaking changes across MintAI's API. This API
+To provide some stability to users of 0.X.X versions of Linkis, the MINOR
+version is used to signal breaking changes across Linkis's API. This API
 includes all publicly exposed types, functions, and methods in non-internal Go
-packages as well as the types and methods accessible via the MintAI RPC
+packages as well as the types and methods accessible via the Linkis RPC
 interface.
 
 Breaking changes to these public APIs will be documented in the CHANGELOG.
 
 ### Upgrades
 
-In an effort to avoid accumulating technical debt prior to 1.0.0, we do not guarantee that breaking changes (i.e., bumps in the MINOR version) will work with existing MintAI blockchains. In these cases, you will have to start a new blockchain or write something custom to get the old data into the new chain. However, any bump in the PATCH version should be compatible with existing blockchain histories.
+In an effort to avoid accumulating technical debt prior to 1.0.0, we do not guarantee that breaking changes (i.e., bumps in the MINOR version) will work with existing Linkis blockchains. In these cases, you will have to start a new blockchain or write something custom to get the old data into the new chain. However, any bump in the PATCH version should be compatible with existing blockchain histories.
 
 ### Supported Versions
 
-Because we are a small core team, we only ship patch updates, including security updates, to the most recent minor release and the second-most recent minor release. Consequently, we strongly recommend keeping MintAI up-to-date when joining as validator or worker nodes. We will try our best to ensure that every major upgrade will be technically supported to the extent that the validator node restart will be as smooth as possible.
+Because we are a small core team, we only ship patch updates, including security updates, to the most recent minor release and the second-most recent minor release. Consequently, we strongly recommend keeping Linkis up-to-date when joining as validator or worker nodes. We will try our best to ensure that every major upgrade will be technically supported to the extent that the validator node restart will be as smooth as possible.
 ## Resources
 
 ### Research
-- [MintAI Protocol](https://mintai.gitbook.io/whitepaper/)
+- [Linkis Protocol](https://linkis.gitbook.io/whitepaper/)
 - [Proof of Training](https://arxiv.org/pdf/2307.07066)
 - [DeAI Overview](https://arxiv.org/pdf/2310.19099)
 - [The latest gossip on BFT consensus](https://arxiv.org/abs/1807.04938)
 - [Master's Thesis on Tendermint](https://atrium.lib.uoguelph.ca/xmlui/handle/10214/9769)
 
 ## Contribution
-We appreciate your interest in contributing to our open-source initiative. We'll provide a document of contribution guidelines soon, outlining the steps for contributing to MintAI. We welcome contributions from anyone on the internet and are grateful for even the smallest of fixes🤝!
+We appreciate your interest in contributing to our open-source initiative. We'll provide a document of contribution guidelines soon, outlining the steps for contributing to Linkis. We welcome contributions from anyone on the internet and are grateful for even the smallest of fixes🤝!
 
 [bft]: https://en.wikipedia.org/wiki/Byzantine_fault_tolerance
 [smr]: https://en.wikipedia.org/wiki/State_machine_replication
@@ -176,7 +176,7 @@ We appreciate your interest in contributing to our open-source initiative. We'll
 [discord-badge]: https://img.shields.io/discord/669268347736686612.svg
 [discord-url]: https://discord.gg/cosmosnetwork
 [license-badge]: https://img.shields.io/badge/License-GPL--3.0-lightgreen
-[license-url]: https://github.com/DeAI-Artist/Linkis/blob/main/LICENSE
+[license-url]: https://github.com/DeAI-Artist/Linkis/blob/main/LISACENSE
 [sg-badge]: https://sourcegraph.com/github.com/DeAI-Artist/Linkis/-/badge.svg
 [sg-url]: https://sourcegraph.com/github.com/DeAI-Artist/Linkis?badge
 [tests-url]: https://github.com/DeAI-Artist/Linkis/actions/workflows/tests.yml

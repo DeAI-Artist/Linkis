@@ -1,12 +1,12 @@
-project_name: MintAI
+project_name: Linkis
 
 env:
   # Require use of Go modules.
   - GO111MODULE=on
 
 builds:
-  - id: "mintai"
-    main: ./cmd/mintai/main.go
+  - id: "linkis"
+    main: ./cmd/linkis/main.go
     ldflags:
       - -s -w -X github.com/DeAI-Artist/Linkis/version.TMCoreSemVer={{ .Version }}
     env:

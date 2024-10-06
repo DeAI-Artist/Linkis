@@ -12,7 +12,7 @@ contract BaseCoordinator is Lock, Owned, MixinResolver {
 
     using SafeMath for uint;
     using SafeMath for uint256;
-    bytes32 public constant CONTRACT_MAI_PROXY = "MAI_PROXY";
+    bytes32 public constant CONTRACT_LI_PROXY = "LI_PROXY";
     bytes32 public constant CONTRACT_LOCK = "LockCoordinatorsV1";
     bool public staking_initialized;
 

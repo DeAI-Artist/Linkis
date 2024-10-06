@@ -1,7 +1,7 @@
 # Makefile for the "localnode" docker image.
 
 all:
-	docker build --tag mintai/localnode localnode
+	docker build --tag linkis/localnode localnode
 
 .PHONY: all
 

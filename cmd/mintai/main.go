@@ -4,8 +4,8 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/DeAI-Artist/Linkis/cmd/mintai/commands"
-	"github.com/DeAI-Artist/Linkis/cmd/mintai/commands/debug"
+	cmd "github.com/DeAI-Artist/Linkis/cmd/linkis/commands"
+	"github.com/DeAI-Artist/Linkis/cmd/linkis/commands/debug"
 	cfg "github.com/DeAI-Artist/Linkis/config"
 	"github.com/DeAI-Artist/Linkis/libs/cli"
 	nm "github.com/DeAI-Artist/Linkis/node"
@@ -49,7 +49,7 @@ func main() {
 	// Create & start node
 	rootCmd.AddCommand(cmd.NewRunNodeCmd(nodeFunc))
 
-	cmd := cli.PrepareBaseCmd(rootCmd, "MAI", os.ExpandEnv(filepath.Join("$HOME", cfg.DefaultTendermintDir)))
+	cmd := cli.PrepareBaseCmd(rootCmd, "LISA", os.ExpandEnv(filepath.Join("$HOME", cfg.DefaultTendermintDir)))
 	if err := cmd.Execute(); err != nil {
 		panic(err)
 	}

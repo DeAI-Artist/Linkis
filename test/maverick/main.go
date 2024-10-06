@@ -8,8 +8,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cmd "github.com/DeAI-Artist/Linkis/cmd/mintai/commands"
-	"github.com/DeAI-Artist/Linkis/cmd/mintai/commands/debug"
+	cmd "github.com/DeAI-Artist/Linkis/cmd/linkis/commands"
+	"github.com/DeAI-Artist/Linkis/cmd/linkis/commands/debug"
 	cfg "github.com/DeAI-Artist/Linkis/config"
 	"github.com/DeAI-Artist/Linkis/libs/cli"
 	tmflags "github.com/DeAI-Artist/Linkis/libs/cli/flags"

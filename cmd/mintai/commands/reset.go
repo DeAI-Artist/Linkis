@@ -11,7 +11,7 @@ import (
 	"github.com/DeAI-Artist/Linkis/privval"
 )
 
-// ResetAllCmd removes the database of this MintAI core
+// ResetAllCmd removes the database of this Linkis core
 // instance.
 var ResetAllCmd = &cobra.Command{
 	Use:     "unsafe-reset-all",
@@ -23,7 +23,7 @@ var ResetAllCmd = &cobra.Command{
 
 var keepAddrBook bool
 
-// ResetStateCmd removes the database of the specified MintAI core instance.
+// ResetStateCmd removes the database of the specified Linkis core instance.
 var ResetStateCmd = &cobra.Command{
 	Use:    "reset-state",
 	Short:  "Remove all the data and WAL",

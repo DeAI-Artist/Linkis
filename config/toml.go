@@ -81,7 +81,7 @@ const defaultConfigTemplate = `# This is a TOML config file.
 #######################################################################
 
 # TCP or UNIX socket address of the ABCI application,
-# or the name of an ABCI application compiled in with the MintAI binary
+# or the name of an ABCI application compiled in with the Linkis binary
 proxy_app = "{{ .BaseConfig.ProxyApp }}"
 
 # A custom human readable name for this node

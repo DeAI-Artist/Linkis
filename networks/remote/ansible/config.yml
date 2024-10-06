@@ -8,7 +8,7 @@
   any_errors_fatal: true
   gather_facts: yes
   vars:
-    - service: mintai
+    - service: linkis
     - N: 4
   roles:
     - stop

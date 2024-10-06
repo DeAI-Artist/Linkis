@@ -24,7 +24,7 @@ var (
 // debugging running Tendermint processes.
 var DebugCmd = &cobra.Command{
 	Use:   "debug",
-	Short: "A utility to kill or watch a MintAI process while aggregating debugging data",
+	Short: "A utility to kill or watch a Linkis process while aggregating debugging data",
 }
 
 func init() {
@@ -33,7 +33,7 @@ func init() {
 		&nodeRPCAddr,
 		flagNodeRPCAddr,
 		"tcp://localhost:26657",
-		"the MintAI node's RPC address (<host>:<port>)",
+		"the Linkis node's RPC address (<host>:<port>)",
 	)
 
 	DebugCmd.AddCommand(killCmd)

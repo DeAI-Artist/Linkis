@@ -17,8 +17,8 @@ import (
 
 var dumpCmd = &cobra.Command{
 	Use:   "dump [output-directory]",
-	Short: "Continuously poll a MintAI process and dump debugging data into a single location",
-	Long: `Continuously poll a MintAI process and dump debugging data into a single
+	Short: "Continuously poll a Linkis process and dump debugging data into a single location",
+	Long: `Continuously poll a Linkis process and dump debugging data into a single
 location at a specified frequency. At each frequency interval, an archived and compressed
 file will contain node debugging information including the goroutine and heap profiles
 if enabled.`,
@@ -31,7 +31,7 @@ func init() {
 		&frequency,
 		flagFrequency,
 		30,
-		"the frequency (seconds) in which to poll, aggregate and dump MintAI debug data",
+		"the frequency (seconds) in which to poll, aggregate and dump Linkis debug data",
 	)
 
 	dumpCmd.Flags().StringVar(
@@ -81,7 +81,7 @@ func dumpCmdHandler(_ *cobra.Command, args []string) error {
 func dumpDebugData(outDir string, conf *cfg.Config, rpc *rpchttp.HTTP) {
 	start := time.Now().UTC()
 
-	tmpDir, err := os.MkdirTemp(outDir, "mintai_debug_tmp")
+	tmpDir, err := os.MkdirTemp(outDir, "linkis_debug_tmp")
 	if err != nil {
 		logger.Error("failed to create temporary directory", "dir", tmpDir, "error", err)
 		return
