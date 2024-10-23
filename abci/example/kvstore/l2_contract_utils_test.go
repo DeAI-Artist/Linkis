@@ -42,9 +42,20 @@ func TestChainIDUsingSigner(t *testing.T) {
 	}
 
 	chainID := big.NewInt(11155111) // Sepolia Chain ID
+	toAddress := common.HexToAddress("0xAddress")
 
-	// Mock transaction to test signing
-	tx := types.NewTransaction(0, common.HexToAddress("0xAddress"), big.NewInt(0), 21000, big.NewInt(1), nil)
+	// Prepare the transaction using the EIP-1559 model
+	tx := types.NewTx(&types.DynamicFeeTx{
+		ChainID:   chainID,
+		Nonce:     0,
+		GasTipCap: big.NewInt(2),  // Priority fee per gas
+		GasFeeCap: big.NewInt(10), // Base fee per gas
+		Gas:       21000,
+		To:        &toAddress, // Corrected to pointer
+		Value:     big.NewInt(0),
+		Data:      nil,
+	})
+
 	signer := types.LatestSignerForChainID(chainID)
 
 	// Sign the transaction
